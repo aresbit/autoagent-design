@@ -1,0 +1,15 @@
+node_modules
+.DS_Store
+coverage
+.env
+*.log
+.idea
+.vscode
+*.suo
+CLAUDE.md
+.claude/
+.learnings/
+# Self-improving telemetry artifacts
+.self_improving_experience.json
+.self_improving_performance.json
+vendor/

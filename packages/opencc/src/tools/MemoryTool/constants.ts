@@ -1,0 +1,1 @@
+export const MEMORY_TOOL_NAME = 'MemoryTool'

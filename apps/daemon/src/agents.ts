@@ -115,6 +115,64 @@ function parseLineSeparatedModels(stdout) {
 
 export const AGENT_DEFS = [
   {
+    id: 'opencc',
+    name: 'OpenCC',
+    bin: 'opencc',
+    // opencc (claude-js) is a reverse-engineered Claude Code CLI that runs
+    // on Bun and speaks the identical `--output-format stream-json` protocol.
+    // Tried in order: `opencc` → `claude-js` (npm package name) → bundled
+    // dist path. Resolved via resolveOpenccPath() which checks:
+    //   1. OD_OPENCC_COMMAND env var
+    //   2. PATH lookup (opencc, claude-js)
+    //   3. Bundled opencc-dist/ from Electron resources or workspace dev
+    //   4. Fallback to `bun run "cli.js" --dangerously-skip-permissions`
+    fallbackBins: ['claude-js'],
+    versionArgs: ['--version'],
+    helpArgs: ['--help'],
+    capabilityFlags: {
+      '--include-partial-messages': 'partialMessages',
+      '--add-dir': 'addDir',
+    },
+    // opencc accepts the same model aliases and full ids as Claude Code
+    // since it uses the same Anthropic SDK under the hood.
+    fallbackModels: [
+      DEFAULT_MODEL_OPTION,
+      { id: 'sonnet', label: 'Sonnet (alias)' },
+      { id: 'opus', label: 'Opus (alias)' },
+      { id: 'haiku', label: 'Haiku (alias)' },
+      { id: 'claude-opus-4-5', label: 'claude-opus-4-5' },
+      { id: 'claude-sonnet-4-5', label: 'claude-sonnet-4-5' },
+      { id: 'claude-haiku-4-5', label: 'claude-haiku-4-5' },
+    ],
+    // Same argv contract as Claude Code: `-p --output-format stream-json --verbose`.
+    // Prompt via stdin to avoid E2BIG/ENAMETOOLONG on large composed prompts.
+    buildArgs: (_prompt, _imagePaths, extraAllowedDirs = [], options = {}) => {
+      const caps = agentCapabilities.get('opencc') || {};
+      const args = [
+        '-p',
+        '--output-format',
+        'stream-json',
+        '--verbose',
+      ];
+      if (caps.partialMessages) {
+        args.push('--include-partial-messages');
+      }
+      if (options.model && options.model !== 'default') {
+        args.push('--model', options.model);
+      }
+      const dirs = (extraAllowedDirs || []).filter(
+        (d) => typeof d === 'string' && d.length > 0,
+      );
+      if (dirs.length > 0 && caps.addDir !== false) {
+        args.push('--add-dir', ...dirs);
+      }
+      args.push('--permission-mode', 'bypassPermissions');
+      return args;
+    },
+    promptViaStdin: true,
+    streamFormat: 'claude-stream-json',
+  },
+  {
     id: 'claude',
     name: 'Claude Code',
     bin: 'claude',
@@ -349,27 +407,11 @@ export const AGENT_DEFS = [
     buildArgs: () => ['acp', '--accept-hooks'],
     streamFormat: 'acp-json-rpc',
   },
-  {
-    id: 'kimi',
-    name: 'Kimi CLI',
-    bin: 'kimi',
-    versionArgs: ['--version'],
-    fetchModels: async (resolvedBin) =>
-      detectAcpModels({
-        bin: resolvedBin,
-        args: ['acp'],
-        timeoutMs: 15_000,
-        defaultModelOption: DEFAULT_MODEL_OPTION,
-      }),
-    fallbackModels: [
-      DEFAULT_MODEL_OPTION,
-      { id: 'kimi-k2-turbo-preview', label: 'kimi-k2-turbo-preview' },
-      { id: 'moonshot-v1-8k', label: 'moonshot-v1-8k' },
-      { id: 'moonshot-v1-32k', label: 'moonshot-v1-32k' },
-    ],
-    buildArgs: () => ['acp'],
-    streamFormat: 'acp-json-rpc',
-  },
+  // kimi agent removed — the system-installed /usr/bin/kimi is an Electron
+  // desktop binary, not a CLI. Probing it with --version launches the full
+  // kimi-desktop GUI instead of printing a version string. If a real kimi CLI
+  // ships in the future (e.g. @anthropic-ai/kimi-cli), this entry can be
+  // restored with a guard that skips the Electron binary path.
   {
     id: 'cursor-agent',
     name: 'Cursor Agent',
@@ -693,6 +735,82 @@ export function resolveAgentExecutable(def) {
   return null;
 }
 
+// Resolve the opencc binary path from multiple sources in priority order.
+//   1. OD_OPENCC_COMMAND env var — full command, e.g. "bun /path/to/cli.js"
+//   2. PATH lookup (opencc, claude-js)
+//   3. Bundled opencc-dist/ from Electron resources (process.resourcesPath)
+//   4. Workspace dev path (packages/opencc/dist/cli.js relative to project root)
+//   5. System-installed /usr/lib/autoagent/cli.js
+//   6. Bun-based fallback
+// When the resolved path ends in .js, the returned command array is
+// prepended with `bun` so the child process can execute it.
+export function resolveOpenccPath(projectRoot) {
+  // 1. Environment variable override
+  const envCmd = process.env.OD_OPENCC_COMMAND;
+  if (envCmd && envCmd.trim()) {
+    return envCmd.trim();
+  }
+
+  // 2. PATH lookup (opencc, claude-js)
+  for (const bin of ['opencc', 'claude-js']) {
+    const onPath = resolveOnPath(bin);
+    if (onPath) return onPath;
+  }
+
+  // 3. Bundled Electron resources path
+  try {
+    if (typeof process.resourcesPath === 'string' && process.resourcesPath) {
+      const bundledPath = path.join(process.resourcesPath, 'opencc-dist', 'cli.js');
+      if (existsSync(bundledPath)) return bundledPath;
+    }
+  } catch {
+    // process.resourcesPath only exists in Electron, ignore in daemon context
+  }
+
+  // 4. Workspace dev paths
+  if (projectRoot) {
+    const devPaths = [
+      path.join(projectRoot, 'packages', 'opencc', 'dist', 'cli.js'),
+      path.join(projectRoot, '..', 'opencc', 'dist', 'cli.js'),
+    ];
+    for (const p of devPaths) {
+      if (existsSync(p)) return p;
+    }
+  }
+
+  // 5. System-installed path
+  const sysPath = '/usr/lib/autoagent/cli.js';
+  if (existsSync(sysPath)) return sysPath;
+
+  // 6. Bun-based fallback
+  return null;
+}
+
+// Build an env object for spawning the opencc agent. Mirrors the autoagent
+// reference project's spawn env: sets CLAUDE_CODE_ENTRYPOINT,
+// CLAUDE_CODE_INCLUDE_PARTIAL_MESSAGES, and conditionally strips
+// ANTHROPIC_API_KEY so the agent's own auth resolution wins.
+export function spawnEnvForOpencc(baseEnv, apiKey, baseURL, model, configDir) {
+  const env = { ...baseEnv };
+  // Strip ANTHROPIC_API_KEY so opencc's own auth (claude login / Pro plan)
+  // wins instead of silently falling back to API-key billing.
+  for (const key of Object.keys(env)) {
+    if (key.toUpperCase() === 'ANTHROPIC_API_KEY') delete env[key];
+  }
+  env.CLAUDE_CODE_ENTRYPOINT = 'claude-desktop';
+  env.CLAUDE_CODE_INCLUDE_PARTIAL_MESSAGES = '1';
+  if (configDir && configDir.trim()) {
+    env.CLAUDE_CONFIG_DIR = configDir.trim();
+  }
+  if (apiKey) env.ANTHROPIC_API_KEY = apiKey;
+  if (baseURL) env.ANTHROPIC_BASE_URL = baseURL.replace(/\/chat\/completions\/?$/, '').replace(/\/v1\/?$/, '');
+  if (model) {
+    env.ANTHROPIC_MODEL = model;
+    env.ANTHROPIC_CUSTOM_MODEL_OPTION = model;
+  }
+  return env;
+}
+
 async function fetchModels(def, resolvedBin) {
   if (typeof def.fetchModels === 'function') {
     try {
@@ -828,7 +946,11 @@ export function resolveAgentBin(id) {
 // the child. Iterate keys and compare case-insensitively to close that.
 export function spawnEnvForAgent(agentId, baseEnv) {
   const env = { ...baseEnv };
-  if (agentId !== 'claude') return env;
+  // Strip ANTHROPIC_API_KEY for agents that use their own auth resolution
+  // (claude login / Pro/Max plan) so the daemon's ambient env doesn't
+  // silently switch them to API-key billing. opencc uses the same auth
+  // resolution as Claude Code.
+  if (agentId !== 'claude' && agentId !== 'opencc') return env;
   for (const key of Object.keys(env)) {
     if (key.toUpperCase() === 'ANTHROPIC_API_KEY') delete env[key];
   }
