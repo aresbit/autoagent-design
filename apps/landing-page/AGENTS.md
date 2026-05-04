@@ -70,5 +70,5 @@ pnpm --filter @open-design/landing-page typecheck
 - New section added to the canonical landing page → port it here.
 - Asset regeneration in the skill → re-mirror PNGs into
   `public/assets/`.
-- Brand re-keying for a non-Open-Design tenant → fork the app, update
+- Brand re-keying for a non-Auto-Design tenant → fork the app, update
   copy, swap PNGs. Do not parameterize this app for multi-tenancy.
