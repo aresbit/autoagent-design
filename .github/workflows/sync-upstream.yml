@@ -1,0 +1,29 @@
+name: sync-upstream
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    name: Sync from nexu-io/open-design
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.2
+        with:
+          fetch-depth: 0
+
+      - name: Merge upstream/main into main
+        run: |
+          git remote add upstream https://github.com/nexu-io/open-design.git
+          git fetch upstream main
+          git checkout main
+          git merge upstream/main --no-edit
+          git push origin main
