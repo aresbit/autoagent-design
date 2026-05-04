@@ -1,5 +1,6 @@
 node_modules/
 dist/
+!packages/opencc/dist/
 out/
 .next/
 .next-*/
