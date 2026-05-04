@@ -33,13 +33,13 @@
 
 Anthropic [Claude Design][cd] (выпущен 2026-04-17, на Opus 4.7) показал, что происходит, когда LLM перестаёт писать прозу и начинает выдавать готовые дизайн-артефакты. Продукт моментально стал вирусным — и остался закрытым, платным, облачным и жёстко привязанным к модели Anthropic и внутренним навыкам Anthropic. Никакого checkout, никакого self-host, никакого деплоя на Vercel, никакой замены агента на своего.
 
-**Auto Design (OD) — открытая альтернатива.** Тот же цикл, та же логика artifact-first, но без lock-in. Мы не поставляем собственного агента: самые сильные coding-агенты уже стоят у вас на ноутбуке. Мы связываем их с skill-driven workflow для дизайна, который запускается локально через `pnpm tools-dev`, умеет выкладывать web-слой на Vercel и остаётся BYOK на каждом уровне.
+**Auto Design (AD) — открытая альтернатива.** Тот же цикл, та же логика artifact-first, но без lock-in. Мы не поставляем собственного агента: самые сильные coding-агенты уже стоят у вас на ноутбуке. Мы связываем их с skill-driven workflow для дизайна, который запускается локально через `pnpm tools-dev`, умеет выкладывать web-слой на Vercel и остаётся BYOK на каждом уровне.
 
 Введите `make me a magazine-style pitch deck for our seed round`. Ещё до того, как модель импровизирует хоть один пиксель, появляется интерактивная форма вопросов. Агент выбирает одно из пяти отобранных визуальных направлений. Живой план `TodoWrite` стримится в UI. Демон создаёт на диске реальную проектную папку с seed-шаблоном, библиотекой раскладок и checklist’ом самопроверки. Агент читает их — pre-flight обязателен — прогоняет пятимерную критику собственного результата и выдаёт единый `<artifact>`, который через несколько секунд рендерится в sandboxed iframe.
 
 Это не «ИИ пытается что-то задизайнить». Это ИИ, который prompt stack приучил вести себя как senior-дизайнер с рабочей файловой системой, детерминированной библиотекой палитр и культурой checklist’ов — ровно та планка, которую задал Claude Design, только в открытом и вашем варианте.
 
-OD стоит на плечах четырёх open-source проектов:
+AD стоит на плечах четырёх open-source проектов:
 
 - [**`alchaincyf/huashu-design`**](https://github.com/alchaincyf/huashu-design) — философский компас дизайна. Junior-Designer workflow, 5-step protocol для brand assets, anti-AI-slop checklist, 5-dimensional self-critique и идея «5 schools × 20 design philosophies» для выбора направления — всё это distilled в [`apps/web/src/prompts/discovery.ts`](apps/web/src/prompts/discovery.ts).
 - [**`op7418/guizang-ppt-skill`**](https://github.com/op7418/guizang-ppt-skill) — режим deck. Встроен без изменений в [`skills/guizang-ppt/`](skills/guizang-ppt/) с сохранением исходной LICENSE; журнальные раскладки, WebGL hero и P0/P1/P2 checklists.
@@ -78,7 +78,7 @@ OD стоит на плечах четырёх open-source проектов:
 </td>
 <td width="50%">
 <img src="docs/screenshots/02-question-form.png" alt="02 · Форма первичной диагностики" /><br/>
-<sub><b>Форма первичной диагностики</b> — до того как модель нарисует хотя бы пиксель, OD фиксирует brief: surface, audience, tone, brand context, scale. 30 секунд с radio buttons лучше 30 минут редиректов.</sub>
+<sub><b>Форма первичной диагностики</b> — до того как модель нарисует хотя бы пиксель, AD фиксирует brief: surface, audience, tone, brand context, scale. 30 секунд с radio buttons лучше 30 минут редиректов.</sub>
 </td>
 </tr>
 <tr>
@@ -230,7 +230,7 @@ OD стоит на плечах четырёх open-source проектов:
 
 ### 4 · Интерактивная форма вопросов убирает 80% редиректов.
 
-В prompt stack OD жёстко зашито `RULE 1`: каждый новый дизайн-бриф начинается с `<question-form id="discovery">`, а не с кода. Surface · audience · tone · brand context · scale · constraints. Даже длинный бриф оставляет массу открытых решений — визуальный тон, цветовую позицию, масштаб — и как раз их форма фиксирует за 30 секунд.
+В prompt stack AD жёстко зашито `RULE 1`: каждый новый дизайн-бриф начинается с `<question-form id="discovery">`, а не с кода. Surface · audience · tone · brand context · scale · constraints. Даже длинный бриф оставляет массу открытых решений — визуальный тон, цветовую позицию, масштаб — и как раз их форма фиксирует за 30 секунд.
 
 Это и есть **режим Junior-Designer**, distilled из [`huashu-design`](https://github.com/alchaincyf/huashu-design): задаём вопросы upfront, быстро показываем что-то видимое (хотя бы wireframe с серыми блоками), даём пользователю дёшево скорректировать курс. В сочетании с brand-asset protocol (locate · download · `grep` hex · write `brand-spec.md` · vocalise) это, пожалуй, главный фактор, из-за которого output перестаёт быть AI freestyle и начинает ощущаться как работа внимательного дизайнера.
 
@@ -489,7 +489,7 @@ open-design/
 
 ## Генерация медиа
 
-OD не заканчивается на коде. Тот же чатовый surface, который производит HTML-артефакты через `<artifact>`, умеет запускать и **image**, и **video**, и **audio** generation — через media pipeline демона ([`apps/daemon/src/media-models.ts`](apps/daemon/src/media-models.ts), [`apps/web/src/media/models.ts`](apps/web/src/media/models.ts)). Каждый результат сохраняется как реальный файл в project workspace — `.png` для image, `.mp4` для video — и в конце хода появляется как downloadable chip.
+AD не заканчивается на коде. Тот же чатовый surface, который производит HTML-артефакты через `<artifact>`, умеет запускать и **image**, и **video**, и **audio** generation — через media pipeline демона ([`apps/daemon/src/media-models.ts`](apps/daemon/src/media-models.ts), [`apps/web/src/media/models.ts`](apps/web/src/media/models.ts)). Каждый результат сохраняется как реальный файл в project workspace — `.png` для image, `.mp4` для video — и в конце хода появляется как downloadable chip.
 
 Сегодня основную нагрузку несут три семейства моделей:
 
@@ -556,13 +556,13 @@ OD не заканчивается на коде. Тот же чатовый sur
 </tr>
 </table>
 
-Паттерн тот же, что и в остальных режимах: выберите template, отредактируйте brief, отправьте. Агент прочитает встроенный `skills/hyperframes/SKILL.md` (там описан OD-специфичный render workflow — composition source files складываются в `.hyperframes-cache/`, чтобы не засорять file workspace, демон запускает `npx hyperframes render`, обходя зависания macOS sandbox-exec / Puppeteer, и только финальный `.mp4` попадает в проект как chip), соберёт композицию и выпустит MP4. Thumbnails catalog blocks © HeyGen и отдаются с их CDN; сам OSS-framework лицензирован по Apache-2.0.
+Паттерн тот же, что и в остальных режимах: выберите template, отредактируйте brief, отправьте. Агент прочитает встроенный `skills/hyperframes/SKILL.md` (там описан AD-специфичный render workflow — composition source files складываются в `.hyperframes-cache/`, чтобы не засорять file workspace, демон запускает `npx hyperframes render`, обходя зависания macOS sandbox-exec / Puppeteer, и только финальный `.mp4` попадает в проект как chip), соберёт композицию и выпустит MP4. Thumbnails catalog blocks © HeyGen и отдаются с их CDN; сам OSS-framework лицензирован по Apache-2.0.
 
 > **Уже подключено, но пока не вынесено в шаблоны:** Kling 2.0 / 1.6 / 1.5, Veo 3 / Veo 2, Sora 2 / Sora 2-Pro (через Fal), MiniMax video-01 — всё это уже живёт в `VIDEO_MODELS` ([`apps/web/src/media/models.ts`](apps/web/src/media/models.ts)). На стороне audio поддерживаются Suno v5 / v4.5, Udio v2, Lyria 2 (музыка) и gpt-4o-mini-tts, MiniMax TTS (речь). Шаблоны для них — открытая область для вкладов: добавьте JSON в `prompt-templates/video/` или `prompt-templates/audio/`, и он появится в picker’е.
 
 ## Не только чат — что ещё уже поставляется
 
-Чатовый / артефактный цикл получает больше всего внимания, но в OD уже встроено ещё несколько менее заметных возможностей, о которых полезно знать до любых сравнений:
+Чатовый / артефактный цикл получает больше всего внимания, но в AD уже встроено ещё несколько менее заметных возможностей, о которых полезно знать до любых сравнений:
 
 - **Импорт ZIP из Claude Design.** Перетащите экспорт из claude.ai в welcome dialog. `POST /api/import/claude-design` распакует его в реальный `.od/projects/<id>/`, откроет entry file как tab и подготовит prompt «продолжить с того места, где остановился Anthropic» для вашего локального агента. Никакого переформулирования, никакого «попросите модель восстановить то, что уже было». ([`apps/daemon/src/server.ts`](apps/daemon/src/server.ts) — маршрут `/api/import/claude-design`)
 - **OpenAI-compatible BYOK proxy.** `POST /api/proxy/stream` принимает `{ baseUrl, apiKey, model, messages }`, нормализует путь до `…/v1/chat/completions`, форвардит SSE chunks обратно в браузер и отвергает loopback / link-local / RFC1918 адреса для защиты от SSRF. Подойдёт всё, что говорит на схеме OpenAI chat — Anthropic-via-OpenAI shim, DeepSeek, Groq, MiMo, OpenRouter, self-hosted vLLM. Для MiMo автоматически выставляется `tool_choice: 'none'`, потому что его схема tool-use плохо ведёт себя при free-form generation.
@@ -575,7 +575,7 @@ OD не заканчивается на коде. Тот же чатовый sur
 
 ## Механика против AI-slop
 
-Вся эта механика — прямое переложение методологии [`huashu-design`](https://github.com/alchaincyf/huashu-design) в prompt stack OD с enforce’ом через side-file pre-flight. Текущие формулировки можно посмотреть в [`apps/web/src/prompts/discovery.ts`](apps/web/src/prompts/discovery.ts):
+Вся эта механика — прямое переложение методологии [`huashu-design`](https://github.com/alchaincyf/huashu-design) в prompt stack AD с enforce’ом через side-file pre-flight. Текущие формулировки можно посмотреть в [`apps/web/src/prompts/discovery.ts`](apps/web/src/prompts/discovery.ts):
 
 - **Сначала question form.** Ход 1 — только `<question-form>`, без размышлений, без tools, без narration. Пользователь выбирает дефолты со скоростью radio-click.
 - **Извлечение brand spec.** Если пользователь прикладывает screenshot или URL, агент перед написанием CSS проходит пятишаговый протокол (locate · download · grep hex · codify `brand-spec.md` · vocalise). **Никогда не угадывает brand colors по памяти.**
@@ -687,7 +687,7 @@ OD не заканчивается на коде. Тот же чатовый sur
   <a href="https://github.com/nexu-io/open-design"><img src="docs/assets/star-us.png" alt="Поставьте звезду Auto Design на GitHub — github.com/nexu-io/open-design" width="100%" /></a>
 </p>
 
-Если OD сэкономил вам хотя бы тридцать минут — подарите ему ★. Звёзды не платят аренду, но показывают следующему дизайнеру, агенту и контрибьютору, что этот эксперимент заслуживает внимания. Один клик, три секунды, реальный сигнал: [github.com/nexu-io/open-design](https://github.com/nexu-io/open-design).
+Если AD сэкономил вам хотя бы тридцать минут — подарите ему ★. Звёзды не платят аренду, но показывают следующему дизайнеру, агенту и контрибьютору, что этот эксперимент заслуживает внимания. Один клик, три секунды, реальный сигнал: [github.com/nexu-io/open-design](https://github.com/nexu-io/open-design).
 
 ## Как участвовать
 

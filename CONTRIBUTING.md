@@ -1,6 +1,6 @@
 # Contributing to Auto Design
 
-Thanks for thinking about contributing. OD is small on purpose — most of the value lives in **files** (skills, design systems, prompt fragments) rather than framework code. That means the highest-leverage contributions are usually one folder, one Markdown file, or one PR-sized adapter.
+Thanks for thinking about contributing. AD is small on purpose — most of the value lives in **files** (skills, design systems, prompt fragments) rather than framework code. That means the highest-leverage contributions are usually one folder, one Markdown file, or one PR-sized adapter.
 
 This guide tells you exactly where to look for each type of contribution and what bar a PR has to clear before we merge it.
 
@@ -12,8 +12,8 @@ This guide tells you exactly where to look for each type of contribution and wha
 
 | If you want to… | You're really adding | Where it lives | Ship size |
 |---|---|---|---|
-| Make OD render a new kind of artifact (an invoice, an iOS Settings screen, a one-pager…) | a **Skill** | [`skills/<your-skill>/`](skills/) | one folder, ~2 files |
-| Make OD speak a new brand's visual language | a **Design System** | [`design-systems/<brand>/DESIGN.md`](design-systems/) | one Markdown file |
+| Make AD render a new kind of artifact (an invoice, an iOS Settings screen, a one-pager…) | a **Skill** | [`skills/<your-skill>/`](skills/) | one folder, ~2 files |
+| Make AD speak a new brand's visual language | a **Design System** | [`design-systems/<brand>/DESIGN.md`](design-systems/) | one Markdown file |
 | Hook up a new coding-agent CLI | an **Agent adapter** | [`apps/daemon/src/agents.ts`](apps/daemon/src/agents.ts) | ~10 lines in one array |
 | Add a feature, fix a bug, lift a UX pattern from [`open-codesign`][ocod] | code | `apps/web/src/`, `apps/daemon/` | normal PR |
 | Improve docs, port a section to Deutsch / 中文, fix typos | docs | `README.md`, `README.de.md`, `README.zh-CN.md`, `docs/`, `QUICKSTART.md` | one PR |
@@ -38,7 +38,7 @@ pnpm build                # production build
 
 Node `~24` and pnpm `10.33.x` are required. `nvm` / `fnm` are optional; use `nvm install 24 && nvm use 24` or `fnm install 24 && fnm use 24` if you prefer managing Node that way. macOS, Linux, and WSL2 are the primary paths. Windows native should work but isn't a primary target — file an issue if it doesn't.
 
-You don't need any agent CLI on your `PATH` to develop OD itself — the daemon will tell you "no agents found" and fall back to the **Anthropic API · BYOK** path, which is the fastest dev loop anyway.
+You don't need any agent CLI on your `PATH` to develop AD itself — the daemon will tell you "no agents found" and fall back to the **Anthropic API · BYOK** path, which is the fastest dev loop anyway.
 
 ---
 
@@ -61,7 +61,7 @@ skills/your-skill/
 
 ### `SKILL.md` frontmatter
 
-The first three keys are the Claude Code base spec — `name`, `description`, `triggers`. Everything under `od:` is OD-specific and optional, but **`od.mode`** decides which group the skill shows up in (Prototype / Deck / Template / Design system).
+The first three keys are the Claude Code base spec — `name`, `description`, `triggers`. Everything under `od:` is AD-specific and optional, but **`od.mode`** decides which group the skill shows up in (Prototype / Deck / Template / Design system).
 
 ```yaml
 ---
@@ -217,7 +217,7 @@ The OVERRIDES table in `maxTokens.ts` is for the rare case where LiteLLM is miss
 
 ## Localization maintenance
 
-German uses formal `Sie` because OD speaks to a mixed audience of solo creators, agencies, and engineering teams; until project feedback shows that an informal `du` voice fits better, formal German is the least surprising default. Locale PRs should translate UI chrome, core docs, and display-only gallery metadata in `apps/web/src/i18n/content.ts`, but should not translate `skills/`, `design-systems/`, or prompt bodies that agents execute. Those source prompts are maintained as workflow inputs, and keeping one source language avoids multiplying prompt QA across locales. When adding or renaming a skill, design system, or prompt template, update the German display metadata and run `pnpm --filter @open-design/web test`; `content.test.ts` fails if German display coverage drifts. Daemon errors, export filenames, and agent-generated artifact text are known limitations unless a PR explicitly scopes them.
+German uses formal `Sie` because AD speaks to a mixed audience of solo creators, agencies, and engineering teams; until project feedback shows that an informal `du` voice fits better, formal German is the least surprising default. Locale PRs should translate UI chrome, core docs, and display-only gallery metadata in `apps/web/src/i18n/content.ts`, but should not translate `skills/`, `design-systems/`, or prompt bodies that agents execute. Those source prompts are maintained as workflow inputs, and keeping one source language avoids multiplying prompt QA across locales. When adding or renaming a skill, design system, or prompt template, update the German display metadata and run `pnpm --filter @open-design/web test`; `content.test.ts` fails if German display coverage drifts. Daemon errors, export filenames, and agent-generated artifact text are known limitations unless a PR explicitly scopes them.
 
 For step-by-step instructions on adding a new locale (UI dictionary, README, language switcher, regional terminology), see [`TRANSLATIONS.md`](TRANSLATIONS.md).
 
@@ -277,10 +277,10 @@ For prompt-stack bugs ("the agent emitted a purple gradient hero, the slop black
 
 To keep the project focused, please don't open PRs that:
 
-- **Vendor a model runtime.** OD's whole bet is "your existing CLI is enough". We don't ship `pi-ai`, OpenAI keys, or model loaders.
+- **Vendor a model runtime.** AD's whole bet is "your existing CLI is enough". We don't ship `pi-ai`, OpenAI keys, or model loaders.
 - **Rewrite the frontend away from the current stack without prior discussion.** Next.js 16 App Router + React 18 + TS is the line. No Astro, Solid, Svelte, or other framework rewrites unless maintainers explicitly want that migration.
 - **Replace the daemon with a serverless function.** The daemon's whole point is owning a real `cwd` and spawning a real CLI. Vercel deployment of the SPA is fine; the daemon stays a daemon.
-- **Add telemetry / analytics / phone-home.** OD is local-first. The only outbound calls are to providers the user explicitly configured.
+- **Add telemetry / analytics / phone-home.** AD is local-first. The only outbound calls are to providers the user explicitly configured.
 - **Bundle a binary** without a license file and authorship attribution next to it.
 
 If you're not sure whether your idea fits, open a discussion before writing the code.

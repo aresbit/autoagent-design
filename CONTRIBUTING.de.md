@@ -1,6 +1,6 @@
 # Zu Auto Design beitragen
 
-Danke, dass Sie über einen Beitrag nachdenken. OD ist bewusst klein gehalten — der größte Teil des Werts steckt in **Dateien** (Skills, Designsysteme, Prompt-Fragmente) statt in Framework-Code. Die wirkungsvollsten Beiträge sind deshalb oft ein Ordner, eine Markdown-Datei oder ein PR-großer Adapter.
+Danke, dass Sie über einen Beitrag nachdenken. AD ist bewusst klein gehalten — der größte Teil des Werts steckt in **Dateien** (Skills, Designsysteme, Prompt-Fragmente) statt in Framework-Code. Die wirkungsvollsten Beiträge sind deshalb oft ein Ordner, eine Markdown-Datei oder ein PR-großer Adapter.
 
 Dieser Leitfaden zeigt, wo Sie für welche Art Beitrag suchen sollten und welche Messlatte ein PR vor dem Merge erfüllen muss.
 
@@ -12,8 +12,8 @@ Dieser Leitfaden zeigt, wo Sie für welche Art Beitrag suchen sollten und welche
 
 | Wenn Sie möchten… | Fügen Sie eigentlich hinzu | Ort | Umfang |
 |---|---|---|---|
-| OD eine neue Artifact-Art rendern lassen (Rechnung, iOS Settings Screen, One-Pager…) | einen **Skill** | [`skills/<your-skill>/`](skills/) | ein Ordner, ca. 2 Dateien |
-| OD die visuelle Sprache einer neuen Marke sprechen lassen | ein **Design System** | [`design-systems/<brand>/DESIGN.md`](design-systems/) | eine Markdown-Datei |
+| AD eine neue Artifact-Art rendern lassen (Rechnung, iOS Settings Screen, One-Pager…) | einen **Skill** | [`skills/<your-skill>/`](skills/) | ein Ordner, ca. 2 Dateien |
+| AD die visuelle Sprache einer neuen Marke sprechen lassen | ein **Design System** | [`design-systems/<brand>/DESIGN.md`](design-systems/) | eine Markdown-Datei |
 | Eine neue coding-agent CLI anbinden | einen **Agent adapter** | [`apps/daemon/src/agents.ts`](apps/daemon/src/agents.ts) | ca. 10 Zeilen in einem Array |
 | Feature ergänzen, Bug fixen, UX-Pattern aus [`open-codesign`][ocod] übernehmen | Code | `apps/web/src/`, `apps/daemon/` | normaler PR |
 | Dokumentation verbessern, Deutsch / 中文 ergänzen, Tippfehler fixen | Dokumentation | `README.md`, `README.de.md`, `README.zh-CN.md`, `docs/`, `QUICKSTART.md` | ein PR |
@@ -38,7 +38,7 @@ pnpm build                # production build
 
 Node `~24` und pnpm `10.33.x` sind erforderlich. `nvm` / `fnm` sind optional; nutzen Sie `nvm install 24 && nvm use 24` oder `fnm install 24 && fnm use 24`, wenn Sie Node so verwalten. macOS, Linux und WSL2 sind die primären Pfade. Windows nativ sollte funktionieren, ist aber kein primäres Ziel.
 
-Sie brauchen keine Agent-CLI im `PATH`, um OD selbst zu entwickeln. Der daemon meldet dann "no agents found" und fällt auf den **Anthropic API · BYOK** Pfad zurück, der oft die schnellste Dev-Schleife ist.
+Sie brauchen keine Agent-CLI im `PATH`, um AD selbst zu entwickeln. Der daemon meldet dann "no agents found" und fällt auf den **Anthropic API · BYOK** Pfad zurück, der oft die schnellste Dev-Schleife ist.
 
 ---
 
@@ -61,7 +61,7 @@ skills/your-skill/
 
 ### `SKILL.md` Frontmatter
 
-Die ersten drei Keys sind die Claude Code Basis-Spec: `name`, `description`, `triggers`. Alles unter `od:` ist OD-spezifisch und optional, aber **`od.mode`** bestimmt, in welcher Gruppe der Skill erscheint.
+Die ersten drei Keys sind die Claude Code Basis-Spec: `name`, `description`, `triggers`. Alles unter `od:` ist AD-spezifisch und optional, aber **`od.mode`** bestimmt, in welcher Gruppe der Skill erscheint.
 
 ```yaml
 ---
@@ -162,7 +162,7 @@ Das 9-Section-Schema ist fest — Skill-Bodies greifen darauf per Suche zu. Das 
 4. **Kein Marketing-Fluff.** Die Tagline einer Marke ist kein Design Token.
 5. **Slug nutzt ASCII** — `linear.app` wird `linear-app`, `x.ai` wird `x-ai`.
 
-Die gelieferten Produktsysteme werden aus [`VoltAgent/awesome-design-md`][acd2] über [`scripts/sync-design-systems.ts`](scripts/sync-design-systems.ts) importiert. Wenn Ihre Marke upstream passt, schicken Sie den PR zuerst dorthin; OD übernimmt ihn beim nächsten Sync.
+Die gelieferten Produktsysteme werden aus [`VoltAgent/awesome-design-md`][acd2] über [`scripts/sync-design-systems.ts`](scripts/sync-design-systems.ts) importiert. Wenn Ihre Marke upstream passt, schicken Sie den PR zuerst dorthin; AD übernimmt ihn beim nächsten Sync.
 
 ---
 
@@ -193,7 +193,7 @@ Merge-Bar:
 
 ## Wartung von Lokalisierungen
 
-Deutsch verwendet das formelle `Sie`, weil OD eine gemischte Zielgruppe aus Solo-Creators, Agenturen und Engineering-Teams anspricht; solange Projektfeedback keine informelle `du`-Stimme nahelegt, ist formelles Deutsch die am wenigsten überraschende Vorgabe. Locale-PRs sollen UI-Chrome, zentrale Dokumentation und display-only Gallery-Metadaten in `apps/web/src/i18n/content.ts` übersetzen, aber nicht `skills/`, `design-systems/` oder Prompt-Bodies, die Agents ausführen. Diese Quell-Prompts sind Workflow-Eingaben; eine gemeinsame Quellsprache vermeidet multiplizierte Prompt-QA über alle Locales. Wenn ein Skill, Designsystem oder Prompt Template ergänzt oder umbenannt wird, aktualisieren Sie die deutschen Display-Metadaten und führen `pnpm --filter @open-design/web test` aus; `content.test.ts` schlägt fehl, wenn die deutsche Display-Coverage driftet. Daemon-Fehler, Export-Dateinamen und agent-generierte Artifact-Texte sind bekannte Grenzen, sofern ein PR sie nicht ausdrücklich umfasst.
+Deutsch verwendet das formelle `Sie`, weil AD eine gemischte Zielgruppe aus Solo-Creators, Agenturen und Engineering-Teams anspricht; solange Projektfeedback keine informelle `du`-Stimme nahelegt, ist formelles Deutsch die am wenigsten überraschende Vorgabe. Locale-PRs sollen UI-Chrome, zentrale Dokumentation und display-only Gallery-Metadaten in `apps/web/src/i18n/content.ts` übersetzen, aber nicht `skills/`, `design-systems/` oder Prompt-Bodies, die Agents ausführen. Diese Quell-Prompts sind Workflow-Eingaben; eine gemeinsame Quellsprache vermeidet multiplizierte Prompt-QA über alle Locales. Wenn ein Skill, Designsystem oder Prompt Template ergänzt oder umbenannt wird, aktualisieren Sie die deutschen Display-Metadaten und führen `pnpm --filter @open-design/web test` aus; `content.test.ts` schlägt fehl, wenn die deutsche Display-Coverage driftet. Daemon-Fehler, Export-Dateinamen und agent-generierte Artifact-Texte sind bekannte Grenzen, sofern ein PR sie nicht ausdrücklich umfasst.
 
 ---
 
@@ -251,10 +251,10 @@ Für Prompt-Stack-Bugs fügen Sie die **vollständige Assistant Message** bei, d
 
 Um das Projekt fokussiert zu halten, öffnen Sie bitte keine PRs, die:
 
-- **Eine Model Runtime vendoren.** OD setzt darauf, dass Ihre vorhandene CLI reicht.
+- **Eine Model Runtime vendoren.** AD setzt darauf, dass Ihre vorhandene CLI reicht.
 - **Das Frontend ohne vorherige Abstimmung aus dem aktuellen Stack reißen.** Next.js 16 App Router + React 18 + TS ist gesetzt.
 - **Den daemon durch eine Serverless Function ersetzen.** Der daemon besitzt ein echtes `cwd` und startet echte CLIs.
-- **Telemetry / Analytics / Phone-home hinzufügen.** OD ist local-first.
+- **Telemetry / Analytics / Phone-home hinzufügen.** AD ist local-first.
 - **Ein Binary bündeln** ohne Lizenzdatei und Autorenschaft direkt daneben.
 
 Wenn Sie nicht sicher sind, ob eine Idee passt, öffnen Sie vor dem Code eine Discussion.

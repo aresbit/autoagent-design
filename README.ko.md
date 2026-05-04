@@ -33,13 +33,13 @@
 
 Anthropic의 [Claude Design][cd](2026-04-17 출시, Opus 4.7 기반)은 LLM이 장문의 글쓰기를 멈추고 디자인 산출물을 직접 내놓기 시작했을 때 어떤 일이 일어나는지 보여주었습니다. 순식간에 화제가 되었지만, 여전히 **클로즈드 소스**, 유료, 클라우드 전용, Anthropic 모델과 Anthropic 내부 skill에 종속된 상태입니다. 체크아웃도, 자가 호스팅도, Vercel 배포도, 에이전트 교체도 불가능합니다.
 
-**Auto Design(OD)은 그 오픈소스 대안입니다.** 동일한 루프, 동일한 '아티팩트 우선' 사고방식, 락인 없음. 우리는 에이전트를 만들지 않습니다 — 가장 강력한 코딩 에이전트는 이미 여러분의 노트북에 있습니다. 우리는 그것을 skill 기반 디자인 워크플로에 연결할 뿐입니다. 로컬에서는 `pnpm tools-dev`로 실행하고, 웹 레이어는 Vercel에 배포할 수 있으며, 모든 레이어에서 BYOK(자체 키 사용)가 가능합니다.
+**Auto Design(AD)은 그 오픈소스 대안입니다.** 동일한 루프, 동일한 '아티팩트 우선' 사고방식, 락인 없음. 우리는 에이전트를 만들지 않습니다 — 가장 강력한 코딩 에이전트는 이미 여러분의 노트북에 있습니다. 우리는 그것을 skill 기반 디자인 워크플로에 연결할 뿐입니다. 로컬에서는 `pnpm tools-dev`로 실행하고, 웹 레이어는 Vercel에 배포할 수 있으며, 모든 레이어에서 BYOK(자체 키 사용)가 가능합니다.
 
 `시드 라운드를 위한 매거진 스타일 피치덱 만들어줘`라고 입력하세요. 모델이 픽셀 하나 그리기 전에 **초기화 질문 폼**이 먼저 등장합니다. 에이전트는 5개의 엄선된 시각적 방향 중 하나를 선택합니다. 실시간 `TodoWrite` 계획 카드가 UI에 스트리밍됩니다. Daemon이 디스크에 실제 프로젝트 폴더를 생성하며, seed 템플릿, 레이아웃 라이브러리, 자가 점검 체크리스트가 포함됩니다. 에이전트는 **pre-flight를 강제**로 읽고, 자신의 출력물에 대해 **5차원 검토**를 실행하며, 몇 초 후 샌드박스 iframe에 렌더링되는 단일 `<artifact>`를 내보냅니다.
 
 이건 "AI가 디자인을 시도한다"가 아닙니다. 프롬프트 스택에 의해 훈련된 AI가 사용 가능한 파일시스템, 결정론적 팔레트 라이브러리, 체크리스트 문화를 갖춘 수석 디자이너처럼 동작하는 것입니다 — Claude Design이 세운 기준 그대로, 하지만 오픈소스로, 여러분의 것으로.
 
-OD는 네 개의 오픈소스 프로젝트의 어깨 위에 서 있습니다:
+AD는 네 개의 오픈소스 프로젝트의 어깨 위에 서 있습니다:
 
 - [**`alchaincyf/huashu-design`**](https://github.com/alchaincyf/huashu-design) — 디자인 철학의 나침반. Junior-Designer 워크플로, 5단계 브랜드 에셋 프로토콜, anti-AI-slop 체크리스트, 5차원 자기 검토, 그리고 방향 선택기 뒤의 "5개 학파 × 20가지 디자인 철학" 아이디어 — 모두 [`apps/web/src/prompts/discovery.ts`](apps/web/src/prompts/discovery.ts)에 녹아들었습니다.
 - [**`op7418/guizang-ppt-skill`**](https://github.com/op7418/guizang-ppt-skill) — 덱 모드. [`skills/guizang-ppt/`](skills/guizang-ppt/) 아래에 원본 그대로 번들됨, 원 LICENSE 보존; 매거진 레이아웃, WebGL hero, P0/P1/P2 체크리스트.
@@ -77,7 +77,7 @@ OD는 네 개의 오픈소스 프로젝트의 어깨 위에 서 있습니다:
 </td>
 <td width="50%">
 <img src="docs/screenshots/02-question-form.png" alt="02 · Turn-1 초기화 폼" /><br/>
-<sub><b>Turn-1 초기화 폼</b> — 모델이 픽셀 하나 그리기 전에 OD가 브리프를 확정합니다: 화면, 대상, 톤, 브랜드 컨텍스트, 규모. 30초의 라디오 버튼 클릭이 30분의 수정 작업을 대체합니다.</sub>
+<sub><b>Turn-1 초기화 폼</b> — 모델이 픽셀 하나 그리기 전에 AD가 브리프를 확정합니다: 화면, 대상, 톤, 브랜드 컨텍스트, 규모. 30초의 라디오 버튼 클릭이 30분의 수정 작업을 대체합니다.</sub>
 </td>
 </tr>
 <tr>
@@ -229,7 +229,7 @@ Claude Code의 [`SKILL.md` 규약](https://docs.anthropic.com/en/docs/claude-cod
 
 ### 4 · 초기화 질문 폼이 수정 작업의 80%를 막아줍니다.
 
-OD의 프롬프트 스택에는 `RULE 1`이 하드코딩되어 있습니다: 모든 새 디자인 브리프는 코드 대신 `<question-form id="discovery">`로 시작합니다. 화면 · 대상 · 톤 · 브랜드 컨텍스트 · 규모 · 제약 조건. 긴 브리프라도 시각적 톤, 색상 입장, 규모 같은 디자인 결정 사항은 여전히 열려 있습니다 — 폼이 정확히 이것들을 30초 안에 고정합니다. 잘못된 방향의 비용은 한 번의 채팅 라운드이지, 완성된 덱 하나가 아닙니다.
+AD의 프롬프트 스택에는 `RULE 1`이 하드코딩되어 있습니다: 모든 새 디자인 브리프는 코드 대신 `<question-form id="discovery">`로 시작합니다. 화면 · 대상 · 톤 · 브랜드 컨텍스트 · 규모 · 제약 조건. 긴 브리프라도 시각적 톤, 색상 입장, 규모 같은 디자인 결정 사항은 여전히 열려 있습니다 — 폼이 정확히 이것들을 30초 안에 고정합니다. 잘못된 방향의 비용은 한 번의 채팅 라운드이지, 완성된 덱 하나가 아닙니다.
 
 이것이 [`huashu-design`](https://github.com/alchaincyf/huashu-design)에서 추출한 **Junior-Designer 모드**입니다: 미리 일괄 질문하고, 일찍 가시적인 것을 보여주며(와이어프레임에 회색 블록이라도), 사용자가 저렴한 비용으로 방향을 바꿀 수 있도록 합니다. 브랜드 에셋 프로토콜(위치 파악 · 다운로드 · `grep` hex · `brand-spec.md` 작성 · 발성)과 결합하면, 출력이 "AI 자유 창작"에서 "그리기 전에 주의를 기울인 디자이너"처럼 느껴지게 되는 가장 큰 이유입니다.
 
@@ -471,7 +471,7 @@ open-design/
 
 ## 시각적 방향
 
-사용자에게 브랜드 스펙이 없을 때, 에이전트가 5개의 엄선된 방향이 있는 두 번째 폼을 내보냅니다 — [`huashu-design`의 "5개 학파 × 20가지 디자인 철학" 폴백](https://github.com/alchaincyf/huashu-design#%E8%AE%BE%E8%AE%A1%E6%96%B9%E5%90%91%E9%A1%BE%E9%97%AE-fallback)의 OD 적용. 각 방향은 결정론적 스펙입니다 — OKLch의 팔레트, 폰트 스택, 레이아웃 포스처 단서, 참고 자료 — 에이전트가 이를 seed 템플릿의 `:root`에 그대로 바인딩합니다. 라디오 하나 클릭 → 완전히 지정된 시각 시스템. 즉흥 없음, AI-slop 없음.
+사용자에게 브랜드 스펙이 없을 때, 에이전트가 5개의 엄선된 방향이 있는 두 번째 폼을 내보냅니다 — [`huashu-design`의 "5개 학파 × 20가지 디자인 철학" 폴백](https://github.com/alchaincyf/huashu-design#%E8%AE%BE%E8%AE%A1%E6%96%B9%E5%90%91%E9%A1%BE%E9%97%AE-fallback)의 AD 적용. 각 방향은 결정론적 스펙입니다 — OKLch의 팔레트, 폰트 스택, 레이아웃 포스처 단서, 참고 자료 — 에이전트가 이를 seed 템플릿의 `:root`에 그대로 바인딩합니다. 라디오 하나 클릭 → 완전히 지정된 시각 시스템. 즉흥 없음, AI-slop 없음.
 
 | 방향 | 무드 | 참고 |
 |---|---|---|
@@ -485,7 +485,7 @@ open-design/
 
 ## 미디어 생성
 
-OD는 코드에서 끝나지 않습니다. `<artifact>` HTML을 만드는 동일한 채팅 입구가 **이미지**, **비디오**, **오디오** 생성도 구동합니다 — 모델 어댑터는 daemon의 미디어 파이프라인([`apps/daemon/src/media-models.ts`](apps/daemon/src/media-models.ts), [`apps/web/src/media/models.ts`](apps/web/src/media/models.ts))에 연결되어 있습니다. 모든 렌더링은 프로젝트 워크스페이스에 실제 파일로 떨어지며 — 이미지는 `.png`, 비디오는 `.mp4` — 턴이 끝날 때 다운로드 chip으로 표시됩니다.
+AD는 코드에서 끝나지 않습니다. `<artifact>` HTML을 만드는 동일한 채팅 입구가 **이미지**, **비디오**, **오디오** 생성도 구동합니다 — 모델 어댑터는 daemon의 미디어 파이프라인([`apps/daemon/src/media-models.ts`](apps/daemon/src/media-models.ts), [`apps/web/src/media/models.ts`](apps/web/src/media/models.ts))에 연결되어 있습니다. 모든 렌더링은 프로젝트 워크스페이스에 실제 파일로 떨어지며 — 이미지는 `.png`, 비디오는 `.mp4` — 턴이 끝날 때 다운로드 chip으로 표시됩니다.
 
 오늘날 부하를 짊어진 세 모델 패밀리:
 
@@ -552,7 +552,7 @@ OD는 코드에서 끝나지 않습니다. `<artifact>` HTML을 만드는 동일
 </tr>
 </table>
 
-패턴은 다른 것과 동일합니다: 템플릿을 고르고, brief를 편집하고, 보냅니다. 에이전트는 동봉된 `skills/hyperframes/SKILL.md`(OD 전용 렌더링 워크플로 — composition 소스 파일을 `.hyperframes-cache/`에 격리해 파일 워크스페이스를 어지럽히지 않고, daemon이 `npx hyperframes render`를 대신 실행해 macOS sandbox-exec / Puppeteer 행 현상을 우회하고, 최종 `.mp4`만 프로젝트 chip으로 표시되도록)를 읽고, composition을 작성하고, MP4를 출력합니다. 카탈로그 블록 썸네일은 © HeyGen, 그들의 CDN에서 제공; OSS 프레임워크 자체는 Apache-2.0입니다.
+패턴은 다른 것과 동일합니다: 템플릿을 고르고, brief를 편집하고, 보냅니다. 에이전트는 동봉된 `skills/hyperframes/SKILL.md`(AD 전용 렌더링 워크플로 — composition 소스 파일을 `.hyperframes-cache/`에 격리해 파일 워크스페이스를 어지럽히지 않고, daemon이 `npx hyperframes render`를 대신 실행해 macOS sandbox-exec / Puppeteer 행 현상을 우회하고, 최종 `.mp4`만 프로젝트 chip으로 표시되도록)를 읽고, composition을 작성하고, MP4를 출력합니다. 카탈로그 블록 썸네일은 © HeyGen, 그들의 CDN에서 제공; OSS 프레임워크 자체는 Apache-2.0입니다.
 
 > **연결되었지만 아직 템플릿으로 노출되지 않은 모델:** Kling 2.0 / 1.6 / 1.5, Veo 3 / Veo 2, Sora 2 / Sora 2-Pro(via Fal), MiniMax video-01 — 모두 `VIDEO_MODELS`([`apps/web/src/media/models.ts`](apps/web/src/media/models.ts))에 있습니다. Suno v5 / v4.5, Udio v2, Lyria 2(음악)와 gpt-4o-mini-tts, MiniMax TTS(음성)가 오디오 surface를 커버합니다. 이들 prompt 템플릿은 오픈 컨트리뷰션입니다 — JSON을 `prompt-templates/video/` 또는 `prompt-templates/audio/`에 떨구면 picker에 나타납니다.
 
@@ -571,7 +571,7 @@ OD는 코드에서 끝나지 않습니다. `<artifact>` HTML을 만드는 동일
 
 ## Anti-AI-slop 메커니즘
 
-아래의 모든 메커니즘은 [`huashu-design`](https://github.com/alchaincyf/huashu-design) 플레이북을 OD의 프롬프트 스택에 이식하고, 사이드 파일 pre-flight를 통해 skill별로 적용 가능하게 만든 것입니다. 실제 문구는 [`apps/web/src/prompts/discovery.ts`](apps/web/src/prompts/discovery.ts)를 읽으세요:
+아래의 모든 메커니즘은 [`huashu-design`](https://github.com/alchaincyf/huashu-design) 플레이북을 AD의 프롬프트 스택에 이식하고, 사이드 파일 pre-flight를 통해 skill별로 적용 가능하게 만든 것입니다. 실제 문구는 [`apps/web/src/prompts/discovery.ts`](apps/web/src/prompts/discovery.ts)를 읽으세요:
 
 - **질문 폼 우선.** Turn 1은 오직 `<question-form>` — 생각하기 없음, 도구 없음, 내레이션 없음. 사용자는 라디오 속도로 기본값을 선택합니다.
 - **브랜드 스펙 추출.** 사용자가 스크린샷이나 URL을 첨부하면, 에이전트는 5단계 프로토콜(위치 파악 · 다운로드 · hex grep · `brand-spec.md` 코드화 · 발성)을 실행한 후 CSS를 작성합니다. **절대 기억에서 브랜드 색상을 추측하지 않습니다.**

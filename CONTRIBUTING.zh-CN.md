@@ -1,6 +1,6 @@
 # 贡献指南 · Contributing to Auto Design
 
-谢谢你愿意参与。OD 是有意做小的 —— 大部分价值在 **文件** 里（skill、design system、提示词片段），而不是框架代码。这意味着收益最高的贡献往往就是一个文件夹、一份 Markdown，或者一个 PR 大小的 adapter。
+谢谢你愿意参与。AD 是有意做小的 —— 大部分价值在 **文件** 里（skill、design system、提示词片段），而不是框架代码。这意味着收益最高的贡献往往就是一个文件夹、一份 Markdown，或者一个 PR 大小的 adapter。
 
 这份指南会告诉你：每种贡献该往哪里看、合并之前 PR 需要过哪些线。
 
@@ -12,8 +12,8 @@
 
 | 你想要…… | 你其实在加的是 | 它住在哪 | 体量 |
 |---|---|---|---|
-| 让 OD 渲染一种新的 artifact（一份发票、一个 iOS 设置页、一张 one-pager……） | 一个 **Skill** | [`skills/<your-skill>/`](skills/) | 一个文件夹，约 2 个文件 |
-| 让 OD 说一种新品牌的视觉语言 | 一套 **Design System** | [`design-systems/<brand>/DESIGN.md`](design-systems/) | 一个 Markdown 文件 |
+| 让 AD 渲染一种新的 artifact（一份发票、一个 iOS 设置页、一张 one-pager……） | 一个 **Skill** | [`skills/<your-skill>/`](skills/) | 一个文件夹，约 2 个文件 |
+| 让 AD 说一种新品牌的视觉语言 | 一套 **Design System** | [`design-systems/<brand>/DESIGN.md`](design-systems/) | 一个 Markdown 文件 |
 | 接入一个新的 coding-agent CLI | 一个 **Agent adapter** | [`apps/daemon/src/agents.ts`](apps/daemon/src/agents.ts) | 一个数组里 ~10 行 |
 | 加功能、修 bug、从 [`open-codesign`][ocod] 移植一个 UX 模式 | 代码 | `apps/web/src/`、`apps/daemon/` | 普通 PR |
 | 改文档、补德语 / 中文翻译、修错别字 | 文档 | `README.md`、`README.de.md`、`README.zh-CN.md`、`docs/`、`QUICKSTART.md` | 一个 PR |
@@ -38,7 +38,7 @@ pnpm build                # 生产构建
 
 要求 Node `~24` 和 pnpm `10.33.x`。`nvm` / `fnm` 是可选路径；如果你习惯用它们，先执行 `nvm install 24 && nvm use 24` 或 `fnm install 24 && fnm use 24`。macOS、Linux、WSL2 是主要路径。Windows 原生应该能跑但不是主要目标 —— 跑不起来请开 issue。
 
-**开发 OD 本身不需要在 `PATH` 上装任何 agent CLI** —— daemon 会告诉你「找不到 agent」并落到 **Anthropic API · BYOK** 路径，反而是最快的开发循环。
+**开发 AD 本身不需要在 `PATH` 上装任何 agent CLI** —— daemon 会告诉你「找不到 agent」并落到 **Anthropic API · BYOK** 路径，反而是最快的开发循环。
 
 ---
 
@@ -61,7 +61,7 @@ skills/your-skill/
 
 ### `SKILL.md` 的 frontmatter
 
-前三个字段是 Claude Code 的基础规范 —— `name`、`description`、`triggers`。`od:` 下面所有字段都是 OD 特有的、可选的，但 **`od.mode`** 决定 skill 出现在哪一组（Prototype / Deck / Template / Design system）。
+前三个字段是 Claude Code 的基础规范 —— `name`、`description`、`triggers`。`od:` 下面所有字段都是 AD 特有的、可选的，但 **`od.mode`** 决定 skill 出现在哪一组（Prototype / Deck / Template / Design system）。
 
 ```yaml
 ---
@@ -268,10 +268,10 @@ node --experimental-strip-types scripts/sync-litellm-models.ts
 
 为了保持项目聚焦，请不要发以下类型的 PR：
 
-- **Vendor 一个模型运行时。** OD 整个赌注就是「你已有的 CLI 就够了」。我们不带 `pi-ai`、不带 OpenAI key、不带模型加载器。
+- **Vendor 一个模型运行时。** AD 整个赌注就是「你已有的 CLI 就够了」。我们不带 `pi-ai`、不带 OpenAI key、不带模型加载器。
 - **未经讨论不要把前端重写到别的栈。** Next.js 16 App Router + React 18 + TS 是当前底线。不要随手改成 Astro / Solid / Svelte 或其他框架。
 - **把 daemon 换成 serverless function。** Daemon 的存在意义就是拥有真实的 `cwd` 和 spawn 真实的 CLI。SPA 部署 Vercel 没问题，daemon 仍然是 daemon。
-- **加 telemetry / 分析 / phone-home。** OD 是 local-first。唯一的对外请求是用户明确配置的 provider。
+- **加 telemetry / 分析 / phone-home。** AD 是 local-first。唯一的对外请求是用户明确配置的 provider。
 - **打包二进制** 而没有附 license 文件和原作者归属。
 
 不确定自己的想法合不合适？开个 discussion 再写代码。

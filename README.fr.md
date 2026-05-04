@@ -33,13 +33,13 @@
 
 [Claude Design][cd] d’Anthropic, lancé le 17 avril 2026 avec Opus 4.7, a montré ce qui se passe lorsqu’un LLM cesse de produire seulement du texte et commence à livrer des design artifacts. Le produit est devenu viral, tout en restant closed-source, paid-only, cloud-only et lié au modèle comme aux Skills d’Anthropic. Aucun checkout possible, aucun self-hosting, aucun déploiement Vercel, aucun remplacement par votre propre agent.
 
-**Auto Design (OD) est l’alternative open source.** Même boucle, même mental model artifact-first, sans lock-in. Nous ne livrons pas d’agent : les meilleurs coding agents vivent déjà sur votre machine. OD les branche sur un workflow de design piloté par des Skills, exécutable localement avec `pnpm tools-dev`, déployable sur Vercel côté web, avec BYOK à chaque couche.
+**Auto Design (AD) est l’alternative open source.** Même boucle, même mental model artifact-first, sans lock-in. Nous ne livrons pas d’agent : les meilleurs coding agents vivent déjà sur votre machine. AD les branche sur un workflow de design piloté par des Skills, exécutable localement avec `pnpm tools-dev`, déployable sur Vercel côté web, avec BYOK à chaque couche.
 
 Tapez `make me a magazine-style pitch deck for our seed round`. Le question form interactif apparaît avant que le modèle n’improvise le moindre pixel. L’agent choisit l’une des cinq directions visuelles soigneusement sélectionnées. Un plan `TodoWrite` live arrive dans l’UI. Le daemon crée un vrai dossier projet sur disque avec un seed template, une layout library et une checklist de self-check. L’agent les lit, le pre-flight est obligatoire, puis il lance une critique en cinq dimensions sur sa propre sortie et émet un seul `<artifact>`, rendu quelques secondes plus tard dans une iframe sandboxée.
 
 Le résultat dépasse l’idée d’une IA qui tente simplement de faire du design. Le prompt stack pousse l’IA à se comporter comme un senior designer avec un vrai filesystem, une bibliothèque de palettes déterministe et une culture de checklist, au niveau fixé par Claude Design, en version ouverte et sous votre contrôle.
 
-OD s’appuie sur quatre projets open source :
+AD s’appuie sur quatre projets open source :
 
 - [**`alchaincyf/huashu-design`**](https://github.com/alchaincyf/huashu-design), la boussole de design philosophy. Le workflow Junior-Designer, le protocole en 5 étapes pour les assets de marque, la checklist anti-AI-slop, la self-critique en 5 dimensions et l’idée « 5 écoles × 20 philosophies design » derrière notre direction picker sont condensés dans [`apps/web/src/prompts/discovery.ts`](apps/web/src/prompts/discovery.ts).
 - [**`op7418/guizang-ppt-skill`**](https://github.com/op7418/guizang-ppt-skill), le mode deck. Inclus tel quel sous [`skills/guizang-ppt/`](skills/guizang-ppt/), avec licence originale préservée ; layouts magazine, hero WebGL, checklists P0/P1/P2.
@@ -78,7 +78,7 @@ OD s’appuie sur quatre projets open source :
 </td>
 <td width="50%">
 <img src="docs/screenshots/02-question-form.png" alt="02 · Question form de découverte du premier tour" /><br/>
-<sub><b>Question form de découverte</b> : avant que le modèle n’écrive un pixel, OD verrouille le brief : surface, audience, ton, contexte de marque, échelle. 30 secondes de boutons radio valent mieux que 30 minutes d’allers-retours.</sub>
+<sub><b>Question form de découverte</b> : avant que le modèle n’écrive un pixel, AD verrouille le brief : surface, audience, ton, contexte de marque, échelle. 30 secondes de boutons radio valent mieux que 30 minutes d’allers-retours.</sub>
 </td>
 </tr>
 <tr>
@@ -230,7 +230,7 @@ Le schéma `DESIGN.md` en 9 sections vient de [`VoltAgent/awesome-design-md`][ac
 
 ### 4 · Le question form évite 80 % des allers-retours.
 
-Le prompt stack d’OD impose `RULE 1` : tout nouveau design brief commence par un `<question-form id="discovery">` au lieu de code. Surface · audience · tone · brand context · scale · contraintes. Même un long brief laisse des décisions design ouvertes, comme le ton visuel, la posture couleur ou l’échelle ; le formulaire les verrouille en 30 secondes. Une mauvaise direction coûte un tour de chat, pas un deck terminé.
+Le prompt stack d’AD impose `RULE 1` : tout nouveau design brief commence par un `<question-form id="discovery">` au lieu de code. Surface · audience · tone · brand context · scale · contraintes. Même un long brief laisse des décisions design ouvertes, comme le ton visuel, la posture couleur ou l’échelle ; le formulaire les verrouille en 30 secondes. Une mauvaise direction coûte un tour de chat, pas un deck terminé.
 
 C’est le **mode Junior-Designer** tiré de [`huashu-design`](https://github.com/alchaincyf/huashu-design) : poser les questions dès le départ, montrer vite quelque chose de visible, même un wireframe en blocs gris, et permettre à l’utilisateur de corriger le tir à faible coût. Combiné au protocole brand-asset (locate · download · `grep` hex · write `brand-spec.md` · vocalise), c’est la raison principale pour laquelle la sortie cesse de ressembler à du freestyle IA et commence à ressembler à un designer qui a observé avant de peindre.
 
@@ -240,7 +240,7 @@ Le daemon lance la CLI avec `cwd` pointant vers le dossier artifact du projet so
 
 ### 6 · Le prompt stack est le produit.
 
-À l’envoi, OD compose plusieurs couches :
+À l’envoi, AD compose plusieurs couches :
 
 ```text
 DISCOVERY directives  (formulaire tour 1, branche marque tour 2, TodoWrite, critique 5 dimensions)
@@ -315,7 +315,7 @@ Pour le démarrage desktop/background, les redémarrages sur ports fixes et les 
 
 Au premier chargement :
 
-1. OD détecte les CLI d’agents présentes dans votre `PATH` et en choisit une automatiquement.
+1. AD détecte les CLI d’agents présentes dans votre `PATH` et en choisit une automatiquement.
 2. Il charge 31 Skills + 72 Design Systems.
 3. Il affiche le welcome dialog pour coller une clé Anthropic, nécessaire seulement pour le fallback BYOK.
 4. Il **crée automatiquement `./.od/`**, le dossier runtime local pour la DB SQLite, les artifacts par projet et les rendus enregistrés. Pas d’étape `od init` ; le daemon crée ce dont il a besoin au boot.
@@ -478,7 +478,7 @@ La bibliothèque de product systems est importée depuis [`VoltAgent/awesome-des
 
 ## Directions visuelles
 
-Quand l’utilisateur n’a pas de brand spec, l’agent émet un second formulaire avec cinq directions soigneusement sélectionnées, l’adaptation OD du fallback « 5 schools × 20 design philosophies » de [`huashu-design`](https://github.com/alchaincyf/huashu-design#%E8%AE%BE%E8%AE%A1%E6%96%B9%E5%90%91%E9%A1%BE%E9%97%AE-fallback). Chaque direction est une spec déterministe : palette OKLch, font stack, posture layout, références, que l’agent injecte tel quel dans le `:root` du seed template. Un clic radio → système visuel entièrement spécifié. Pas d’improvisation, pas d’AI-slop.
+Quand l’utilisateur n’a pas de brand spec, l’agent émet un second formulaire avec cinq directions soigneusement sélectionnées, l’adaptation AD du fallback « 5 schools × 20 design philosophies » de [`huashu-design`](https://github.com/alchaincyf/huashu-design#%E8%AE%BE%E8%AE%A1%E6%96%B9%E5%90%91%E9%A1%BE%E9%97%AE-fallback). Chaque direction est une spec déterministe : palette OKLch, font stack, posture layout, références, que l’agent injecte tel quel dans le `:root` du seed template. Un clic radio → système visuel entièrement spécifié. Pas d’improvisation, pas d’AI-slop.
 
 | Direction | Mood | Références |
 |---|---|---|
@@ -492,7 +492,7 @@ Spec complète → [`apps/web/src/prompts/directions.ts`](apps/web/src/prompts/d
 
 ## Génération média
 
-OD ne s’arrête pas au code. La même surface de chat qui produit du HTML `<artifact>` pilote aussi la génération **image**, **vidéo** et **audio**, avec des adapters modèle reliés à la pipeline média du daemon ([`apps/daemon/src/media-models.ts`](apps/daemon/src/media-models.ts), [`apps/web/src/media/models.ts`](apps/web/src/media/models.ts)). Chaque rendu arrive comme vrai fichier dans le workspace projet, `.png` pour l’image, `.mp4` pour la vidéo, et apparaît comme chip de téléchargement à la fin du tour.
+AD ne s’arrête pas au code. La même surface de chat qui produit du HTML `<artifact>` pilote aussi la génération **image**, **vidéo** et **audio**, avec des adapters modèle reliés à la pipeline média du daemon ([`apps/daemon/src/media-models.ts`](apps/daemon/src/media-models.ts), [`apps/web/src/media/models.ts`](apps/web/src/media/models.ts)). Chaque rendu arrive comme vrai fichier dans le workspace projet, `.png` pour l’image, `.mp4` pour la vidéo, et apparaît comme chip de téléchargement à la fin du tour.
 
 Trois familles de modèles portent la charge aujourd’hui :
 
@@ -578,7 +578,7 @@ La boucle chat / artifact est la plus visible, mais plusieurs capacités moins e
 
 ## Anti-AI-slop machinery
 
-Tout le mécanisme ci-dessous vient du playbook [`huashu-design`](https://github.com/alchaincyf/huashu-design), porté dans le prompt stack d’OD et rendu vérifiable par Skill via le pre-flight des side files :
+Tout le mécanisme ci-dessous vient du playbook [`huashu-design`](https://github.com/alchaincyf/huashu-design), porté dans le prompt stack d’AD et rendu vérifiable par Skill via le pre-flight des side files :
 
 - **Question form first.** Le tour 1 est seulement `<question-form>`, sans thinking, outils ni narration. L’utilisateur choisit des valeurs par défaut à la vitesse de boutons radio.
 - **Brand-spec extraction.** Quand l’utilisateur attache un screenshot ou une URL, l’agent suit un protocole en cinq étapes (locate · download · grep hex · codify `brand-spec.md` · vocalise) avant d’écrire du CSS. **Il ne devine jamais les couleurs de marque depuis la mémoire.**

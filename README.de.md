@@ -33,13 +33,13 @@
 
 Anthropics [Claude Design][cd] (veröffentlicht am 2026-04-17, Opus 4.7) hat gezeigt, was passiert, wenn ein LLM aufhört, Prosa zu schreiben, und anfängt, Design-Artefakte zu liefern. Es ging viral und blieb closed-source, nur bezahlt, nur Cloud, fest an Anthropics Modell und Anthropics Skills gebunden. Kein Checkout, kein Self-Hosting, kein Vercel-Deploy, kein Austausch gegen Ihren eigenen Agent.
 
-**Auto Design (OD) ist die Open-Source-Alternative.** Dieselbe Schleife, dasselbe artifact-first Denkmodell, aber ohne Lock-in. Wir liefern keinen Agent: Die stärksten coding agents laufen bereits auf Ihrem Laptop. Wir verbinden sie mit einem skillgesteuerten Design-Workflow, der lokal mit `pnpm tools-dev` läuft, die Web-Schicht zu Vercel deployen kann und auf jeder Ebene BYOK bleibt.
+**Auto Design (AD) ist die Open-Source-Alternative.** Dieselbe Schleife, dasselbe artifact-first Denkmodell, aber ohne Lock-in. Wir liefern keinen Agent: Die stärksten coding agents laufen bereits auf Ihrem Laptop. Wir verbinden sie mit einem skillgesteuerten Design-Workflow, der lokal mit `pnpm tools-dev` läuft, die Web-Schicht zu Vercel deployen kann und auf jeder Ebene BYOK bleibt.
 
 Geben Sie `make me a magazine-style pitch deck for our seed round` ein. Das interaktive Fragenformular erscheint, bevor das Modell auch nur ein Pixel improvisiert. Der Agent wählt eine von fünf kuratierten visuellen Richtungen. Ein live `TodoWrite` Plan streamt in die UI. Der daemon baut einen echten Projektordner auf der Festplatte mit Seed-Template, Layout-Bibliothek und Self-Check-Checklist. Der Agent liest sie, der Pre-Flight ist erzwungen, bewertet seine eigene Ausgabe mit einer fünfdimensionalen Kritik und gibt ein einzelnes `<artifact>` aus, das Sekunden später in einem sandboxed iframe rendert.
 
 Das ist nicht "AI versucht, etwas zu designen". Das ist eine AI, die durch den Prompt Stack darauf trainiert wurde, sich wie ein Senior Designer mit funktionierendem Dateisystem, deterministischer Palettenbibliothek und Checklist-Kultur zu verhalten: genau die Messlatte, die Claude Design gesetzt hat, aber offen und unter Ihrer Kontrolle.
 
-OD steht auf den Schultern von vier Open-Source-Projekten:
+AD steht auf den Schultern von vier Open-Source-Projekten:
 
 - [**`alchaincyf/huashu-design`**](https://github.com/alchaincyf/huashu-design) — der Design-Philosophie-Kompass. Junior-Designer Workflow, das 5-step brand-asset protocol, die anti-AI-slop checklist, die fünfdimensionale Self-Critique und die Idee "5 schools × 20 design philosophies" hinter unserem Direction Picker, alles verdichtet in [`apps/web/src/prompts/discovery.ts`](apps/web/src/prompts/discovery.ts).
 - [**`op7418/guizang-ppt-skill`**](https://github.com/op7418/guizang-ppt-skill) — der Deck-Modus. Unverändert unter [`skills/guizang-ppt/`](skills/guizang-ppt/) gebündelt, mit ursprünglicher LICENSE; magazinartige Layouts, WebGL-Hero, P0/P1/P2-Checklists.
@@ -77,7 +77,7 @@ OD steht auf den Schultern von vier Open-Source-Projekten:
 </td>
 <td width="50%">
 <img src="docs/screenshots/02-question-form.png" alt="02 · Turn-1 discovery form" /><br/>
-<sub><b>Turn-1 discovery form</b> — bevor das Modell ein Pixel schreibt, fixiert OD den Brief: Oberfläche, Zielgruppe, Ton, Brand-Kontext, Umfang. 30 Sekunden Radio Buttons schlagen 30 Minuten Redirects.</sub>
+<sub><b>Turn-1 discovery form</b> — bevor das Modell ein Pixel schreibt, fixiert AD den Brief: Oberfläche, Zielgruppe, Ton, Brand-Kontext, Umfang. 30 Sekunden Radio Buttons schlagen 30 Minuten Redirects.</sub>
 </td>
 </tr>
 <tr>
@@ -473,7 +473,7 @@ Die Bibliothek wird über [`scripts/sync-design-systems.ts`](scripts/sync-design
 
 ## Visuelle Richtungen
 
-Wenn der Nutzer keine Brand Spec hat, gibt der Agent ein zweites Formular mit fünf kuratierten Richtungen aus: die OD-Adaption von [`huashu-design`s "5 schools × 20 design philosophies" fallback](https://github.com/alchaincyf/huashu-design#%E8%AE%BE%E8%AE%A1%E6%96%B9%E5%90%91%E9%A1%BE%E9%97%AE-fallback). Jede Richtung ist eine deterministische Spec: Palette in OKLch, Font Stack, Layout-Posture-Cues, Referenzen. Der Agent bindet sie unverändert in das `:root` des Seed Templates. Ein Radio-Klick → ein vollständig spezifiziertes visuelles System. Keine Improvisation, kein AI-slop.
+Wenn der Nutzer keine Brand Spec hat, gibt der Agent ein zweites Formular mit fünf kuratierten Richtungen aus: die AD-Adaption von [`huashu-design`s "5 schools × 20 design philosophies" fallback](https://github.com/alchaincyf/huashu-design#%E8%AE%BE%E8%AE%A1%E6%96%B9%E5%90%91%E9%A1%BE%E9%97%AE-fallback). Jede Richtung ist eine deterministische Spec: Palette in OKLch, Font Stack, Layout-Posture-Cues, Referenzen. Der Agent bindet sie unverändert in das `:root` des Seed Templates. Ein Radio-Klick → ein vollständig spezifiziertes visuelles System. Keine Improvisation, kein AI-slop.
 
 | Richtung | Stimmung | Referenzen |
 |---|---|---|
@@ -487,7 +487,7 @@ Vollständige Spec → [`apps/web/src/prompts/directions.ts`](apps/web/src/promp
 
 ## Medienerzeugung
 
-OD endet nicht beim Code. Dieselbe Chat-Oberfläche, die `<artifact>`-HTML produziert, treibt auch **Image-**, **Video-** und **Audio-**Generierung — die Modell-Adapter sind in der daemon-Media-Pipeline verdrahtet ([`apps/daemon/src/media-models.ts`](apps/daemon/src/media-models.ts), [`apps/web/src/media/models.ts`](apps/web/src/media/models.ts)). Jedes Render landet als echte Datei im Projekt-Workspace — `.png` für Image, `.mp4` für Video — und erscheint als Download-Chip am Ende des Turns.
+AD endet nicht beim Code. Dieselbe Chat-Oberfläche, die `<artifact>`-HTML produziert, treibt auch **Image-**, **Video-** und **Audio-**Generierung — die Modell-Adapter sind in der daemon-Media-Pipeline verdrahtet ([`apps/daemon/src/media-models.ts`](apps/daemon/src/media-models.ts), [`apps/web/src/media/models.ts`](apps/web/src/media/models.ts)). Jedes Render landet als echte Datei im Projekt-Workspace — `.png` für Image, `.mp4` für Video — und erscheint als Download-Chip am Ende des Turns.
 
 Drei Modellfamilien tragen heute die Last:
 
@@ -554,13 +554,13 @@ Elf HyperFrames-Prompts liegen unter [`prompt-templates/video/hyperframes-*.json
 </tr>
 </table>
 
-Das Muster ist dasselbe wie sonst: Template wählen, Brief editieren, senden. Der Agent liest das mitgelieferte `skills/hyperframes/SKILL.md` (das den OD-spezifischen Render-Workflow enthält — Composition-Source-Files in einen `.hyperframes-cache/`, damit sie den File-Workspace nicht verschmutzen, daemon dispatcht `npx hyperframes render`, um den macOS-sandbox-exec/Puppeteer-Hang zu umgehen, nur die finale `.mp4` landet als Projekt-Chip), schreibt die Composition und liefert ein MP4. Catalog-Block-Thumbnails © HeyGen, von deren CDN; das OSS-Framework selbst ist Apache-2.0.
+Das Muster ist dasselbe wie sonst: Template wählen, Brief editieren, senden. Der Agent liest das mitgelieferte `skills/hyperframes/SKILL.md` (das den AD-spezifischen Render-Workflow enthält — Composition-Source-Files in einen `.hyperframes-cache/`, damit sie den File-Workspace nicht verschmutzen, daemon dispatcht `npx hyperframes render`, um den macOS-sandbox-exec/Puppeteer-Hang zu umgehen, nur die finale `.mp4` landet als Projekt-Chip), schreibt die Composition und liefert ein MP4. Catalog-Block-Thumbnails © HeyGen, von deren CDN; das OSS-Framework selbst ist Apache-2.0.
 
 > **Auch verdrahtet, aber noch nicht als Templates aufgetaucht:** Kling 2.0 / 1.6 / 1.5, Veo 3 / Veo 2, Sora 2 / Sora 2-Pro (via Fal), MiniMax video-01 — alle in `VIDEO_MODELS` ([`apps/web/src/media/models.ts`](apps/web/src/media/models.ts)). Suno v5 / v4.5, Udio v2, Lyria 2 (Music) und gpt-4o-mini-tts, MiniMax TTS (Speech) decken die Audio-Surface ab. Templates dafür sind offene Beiträge — JSON in `prompt-templates/video/` oder `prompt-templates/audio/` legen, taucht im Picker auf.
 
 ## Jenseits des Chats — was sonst mitgeliefert wird
 
-Der Chat-/Artifact-Loop steht im Rampenlicht, aber einige weniger sichtbare Fähigkeiten sind bereits verdrahtet und wichtig, bevor Sie OD mit etwas anderem vergleichen:
+Der Chat-/Artifact-Loop steht im Rampenlicht, aber einige weniger sichtbare Fähigkeiten sind bereits verdrahtet und wichtig, bevor Sie AD mit etwas anderem vergleichen:
 
 - **Claude Design ZIP import.** Ziehen Sie einen Export von claude.ai in den Welcome Dialog. `POST /api/import/claude-design` extrahiert ihn in ein echtes `.od/projects/<id>/`, öffnet die Entry-Datei als Tab und bereitet einen Continue-where-Anthropic-left-off Prompt für Ihren lokalen Agent vor. Kein erneutes Prompting, kein "ask the model to re-create what we just had". ([`apps/daemon/src/server.ts`](apps/daemon/src/server.ts) — `/api/import/claude-design`)
 - **OpenAI-kompatibler BYOK proxy.** `POST /api/proxy/stream` nimmt `{ baseUrl, apiKey, model, messages }`, normalisiert den Pfad (`…/v1/chat/completions`), leitet SSE-Chunks an den Browser zurück und lehnt loopback / link-local / RFC1918 Ziele ab, um SSRF zu verhindern. Alles, was das OpenAI Chat Schema spricht, funktioniert: Anthropic-via-OpenAI shim, DeepSeek, Groq, MiMo, OpenRouter, Ihr selbst gehostetes vLLM. MiMo bekommt automatisch `tool_choice: 'none'`, weil sein Tool Schema bei freier Generierung Probleme macht.
