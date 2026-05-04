@@ -177,7 +177,7 @@ The eight question groups, in order:
 | 8     | `cta` + `footer.{columns[4],mega}`                      | All         | Mega kicker is a `MixedText` like the headlines |
 
 Open [`inputs.example.json`](./inputs.example.json) for a complete
-worked example (Open Design itself).
+worked example (Auto Design itself).
 
 ### 2. Decide the image strategy
 
@@ -277,14 +277,14 @@ skills/editorial-collage/
 ├── README.md                # quick-start
 ├── schema.ts                # typed inputs (single source of truth)
 ├── styles.css               # Atelier Zero stylesheet (single source of truth)
-├── inputs.example.json      # Open Design as the worked example
+├── inputs.example.json      # Auto Design as the worked example
 ├── example.html             # canonical rendering (regenerated from inputs.example.json)
 ├── scripts/
 │   ├── compose.ts           # inputs.json + styles.css → index.html
 │   ├── imagegen.ts          # gpt-image-2 wrapper (fal.ai)
 │   └── placeholder.ts       # SVG paper-textured frames
 └── assets/
-    ├── *.png                # 16 collage plates (Open Design instance)
+    ├── *.png                # 16 collage plates (Auto Design instance)
     ├── image-manifest.json  # slot → file/dimensions/prompt mapping
     └── imagegen-prompts.md  # human-readable prompt pack
 ```

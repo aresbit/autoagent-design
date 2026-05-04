@@ -1,5 +1,5 @@
 /**
- * The base system prompt for Open Design.
+ * The base system prompt for Auto Design.
  *
  * Adapted from claude.ai/design's "expert designer" prompt — same identity,
  * workflow, and content philosophy, retargeted to the tools an OD-managed

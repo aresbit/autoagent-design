@@ -1,7 +1,7 @@
 # Task Plan: autoagent-design-opencc-migration
 
 ## Goal
-将 opencc (claude-js) 集成为 Open Design 桌面设计软件的主 AI agent 大脑，完整的 Electron 桌面应用。
+将 opencc (claude-js) 集成为 Auto Design 桌面设计软件的主 AI agent 大脑，完整的 Electron 桌面应用。
 
 ## Desktop 架构设计
 
@@ -11,7 +11,7 @@
 │ ┌─────────────────────────────────────────────┐ │
 │ │ BrowserWindow 1280x900                      │ │
 │ │ 加载 web URL → http://127.0.0.1:17573       │ │
-│ │ title: "Open Design"                         │ │
+│ │ title: "Auto Design"                         │ │
 │ │ macOS: hiddenInset titleBar                 │ │
 │ │ sandbox: true, contextIsolation: true       │ │
 │ └─────────────────────────────────────────────┘ │

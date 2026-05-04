@@ -95,7 +95,7 @@ ls -la apps/daemon/dist/cli.js
 curl -s http://127.0.0.1:7457/api/health
 ```
 
-その後、古いターミナルエージェントセッションを再開する代わりに、Open Design アプリからプロジェクトを再度開いてください。daemon から起動されたエージェントは、次のような値を確認できるはずです：
+その後、古いターミナルエージェントセッションを再開する代わりに、Auto Design アプリからプロジェクトを再度開いてください。daemon から起動されたエージェントは、次のような値を確認できるはずです：
 
 ```bash
 echo "OD_BIN=$OD_BIN"
@@ -179,7 +179,7 @@ open-design/
 │   └── desktop/               # Electron ランタイム、tools-dev によって起動／検査される
 ├── packages/
 │   ├── contracts/             # 共有 web/daemon アプリ契約
-│   ├── sidecar-proto/         # Open Design sidecar プロトコル契約
+│   ├── sidecar-proto/         # Auto Design sidecar プロトコル契約
 │   ├── sidecar/               # 汎用 sidecar ランタイムプリミティブ
 │   └── platform/              # 汎用プロセス／プラットフォームプリミティブ
 ├── tools/dev/                 # `pnpm tools-dev` ライフサイクルと inspect CLI
@@ -216,8 +216,8 @@ open-design/
 
 - **「no agents found on PATH」** — `claude`、`codex`、`devin`、`gemini`、`opencode`、`cursor-agent`、`qwen`、`copilot` のいずれかをインストールしてください。または、トップバーで「Anthropic API · BYOK」に切り替え、**設定** にキーを貼り付けます。
 - **/api/chat で daemon が 500 を返す** — daemon ターミナルで stderr の末尾を確認してください。通常は CLI が引数を拒否しています。CLI ごとに argv の形式が異なります。調整が必要な場合は `apps/daemon/src/agents.ts` の `buildArgs` を参照してください。
-- **メディア生成で `OD_BIN` が欠落、または daemon URL が `:0`** — 上記のメディアディスパッチャーチェックを実行してください。古い CLI セッションを再開せず、Open Design アプリからプロジェクトを再度開いて、daemon が新しい `OD_*` 変数を注入できるようにしてください。
-- **Codex がプラグインコンテキストを多く読み込みすぎる** — `OD_CODEX_DISABLE_PLUGINS=1 pnpm tools-dev` で Open Design を起動すると、daemon から起動された Codex プロセスが `--disable plugins` で実行されます。
+- **メディア生成で `OD_BIN` が欠落、または daemon URL が `:0`** — 上記のメディアディスパッチャーチェックを実行してください。古い CLI セッションを再開せず、Auto Design アプリからプロジェクトを再度開いて、daemon が新しい `OD_*` 変数を注入できるようにしてください。
+- **Codex がプラグインコンテキストを多く読み込みすぎる** — `OD_CODEX_DISABLE_PLUGINS=1 pnpm tools-dev` で Auto Design を起動すると、daemon から起動された Codex プロセスが `--disable plugins` で実行されます。
 - **アーティファクトがレンダリングされない** — モデルが `<artifact>` でラップせずにテキストを生成しました。システムプロンプトが通っていることを確認し（daemon ログを確認）、より高性能なモデルまたは厳格なスキルへの切り替えを検討してください。
 
 ## ビジョンへのマッピング

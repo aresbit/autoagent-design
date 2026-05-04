@@ -37,13 +37,13 @@ export const hu: Dict = {
   'common.daysShort': '{n}n',
   'common.untitled': 'Cím nélkül',
 
-  'app.brand': 'Open Design',
+  'app.brand': 'Auto Design',
   'app.brandPill': 'Kutatási előzetes',
-  'app.brandSubtitle': 'a Nexu Labs-tól',
+  'app.brandSubtitle': '',
   'app.welcomeLoading': 'Munkaterület betöltése…',
 
   'settings.welcomeKicker': 'Üdvözlünk',
-  'settings.welcomeTitle': 'Open Design beállítása',
+  'settings.welcomeTitle': 'Auto Design beállítása',
   'settings.welcomeSubtitle':
     'Válaszd ki, hogyan szeretnéd futtatni a generálásokat. Ezt bármikor módosíthatod a felső sáv Beállítások gombjával.',
   'settings.kicker': 'Beállítások',
@@ -685,7 +685,7 @@ export const hu: Dict = {
   'pet.navTitle': 'Háziállatok',
   'pet.navHint': 'Befogadás vagy testreszabás',
   'pet.tabBuiltIn': 'Beépített',
-  'pet.tabBuiltInHint': 'Az Open Designnal csomagolt társak — válassz egyet és fogadd örökbe.',
+  'pet.tabBuiltInHint': 'Az Auto Designnal csomagolt társak — válassz egyet és fogadd örökbe.',
   'pet.builtInEmpty': 'A beépített állatok most nem elérhetők. Frissítsd a Közösség fület, amint a daemon újra online.',
   'pet.tabCustom': 'Egyéni',
   'pet.tabCustomHint': 'Készíts sajátot névvel, jellel, színnel vagy sprite-tal.',
@@ -797,7 +797,7 @@ export const hu: Dict = {
   'pet.communitySyncDone': '{wrote} új háziállat szinkronizálva (összesen {total}).',
   'pet.communitySyncFailed': 'A szinkronizálás sikertelen: {error}',
   'pet.codexBundled': 'Beépített',
-  'pet.codexBundledTitle': 'Az Open Designgal érkezik — letöltés nem szükséges.',
+  'pet.codexBundledTitle': 'Az Auto Designgal érkezik — letöltés nem szükséges.',
 
   'settings.notifications': 'Értesítések',
   'settings.notificationsHint': 'Hang és asztali értesítés a feladat befejezésekor',

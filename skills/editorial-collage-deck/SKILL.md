@@ -30,7 +30,7 @@ inputs:
     schema_path: ./schema.ts#BrandBlock
   - id: deck_title
     label: Kicker shown in the HUD top bar
-    description: e.g. `'Open Design · Vol. 01 / Issue Nº 26'`.
+    description: e.g. `'Auto Design · Vol. 01 / Issue Nº 26'`.
   - id: slides
     label: Ordered list of typed slides
     description: >

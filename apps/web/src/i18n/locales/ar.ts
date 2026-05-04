@@ -37,13 +37,13 @@ export const ar: Dict = {
   'common.daysShort': '{n} ي',
   'common.untitled': 'بدون عنوان',
 
-  'app.brand': 'Open Design',
+  'app.brand': 'Auto Design',
   'app.brandPill': 'معاينة البحث',
-  'app.brandSubtitle': 'بواسطة Nexu Labs',
+  'app.brandSubtitle': '',
   'app.welcomeLoading': 'جاري تحميل مساحة العمل...',
 
   'settings.welcomeKicker': 'مرحباً',
-  'settings.welcomeTitle': 'إعداد Open Design',
+  'settings.welcomeTitle': 'إعداد Auto Design',
   'settings.welcomeSubtitle':
     "اختر كيف تريد تشغيل الأجيال. يمكنك تغيير هذا في أي وقت من زر الإعدادات في الشريط العلوي.",
   'settings.kicker': 'الإعدادات',
@@ -685,7 +685,7 @@ export const ar: Dict = {
   'pet.navTitle': 'الحيوانات الأليفة',
   'pet.navHint': 'تبنَّ أو خصص',
   'pet.tabBuiltIn': 'مدمج',
-  'pet.tabBuiltInHint': 'رفقاء منتقون مدمجون مع Open Design - اختر واحداً وتبنَّه.',
+  'pet.tabBuiltInHint': 'رفقاء منتقون مدمجون مع Auto Design - اختر واحداً وتبنَّه.',
   'pet.builtInEmpty': 'الحيوانات الأليفة المدمجة غير متوفرة حالياً. حاول تحديث تبويب المجتمع بمجرد اتصال البرنامج الخفي.',
   'pet.tabCustom': 'مخصص',
   'pet.tabCustomHint': 'اصنع خاصتك باسم، رمز، لون أو صورة.',
@@ -787,7 +787,7 @@ export const ar: Dict = {
   'pet.communitySyncDone': 'تمت مزامنة {wrote} حيواناً جديداً ({total} إجمالي).',
   'pet.communitySyncFailed': 'فشلت المزامنة: {error}',
   'pet.codexBundled': 'مدمج',
-  'pet.codexBundledTitle': 'يأتي مع Open Design - لا حاجة للتحميل.',
+  'pet.codexBundledTitle': 'يأتي مع Auto Design - لا حاجة للتحميل.',
 
   'settings.notifications': 'الإشعارات',
   'settings.notificationsHint': 'صوت وإشعار سطح المكتب عند اكتمال المهمة',

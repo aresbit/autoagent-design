@@ -3,7 +3,7 @@
   "version": "0.3.0",
   "private": true,
   "type": "module",
-  "description": "Shared pure TypeScript contracts for the Open Design web/daemon boundary.",
+  "description": "Shared pure TypeScript contracts for the Auto Design web/daemon boundary.",
   "exports": {
     ".": {
       "types": "./src/index.ts",

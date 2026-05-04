@@ -37,13 +37,13 @@ export const fa: Dict = {
   'common.daysShort': '{n}ر',
   'common.untitled': 'بدون عنوان',
 
-  'app.brand': 'Open Design',
+  'app.brand': 'Auto Design',
   'app.brandPill': 'پیش‌نمایش تحقیقاتی',
-  'app.brandSubtitle': 'توسط Nexu Labs',
+  'app.brandSubtitle': '',
   'app.welcomeLoading': 'در حال بارگذاری فضای کاری…',
 
   'settings.welcomeKicker': 'خوش آمدید',
-  'settings.welcomeTitle': 'Open Design را راه‌اندازی کنید',
+  'settings.welcomeTitle': 'Auto Design را راه‌اندازی کنید',
   'settings.welcomeSubtitle':
     'نحوه اجرای تولیدات را انتخاب کنید. می‌توانید هر زمان از دکمه تنظیمات در نوار بالا این را تغییر دهید.',
   'settings.kicker': 'تنظیمات',
@@ -683,7 +683,7 @@ export const fa: Dict = {
 
   'pet.title': 'حیوان خانگی',
   'pet.tabBuiltIn': 'پیش‌فرض',
-  'pet.tabBuiltInHint': 'همراهان منتخب همراه Open Design — یکی را انتخاب و فرزندخوانده کن.',
+  'pet.tabBuiltInHint': 'همراهان منتخب همراه Auto Design — یکی را انتخاب و فرزندخوانده کن.',
   'pet.builtInEmpty': 'حیوانات داخلی در حال حاضر در دسترس نیستند. وقتی دیمن دوباره فعال شد، تب جامعه را تازه کن.',
   'pet.tabCustom': 'سفارشی',
   'pet.tabCustomHint': 'نام، نشان، رنگ یا اسپرایت دلخواه خودت را تنظیم کن.',
@@ -788,7 +788,7 @@ export const fa: Dict = {
   'pet.communitySyncDone': '{wrote} حیوان جدید همگام شد (مجموع {total}).',
   'pet.communitySyncFailed': 'خطا در همگام‌سازی: {error}',
   'pet.codexBundled': 'همراه',
-  'pet.codexBundledTitle': 'همراه Open Design ارائه می‌شود — نیازی به دانلود نیست.',
+  'pet.codexBundledTitle': 'همراه Auto Design ارائه می‌شود — نیازی به دانلود نیست.',
 
   'settings.notifications': 'اعلان‌ها',
   'settings.notificationsHint': 'صدا و اعلان دسکتاپ هنگام تکمیل وظیفه',

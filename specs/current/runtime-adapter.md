@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Runtime Adapter is the daemon layer responsible for adapting local AI agent CLIs. It converts Open Design's unified generation requests into the actual command-line invocations for each CLI, and converts CLI output into streaming events that the frontend can consume.
+Runtime Adapter is the daemon layer responsible for adapting local AI agent CLIs. It converts Auto Design's unified generation requests into the actual command-line invocations for each CLI, and converts CLI output into streaming events that the frontend can consume.
 
 The current implementation is concentrated in:
 

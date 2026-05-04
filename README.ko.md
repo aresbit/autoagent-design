@@ -1,9 +1,9 @@
-# Open Design
+# Auto Design
 
 > **[Claude Design][cd]의 오픈소스 대안.** 로컬 우선, 웹 배포 가능, 모든 레이어에서 BYOK — `PATH`에서 자동 감지되는 **10개의 코딩 에이전트 CLI**(Claude Code, Codex, Cursor Agent, Gemini CLI, OpenCode, Qwen, GitHub Copilot CLI, Hermes, Kimi, Pi)가 **31개의 조합 가능한 Skill**과 **72개의 브랜드급 디자인 시스템**으로 구동되는 디자인 엔진이 됩니다. CLI가 하나도 없다? OpenAI 호환 BYOK 프록시가 spawn만 빠진 동일한 루프를 돌립니다.
 
 <p align="center">
-  <img src="docs/assets/banner.png" alt="Open Design — 노트북 위의 에이전트와 함께 설계하는 표지" width="100%" />
+  <img src="docs/assets/banner.png" alt="Auto Design — 노트북 위의 에이전트와 함께 설계하는 표지" width="100%" />
 </p>
 
 <p align="center">
@@ -33,7 +33,7 @@
 
 Anthropic의 [Claude Design][cd](2026-04-17 출시, Opus 4.7 기반)은 LLM이 장문의 글쓰기를 멈추고 디자인 산출물을 직접 내놓기 시작했을 때 어떤 일이 일어나는지 보여주었습니다. 순식간에 화제가 되었지만, 여전히 **클로즈드 소스**, 유료, 클라우드 전용, Anthropic 모델과 Anthropic 내부 skill에 종속된 상태입니다. 체크아웃도, 자가 호스팅도, Vercel 배포도, 에이전트 교체도 불가능합니다.
 
-**Open Design(OD)은 그 오픈소스 대안입니다.** 동일한 루프, 동일한 '아티팩트 우선' 사고방식, 락인 없음. 우리는 에이전트를 만들지 않습니다 — 가장 강력한 코딩 에이전트는 이미 여러분의 노트북에 있습니다. 우리는 그것을 skill 기반 디자인 워크플로에 연결할 뿐입니다. 로컬에서는 `pnpm tools-dev`로 실행하고, 웹 레이어는 Vercel에 배포할 수 있으며, 모든 레이어에서 BYOK(자체 키 사용)가 가능합니다.
+**Auto Design(OD)은 그 오픈소스 대안입니다.** 동일한 루프, 동일한 '아티팩트 우선' 사고방식, 락인 없음. 우리는 에이전트를 만들지 않습니다 — 가장 강력한 코딩 에이전트는 이미 여러분의 노트북에 있습니다. 우리는 그것을 skill 기반 디자인 워크플로에 연결할 뿐입니다. 로컬에서는 `pnpm tools-dev`로 실행하고, 웹 레이어는 Vercel에 배포할 수 있으며, 모든 레이어에서 BYOK(자체 키 사용)가 가능합니다.
 
 `시드 라운드를 위한 매거진 스타일 피치덱 만들어줘`라고 입력하세요. 모델이 픽셀 하나 그리기 전에 **초기화 질문 폼**이 먼저 등장합니다. 에이전트는 5개의 엄선된 시각적 방향 중 하나를 선택합니다. 실시간 `TodoWrite` 계획 카드가 UI에 스트리밍됩니다. Daemon이 디스크에 실제 프로젝트 폴더를 생성하며, seed 템플릿, 레이아웃 라이브러리, 자가 점검 체크리스트가 포함됩니다. 에이전트는 **pre-flight를 강제**로 읽고, 자신의 출력물에 대해 **5차원 검토**를 실행하며, 몇 초 후 샌드박스 iframe에 렌더링되는 단일 `<artifact>`를 내보냅니다.
 
@@ -380,7 +380,7 @@ open-design/
 │
 ├── packages/
 │   ├── contracts/                 ← 공유 web/daemon app contracts
-│   ├── sidecar-proto/             ← Open Design sidecar protocol contract
+│   ├── sidecar-proto/             ← Auto Design sidecar protocol contract
 │   ├── sidecar/                   ← generic sidecar runtime primitives
 │   └── platform/                  ← generic process/platform primitives
 │
@@ -527,7 +527,7 @@ OD는 코드에서 끝나지 않습니다. `<artifact>` HTML을 만드는 동일
 
 ### HyperFrames — HTML→MP4 모션 그래픽(11개의 즉시 복제 가능한 템플릿)
 
-[**`heygen-com/hyperframes`**](https://github.com/heygen-com/hyperframes)는 HeyGen이 오픈소스화한 에이전트 네이티브 비디오 프레임워크입니다 — 당신(또는 에이전트)이 HTML + CSS + GSAP을 작성하면 HyperFrames가 headless Chrome + FFmpeg로 결정론적으로 MP4를 렌더링합니다. Open Design은 HyperFrames를 일급 비디오 모델(`hyperframes-html`)로 daemon dispatch에 연결하고, 추가로 `skills/hyperframes/` skill을 동봉해 timeline 계약, 씬 트랜지션 규칙, audio-reactive 패턴, 자막/TTS, 카탈로그 블록(`npx hyperframes add <slug>`)을 에이전트에게 가르칩니다.
+[**`heygen-com/hyperframes`**](https://github.com/heygen-com/hyperframes)는 HeyGen이 오픈소스화한 에이전트 네이티브 비디오 프레임워크입니다 — 당신(또는 에이전트)이 HTML + CSS + GSAP을 작성하면 HyperFrames가 headless Chrome + FFmpeg로 결정론적으로 MP4를 렌더링합니다. Auto Design은 HyperFrames를 일급 비디오 모델(`hyperframes-html`)로 daemon dispatch에 연결하고, 추가로 `skills/hyperframes/` skill을 동봉해 timeline 계약, 씬 트랜지션 규칙, audio-reactive 패턴, 자막/TTS, 카탈로그 블록(`npx hyperframes add <slug>`)을 에이전트에게 가르칩니다.
 
 11개의 HyperFrames prompt가 [`prompt-templates/video/hyperframes-*.json`](prompt-templates/video/)에 들어 있고, 각각이 특정 아키타입을 만들어내는 구체적인 brief입니다:
 
@@ -582,7 +582,7 @@ OD는 코드에서 끝나지 않습니다. `<artifact>` HTML을 만드는 동일
 
 ## 비교
 
-| 축 | [Claude Design][cd] (Anthropic) | [Open CoDesign][ocod] | **Open Design** |
+| 축 | [Claude Design][cd] (Anthropic) | [Open CoDesign][ocod] | **Auto Design** |
 |---|---|---|---|
 | 라이선스 | 클로즈드 | MIT | **Apache-2.0** |
 | 폼 팩터 | 웹(claude.ai) | 데스크탑(Electron) | **웹앱 + 로컬 daemon** |
@@ -676,7 +676,7 @@ daemon 부팅 시 `PATH`에서 자동 감지됩니다. 설정 필요 없음. 스
 ## 스타 주세요
 
 <p align="center">
-  <a href="https://github.com/nexu-io/open-design"><img src="docs/assets/star-us.png" alt="GitHub에서 Open Design에 스타 주기 — github.com/nexu-io/open-design" width="100%" /></a>
+  <a href="https://github.com/nexu-io/open-design"><img src="docs/assets/star-us.png" alt="GitHub에서 Auto Design에 스타 주기 — github.com/nexu-io/open-design" width="100%" /></a>
 </p>
 
 이것이 30분을 절약해줬다면 — ★를 주세요. 스타가 임대료를 내지는 않지만, 다음 디자이너, 에이전트, 기여자에게 이 실험이 그들의 관심을 받을 가치가 있다는 것을 알려줍니다. 한 번의 클릭, 3초, 진짜 신호: [github.com/nexu-io/open-design](https://github.com/nexu-io/open-design).
@@ -693,10 +693,10 @@ daemon 부팅 시 `PATH`에서 자동 감지됩니다. 설정 필요 없음. 스
 
 ## 컨트리뷰터
 
-Open Design을 앞으로 나아가게 도와준 모든 분께 감사드립니다 — 코드, 문서, 피드백, 새 skill, 새 디자인 시스템, 또는 날카로운 이슈 하나라도. 모든 진짜 기여가 의미 있고, 아래의 벽이 가장 직접적인 "감사합니다"입니다.
+Auto Design을 앞으로 나아가게 도와준 모든 분께 감사드립니다 — 코드, 문서, 피드백, 새 skill, 새 디자인 시스템, 또는 날카로운 이슈 하나라도. 모든 진짜 기여가 의미 있고, 아래의 벽이 가장 직접적인 "감사합니다"입니다.
 
 <a href="https://github.com/nexu-io/open-design/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=nexu-io/open-design&cache_bust=2026-05-04" alt="Open Design 컨트리뷰터" />
+  <img src="https://contrib.rocks/image?repo=nexu-io/open-design&cache_bust=2026-05-04" alt="Auto Design 컨트리뷰터" />
 </a>
 
 첫 PR을 보냈다면 — 환영합니다. [`good-first-issue`](https://github.com/nexu-io/open-design/labels/good-first-issue) 레이블이 시작점입니다.
@@ -704,7 +704,7 @@ Open Design을 앞으로 나아가게 도와준 모든 분께 감사드립니다
 ## 저장소 활동
 
 <picture>
-  <img alt="Open Design — 저장소 지표" src="docs/assets/github-metrics.svg" />
+  <img alt="Auto Design — 저장소 지표" src="docs/assets/github-metrics.svg" />
 </picture>
 
 위의 SVG는 [`.github/workflows/metrics.yml`](.github/workflows/metrics.yml)이 [`lowlighter/metrics`](https://github.com/lowlighter/metrics)를 사용해 매일 자동으로 다시 생성합니다. 즉시 새로 고치려면 **Actions** 탭에서 수동 트리거하세요; 더 풍부한 플러그인(traffic, follow-up time 등)을 켜려면 저장소 secrets에 fine-grained PAT를 `METRICS_TOKEN`이라는 이름으로 추가하세요.
@@ -715,7 +715,7 @@ Open Design을 앞으로 나아가게 도와준 모든 분께 감사드립니다
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&theme=dark&cache_bust=2026-05-04" />
     <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-04" />
-    <img alt="Open Design star history" src="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-04" />
+    <img alt="Auto Design star history" src="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-04" />
   </picture>
 </a>
 

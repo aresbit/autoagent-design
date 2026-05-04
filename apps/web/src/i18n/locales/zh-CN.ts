@@ -37,13 +37,13 @@ export const zhCN: Dict = {
   'common.daysShort': '{n}天',
   'common.untitled': '未命名',
 
-  'app.brand': 'Open Design',
+  'app.brand': 'Auto Design',
   'app.brandPill': '研究预览版',
-  'app.brandSubtitle': '由 Nexu Labs 出品',
+  'app.brandSubtitle': '',
   'app.welcomeLoading': '正在加载工作区…',
 
   'settings.welcomeKicker': '欢迎',
-  'settings.welcomeTitle': '初始化 Open Design',
+  'settings.welcomeTitle': '初始化 Auto Design',
   'settings.welcomeSubtitle':
     '选择你希望使用的执行方式。后续可以随时从顶部「设置」按钮中修改。',
   'settings.kicker': '设置',
@@ -664,7 +664,7 @@ export const zhCN: Dict = {
 
   'pet.title': '宠物',
   'pet.tabBuiltIn': '内置',
-  'pet.tabBuiltInHint': 'Open Design 内置的精选宠物 — 一键领养。',
+  'pet.tabBuiltInHint': 'Auto Design 内置的精选宠物 — 一键领养。',
   'pet.builtInEmpty': '暂时无法加载内置宠物。等本地服务恢复后,刷新「社区」页签再试。',
   'pet.tabCustom': '自定义',
   'pet.tabCustomHint': '自己取名、选符号或上传精灵图。',
@@ -769,7 +769,7 @@ export const zhCN: Dict = {
   'pet.communitySyncDone': '已同步 {wrote} 个新宠物（共 {total} 个）。',
   'pet.communitySyncFailed': '同步失败：{error}',
   'pet.codexBundled': '内置',
-  'pet.codexBundledTitle': 'Open Design 内置宠物，无需下载。',
+  'pet.codexBundledTitle': 'Auto Design 内置宠物，无需下载。',
 
   'settings.notifications': '通知',
   'settings.notificationsHint': '任务完成时的声音和桌面通知',

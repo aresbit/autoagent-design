@@ -1,9 +1,9 @@
-# Open Design
+# Auto Design
 
 > **Die Open-Source-Alternative zu [Claude Design][cd].** Local-first, web-deploybar, BYOK auf jeder Ebene: **10 coding-agent CLIs** werden automatisch in Ihrem `PATH` erkannt (Claude Code, Codex, Cursor Agent, Gemini CLI, OpenCode, Qwen, GitHub Copilot CLI, Hermes, Kimi, Pi) und werden zur Design-Engine, gesteuert von **31 kombinierbaren Skills** und **72 brandreifen Design Systems**. Keine CLI? Ein OpenAI-kompatibler BYOK-Proxy ist dieselbe Schleife ohne Spawn.
 
 <p align="center">
-  <img src="docs/assets/banner.png" alt="Open Design — editorial cover: design with the agent on your laptop" width="100%" />
+  <img src="docs/assets/banner.png" alt="Auto Design — editorial cover: design with the agent on your laptop" width="100%" />
 </p>
 
 <p align="center">
@@ -33,7 +33,7 @@
 
 Anthropics [Claude Design][cd] (veröffentlicht am 2026-04-17, Opus 4.7) hat gezeigt, was passiert, wenn ein LLM aufhört, Prosa zu schreiben, und anfängt, Design-Artefakte zu liefern. Es ging viral und blieb closed-source, nur bezahlt, nur Cloud, fest an Anthropics Modell und Anthropics Skills gebunden. Kein Checkout, kein Self-Hosting, kein Vercel-Deploy, kein Austausch gegen Ihren eigenen Agent.
 
-**Open Design (OD) ist die Open-Source-Alternative.** Dieselbe Schleife, dasselbe artifact-first Denkmodell, aber ohne Lock-in. Wir liefern keinen Agent: Die stärksten coding agents laufen bereits auf Ihrem Laptop. Wir verbinden sie mit einem skillgesteuerten Design-Workflow, der lokal mit `pnpm tools-dev` läuft, die Web-Schicht zu Vercel deployen kann und auf jeder Ebene BYOK bleibt.
+**Auto Design (OD) ist die Open-Source-Alternative.** Dieselbe Schleife, dasselbe artifact-first Denkmodell, aber ohne Lock-in. Wir liefern keinen Agent: Die stärksten coding agents laufen bereits auf Ihrem Laptop. Wir verbinden sie mit einem skillgesteuerten Design-Workflow, der lokal mit `pnpm tools-dev` läuft, die Web-Schicht zu Vercel deployen kann und auf jeder Ebene BYOK bleibt.
 
 Geben Sie `make me a magazine-style pitch deck for our seed round` ein. Das interaktive Fragenformular erscheint, bevor das Modell auch nur ein Pixel improvisiert. Der Agent wählt eine von fünf kuratierten visuellen Richtungen. Ein live `TodoWrite` Plan streamt in die UI. Der daemon baut einen echten Projektordner auf der Festplatte mit Seed-Template, Layout-Bibliothek und Self-Check-Checklist. Der Agent liest sie, der Pre-Flight ist erzwungen, bewertet seine eigene Ausgabe mit einer fünfdimensionalen Kritik und gibt ein einzelnes `<artifact>` aus, das Sekunden später in einem sandboxed iframe rendert.
 
@@ -382,7 +382,7 @@ open-design/
 │
 ├── packages/
 │   ├── contracts/                 ← shared web/daemon app contracts
-│   ├── sidecar-proto/             ← Open Design sidecar protocol contract
+│   ├── sidecar-proto/             ← Auto Design sidecar protocol contract
 │   ├── sidecar/                   ← generic sidecar runtime primitives
 │   └── platform/                  ← generic process/platform primitives
 │
@@ -529,7 +529,7 @@ Klicken Sie auf ein Thumbnail, um das tatsächlich gerenderte MP4 abzuspielen. K
 
 ### HyperFrames — HTML→MP4 Motion Graphics (11 sofort reproduzierbare Templates)
 
-[**`heygen-com/hyperframes`**](https://github.com/heygen-com/hyperframes) ist HeyGens Open-Source-, agent-natives Video-Framework — Sie (oder der Agent) schreiben HTML + CSS + GSAP, HyperFrames rendert deterministisch zu MP4 via Headless-Chrome + FFmpeg. Open Design liefert HyperFrames als first-class Video-Modell (`hyperframes-html`) verdrahtet im daemon-Dispatch, plus den `skills/hyperframes/`-Skill, der dem Agent Timeline-Vertrag, Scene-Transition-Regeln, Audio-Reactive-Patterns, Captions/TTS und die Catalog-Blocks (`npx hyperframes add <slug>`) beibringt.
+[**`heygen-com/hyperframes`**](https://github.com/heygen-com/hyperframes) ist HeyGens Open-Source-, agent-natives Video-Framework — Sie (oder der Agent) schreiben HTML + CSS + GSAP, HyperFrames rendert deterministisch zu MP4 via Headless-Chrome + FFmpeg. Auto Design liefert HyperFrames als first-class Video-Modell (`hyperframes-html`) verdrahtet im daemon-Dispatch, plus den `skills/hyperframes/`-Skill, der dem Agent Timeline-Vertrag, Scene-Transition-Regeln, Audio-Reactive-Patterns, Captions/TTS und die Catalog-Blocks (`npx hyperframes add <slug>`) beibringt.
 
 Elf HyperFrames-Prompts liegen unter [`prompt-templates/video/hyperframes-*.json`](prompt-templates/video/), jeder ein konkreter Brief, der einen spezifischen Archetyp produziert:
 
@@ -584,7 +584,7 @@ Die gesamte Maschinerie unten ist das [`huashu-design`](https://github.com/alcha
 
 ## Vergleich
 
-| Achse | [Claude Design][cd] (Anthropic) | [Open CoDesign][ocod] | **Open Design** |
+| Achse | [Claude Design][cd] (Anthropic) | [Open CoDesign][ocod] | **Auto Design** |
 |---|---|---|---|
 | Lizenz | Closed | MIT | **Apache-2.0** |
 | Formfaktor | Web (claude.ai) | Desktop (Electron) | **Web-App + lokaler Daemon** |
@@ -678,7 +678,7 @@ Dies ist eine frühe Implementierung: Der geschlossene Loop (detect → pick ski
 ## Geben Sie uns einen Star
 
 <p align="center">
-  <a href="https://github.com/nexu-io/open-design"><img src="docs/assets/star-us.png" alt="Star Open Design on GitHub — github.com/nexu-io/open-design" width="100%" /></a>
+  <a href="https://github.com/nexu-io/open-design"><img src="docs/assets/star-us.png" alt="Star Auto Design on GitHub — github.com/nexu-io/open-design" width="100%" /></a>
 </p>
 
 Wenn Ihnen das dreißig Minuten gespart hat, geben Sie ein ★. Stars bezahlen keine Miete, aber sie zeigen dem nächsten Designer, Agent und Contributor, dass dieses Experiment Aufmerksamkeit verdient. Ein Klick, drei Sekunden, echtes Signal: [github.com/nexu-io/open-design](https://github.com/nexu-io/open-design).
@@ -695,10 +695,10 @@ Vollständiger Walkthrough, Merge-Messlatte, Code Style und was wir nicht annehm
 
 ## Mitwirkende
 
-Danke an alle, die Open Design vorangebracht haben: durch Code, Docs, Feedback, neue Skills, neue Design Systems oder auch ein scharfes Issue. Jeder echte Beitrag zählt, und die Wand unten ist die einfachste Art, das laut zu sagen.
+Danke an alle, die Auto Design vorangebracht haben: durch Code, Docs, Feedback, neue Skills, neue Design Systems oder auch ein scharfes Issue. Jeder echte Beitrag zählt, und die Wand unten ist die einfachste Art, das laut zu sagen.
 
 <a href="https://github.com/nexu-io/open-design/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=nexu-io/open-design&cache_bust=2026-05-04" alt="Open Design contributors" />
+  <img src="https://contrib.rocks/image?repo=nexu-io/open-design&cache_bust=2026-05-04" alt="Auto Design contributors" />
 </a>
 
 Wenn Sie Ihren ersten PR gemergt haben: willkommen. Das Label [`good-first-issue`](https://github.com/nexu-io/open-design/labels/good-first-issue) ist der Einstiegspunkt.
@@ -706,7 +706,7 @@ Wenn Sie Ihren ersten PR gemergt haben: willkommen. Das Label [`good-first-issue
 ## Repository-Aktivität
 
 <picture>
-  <img alt="Open Design — repository metrics" src="docs/assets/github-metrics.svg" />
+  <img alt="Auto Design — repository metrics" src="docs/assets/github-metrics.svg" />
 </picture>
 
 Das SVG oben wird täglich von [`.github/workflows/metrics.yml`](.github/workflows/metrics.yml) mit [`lowlighter/metrics`](https://github.com/lowlighter/metrics) regeneriert. Lösen Sie auf dem **Actions** Tab manuell eine Aktualisierung aus, wenn Sie sie früher brauchen; für reichere Plugins (traffic, follow-up time) fügen Sie ein `METRICS_TOKEN` Repository Secret mit einem fine-grained PAT hinzu.
@@ -717,7 +717,7 @@ Das SVG oben wird täglich von [`.github/workflows/metrics.yml`](.github/workflo
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&theme=dark&cache_bust=2026-05-04" />
     <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-04" />
-    <img alt="Open Design star history" src="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-04" />
+    <img alt="Auto Design star history" src="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-04" />
   </picture>
 </a>
 

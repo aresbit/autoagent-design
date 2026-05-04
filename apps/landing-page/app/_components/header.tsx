@@ -21,7 +21,7 @@ export function Header() {
       <div className='container nav-inner'>
         <a href='#top' className='brand'>
           <span className='brand-mark'>Ø</span>
-          <span>Open Design</span>
+          <span>Auto Design</span>
           <span className='brand-meta'>
             <b>Studio Nº 01</b>Berlin / Open / Earth
           </span>
@@ -57,7 +57,7 @@ export function Header() {
           <a
             className='nav-cta ghost'
             href={REPO_RELEASES}
-            aria-label='Download Open Design desktop'
+            aria-label='Download Auto Design desktop'
             title='Download the desktop app'
             {...ext}
           >
@@ -66,7 +66,7 @@ export function Header() {
           <a
             className='nav-cta'
             href={REPO}
-            aria-label='Star Open Design on GitHub'
+            aria-label='Star Auto Design on GitHub'
             title='Click to star us on GitHub'
             {...ext}
           >

@@ -42,7 +42,7 @@ skills/editorial-collage-deck/
 ├── SKILL.md                 # ← agent contract (read this first)
 ├── README.md                # ← you are here
 ├── schema.ts                # typed slide variants + brand block (re-exports from sister)
-├── inputs.example.json      # Open Design 11-slide pitch deck
+├── inputs.example.json      # Auto Design 11-slide pitch deck
 ├── example.html             # canonical rendering
 └── scripts/
     └── compose.ts           # inputs.json + sister styles.css → index.html

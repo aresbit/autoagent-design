@@ -33,7 +33,7 @@ import type { ToolPackConfig } from "./config.js";
 import { copyBundledResourceTrees, winResources } from "./resources.js";
 
 const execFileAsync = promisify(execFile);
-const PRODUCT_NAME = "Open Design";
+const PRODUCT_NAME = "Auto Design";
 const DESKTOP_LOG_ECHO_ENV = "OD_DESKTOP_LOG_ECHO";
 const NSIS_INSTALLER_LANGUAGE_BY_WEB_LOCALE = {
   en: "en_US",
@@ -303,19 +303,19 @@ LangString OD_REMOVE_LOCAL_DATA_TITLE 1046 "Remover dados locais"
 LangString OD_REMOVE_LOCAL_DATA_TITLE 1049 "Удалить локальные данные"
 LangString OD_REMOVE_LOCAL_DATA_TITLE 1065 "حذف داده‌های محلی"
 
-LangString OD_REMOVE_LOCAL_DATA_HINT 1033 "Choose whether the uninstaller should remove Open Design data stored on this computer."
-LangString OD_REMOVE_LOCAL_DATA_HINT 2052 "请选择卸载程序是否删除此电脑上保存的 Open Design 数据。"
-LangString OD_REMOVE_LOCAL_DATA_HINT 1028 "請選擇解除安裝程式是否刪除此電腦上儲存的 Open Design 資料。"
-LangString OD_REMOVE_LOCAL_DATA_HINT 1046 "Escolha se o desinstalador deve remover os dados do Open Design armazenados neste computador."
-LangString OD_REMOVE_LOCAL_DATA_HINT 1049 "Выберите, должен ли деинсталлятор удалить данные Open Design, сохраненные на этом компьютере."
-LangString OD_REMOVE_LOCAL_DATA_HINT 1065 "انتخاب کنید که حذف‌کننده داده‌های Open Design ذخیره‌شده در این رایانه را حذف کند یا نه."
+LangString OD_REMOVE_LOCAL_DATA_HINT 1033 "Choose whether the uninstaller should remove Auto Design data stored on this computer."
+LangString OD_REMOVE_LOCAL_DATA_HINT 2052 "请选择卸载程序是否删除此电脑上保存的 Auto Design 数据。"
+LangString OD_REMOVE_LOCAL_DATA_HINT 1028 "請選擇解除安裝程式是否刪除此電腦上儲存的 Auto Design 資料。"
+LangString OD_REMOVE_LOCAL_DATA_HINT 1046 "Escolha se o desinstalador deve remover os dados do Auto Design armazenados neste computador."
+LangString OD_REMOVE_LOCAL_DATA_HINT 1049 "Выберите, должен ли деинсталлятор удалить данные Auto Design, сохраненные на этом компьютере."
+LangString OD_REMOVE_LOCAL_DATA_HINT 1065 "انتخاب کنید که حذف‌کننده داده‌های Auto Design ذخیره‌شده در این رایانه را حذف کند یا نه."
 
-LangString OD_REMOVE_LOCAL_DATA_CHECKBOX 1033 "Remove local Open Design data:"
-LangString OD_REMOVE_LOCAL_DATA_CHECKBOX 2052 "删除本地 Open Design 数据："
-LangString OD_REMOVE_LOCAL_DATA_CHECKBOX 1028 "刪除本機 Open Design 資料："
-LangString OD_REMOVE_LOCAL_DATA_CHECKBOX 1046 "Remover dados locais do Open Design:"
-LangString OD_REMOVE_LOCAL_DATA_CHECKBOX 1049 "Удалить локальные данные Open Design:"
-LangString OD_REMOVE_LOCAL_DATA_CHECKBOX 1065 "حذف داده‌های محلی Open Design:"
+LangString OD_REMOVE_LOCAL_DATA_CHECKBOX 1033 "Remove local Auto Design data:"
+LangString OD_REMOVE_LOCAL_DATA_CHECKBOX 2052 "删除本地 Auto Design 数据："
+LangString OD_REMOVE_LOCAL_DATA_CHECKBOX 1028 "刪除本機 Auto Design 資料："
+LangString OD_REMOVE_LOCAL_DATA_CHECKBOX 1046 "Remover dados locais do Auto Design:"
+LangString OD_REMOVE_LOCAL_DATA_CHECKBOX 1049 "Удалить локальные данные Auto Design:"
+LangString OD_REMOVE_LOCAL_DATA_CHECKBOX 1065 "حذف داده‌های محلی Auto Design:"
 
 !macro customUnWelcomePage
   !insertmacro MUI_UNPAGE_WELCOME
@@ -353,7 +353,7 @@ FunctionEnd
     StrCpy $odLocalDataRoot "${localDataRoot}"
   \${EndIf}
   \${If} $odRemoveLocalData != "0"
-    DetailPrint "Removing local Open Design data: $odLocalDataRoot"
+    DetailPrint "Removing local Auto Design data: $odLocalDataRoot"
     RMDir /r "$odLocalDataRoot"
   \${EndIf}
 !macroend
@@ -675,7 +675,7 @@ async function writeAssembledApp(config: ToolPackConfig, paths: WinPaths, packed
     `${JSON.stringify(
       {
         dependencies,
-        description: "Open Design packaged runtime",
+        description: "Auto Design packaged runtime",
         main: "./main.cjs",
         name: "open-design-packaged-app",
         private: true,

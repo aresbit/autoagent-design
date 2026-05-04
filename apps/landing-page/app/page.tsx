@@ -1,5 +1,5 @@
 /*
- * Open Design — Atelier Zero landing page.
+ * Auto Design — Atelier Zero landing page.
  *
  * Mirrors `skills/editorial-collage/example.html` 1:1. When the canonical
  * example.html changes, mirror the diff here and into `app/globals.css`.
@@ -91,7 +91,7 @@ export default function Page() {
       {/* side rails (rotated brand text) */}
       <div className='side-rail right' data-od-id='rail-right'>
         <span className='rail-text'>
-          Open Design — Vol. 01 · Issue Nº 26 · Apache-2.0
+          Auto Design — Vol. 01 · Issue Nº 26 · Apache-2.0
         </span>
       </div>
       <div className='side-rail left' data-od-id='rail-left'>
@@ -211,7 +211,7 @@ export default function Page() {
               <span className='annot annot-bl coord'>SHA · a1b2c3d</span>
               <span className='annot annot-br'>
                 Composed in{NBSP}
-                <span style={{ color: 'var(--coral)' }}>Open Design</span>
+                <span style={{ color: 'var(--coral)' }}>Auto Design</span>
               </span>
               <img src={heroImage} alt='' />
               <div className='index'>
@@ -254,7 +254,7 @@ export default function Page() {
               <span className='meta-grp'>
                 <span>About / Manifesto</span>
                 <span className='dot-mark'>•</span>
-                <span>Open Design / Volume 01</span>
+                <span>Auto Design / Volume 01</span>
               </span>
               <span>002 / 008</span>
             </div>
@@ -304,7 +304,7 @@ export default function Page() {
                 </div>
                 <div className='about-caption'>
                   <b>Studies in form · perception · machine imagination.</b>
-                  (Open Design, MMXXVI)
+                  (Auto Design, MMXXVI)
                 </div>
               </div>
             </div>
@@ -735,7 +735,7 @@ export default function Page() {
               <span style={{ display: 'inline-flex', gap: 24 }}>
                 <span>Selected Work · 2026 Catalog</span>
                 <span style={{ color: 'var(--coral)' }}>•</span>
-                <span>Edited by Open Design</span>
+                <span>Edited by Auto Design</span>
               </span>
               <span>006 / 008</span>
             </div>
@@ -846,7 +846,7 @@ export default function Page() {
                   Collaborators <span className='ix'>· Nº 06</span>
                 </span>
                 <h2 style={{ marginTop: 30 }}>
-                  &ldquo;Open Design helped us turn vague <em>AI ideas</em> into
+                  &ldquo;Auto Design helped us turn vague <em>AI ideas</em> into
                   a visual system that felt <em>sharp, believable,</em> and
                   genuinely new.&rdquo;
                 </h2>
@@ -1035,7 +1035,7 @@ export default function Page() {
               <div className='foot-brand'>
                 <a href='#top' className='brand'>
                   <span className='brand-mark'>Ø</span>
-                  <span>Open Design</span>
+                  <span>Auto Design</span>
                 </a>
                 <p style={{ marginTop: 18 }}>
                   The open-source alternative to Claude Design. Built on the
@@ -1076,7 +1076,7 @@ export default function Page() {
                 <a
                   className='foot-cta'
                   href={REPO_RELEASES}
-                  aria-label='Download the Open Design desktop app'
+                  aria-label='Download the Auto Design desktop app'
                   {...ext}
                 >
                   Download desktop
@@ -1183,7 +1183,7 @@ export default function Page() {
             <div className='foot-bottom'>
               <span>
                 <span className='pulse' />●{' '}
-                <b style={{ color: 'var(--ink)' }}>Open Design</b> · Apache-2.0
+                <b style={{ color: 'var(--ink)' }}>Auto Design</b> · Apache-2.0
                 · 2026 / Volume 01 / Issue Nº 26
               </span>
               <span className='right'>

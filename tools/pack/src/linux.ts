@@ -29,8 +29,8 @@ import { copyBundledResourceTrees, linuxResources } from "./resources.js";
 
 const execFileAsync = promisify(execFile);
 
-const PRODUCT_NAME = "Open Design";
-const APP_IMAGE_PRODUCT_NAME = "Open-Design";
+const PRODUCT_NAME = "Auto Design";
+const APP_IMAGE_PRODUCT_NAME = "Auto-Design";
 const DESKTOP_LOG_ECHO_ENV = "OD_DESKTOP_LOG_ECHO";
 
 const INTERNAL_PACKAGES = [
@@ -410,8 +410,8 @@ async function writeLinuxBuilderConfig(config: ToolPackConfig, paths: LinuxPaths
       target,
       icon: linuxResources.icon,
       category: "Development",
-      synopsis: "Open Design",
-      maintainer: "Open Design Contributors",
+      synopsis: "Auto Design",
+      maintainer: "Auto Design Contributors",
     },
     nodeGypRebuild: false,
     npmRebuild: false,

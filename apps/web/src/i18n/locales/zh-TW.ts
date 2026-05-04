@@ -37,13 +37,13 @@ export const zhTW: Dict = {
   'common.daysShort': '{n}天',
   'common.untitled': '未命名',
 
-  'app.brand': 'Open Design',
+  'app.brand': 'Auto Design',
   'app.brandPill': '研究預覽版',
-  'app.brandSubtitle': '由 Nexu Labs 出品',
+  'app.brandSubtitle': '',
   'app.welcomeLoading': '正在載入工作區…',
 
   'settings.welcomeKicker': '歡迎',
-  'settings.welcomeTitle': '初始化 Open Design',
+  'settings.welcomeTitle': '初始化 Auto Design',
   'settings.welcomeSubtitle':
     '選擇你希望使用的執行方式。後續可以隨時從頂端「設定」按鈕中修改。',
   'settings.kicker': '設定',
@@ -664,7 +664,7 @@ export const zhTW: Dict = {
 
   'pet.title': '寵物',
   'pet.tabBuiltIn': '內建',
-  'pet.tabBuiltInHint': 'Open Design 內建的精選寵物 — 一鍵領養。',
+  'pet.tabBuiltInHint': 'Auto Design 內建的精選寵物 — 一鍵領養。',
   'pet.builtInEmpty': '目前無法載入內建寵物。等本地服務恢復後,重新整理「社群」頁籤再試。',
   'pet.tabCustom': '自訂',
   'pet.tabCustomHint': '自己命名、選符號或上傳精靈圖。',
@@ -769,7 +769,7 @@ export const zhTW: Dict = {
   'pet.communitySyncDone': '已同步 {wrote} 個新寵物（共 {total} 個）。',
   'pet.communitySyncFailed': '同步失敗：{error}',
   'pet.codexBundled': '內建',
-  'pet.codexBundledTitle': 'Open Design 內建寵物，無需下載。',
+  'pet.codexBundledTitle': 'Auto Design 內建寵物，無需下載。',
 
   'settings.notifications': '通知',
   'settings.notificationsHint': '任務完成時的音效和桌面通知',

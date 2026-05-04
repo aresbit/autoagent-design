@@ -37,13 +37,13 @@ export const en: Dict = {
   'common.daysShort': '{n}d',
   'common.untitled': 'Untitled',
 
-  'app.brand': 'Open Design',
+  'app.brand': 'Auto Design',
   'app.brandPill': 'Research Preview',
-  'app.brandSubtitle': 'by Nexu Labs',
+  'app.brandSubtitle': '',
   'app.welcomeLoading': 'Loading workspace…',
 
   'settings.welcomeKicker': 'Welcome',
-  'settings.welcomeTitle': 'Set up Open Design',
+  'settings.welcomeTitle': 'Set up Auto Design',
   'settings.welcomeSubtitle':
     "Pick how you'd like to run generations. You can change this any time from the Settings button in the top bar.",
   'settings.kicker': 'Settings',
@@ -685,7 +685,7 @@ export const en: Dict = {
   'pet.navTitle': 'Pets',
   'pet.navHint': 'Adopt or customize',
   'pet.tabBuiltIn': 'Built-in',
-  'pet.tabBuiltInHint': 'Curated companions bundled with Open Design — pick one and adopt.',
+  'pet.tabBuiltInHint': 'Curated companions bundled with Auto Design — pick one and adopt.',
   'pet.builtInEmpty': 'Built-in pets are unavailable right now. Try refreshing the Community tab once the daemon is online.',
   'pet.tabCustom': 'Custom',
   'pet.tabCustomHint': 'Make your own with a name, glyph, color or sprite.',
@@ -787,7 +787,7 @@ export const en: Dict = {
   'pet.communitySyncDone': 'Synced {wrote} new pets ({total} total).',
   'pet.communitySyncFailed': 'Sync failed: {error}',
   'pet.codexBundled': 'Bundled',
-  'pet.codexBundledTitle': 'Ships with Open Design — no download needed.',
+  'pet.codexBundledTitle': 'Ships with Auto Design — no download needed.',
 
   'settings.notifications': 'Notifications',
   'settings.notificationsHint': 'Sound and desktop notification on task completion',

@@ -37,13 +37,13 @@ export const fr: Dict = {
   'common.daysShort': '{n} j',
   'common.untitled': 'Sans titre',
 
-  'app.brand': 'Open Design',
+  'app.brand': 'Auto Design',
   'app.brandPill': 'Aperçu de recherche',
-  'app.brandSubtitle': 'par Nexu Labs',
+  'app.brandSubtitle': '',
   'app.welcomeLoading': 'Chargement de l\'espace de travail…',
 
   'settings.welcomeKicker': 'Bienvenue',
-  'settings.welcomeTitle': 'Configurer Open Design',
+  'settings.welcomeTitle': 'Configurer Auto Design',
   'settings.welcomeSubtitle':
     'Choisissez comment vous souhaitez exécuter les générations. Vous pouvez changer cela à tout moment depuis le bouton Paramètres dans la barre supérieure.',
   'settings.kicker': 'Paramètres',
@@ -685,7 +685,7 @@ export const fr: Dict = {
   'pet.navTitle': 'Compagnons',
   'pet.navHint': 'Adopter ou personnaliser',
   'pet.tabBuiltIn': 'Intégrés',
-  'pet.tabBuiltInHint': 'Compagnons fournis avec Open Design — choisissez-en un et adoptez-le.',
+  'pet.tabBuiltInHint': 'Compagnons fournis avec Auto Design — choisissez-en un et adoptez-le.',
   'pet.builtInEmpty': 'Les compagnons intégrés sont indisponibles pour l\'instant. Essayez d\'actualiser l\'onglet Communauté une fois le daemon en ligne.',
   'pet.tabCustom': 'Personnalisé',
   'pet.tabCustomHint': 'Créez le vôtre avec un nom, un glyphe, une couleur ou un sprite.',
@@ -787,7 +787,7 @@ export const fr: Dict = {
   'pet.communitySyncDone': '{wrote} nouveaux pets synchronisés ({total} au total).',
   'pet.communitySyncFailed': 'Échec de la synchronisation : {error}',
   'pet.codexBundled': 'Fourni',
-  'pet.codexBundledTitle': 'Livré avec Open Design — aucun téléchargement nécessaire.',
+  'pet.codexBundledTitle': 'Livré avec Auto Design — aucun téléchargement nécessaire.',
 
   'settings.notifications': 'Notifications',
   'settings.notificationsHint': 'Son et notification bureau à la fin d\'une tâche',

@@ -155,7 +155,7 @@ A feature-heavy follow-up to 0.1.0 — dark mode, xAI Grok Imagine media generat
 
 ## [0.1.0] - 2026-05-01
 
-First public release of Open Design — a local-first, open-source alternative to Anthropic's Claude Design. It detects your installed code-agent CLI, runs design skills against curated design systems, and streams artifacts into a sandboxed in-app preview.
+First public release of Auto Design — a local-first, open-source alternative to Anthropic's Claude Design. It detects your installed code-agent CLI, runs design skills against curated design systems, and streams artifacts into a sandboxed in-app preview.
 
 ### Added
 
@@ -244,7 +244,7 @@ First public release of Open Design — a local-first, open-source alternative t
 
 ### Internal
 
-- Initial project structure, project rename "Open Claude Design" → "Open Design", naming optimization. ([#1], [#2])
+- Initial project structure, project rename "Open Claude Design" → "Auto Design", naming optimization. ([#1], [#2])
 - Initial AGENTS.md and OpenCode agent instructions. ([#114])
 - Beta release workflow placeholder. ([#36])
 - Git commit co-author policy. ([#131])

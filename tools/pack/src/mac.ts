@@ -30,7 +30,7 @@ import type { ToolPackBuildOutput, ToolPackConfig } from "./config.js";
 import { copyBundledResourceTrees, macResources } from "./resources.js";
 
 const execFileAsync = promisify(execFile);
-const PRODUCT_NAME = "Open Design";
+const PRODUCT_NAME = "Auto Design";
 
 const INTERNAL_PACKAGES = [
   { directory: "packages/contracts", name: "@open-design/contracts" },
@@ -324,7 +324,7 @@ async function writeAssembledApp(
     `${JSON.stringify(
       {
         dependencies,
-        description: "Open Design packaged runtime",
+        description: "Auto Design packaged runtime",
         main: "./main.cjs",
         name: "open-design-packaged-app",
         private: true,

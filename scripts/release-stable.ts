@@ -125,7 +125,7 @@ if (latestStable != null && compareVersions(stableParsed, latestStable.parsed) <
 
 const branch = process.env.GITHUB_REF_NAME ?? "";
 const commit = process.env.GITHUB_SHA ?? "";
-const releaseName = `Open Design ${stableVersion}`;
+const releaseName = `Auto Design ${stableVersion}`;
 
 console.log(`[release-stable] channel: stable`);
 console.log(`[release-stable] version: ${stableVersion}`);

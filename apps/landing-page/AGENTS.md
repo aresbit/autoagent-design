@@ -6,7 +6,7 @@ records module-level boundaries for `apps/landing-page/`.
 ## Purpose
 
 `apps/landing-page` is a stand-alone static Astro site that renders
-the canonical Open Design marketing page in the **Atelier Zero** style.
+the canonical Auto Design marketing page in the **Atelier Zero** style.
 It is the deployable counterpart to:
 
 - Skill: `skills/editorial-collage/` — agent workflow + the source-of-truth

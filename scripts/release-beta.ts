@@ -213,7 +213,7 @@ const unsignedSuffix = signed ? "" : ".unsigned";
 const versionTag = `open-design-v${betaVersion}${unsignedSuffix}`;
 const branch = process.env.GITHUB_REF_NAME ?? "";
 const commit = process.env.GITHUB_SHA ?? "";
-const releaseName = `Open Design Beta ${betaVersion}${signed ? "" : " (unsigned)"}`;
+const releaseName = `Auto Design Beta ${betaVersion}${signed ? "" : " (unsigned)"}`;
 
 console.log(`[release-beta] channel: beta`);
 console.log(`[release-beta] base version: ${packagedVersion}`);

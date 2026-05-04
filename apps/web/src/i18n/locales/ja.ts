@@ -37,13 +37,13 @@ export const ja: Dict = {
   'common.daysShort': '{n}日',
   'common.untitled': '無題',
 
-  'app.brand': 'Open Design',
+  'app.brand': 'Auto Design',
   'app.brandPill': 'リサーチプレビュー',
-  'app.brandSubtitle': 'by Nexu Labs',
+  'app.brandSubtitle': '',
   'app.welcomeLoading': 'ワークスペースを読み込み中…',
 
   'settings.welcomeKicker': 'ようこそ',
-  'settings.welcomeTitle': 'Open Design を設定',
+  'settings.welcomeTitle': 'Auto Design を設定',
   'settings.welcomeSubtitle':
     '生成の実行方法を選んでください。この設定はいつでもトップバーの設定ボタンから変更できます。',
   'settings.kicker': '設定',
@@ -681,7 +681,7 @@ export const ja: Dict = {
 
   'pet.title': 'ペット',
   'pet.tabBuiltIn': '組み込み',
-  'pet.tabBuiltInHint': 'Open Design に同梱された厳選コンパニオン — 選んで迎え入れよう。',
+  'pet.tabBuiltInHint': 'Auto Design に同梱された厳選コンパニオン — 選んで迎え入れよう。',
   'pet.builtInEmpty': '組み込みペットを今は読み込めません。デーモンが復帰したらコミュニティタブを更新してください。',
   'pet.tabCustom': 'カスタム',
   'pet.tabCustomHint': '名前・絵文字・色・スプライトを自分で設定。',
@@ -786,7 +786,7 @@ export const ja: Dict = {
   'pet.communitySyncDone': '{wrote} 体の新しいペットを同期しました（合計 {total} 体）。',
   'pet.communitySyncFailed': '同期に失敗しました: {error}',
   'pet.codexBundled': '同梱',
-  'pet.codexBundledTitle': 'Open Design に同梱 — ダウンロード不要。',
+  'pet.codexBundledTitle': 'Auto Design に同梱 — ダウンロード不要。',
 
   'settings.notifications': '通知',
   'settings.notificationsHint': 'タスク完了時の効果音とデスクトップ通知',

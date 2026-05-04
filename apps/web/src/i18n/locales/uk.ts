@@ -37,13 +37,13 @@ export const uk: Dict = {
   'common.daysShort': '{n}дн',
   'common.untitled': 'Без назви',
 
-  'app.brand': 'Open Design',
+  'app.brand': 'Auto Design',
   'app.brandPill': 'Попередній перегляд',
-  'app.brandSubtitle': 'від Nexu Labs',
+  'app.brandSubtitle': '',
   'app.welcomeLoading': 'Завантаження робочого простору…',
 
   'settings.welcomeKicker': 'Ласкаво просимо',
-  'settings.welcomeTitle': 'Налаштування Open Design',
+  'settings.welcomeTitle': 'Налаштування Auto Design',
   'settings.welcomeSubtitle':
     'Виберіть, як ви хочете запускати генерацію. Ви можете змінити це в будь-який час за допомогою кнопки Налаштування в верхній панелі.',
   'settings.kicker': 'Налаштування',
@@ -685,7 +685,7 @@ export const uk: Dict = {
   'pet.navTitle': 'Маскоти',
   'pet.navHint': 'Встановити або налаштувати',
   'pet.tabBuiltIn': 'Вбудовані',
-  'pet.tabBuiltInHint': 'Кураторські супутники в комплекті з Open Design — виберіть один та встановіть.',
+  'pet.tabBuiltInHint': 'Кураторські супутники в комплекті з Auto Design — виберіть один та встановіть.',
   'pet.builtInEmpty': 'Вбудовані маскоти наразі недоступні. Спробуйте оновити вкладку Спільнота, коли фоновий процес перейде в мережу.',
   'pet.tabCustom': 'Власна',
   'pet.tabCustomHint': 'Створіть свою власну назвою, гліфом, кольором або спрайтом.',
@@ -787,7 +787,7 @@ export const uk: Dict = {
   'pet.communitySyncDone': 'Синхронізовано {wrote} нових домашних тварин ({total} всього).',
   'pet.communitySyncFailed': 'Синхронізація не вдалася: {error}',
   'pet.codexBundled': 'Упаковано',
-  'pet.codexBundledTitle': 'Поставляється з Open Design — завантаження не потрібне.',
+  'pet.codexBundledTitle': 'Поставляється з Auto Design — завантаження не потрібне.',
 
   'settings.notifications': 'Сповіщення',
   'settings.notificationsHint': 'Звук та сповіщення робочого столу при завершенні завдання',

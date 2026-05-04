@@ -95,7 +95,7 @@ ls -la apps/daemon/dist/cli.js
 curl -s http://127.0.0.1:7457/api/health
 ```
 
-Then open the project from the Open Design app again instead of resuming an old terminal agent session. A daemon-spawned agent should see values like:
+Then open the project from the Auto Design app again instead of resuming an old terminal agent session. A daemon-spawned agent should see values like:
 
 ```bash
 echo "OD_BIN=$OD_BIN"
@@ -179,7 +179,7 @@ open-design/
 │   └── desktop/               # Electron runtime, launched/inspected by tools-dev
 ├── packages/
 │   ├── contracts/             # shared web/daemon app contracts
-│   ├── sidecar-proto/         # Open Design sidecar protocol contract
+│   ├── sidecar-proto/         # Auto Design sidecar protocol contract
 │   ├── sidecar/               # generic sidecar runtime primitives
 │   └── platform/              # generic process/platform primitives
 ├── tools/dev/                 # `pnpm tools-dev` lifecycle and inspect CLI
@@ -216,8 +216,8 @@ open-design/
 
 - **"no agents found on PATH"** — install one of: `claude`, `codex`, `devin`, `gemini`, `opencode`, `cursor-agent`, `qwen`, `copilot`. Or switch to API mode in Settings and paste a provider key.
 - **daemon 500 on /api/chat** — check the daemon terminal for the stderr tail; usually the CLI rejected its args. Different CLIs take different argv shapes; see `apps/daemon/src/agents.ts` `buildArgs` if you need to tweak.
-- **media generation says `OD_BIN` is missing or daemon URL is `:0`** — run the media dispatcher checks above. Do not resume the old CLI session; reopen the project from the Open Design app so the daemon can inject fresh `OD_*` variables.
-- **Codex loads too much plugin context** — start Open Design with `OD_CODEX_DISABLE_PLUGINS=1 pnpm tools-dev` to make daemon-spawned Codex processes run with `--disable plugins`.
+- **media generation says `OD_BIN` is missing or daemon URL is `:0`** — run the media dispatcher checks above. Do not resume the old CLI session; reopen the project from the Auto Design app so the daemon can inject fresh `OD_*` variables.
+- **Codex loads too much plugin context** — start Auto Design with `OD_CODEX_DISABLE_PLUGINS=1 pnpm tools-dev` to make daemon-spawned Codex processes run with `--disable plugins`.
 - **artifact never renders** — the model produced text without wrapping in `<artifact>`. Confirm the system prompt is going through (check daemon log) and consider switching to a more capable model or a stricter skill.
 
 ## Mapping back to the vision

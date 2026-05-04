@@ -1,4 +1,4 @@
-# Contributing to Open Design
+# Contributing to Auto Design
 
 Thanks for thinking about contributing. OD is small on purpose — most of the value lives in **files** (skills, design systems, prompt fragments) rather than framework code. That means the highest-leverage contributions are usually one folder, one Markdown file, or one PR-sized adapter.
 

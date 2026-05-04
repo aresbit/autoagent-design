@@ -1,4 +1,4 @@
-# Open Design
+# Auto Design
 启动命令:
 
 ELECTRON_DISABLE_SANDBOX=1 pnpm tools-dev start --daemon-port 17456 --web-port 17573
@@ -7,7 +7,7 @@ ELECTRON_DISABLE_SANDBOX=1 pnpm tools-dev start --daemon-port 17456 --web-port 1
 > **The open-source alternative to [Claude Design][cd].** Local-first, web-deployable, BYOK at every layer — **12 coding-agent CLIs** auto-detected on your `PATH` (OpenCC, Claude Code, Codex, Devin for Terminal, Cursor Agent, Gemini CLI, OpenCode, Qwen, GitHub Copilot CLI, Hermes, Pi, Kiro, Mistral Vibe) become the design engine, driven by **31 composable Skills** and **72 brand-grade Design Systems**. No CLI? An OpenAI-compatible BYOK proxy is the same loop minus the spawn.
 
 <p align="center">
-  <img src="docs/assets/banner.png" alt="Open Design — editorial cover: design with the agent on your laptop" width="100%" />
+  <img src="docs/assets/banner.png" alt="Auto Design — editorial cover: design with the agent on your laptop" width="100%" />
 </p>
 
 <p align="center">
@@ -37,13 +37,13 @@ ELECTRON_DISABLE_SANDBOX=1 pnpm tools-dev start --daemon-port 17456 --web-port 1
 
 Anthropic's [Claude Design][cd] (released 2026-04-17, Opus 4.7) showed what happens when an LLM stops writing prose and starts shipping design artifacts. It went viral — and stayed closed-source, paid-only, cloud-only, locked to Anthropic's model and Anthropic's skills. There is no checkout, no self-host, no Vercel deploy, no swap-in-your-own-agent.
 
-**Open Design (OD) is the open-source alternative.** Same loop, same artifact-first mental model, none of the lock-in. We don't ship an agent — the strongest coding agents already live on your laptop. We wire them into a skill-driven design workflow that runs locally with `pnpm tools-dev`, can deploy the web layer to Vercel, and stays BYOK at every layer.
+**Auto Design (AD) is the open-source alternative.** Same loop, same artifact-first mental model, none of the lock-in. We don't ship an agent — the strongest coding agents already live on your laptop. We wire them into a skill-driven design workflow that runs locally with `pnpm tools-dev`, can deploy the web layer to Vercel, and stays BYOK at every layer.
 
 Type `make me a magazine-style pitch deck for our seed round`. The interactive question form pops up before the model improvises a single pixel. The agent picks one of five curated visual directions. A live `TodoWrite` plan streams into the UI. The daemon builds a real on-disk project folder with a seed template, layout library, and self-check checklist. The agent reads them — pre-flight enforced — runs a five-dimensional critique against its own output, and emits a single `<artifact>` that renders in a sandboxed iframe seconds later.
 
 That's not "AI tries to design something". That's an AI that has been trained, by the prompt stack, to behave like a senior designer with a working filesystem, a deterministic palette library, and a checklist culture — exactly the bar Claude Design set, but open and yours.
 
-OD stands on four open-source shoulders:
+AD stands on four open-source shoulders:
 
 - [**`alchaincyf/huashu-design`**](https://github.com/alchaincyf/huashu-design) — the design-philosophy compass. Junior-Designer workflow, the 5-step brand-asset protocol, the anti-AI-slop checklist, the 5-dimensional self-critique, and the "5 schools × 20 design philosophies" idea behind our direction picker — all distilled into [`apps/web/src/prompts/discovery.ts`](apps/web/src/prompts/discovery.ts).
 - [**`op7418/guizang-ppt-skill`**](https://github.com/op7418/guizang-ppt-skill) — the deck mode. Bundled verbatim under [`skills/guizang-ppt/`](skills/guizang-ppt/) with original LICENSE preserved; magazine-style layouts, WebGL hero, P0/P1/P2 checklists.
@@ -82,7 +82,7 @@ OD stands on four open-source shoulders:
 </td>
 <td width="50%">
 <img src="docs/screenshots/02-question-form.png" alt="02 · Turn-1 discovery form" /><br/>
-<sub><b>Turn-1 discovery form</b> — before the model writes a pixel, OD locks the brief: surface, audience, tone, brand context, scale. 30 seconds of radios beats 30 minutes of redirects.</sub>
+<sub><b>Turn-1 discovery form</b> — before the model writes a pixel, AD locks the brief: surface, audience, tone, brand context, scale. 30 seconds of radios beats 30 minutes of redirects.</sub>
 </td>
 </tr>
 <tr>
@@ -234,7 +234,7 @@ The 9-section `DESIGN.md` schema from [`VoltAgent/awesome-design-md`][acd2] — 
 
 ### 4 · The interactive question form prevents 80% of redirects.
 
-OD's prompt stack hard-codes a `RULE 1`: every fresh design brief begins with a `<question-form id="discovery">` instead of code. Surface · audience · tone · brand context · scale · constraints. A long brief still leaves design decisions open — visual tone, color stance, scale — exactly the things the form locks down in 30 seconds. The cost of a wrong direction is one chat round, not one finished deck.
+AD's prompt stack hard-codes a `RULE 1`: every fresh design brief begins with a `<question-form id="discovery">` instead of code. Surface · audience · tone · brand context · scale · constraints. A long brief still leaves design decisions open — visual tone, color stance, scale — exactly the things the form locks down in 30 seconds. The cost of a wrong direction is one chat round, not one finished deck.
 
 This is the **Junior-Designer mode** distilled from [`huashu-design`](https://github.com/alchaincyf/huashu-design): batch the questions up front, show something visible early (even a wireframe with grey blocks), let the user redirect cheaply. Combined with the brand-asset protocol (locate · download · `grep` hex · write `brand-spec.md` · vocalise), it's the single biggest reason output stops feeling like AI freestyle and starts feeling like a designer who paid attention before painting.
 
@@ -392,7 +392,7 @@ open-design/
 │
 ├── packages/
 │   ├── contracts/                 ← shared web/daemon app contracts
-│   ├── sidecar-proto/             ← Open Design sidecar protocol contract
+│   ├── sidecar-proto/             ← Auto Design sidecar protocol contract
 │   ├── sidecar/                   ← generic sidecar runtime primitives
 │   ├── platform/                  ← generic process/platform primitives
 │   └── opencc/                    ← OpenCC agent engine (Claude Code CLI, reverse-engineered)
@@ -487,7 +487,7 @@ The product-system library is imported via [`scripts/sync-design-systems.ts`](sc
 
 ## Visual directions
 
-When the user has no brand spec, the agent emits a second form with five curated directions — the OD adaptation of [`huashu-design`'s "5 schools × 20 design philosophies" fallback](https://github.com/alchaincyf/huashu-design#%E8%AE%BE%E8%AE%A1%E6%96%B9%E5%90%91%E9%A1%BE%E9%97%AE-fallback). Each direction is a deterministic spec — palette in OKLch, font stack, layout posture cues, references — that the agent binds verbatim into the seed template's `:root`. One radio click → a fully specified visual system. No improvisation, no AI-slop.
+When the user has no brand spec, the agent emits a second form with five curated directions — the AD adaptation of [`huashu-design`'s "5 schools × 20 design philosophies" fallback](https://github.com/alchaincyf/huashu-design#%E8%AE%BE%E8%AE%A1%E6%96%B9%E5%90%91%E9%A1%BE%E9%97%AE-fallback). Each direction is a deterministic spec — palette in OKLch, font stack, layout posture cues, references — that the agent binds verbatim into the seed template's `:root`. One radio click → a fully specified visual system. No improvisation, no AI-slop.
 
 | Direction | Mood | Refs |
 |---|---|---|
@@ -501,7 +501,7 @@ Full spec → [`apps/web/src/prompts/directions.ts`](apps/web/src/prompts/direct
 
 ## Media generation
 
-OD doesn't stop at code. The same chat surface that produces `<artifact>` HTML also drives **image**, **video**, and **audio** generation, with model adapters wired into the daemon's media pipeline ([`apps/daemon/src/media-models.ts`](apps/daemon/src/media-models.ts), [`apps/web/src/media/models.ts`](apps/web/src/media/models.ts)). Every render lands as a real file in the project workspace — `.png` for image, `.mp4` for video — and shows up as a download chip when the turn ends.
+AD doesn't stop at code. The same chat surface that produces `<artifact>` HTML also drives **image**, **video**, and **audio** generation, with model adapters wired into the daemon's media pipeline ([`apps/daemon/src/media-models.ts`](apps/daemon/src/media-models.ts), [`apps/web/src/media/models.ts`](apps/web/src/media/models.ts)). Every render lands as a real file in the project workspace — `.png` for image, `.mp4` for video — and shows up as a download chip when the turn ends.
 
 Three model families carry the load today:
 
@@ -543,7 +543,7 @@ Click any thumbnail to play the actual rendered MP4. Full set → [`prompt-templ
 
 ### HyperFrames — HTML→MP4 motion graphics (11 ready-to-replicate templates)
 
-[**`heygen-com/hyperframes`**](https://github.com/heygen-com/hyperframes) is HeyGen's open-source agent-native video framework — you (or the agent) write HTML + CSS + GSAP, HyperFrames renders it to a deterministic MP4 via headless Chrome + FFmpeg. Open Design ships HyperFrames as a first-class video model (`hyperframes-html`) wired into the daemon dispatch, plus the `skills/hyperframes/` skill that teaches the agent the timeline contract, scene-transition rules, audio-reactive patterns, captions/TTS, and the catalog blocks (`npx hyperframes add <slug>`).
+[**`heygen-com/hyperframes`**](https://github.com/heygen-com/hyperframes) is HeyGen's open-source agent-native video framework — you (or the agent) write HTML + CSS + GSAP, HyperFrames renders it to a deterministic MP4 via headless Chrome + FFmpeg. Auto Design ships HyperFrames as a first-class video model (`hyperframes-html`) wired into the daemon dispatch, plus the `skills/hyperframes/` skill that teaches the agent the timeline contract, scene-transition rules, audio-reactive patterns, captions/TTS, and the catalog blocks (`npx hyperframes add <slug>`).
 
 Eleven hyperframes prompts ship under [`prompt-templates/video/hyperframes-*.json`](prompt-templates/video/), each one a concrete brief that produces a specific archetype:
 
@@ -568,13 +568,13 @@ Eleven hyperframes prompts ship under [`prompt-templates/video/hyperframes-*.jso
 </tr>
 </table>
 
-Pattern is the same as the rest: pick a template, edit the brief, send. The agent reads the bundled `skills/hyperframes/SKILL.md` (which carries the OD-specific render workflow — composition source files into a `.hyperframes-cache/` so they don't clutter the file workspace, daemon dispatches `npx hyperframes render` to dodge the macOS sandbox-exec / Puppeteer hang, only the final `.mp4` lands as a project chip), authors the composition, and ships an MP4. Catalog block thumbnails © HeyGen, served from their CDN; the OSS framework itself is Apache-2.0.
+Pattern is the same as the rest: pick a template, edit the brief, send. The agent reads the bundled `skills/hyperframes/SKILL.md` (which carries the AD-specific render workflow — composition source files into a `.hyperframes-cache/` so they don't clutter the file workspace, daemon dispatches `npx hyperframes render` to dodge the macOS sandbox-exec / Puppeteer hang, only the final `.mp4` lands as a project chip), authors the composition, and ships an MP4. Catalog block thumbnails © HeyGen, served from their CDN; the OSS framework itself is Apache-2.0.
 
 > **Also wired but not surfaced as templates yet:** Kling 2.0 / 1.6 / 1.5, Veo 3 / Veo 2, Sora 2 / Sora 2-Pro (via Fal), MiniMax video-01 — all live in `VIDEO_MODELS` ([`apps/web/src/media/models.ts`](apps/web/src/media/models.ts)). Suno v5 / v4.5, Udio v2, Lyria 2 (music) and gpt-4o-mini-tts, MiniMax TTS (speech) cover the audio surface. Templates for these are open contributions — drop a JSON into `prompt-templates/video/` or `prompt-templates/audio/` and it shows up in the picker.
 
 ## Beyond chat — what else ships
 
-The chat / artifact loop gets the spotlight, but a handful of less-visible capabilities are already wired and worth knowing before you compare OD to anything else:
+The chat / artifact loop gets the spotlight, but a handful of less-visible capabilities are already wired and worth knowing before you compare AD to anything else:
 
 - **Claude Design ZIP import.** Drop an export from claude.ai onto the welcome dialog. `POST /api/import/claude-design` extracts it into a real `.od/projects/<id>/`, opens the entry file as a tab, and stages a continue-where-Anthropic-left-off prompt for your local agent. No re-prompting, no "ask the model to re-create what we just had". ([`apps/daemon/src/server.ts`](apps/daemon/src/server.ts) — `/api/import/claude-design`)
 - **Multi-provider BYOK proxy.** `POST /api/proxy/{anthropic,openai,azure,google}/stream` takes `{ baseUrl, apiKey, model, messages }`, builds the provider-specific upstream request, normalizes SSE chunks into `delta/end/error`, and rejects loopback / link-local / RFC1918 destinations to head off SSRF. OpenAI-compatible covers OpenAI, Azure AI Foundry `/openai/v1`, DeepSeek, Groq, MiMo, OpenRouter, and self-hosted vLLM; Azure OpenAI adds deployment URL + `api-version`; Google uses Gemini `:streamGenerateContent`.
@@ -587,7 +587,7 @@ The chat / artifact loop gets the spotlight, but a handful of less-visible capab
 
 ## Anti-AI-slop machinery
 
-The whole machinery below is the [`huashu-design`](https://github.com/alchaincyf/huashu-design) playbook, ported into OD's prompt-stack and made enforceable per-skill via the side-file pre-flight. Read [`apps/web/src/prompts/discovery.ts`](apps/web/src/prompts/discovery.ts) for the live wording:
+The whole machinery below is the [`huashu-design`](https://github.com/alchaincyf/huashu-design) playbook, ported into AD's prompt-stack and made enforceable per-skill via the side-file pre-flight. Read [`apps/web/src/prompts/discovery.ts`](apps/web/src/prompts/discovery.ts) for the live wording:
 
 - **Question form first.** Turn 1 is `<question-form>` only — no thinking, no tools, no narration. The user chooses defaults at radio speed.
 - **Brand-spec extraction.** When the user attaches a screenshot or URL, the agent runs a five-step protocol (locate · download · grep hex · codify `brand-spec.md` · vocalise) before writing CSS. **Never guesses brand colors from memory.**
@@ -598,7 +598,7 @@ The whole machinery below is the [`huashu-design`](https://github.com/alchaincyf
 
 ## Comparison
 
-| Axis | [Claude Design][cd] (Anthropic) | [Open CoDesign][ocod] | **Open Design** |
+| Axis | [Claude Design][cd] (Anthropic) | [Open CoDesign][ocod] | **Auto Design** |
 |---|---|---|---|
 | License | Closed | MIT | **Apache-2.0** |
 | Form factor | Web (claude.ai) | Desktop (Electron) | **Web app + local daemon** |
@@ -696,7 +696,7 @@ This is an early implementation — the closed loop (detect → pick skill + des
 ## Star us
 
 <p align="center">
-  <a href="https://github.com/nexu-io/open-design"><img src="docs/assets/star-us.png" alt="Star Open Design on GitHub — github.com/nexu-io/open-design" width="100%" /></a>
+  <a href="https://github.com/nexu-io/open-design"><img src="docs/assets/star-us.png" alt="Star Auto Design on GitHub — github.com/nexu-io/open-design" width="100%" /></a>
 </p>
 
 If this saved you thirty minutes — give it a ★. Stars don't pay rent, but they tell the next designer, agent, and contributor that this experiment is worth their attention. One click, three seconds, real signal: [github.com/nexu-io/open-design](https://github.com/nexu-io/open-design).
@@ -713,10 +713,10 @@ Full walkthrough, bar-for-merging, code style, and what we don't accept → [`CO
 
 ## Contributors
 
-Thanks to everyone who has helped move Open Design forward — through code, docs, feedback, new skills, new design systems, or even a sharp issue. Every real contribution counts, and the wall below is the easiest way to say so out loud.
+Thanks to everyone who has helped move Auto Design forward — through code, docs, feedback, new skills, new design systems, or even a sharp issue. Every real contribution counts, and the wall below is the easiest way to say so out loud.
 
 <a href="https://github.com/nexu-io/open-design/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=nexu-io/open-design&cache_bust=2026-05-04" alt="Open Design contributors" />
+  <img src="https://contrib.rocks/image?repo=nexu-io/open-design&cache_bust=2026-05-04" alt="Auto Design contributors" />
 </a>
 
 If you've shipped your first PR — welcome. The [`good-first-issue`](https://github.com/nexu-io/open-design/labels/good-first-issue) label is the entry point.
@@ -724,7 +724,7 @@ If you've shipped your first PR — welcome. The [`good-first-issue`](https://gi
 ## Repository activity
 
 <picture>
-  <img alt="Open Design — repository metrics" src="docs/assets/github-metrics.svg" />
+  <img alt="Auto Design — repository metrics" src="docs/assets/github-metrics.svg" />
 </picture>
 
 The SVG above is regenerated daily by [`.github/workflows/metrics.yml`](.github/workflows/metrics.yml) using [`lowlighter/metrics`](https://github.com/lowlighter/metrics). Trigger a manual refresh from the **Actions** tab if you want it sooner; for richer plugins (traffic, follow-up time), add a `METRICS_TOKEN` repository secret with a fine-grained PAT.
@@ -735,7 +735,7 @@ The SVG above is regenerated daily by [`.github/workflows/metrics.yml`](.github/
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&theme=dark&cache_bust=2026-05-04" />
     <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-04" />
-    <img alt="Open Design star history" src="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-04" />
+    <img alt="Auto Design star history" src="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-04" />
   </picture>
 </a>
 

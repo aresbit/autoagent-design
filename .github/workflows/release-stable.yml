@@ -165,8 +165,8 @@ jobs:
           release_dir="$RUNNER_TEMP/release-assets"
           mkdir -p "$release_dir"
 
-          source_dmg="$RUNNER_TEMP/tools-pack/out/mac/namespaces/release-stable/dmg/Open Design-release-stable.dmg"
-          source_zip="$RUNNER_TEMP/tools-pack/out/mac/namespaces/release-stable/zip/Open Design-release-stable.zip"
+          source_dmg="$RUNNER_TEMP/tools-pack/out/mac/namespaces/release-stable/dmg/Auto Design-release-stable.dmg"
+          source_zip="$RUNNER_TEMP/tools-pack/out/mac/namespaces/release-stable/zip/Auto Design-release-stable.zip"
           if [ ! -f "$source_dmg" ]; then
             echo "expected dmg not found at $source_dmg" >&2
             exit 1
@@ -202,7 +202,7 @@ jobs:
           path: "$zip_url"
           sha512: "$zip_sha512"
           releaseDate: "$release_date"
-          releaseNotes: "Open Design ${{ needs.metadata.outputs.stable_version }}"
+          releaseNotes: "Auto Design ${{ needs.metadata.outputs.stable_version }}"
           EOF
 
       - name: Upload mac release bundle
@@ -252,8 +252,8 @@ jobs:
           $releaseDir = Join-Path $env:RUNNER_TEMP "release-assets"
           New-Item -ItemType Directory -Force -Path $releaseDir | Out-Null
 
-          $sourceInstaller = Join-Path $env:RUNNER_TEMP "tools-pack/out/win/namespaces/release-stable-win/builder/Open Design-release-stable-win-setup.exe"
-          $sourceBlockmap = Join-Path $env:RUNNER_TEMP "tools-pack/out/win/namespaces/release-stable-win/builder/Open Design-release-stable-win-setup.exe.blockmap"
+          $sourceInstaller = Join-Path $env:RUNNER_TEMP "tools-pack/out/win/namespaces/release-stable-win/builder/Auto Design-release-stable-win-setup.exe"
+          $sourceBlockmap = Join-Path $env:RUNNER_TEMP "tools-pack/out/win/namespaces/release-stable-win/builder/Auto Design-release-stable-win-setup.exe.blockmap"
           if (!(Test-Path $sourceInstaller)) {
             throw "expected installer not found at $sourceInstaller"
           }
@@ -284,7 +284,7 @@ jobs:
             "path: `"$installerUrl`""
             "sha512: `"$installerSha512`""
             "releaseDate: `"$releaseDate`""
-            "releaseNotes: `"Open Design ${{ needs.metadata.outputs.stable_version }}`""
+            "releaseNotes: `"Auto Design ${{ needs.metadata.outputs.stable_version }}`""
           ) | Set-Content -Path (Join-Path $releaseDir "latest.yml")
 
       - name: Upload windows release bundle
@@ -341,7 +341,7 @@ jobs:
           release_dir="$RUNNER_TEMP/release-assets"
           mkdir -p "$release_dir"
 
-          source_appimage="$RUNNER_TEMP/tools-pack/out/linux/namespaces/release-stable-linux/builder/Open Design-release-stable-linux.AppImage"
+          source_appimage="$RUNNER_TEMP/tools-pack/out/linux/namespaces/release-stable-linux/builder/Auto Design-release-stable-linux.AppImage"
           if [ ! -f "$source_appimage" ]; then
             echo "expected AppImage not found at $source_appimage" >&2
             exit 1

@@ -57,6 +57,6 @@ follow-up PRs as we wire the linter side.
 
 Craft content is adapted from the MIT-licensed
 [refero_skill](https://github.com/referodesign/refero_skill) project
-(© Refero Design), with edits to fit Open Design's house style and link
+(© Refero Design), with edits to fit Auto Design's house style and link
 back to OD's design tokens (`var(--accent)` etc.) instead of generic
 Tailwind hex values.

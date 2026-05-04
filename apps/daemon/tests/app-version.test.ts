@@ -28,17 +28,17 @@ describe('app version helpers', () => {
   });
 
   it('detects packaged runtimes without sidecar protocol knowledge', () => {
-    expect(isPackagedRuntime({ resourcesPath: '/Applications/Open Design.app/Contents/Resources' })).toBe(true);
+    expect(isPackagedRuntime({ resourcesPath: '/Applications/Auto Design.app/Contents/Resources' })).toBe(true);
     expect(isPackagedRuntime({
-      execPath: '/Applications/Open Design.app/Contents/Resources/open-design/bin/node',
+      execPath: '/Applications/Auto Design.app/Contents/Resources/open-design/bin/node',
       platform: 'darwin',
     })).toBe(true);
     expect(isPackagedRuntime({
-      execPath: 'C:\\Users\\Ada\\AppData\\Local\\Programs\\Open Design\\resources\\open-design\\bin\\node.exe',
+      execPath: 'C:\\Users\\Ada\\AppData\\Local\\Programs\\Auto Design\\resources\\open-design\\bin\\node.exe',
       platform: 'win32',
     })).toBe(true);
     expect(isPackagedRuntime({
-      execPath: '/opt/Open Design/resources/open-design/bin/node',
+      execPath: '/opt/Auto Design/resources/open-design/bin/node',
       platform: 'linux',
     })).toBe(true);
     expect(isPackagedRuntime({ execPath: '/usr/local/bin/node', platform: 'linux' })).toBe(false);
