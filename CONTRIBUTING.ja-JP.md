@@ -1,6 +1,6 @@
 # Auto Design へのコントリビューション
 
-コントリビューションを検討してくださりありがとうございます。OD は意図的に小さく保っています — 価値の大部分はフレームワークコードではなく**ファイル**（Skill、Design System、プロンプトフラグメント）にあります。そのため、最も効果の高いコントリビューションは通常、フォルダ 1 つ、Markdown ファイル 1 つ、または PR サイズの adapter です。
+コントリビューションを検討してくださりありがとうございます。AD は意図的に小さく保っています — 価値の大部分はフレームワークコードではなく**ファイル**（Skill、Design System、プロンプトフラグメント）にあります。そのため、最も効果の高いコントリビューションは通常、フォルダ 1 つ、Markdown ファイル 1 つ、または PR サイズの adapter です。
 
 このガイドでは、各種コントリビューションの対象場所と、PR がマージされるために満たすべき基準を正確に説明します。
 
@@ -12,8 +12,8 @@
 
 | やりたいこと | 実際に追加するもの | 配置場所 | 規模 |
 |---|---|---|---|
-| OD に新しい種類の artifact をレンダリングさせる（請求書、iOS Settings 画面、ワンページャー…） | **Skill** | [`skills/<your-skill>/`](skills/) | フォルダ 1 つ、約 2 ファイル |
-| OD に新しいブランドのビジュアル言語を話させる | **Design System** | [`design-systems/<brand>/DESIGN.md`](design-systems/) | Markdown ファイル 1 つ |
+| AD に新しい種類の artifact をレンダリングさせる（請求書、iOS Settings 画面、ワンページャー…） | **Skill** | [`skills/<your-skill>/`](skills/) | フォルダ 1 つ、約 2 ファイル |
+| AD に新しいブランドのビジュアル言語を話させる | **Design System** | [`design-systems/<brand>/DESIGN.md`](design-systems/) | Markdown ファイル 1 つ |
 | 新しい coding-agent CLI を接続する | **Agent adapter** | [`apps/daemon/src/agents.ts`](apps/daemon/src/agents.ts) | 1 つの配列に約 10 行 |
 | 機能追加、バグ修正、[`open-codesign`][ocod] から UX パターンを移植 | コード | `apps/web/src/`、`apps/daemon/` | 通常の PR |
 | ドキュメント改善、Français / Deutsch / 中文 への翻訳、タイポ修正 | ドキュメント | `README.md`、`README.fr.md`、`README.de.md`、`README.zh-CN.md`、`docs/`、`QUICKSTART.md` | PR 1 つ |
@@ -38,7 +38,7 @@ pnpm --filter @open-design/web build  # 必要に応じて web パッケージ�
 
 Node `~24` と pnpm `10.33.x` が必要です。`nvm` / `fnm` はオプション。使用する場合は `nvm install 24 && nvm use 24` または `fnm install 24 && fnm use 24` を実行してください。macOS、Linux、WSL2 が主要プラットフォームです。Windows ネイティブでも動作するはずですが、主要ターゲットではありません — 動作しない場合は issue を作成してください。
 
-OD 自体の開発に agent CLI は `PATH` 上に不要です — daemon は「no agents found」と表示し、**Anthropic API · BYOK** パスにフォールバックします。このパスが最も高速な開発ループです。
+AD 自体の開発に agent CLI は `PATH` 上に不要です — daemon は「no agents found」と表示し、**Anthropic API · BYOK** パスにフォールバックします。このパスが最も高速な開発ループです。
 
 ---
 
@@ -61,7 +61,7 @@ skills/your-skill/
 
 ### `SKILL.md` frontmatter
 
-最初の 3 キーは Claude Code のベース仕様 — `name`、`description`、`triggers`。`od:` 配下はすべて OD 固有のオプションですが、**`od.mode`** が Skill の表示グループ（Prototype / Deck / Template / Design system）を決定します。
+最初の 3 キーは Claude Code のベース仕様 — `name`、`description`、`triggers`。`od:` 配下はすべて AD 固有のオプションですが、**`od.mode`** が Skill の表示グループ（Prototype / Deck / Template / Design system）を決定します。
 
 ```yaml
 ---
@@ -247,10 +247,10 @@ CLA は求めません。Apache-2.0 でカバーされます。あなたのコ�
 
 プロジェクトの焦点を維持するため、以下のような PR は作成しないでください：
 
-- **モデルランタイムを vendor する。** OD の根幹は「あなたの既存 CLI で十分」です。`pi-ai`、OpenAI キー、モデルローダーは同梱しません。
+- **モデルランタイムを vendor する。** AD の根幹は「あなたの既存 CLI で十分」です。`pi-ai`、OpenAI キー、モデルローダーは同梱しません。
 - **事前の議論なくフロントエンドを現在のスタックから書き換える。** Next.js 16 App Router + React 18 + TS がラインです。メンテナが明示的にそのマイグレーションを望まない限り、Astro、Solid、Svelte、その他のフレームワークへの書き換えは不可。
 - **daemon をサーバーレス関数に置き換える。** daemon の存在意義は実際の `cwd` を所有し、実際の CLI を spawn することです。SPA の Vercel デプロイは OK。daemon は daemon のまま。
-- **テレメトリ / アナリティクス / phone-home を追加する。** OD はローカルファーストです。外向きの呼び出しはユーザーが明示的に設定したプロバイダへのもののみ。
+- **テレメトリ / アナリティクス / phone-home を追加する。** AD はローカルファーストです。外向きの呼び出しはユーザーが明示的に設定したプロバイダへのもののみ。
 - **ライセンスファイルと帰属表示なしでバイナリを同梱する。**
 
 アイデアが適合するか分からない場合は、コードを書く前に discussion を作成してください。

@@ -50,7 +50,7 @@ Anthropic 的 [Claude Design][cd]（2026-04-17 发布，基于 Opus 4.7）让大
 
 这不是「AI 试图做点设计」。这是一个被提示词栈训练得像高级设计师一样工作的 AI —— 有可用的文件系统、有确定性的色板库、有 checklist 文化 —— 也就是 Claude Design 立下的那条线，只是这次它开源、归你。
 
-OD 站在四个开源项目的肩膀上：
+AD 站在四个开源项目的肩膀上：
 
 - [**`alchaincyf/huashu-design`**（花叔的画术）](https://github.com/alchaincyf/huashu-design) —— 设计哲学的指南针。Junior-Designer 工作流、5 步品牌资产协议、anti-AI-slop checklist、五维自评审、以及方向选择器背后的「5 流派 × 20 种设计哲学」思路 —— 全部蒸馏进 [`apps/daemon/src/prompts/discovery.ts`](apps/daemon/src/prompts/discovery.ts)。
 - [**`op7418/guizang-ppt-skill`**（歸藏的杂志风 PPT skill）](https://github.com/op7418/guizang-ppt-skill) —— Deck 模式。原样捆绑在 [`skills/guizang-ppt/`](skills/guizang-ppt/) 下，原 LICENSE 保留；杂志版式、WebGL hero、P0/P1/P2 checklist。
@@ -88,7 +88,7 @@ OD 站在四个开源项目的肩膀上：
 </td>
 <td width="50%">
 <img src="docs/screenshots/02-question-form.png" alt="02 · 初始化问题表单" /><br/>
-<sub><b>初始化问题表单</b> —— 模型动笔之前，OD 先把需求锁住：surface、受众、调性、品牌上下文、规模。30 秒勾选项秒杀 30 分钟来回返工。</sub>
+<sub><b>初始化问题表单</b> —— 模型动笔之前，AD 先把需求锁住：surface、受众、调性、品牌上下文、规模。30 秒勾选项秒杀 30 分钟来回返工。</sub>
 </td>
 </tr>
 <tr>
@@ -125,7 +125,7 @@ OD 站在四个开源项目的肩膀上：
 
 ## 内置 Skills
 
-**31 个 skill，每个一个文件夹**，都遵循 Claude Code 的 [`SKILL.md`][skill] 规范，并叠加 OD 的 `od:` frontmatter，daemon 原样解析 —— `mode`、`platform`、`scenario`、`preview.type`、`design_system.requires`、`default_for`、`featured`、`fidelity`、`speaker_notes`、`animations`、`example_prompt`（[`apps/daemon/src/skills.ts`](apps/daemon/src/skills.ts)）。
+**31 个 skill，每个一个文件夹**，都遵循 Claude Code 的 [`SKILL.md`][skill] 规范，并叠加 AD 的 `od:` frontmatter，daemon 原样解析 —— `mode`、`platform`、`scenario`、`preview.type`、`design_system.requires`、`default_for`、`featured`、`fidelity`、`speaker_notes`、`animations`、`example_prompt`（[`apps/daemon/src/skills.ts`](apps/daemon/src/skills.ts)）。
 
 两种顶层 **mode** 撑起整个目录：**`prototype`**（27 个 —— 任何能被渲染成单页 artifact 的产物，从杂志风 landing 到手机屏到 PM 规范文档都算）和 **`deck`**（4 个 —— 横滑式演示，自带 deck framework 框架）。**`scenario`** 是 picker 用来分组的字段：`design` · `marketing` · `operation` · `engineering` · `product` · `finance` · `hr` · `sale` · `personal`。
 
@@ -491,7 +491,7 @@ open-design/
 
 ## 视觉方向
 
-当用户没有品牌资产时，agent 会跳第二个表单，5 套精选方向 —— 这是 [`huashu-design` 的「设计方向顾问 · 5 流派 × 20 种设计哲学」 fallback](https://github.com/alchaincyf/huashu-design#%E8%AE%BE%E8%AE%A1%E6%96%B9%E5%90%91%E9%A1%BE%E9%97%AE-fallback) 在 OD 里的落地。每一套都是确定性 spec —— OKLch 色板、字体栈、版式姿态、参考列表 —— agent 直接把它**原样**绑进 seed 模板的 `:root`。一个 radio 选完，整套视觉系统全部锁定。零 freestyle，零 AI slop。
+当用户没有品牌资产时，agent 会跳第二个表单，5 套精选方向 —— 这是 [`huashu-design` 的「设计方向顾问 · 5 流派 × 20 种设计哲学」 fallback](https://github.com/alchaincyf/huashu-design#%E8%AE%BE%E8%AE%A1%E6%96%B9%E5%90%91%E9%A1%BE%E9%97%AE-fallback) 在 AD 里的落地。每一套都是确定性 spec —— OKLch 色板、字体栈、版式姿态、参考列表 —— agent 直接把它**原样**绑进 seed 模板的 `:root`。一个 radio 选完，整套视觉系统全部锁定。零 freestyle，零 AI slop。
 
 | 方向 | 调性 | 参考 |
 |---|---|---|
@@ -572,7 +572,7 @@ OD 不止于代码。同一套生成 `<artifact>` HTML 的 chat 入口，也驱�
 </tr>
 </table>
 
-套路和其它一样：选模板、改 brief、发送。Agent 读取自带的 `skills/hyperframes/SKILL.md`（里面带 OD 专用的渲染流程 —— composition 源文件落到 `.hyperframes-cache/`，避免污染文件工作区；daemon 替你触发 `npx hyperframes render`，绕开 macOS sandbox-exec / Puppeteer 卡死；最终只有 `.mp4` 作为项目 chip 出现），写完 composition、产出 MP4。目录块缩略图版权归 HeyGen，从他们的 CDN 回源；OSS 框架本身是 Apache-2.0。
+套路和其它一样：选模板、改 brief、发送。Agent 读取自带的 `skills/hyperframes/SKILL.md`（里面带 AD 专用的渲染流程 —— composition 源文件落到 `.hyperframes-cache/`，避免污染文件工作区；daemon 替你触发 `npx hyperframes render`，绕开 macOS sandbox-exec / Puppeteer 卡死；最终只有 `.mp4` 作为项目 chip 出现），写完 composition、产出 MP4。目录块缩略图版权归 HeyGen，从他们的 CDN 回源；OSS 框架本身是 Apache-2.0。
 
 > **已经接好但还没出 prompt 模板的：** Kling 2.0 / 1.6 / 1.5、Veo 3 / Veo 2、Sora 2 / Sora 2-Pro（via Fal）、MiniMax video-01 —— 都在 `VIDEO_MODELS`（[`apps/web/src/media/models.ts`](apps/web/src/media/models.ts)）里。Suno v5 / v4.5、Udio v2、Lyria 2（音乐）和 gpt-4o-mini-tts、MiniMax TTS（语音）覆盖音频侧。补全这些模型的 prompt 模板属于开放贡献 —— 把 JSON 放进 `prompt-templates/video/` 或 `prompt-templates/audio/`，picker 里就能直接看到。
 
