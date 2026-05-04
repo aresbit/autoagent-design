@@ -637,7 +637,7 @@ function createPendingHtml(): string {
   return `data:text/html;charset=utf-8,${encodeURIComponent(`<!doctype html>
 <html>
   <head>
-    <title>Open Design</title>
+    <title>Auto Design</title>
     <style>
       body {
         align-items: center;
@@ -660,7 +660,7 @@ function createPendingHtml(): string {
   </head>
   <body>
     <main>
-      <h1>Open Design</h1>
+      <h1>Auto Design</h1>
       <p>Waiting for the web runtime URL…</p>
     </main>
   </body>
@@ -1106,7 +1106,7 @@ export async function createDesktopRuntime(options: DesktopRuntimeOptions): Prom
     minHeight: 600,
     minWidth: 900,
     show: true,
-    title: "Open Design",
+    title: "Auto Design",
     ...MAC_WINDOW_CHROME,
     webPreferences: {
       contextIsolation: true,

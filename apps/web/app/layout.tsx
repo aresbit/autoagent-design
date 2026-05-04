@@ -6,7 +6,7 @@ import '../src/index.css';
 import '../src/styles/home/index.css';
 
 export const metadata: Metadata = {
-  title: 'Open Design',
+  title: 'Auto Design',
   icons: {
     icon: '/app-icon.svg',
     // Safari pinned-tab mask icon — Next.js's Metadata API doesn't have a

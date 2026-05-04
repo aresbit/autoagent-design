@@ -222,7 +222,7 @@ ls -la apps/daemon/dist/cli.js
 curl -s http://127.0.0.1:7457/api/health
 ```
 
-Then open the project from the Open Design app again instead of resuming an old terminal agent session. A daemon-spawned agent should see values like:
+Then open the project from the Auto Design app again instead of resuming an old terminal agent session. A daemon-spawned agent should see values like:
 
 ```bash
 echo "OD_BIN=$OD_BIN"
@@ -306,7 +306,7 @@ open-design/
 │   └── desktop/               # Electron runtime, launched/inspected by tools-dev
 ├── packages/
 │   ├── contracts/             # shared web/daemon app contracts
-│   ├── sidecar-proto/         # Open Design sidecar protocol contract
+│   ├── sidecar-proto/         # Auto Design sidecar protocol contract
 │   ├── sidecar/               # generic sidecar runtime primitives
 │   └── platform/              # generic process/platform primitives
 ├── tools/dev/                 # `pnpm tools-dev` lifecycle and inspect CLI
@@ -351,8 +351,8 @@ open-design/
   ```
   If the smoke test reports `401`, `apiKeySource: "none"`, or another auth error without a custom endpoint, run `claude`, use `/login`, exit Claude, and retry Open Design. If you use multiple Claude profiles, set **Settings -> Execution mode -> Claude Code config directory** to the profile path such as `~/.claude-2`. If `ANTHROPIC_BASE_URL` or a proxy is set, check the endpoint URL, proxy credentials, endpoint auth environment, and model access; remove the custom endpoint only if you want to retry with standard Claude Code auth. On Windows, native PowerShell and WSL use separate Claude installs and credential stores; re-authenticate in the same environment Open Design uses, and check Windows Credential Manager if `/login` does not repair native Windows credentials.
 - **daemon 500 on /api/chat** — check the daemon terminal for the stderr tail; usually the CLI rejected its args. Different CLIs take different argv shapes; see `apps/daemon/src/agents.ts` `buildArgs` if you need to tweak.
-- **media generation says `OD_BIN` is missing or daemon URL is `:0`** — run the media dispatcher checks above. Do not resume the old CLI session; reopen the project from the Open Design app so the daemon can inject fresh `OD_*` variables.
-- **Codex loads too much plugin context** — start Open Design with `OD_CODEX_DISABLE_PLUGINS=1 pnpm tools-dev` to make daemon-spawned Codex processes run with `--disable plugins`.
+- **media generation says `OD_BIN` is missing or daemon URL is `:0`** — run the media dispatcher checks above. Do not resume the old CLI session; reopen the project from the Auto Design app so the daemon can inject fresh `OD_*` variables.
+- **Codex loads too much plugin context** — start Auto Design with `OD_CODEX_DISABLE_PLUGINS=1 pnpm tools-dev` to make daemon-spawned Codex processes run with `--disable plugins`.
 - **artifact never renders** — the model produced text without wrapping in `<artifact>`. Confirm the system prompt is going through (check daemon log) and consider switching to a more capable model or a stricter skill.
 
 ## Mapping back to the vision
