@@ -1,5 +1,13 @@
 # Open Design — the open-source Claude Design alternative
 
+启动命令:
+
+```
+ELECTRON_DISABLE_SANDBOX=1 pnpm tools-dev start --daemon-port 17456 --web-port 17573
+```
+
+## user story
+
 > **Open Design is the open-source, local-first alternative to [Claude Design][cd].** Web-deployable, BYOK at every layer — **16 coding-agent CLIs** auto-detected on your `PATH` (Claude Code, Codex, Devin for Terminal, Cursor Agent, Gemini CLI, OpenCode, Qwen, Qoder CLI, GitHub Copilot CLI, Hermes, Kimi, Pi, Kiro, Kilo, Mistral Vibe, DeepSeek TUI) become the design engine, driven by **31 composable Skills** and **72 brand-grade Design Systems**. No CLI? An OpenAI-compatible BYOK proxy is the same loop minus the spawn.
 
 > [!IMPORTANT]
