@@ -274,6 +274,8 @@ export const ru: Dict = {
   'examples.scenarioEducation': 'Образование',
   'examples.scenarioPersonal': 'Личное',
   'examples.emptyNoSkills': 'Нет доступных навыков. Демон запущен?',
+  'examples.searchPlaceholder': 'Поиск примеров…',
+  'examples.searchAria': 'Поиск примеров по имени',
   'examples.emptyNoMatch': 'Нет примеров, соответствующих этим фильтрам.',
   'examples.openPreview': '⤢ Открыть предпросмотр',
   'examples.loadingPreview': 'Загрузка предпросмотра…',

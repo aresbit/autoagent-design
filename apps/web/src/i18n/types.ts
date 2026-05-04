@@ -321,6 +321,8 @@ export interface Dict {
   'examples.scenarioLegal': string;
   'examples.scenarioEducation': string;
   'examples.scenarioPersonal': string;
+  'examples.searchPlaceholder': string;
+  'examples.searchAria': string;
   'examples.emptyNoSkills': string;
   'examples.emptyNoMatch': string;
   'examples.openPreview': string;

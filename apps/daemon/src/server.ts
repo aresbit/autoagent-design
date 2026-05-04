@@ -52,6 +52,7 @@ import {
   deleteProjectFile,
   ensureProject,
   listFiles,
+  mimeFor,
   projectDir,
   readProjectFile,
   removeProjectDir,
@@ -1385,7 +1386,10 @@ export async function startServer({ port = 7456, host = process.env.OD_BIND_HOST
 
       const baked = path.join(skill.dir, 'example.html');
       if (fs.existsSync(baked)) {
-        return res.type('text/html').sendFile(baked);
+        const html = await fs.promises.readFile(baked, 'utf8');
+        return res
+          .type('text/html')
+          .send(rewriteSkillAssetUrls(html, skill.id));
       }
 
       const tpl = path.join(skill.dir, 'assets', 'template.html');
@@ -1395,17 +1399,25 @@ export async function startServer({ port = 7456, host = process.env.OD_BIND_HOST
           const tplHtml = await fs.promises.readFile(tpl, 'utf8');
           const slidesHtml = await fs.promises.readFile(slides, 'utf8');
           const assembled = assembleExample(tplHtml, slidesHtml, skill.name);
-          return res.type('text/html').send(assembled);
+          return res
+            .type('text/html')
+            .send(rewriteSkillAssetUrls(assembled, skill.id));
         } catch {
           // Fall through to raw template on read failure.
         }
       }
       if (fs.existsSync(tpl)) {
-        return res.type('text/html').sendFile(tpl);
+        const html = await fs.promises.readFile(tpl, 'utf8');
+        return res
+          .type('text/html')
+          .send(rewriteSkillAssetUrls(html, skill.id));
       }
       const idx = path.join(skill.dir, 'assets', 'index.html');
       if (fs.existsSync(idx)) {
-        return res.type('text/html').sendFile(idx);
+        const html = await fs.promises.readFile(idx, 'utf8');
+        return res
+          .type('text/html')
+          .send(rewriteSkillAssetUrls(html, skill.id));
       }
       res
         .status(404)
@@ -1413,6 +1425,41 @@ export async function startServer({ port = 7456, host = process.env.OD_BIND_HOST
         .send(
           'no example.html, assets/template.html, or assets/index.html for this skill',
         );
+    } catch (err) {
+      res.status(500).type('text/plain').send(String(err));
+    }
+  });
+
+  // Static assets shipped beside a skill's example/template HTML. Lets the
+  // example HTML reference `./assets/foo.png`-style paths that resolve
+  // correctly when the response is loaded into a sandboxed `srcdoc` iframe
+  // (where relative URLs would otherwise resolve against `about:srcdoc`).
+  // The example response above rewrites `./assets/<file>` into a request
+  // against this route; we still keep the on-disk paths human-friendly so
+  // contributors can preview `example.html` straight from disk.
+  app.get('/api/skills/:id/assets/*', async (req, res) => {
+    try {
+      const skills = await listSkills(SKILLS_DIR);
+      const skill = skills.find((s) => s.id === req.params.id);
+      if (!skill) {
+        return res.status(404).type('text/plain').send('skill not found');
+      }
+      const relPath = String(req.params[0] || '');
+      const assetsRoot = path.resolve(skill.dir, 'assets');
+      const target = path.resolve(assetsRoot, relPath);
+      if (target !== assetsRoot && !target.startsWith(assetsRoot + path.sep)) {
+        return res.status(400).type('text/plain').send('invalid asset path');
+      }
+      if (!fs.existsSync(target)) {
+        return res.status(404).type('text/plain').send('asset not found');
+      }
+      // The example HTML is rendered inside a sandboxed iframe (Origin: null).
+      // Mirror the project /raw route's allowance so the iframe can fetch the
+      // image bytes; same-origin web callers do not need this header.
+      if (req.headers.origin === 'null') {
+        res.header('Access-Control-Allow-Origin', '*');
+      }
+      res.type(mimeFor(target)).sendFile(target);
     } catch (err) {
       res.status(500).type('text/plain').send(String(err));
     }
@@ -3214,6 +3261,30 @@ function assembleExample(templateHtml, slidesHtml, title) {
       /<title>.*?<\/title>/,
       `<title>${title} | Open Design Example</title>`,
     );
+}
+
+// Skill example HTML often references shipped images via relative paths
+// like `./assets/hero.png`. Those resolve correctly when the file is
+// opened from disk, but the web app loads the example into a sandboxed
+// iframe via `srcdoc`, where the document URL is `about:srcdoc` and
+// relative URLs cannot find the assets. Rewriting them to an absolute
+// `/api/skills/<id>/assets/...` URL lets the same HTML render in both
+// places — the disk preview keeps working, and the in-app preview now
+// fetches assets through the matching route below.
+export function rewriteSkillAssetUrls(html: string, skillId: string): string {
+  if (typeof html !== 'string' || html.length === 0) return html;
+  // Match src/href attributes whose values point at the current skill's
+  // assets (`./assets/...` or `assets/...`) or a sibling skill's assets
+  // (`../other-skill/assets/...`). Quote style is preserved so we do not
+  // disturb the surrounding markup.
+  return html.replace(
+    /(\s(?:src|href)\s*=\s*)(['"])((?:\.\.\/([^/'"#?]+)\/)?(?:\.\/)?assets\/([^'"#?]+))(\2)/gi,
+    (_match, attr, openQuote, _fullPath, siblingSkillId, relPath, closeQuote) => {
+      const resolvedSkillId = siblingSkillId || skillId;
+      const prefix = `/api/skills/${encodeURIComponent(resolvedSkillId)}/assets/`;
+      return `${attr}${openQuote}${prefix}${relPath}${closeQuote}`;
+    },
+  );
 }
 
 export function isLocalSameOrigin(req, port) {

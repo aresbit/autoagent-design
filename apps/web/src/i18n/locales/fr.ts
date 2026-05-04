@@ -274,6 +274,8 @@ export const fr: Dict = {
   'examples.scenarioLegal': 'Juridique',
   'examples.scenarioEducation': 'Éducation',
   'examples.scenarioPersonal': 'Personnel',
+  'examples.searchPlaceholder': 'Rechercher des exemples…',
+  'examples.searchAria': 'Rechercher des exemples par nom',
   'examples.emptyNoSkills': 'Aucune compétence disponible. Le daemon est-il en cours d\'exécution ?',
   'examples.emptyNoMatch': 'Aucun exemple ne correspond à ces filtres.',
   'examples.openPreview': '⤢ Ouvrir l\'aperçu',

@@ -274,6 +274,8 @@ export const uk: Dict = {
   'examples.scenarioLegal': 'Юридичні послуги',
   'examples.scenarioEducation': 'Освіта',
   'examples.scenarioPersonal': 'Особисте',
+  'examples.searchPlaceholder': 'Пошук прикладів…',
+  'examples.searchAria': 'Пошук прикладів за назвою',
   'examples.emptyNoSkills': 'Навички недоступні. Чи запущений фоновий процес?',
   'examples.emptyNoMatch': 'Приклади, що відповідають цим фільтрам, не знайдені.',
   'examples.openPreview': '⤢ Відкрити попередній перегляд',
