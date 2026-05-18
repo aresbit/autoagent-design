@@ -706,7 +706,7 @@ Guide complet, critères de merge, style de code et refus fréquents → [`CONTR
 Merci à toutes les personnes qui font avancer Auto Design : code, docs, retours, nouveaux Skills, nouveaux Design Systems ou issues bien ciblées. Chaque vraie contribution compte.
 
 <a href="https://github.com/nexu-io/open-design/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=nexu-io/open-design&cache_bust=2026-05-04" alt="Contributeurs Auto Design" />
+  <img src="https://contrib.rocks/image?repo=nexu-io/open-design&cache_bust=2026-05-18" alt="Contributeurs Auto Design" />
 </a>
 
 Si vous avez livré votre première PR, bienvenue. Le label [`good-first-issue`](https://github.com/nexu-io/open-design/labels/good-first-issue) est le point d’entrée.
@@ -723,9 +723,9 @@ Le SVG ci-dessus est régénéré chaque jour par [`.github/workflows/metrics.ym
 
 <a href="https://star-history.com/#nexu-io/open-design&Date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&theme=dark&cache_bust=2026-05-04" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-04" />
-    <img alt="Historique des stars Auto Design" src="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-04" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&theme=dark&cache_bust=2026-05-18" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-18" />
+    <img alt="Historique des stars Auto Design" src="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-18" />
   </picture>
 </a>
 
