@@ -204,7 +204,7 @@ const HEADER_PRODUCT_MENU_COPY: Record<LandingLocaleCode, HeaderProductMenuCopy>
   en: {
     toggleNavigationMenu: 'Toggle navigation menu',
     product: 'Product',
-    openDesignName: 'Open Design',
+    openDesignName: 'Auto Design',
     openDesignBlurb: 'The agentic design surface: skills, systems, templates.',
     htmlAnythingName: 'HTML Anything',
     htmlAnythingBlurb: 'Markdown / data to ship-ready HTML, by your local agent.',
@@ -214,7 +214,7 @@ const HEADER_PRODUCT_MENU_COPY: Record<LandingLocaleCode, HeaderProductMenuCopy>
   zh: {
     toggleNavigationMenu: '切换导航菜单',
     product: '产品',
-    openDesignName: 'Open Design',
+    openDesignName: 'Auto Design',
     openDesignBlurb: 'Agent 原生设计工作台：Skill、设计系统、模板。',
     htmlAnythingName: 'HTML Anything',
     htmlAnythingBlurb: 'Markdown / 数据变成可交付 HTML，由本地 Agent 完成。',
@@ -224,7 +224,7 @@ const HEADER_PRODUCT_MENU_COPY: Record<LandingLocaleCode, HeaderProductMenuCopy>
   'zh-tw': {
     toggleNavigationMenu: '切換導覽選單',
     product: '產品',
-    openDesignName: 'Open Design',
+    openDesignName: 'Auto Design',
     openDesignBlurb: 'Agent 原生設計工作台：Skill、設計系統、模板。',
     htmlAnythingName: 'HTML Anything',
     htmlAnythingBlurb: 'Markdown / 資料變成可交付 HTML，由本地 Agent 完成。',
@@ -234,7 +234,7 @@ const HEADER_PRODUCT_MENU_COPY: Record<LandingLocaleCode, HeaderProductMenuCopy>
   ja: {
     toggleNavigationMenu: 'ナビゲーションメニューを切り替え',
     product: 'プロダクト',
-    openDesignName: 'Open Design',
+    openDesignName: 'Auto Design',
     openDesignBlurb: 'Agent ネイティブのデザイン面: Skill、システム、テンプレート。',
     htmlAnythingName: 'HTML Anything',
     htmlAnythingBlurb: 'Markdown / データをローカル Agent で納品可能な HTML へ。',
@@ -244,7 +244,7 @@ const HEADER_PRODUCT_MENU_COPY: Record<LandingLocaleCode, HeaderProductMenuCopy>
   ko: {
     toggleNavigationMenu: '내비게이션 메뉴 전환',
     product: '제품',
-    openDesignName: 'Open Design',
+    openDesignName: 'Auto Design',
     openDesignBlurb: 'Agent 네이티브 디자인 작업면: Skill, 시스템, 템플릿.',
     htmlAnythingName: 'HTML Anything',
     htmlAnythingBlurb: 'Markdown / 데이터를 로컬 Agent로 배포 가능한 HTML로 변환.',
@@ -254,7 +254,7 @@ const HEADER_PRODUCT_MENU_COPY: Record<LandingLocaleCode, HeaderProductMenuCopy>
   de: {
     toggleNavigationMenu: 'Navigationsmenu umschalten',
     product: 'Produkt',
-    openDesignName: 'Open Design',
+    openDesignName: 'Auto Design',
     openDesignBlurb: 'Agentische Designoberfläche: Skills, Systeme, Vorlagen.',
     htmlAnythingName: 'HTML Anything',
     htmlAnythingBlurb: 'Markdown / Daten werden durch deinen lokalen Agent zu fertigem HTML.',
@@ -264,7 +264,7 @@ const HEADER_PRODUCT_MENU_COPY: Record<LandingLocaleCode, HeaderProductMenuCopy>
   fr: {
     toggleNavigationMenu: 'Basculer le menu de navigation',
     product: 'Produit',
-    openDesignName: 'Open Design',
+    openDesignName: 'Auto Design',
     openDesignBlurb: 'Surface de design agentique : skills, systèmes, modèles.',
     htmlAnythingName: 'HTML Anything',
     htmlAnythingBlurb: 'Markdown / données vers du HTML prêt à livrer via votre agent local.',
@@ -274,7 +274,7 @@ const HEADER_PRODUCT_MENU_COPY: Record<LandingLocaleCode, HeaderProductMenuCopy>
   ru: {
     toggleNavigationMenu: 'Переключить меню навигации',
     product: 'Продукт',
-    openDesignName: 'Open Design',
+    openDesignName: 'Auto Design',
     openDesignBlurb: 'Agent-native дизайн-среда: skills, системы, шаблоны.',
     htmlAnythingName: 'HTML Anything',
     htmlAnythingBlurb: 'Markdown / данные в готовый HTML через локального Agent.',
@@ -284,7 +284,7 @@ const HEADER_PRODUCT_MENU_COPY: Record<LandingLocaleCode, HeaderProductMenuCopy>
   es: {
     toggleNavigationMenu: 'Alternar menú de navegación',
     product: 'Producto',
-    openDesignName: 'Open Design',
+    openDesignName: 'Auto Design',
     openDesignBlurb: 'Superficie de diseño agentic: skills, sistemas, plantillas.',
     htmlAnythingName: 'HTML Anything',
     htmlAnythingBlurb: 'Markdown / datos a HTML listo para entregar con tu Agent local.',
@@ -294,7 +294,7 @@ const HEADER_PRODUCT_MENU_COPY: Record<LandingLocaleCode, HeaderProductMenuCopy>
   'pt-br': {
     toggleNavigationMenu: 'Alternar menu de navegação',
     product: 'Produto',
-    openDesignName: 'Open Design',
+    openDesignName: 'Auto Design',
     openDesignBlurb: 'Superfície de design agentic: skills, sistemas, templates.',
     htmlAnythingName: 'HTML Anything',
     htmlAnythingBlurb: 'Markdown / dados viram HTML pronto com seu Agent local.',
@@ -304,7 +304,7 @@ const HEADER_PRODUCT_MENU_COPY: Record<LandingLocaleCode, HeaderProductMenuCopy>
   it: {
     toggleNavigationMenu: 'Apri o chiudi il menu di navigazione',
     product: 'Prodotto',
-    openDesignName: 'Open Design',
+    openDesignName: 'Auto Design',
     openDesignBlurb: 'Superficie di design agentic: skill, sistemi, template.',
     htmlAnythingName: 'HTML Anything',
     htmlAnythingBlurb: 'Markdown / dati in HTML pronto alla consegna con il tuo Agent locale.',
@@ -314,7 +314,7 @@ const HEADER_PRODUCT_MENU_COPY: Record<LandingLocaleCode, HeaderProductMenuCopy>
   vi: {
     toggleNavigationMenu: 'Chuyển menu điều hướng',
     product: 'Sản phẩm',
-    openDesignName: 'Open Design',
+    openDesignName: 'Auto Design',
     openDesignBlurb: 'Bề mặt thiết kế agentic: skill, hệ thống, mẫu.',
     htmlAnythingName: 'HTML Anything',
     htmlAnythingBlurb: 'Markdown / dữ liệu thành HTML sẵn sàng giao bằng Agent cục bộ.',
@@ -324,7 +324,7 @@ const HEADER_PRODUCT_MENU_COPY: Record<LandingLocaleCode, HeaderProductMenuCopy>
   pl: {
     toggleNavigationMenu: 'Przełącz menu nawigacji',
     product: 'Produkt',
-    openDesignName: 'Open Design',
+    openDesignName: 'Auto Design',
     openDesignBlurb: 'Agentic powierzchnia projektowa: skills, systemy, szablony.',
     htmlAnythingName: 'HTML Anything',
     htmlAnythingBlurb: 'Markdown / dane do gotowego HTML przez lokalnego Agent.',
@@ -334,7 +334,7 @@ const HEADER_PRODUCT_MENU_COPY: Record<LandingLocaleCode, HeaderProductMenuCopy>
   id: {
     toggleNavigationMenu: 'Alihkan menu navigasi',
     product: 'Produk',
-    openDesignName: 'Open Design',
+    openDesignName: 'Auto Design',
     openDesignBlurb: 'Ruang desain agentic: skill, sistem, template.',
     htmlAnythingName: 'HTML Anything',
     htmlAnythingBlurb: 'Markdown / data menjadi HTML siap kirim lewat Agent lokal.',
@@ -344,7 +344,7 @@ const HEADER_PRODUCT_MENU_COPY: Record<LandingLocaleCode, HeaderProductMenuCopy>
   nl: {
     toggleNavigationMenu: 'Navigatiemenu wisselen',
     product: 'Product',
-    openDesignName: 'Open Design',
+    openDesignName: 'Auto Design',
     openDesignBlurb: 'Agentic designoppervlak: skills, systemen, templates.',
     htmlAnythingName: 'HTML Anything',
     htmlAnythingBlurb: 'Markdown / data naar opleverklare HTML via je lokale Agent.',
@@ -354,7 +354,7 @@ const HEADER_PRODUCT_MENU_COPY: Record<LandingLocaleCode, HeaderProductMenuCopy>
   ar: {
     toggleNavigationMenu: 'تبديل قائمة التنقل',
     product: 'المنتج',
-    openDesignName: 'Open Design',
+    openDesignName: 'Auto Design',
     openDesignBlurb: 'مساحة تصميم وكيلة: المهارات والأنظمة والقوالب.',
     htmlAnythingName: 'HTML Anything',
     htmlAnythingBlurb: 'Markdown / البيانات إلى HTML جاهز عبر Agent المحلي.',
@@ -364,7 +364,7 @@ const HEADER_PRODUCT_MENU_COPY: Record<LandingLocaleCode, HeaderProductMenuCopy>
   tr: {
     toggleNavigationMenu: 'Gezinme menüsünü aç/kapat',
     product: 'Ürün',
-    openDesignName: 'Open Design',
+    openDesignName: 'Auto Design',
     openDesignBlurb: 'Agentic tasarım yüzeyi: skill, sistemler, şablonlar.',
     htmlAnythingName: 'HTML Anything',
     htmlAnythingBlurb: 'Markdown / veriler yerel Agent ile teslim edilebilir HTML olur.',
@@ -374,7 +374,7 @@ const HEADER_PRODUCT_MENU_COPY: Record<LandingLocaleCode, HeaderProductMenuCopy>
   uk: {
     toggleNavigationMenu: 'Перемкнути меню навігації',
     product: 'Продукт',
-    openDesignName: 'Open Design',
+    openDesignName: 'Auto Design',
     openDesignBlurb: 'Agent-native дизайн-поверхня: skills, системи, шаблони.',
     htmlAnythingName: 'HTML Anything',
     htmlAnythingBlurb: 'Markdown / дані у готовий HTML через локального Agent.',
@@ -960,9 +960,9 @@ const COMMON_COPY: Record<LandingLocaleCode, CommonCopy> = {
         contact: 'Contact',
       },
       download: 'Download',
-      downloadAria: 'Download Open Design desktop',
+      downloadAria: 'Download Auto Design desktop',
       downloadTitle: 'Download the desktop app',
-      starAria: 'Star Open Design on GitHub',
+      starAria: 'Star Auto Design on GitHub',
       starTitle: 'Click to star us on GitHub',
       starPrefix: 'Star',
     },
@@ -991,9 +991,9 @@ const COMMON_COPY: Record<LandingLocaleCode, CommonCopy> = {
         contact: '联系',
       },
       download: '下载',
-      downloadAria: '下载 Open Design 桌面端',
+      downloadAria: '下载 Auto Design 桌面端',
       downloadTitle: '下载桌面应用',
-      starAria: '在 GitHub 为 Open Design 点 Star',
+      starAria: '在 GitHub 为 Auto Design 点 Star',
       starTitle: '去 GitHub 点 Star',
       starPrefix: 'Star',
     },
@@ -1022,9 +1022,9 @@ const COMMON_COPY: Record<LandingLocaleCode, CommonCopy> = {
         contact: '聯絡',
       },
       download: '下載',
-      downloadAria: '下載 Open Design 桌面端',
+      downloadAria: '下載 Auto Design 桌面端',
       downloadTitle: '下載桌面應用',
-      starAria: '在 GitHub 為 Open Design 按 Star',
+      starAria: '在 GitHub 為 Auto Design 按 Star',
       starTitle: '去 GitHub 按 Star',
       starPrefix: 'Star',
     },
@@ -1053,9 +1053,9 @@ const COMMON_COPY: Record<LandingLocaleCode, CommonCopy> = {
         contact: '連絡',
       },
       download: 'ダウンロード',
-      downloadAria: 'Open Design デスクトップをダウンロード',
+      downloadAria: 'Auto Design デスクトップをダウンロード',
       downloadTitle: 'デスクトップアプリをダウンロード',
-      starAria: 'GitHub で Open Design にスター',
+      starAria: 'GitHub で Auto Design にスター',
       starTitle: 'GitHub でスターする',
       starPrefix: 'Star',
     },
@@ -1084,9 +1084,9 @@ const COMMON_COPY: Record<LandingLocaleCode, CommonCopy> = {
         contact: '문의',
       },
       download: '다운로드',
-      downloadAria: 'Open Design 데스크톱 다운로드',
+      downloadAria: 'Auto Design 데스크톱 다운로드',
       downloadTitle: '데스크톱 앱 다운로드',
-      starAria: 'GitHub에서 Open Design에 스타 주기',
+      starAria: 'GitHub에서 Auto Design에 스타 주기',
       starTitle: 'GitHub에서 스타 주기',
       starPrefix: 'Star',
     },
@@ -1115,9 +1115,9 @@ const COMMON_COPY: Record<LandingLocaleCode, CommonCopy> = {
         contact: 'Kontakt',
       },
       download: 'Download',
-      downloadAria: 'Open Design Desktop herunterladen',
+      downloadAria: 'Auto Design Desktop herunterladen',
       downloadTitle: 'Desktop-App herunterladen',
-      starAria: 'Open Design auf GitHub mit Stern markieren',
+      starAria: 'Auto Design auf GitHub mit Stern markieren',
       starTitle: 'Auf GitHub sternen',
       starPrefix: 'Star',
     },
@@ -1146,9 +1146,9 @@ const COMMON_COPY: Record<LandingLocaleCode, CommonCopy> = {
         contact: 'Contact',
       },
       download: 'Télécharger',
-      downloadAria: 'Télécharger Open Design Desktop',
+      downloadAria: 'Télécharger Auto Design Desktop',
       downloadTitle: "Télécharger l'application desktop",
-      starAria: 'Ajouter une étoile à Open Design sur GitHub',
+      starAria: 'Ajouter une étoile à Auto Design sur GitHub',
       starTitle: 'Mettre une étoile sur GitHub',
       starPrefix: 'Star',
     },
@@ -1177,9 +1177,9 @@ const COMMON_COPY: Record<LandingLocaleCode, CommonCopy> = {
         contact: 'Контакт',
       },
       download: 'Скачать',
-      downloadAria: 'Скачать Open Design Desktop',
+      downloadAria: 'Скачать Auto Design Desktop',
       downloadTitle: 'Скачать desktop-приложение',
-      starAria: 'Поставить звезду Open Design на GitHub',
+      starAria: 'Поставить звезду Auto Design на GitHub',
       starTitle: 'Поставить звезду на GitHub',
       starPrefix: 'Star',
     },
@@ -1208,9 +1208,9 @@ const COMMON_COPY: Record<LandingLocaleCode, CommonCopy> = {
         contact: 'Contacto',
       },
       download: 'Descargar',
-      downloadAria: 'Descargar Open Design Desktop',
+      downloadAria: 'Descargar Auto Design Desktop',
       downloadTitle: 'Descargar la app de escritorio',
-      starAria: 'Dar Star a Open Design en GitHub',
+      starAria: 'Dar Star a Auto Design en GitHub',
       starTitle: 'Dar Star en GitHub',
       starPrefix: 'Star',
     },
@@ -1239,9 +1239,9 @@ const COMMON_COPY: Record<LandingLocaleCode, CommonCopy> = {
         contact: 'Contato',
       },
       download: 'Baixar',
-      downloadAria: 'Baixar Open Design Desktop',
+      downloadAria: 'Baixar Auto Design Desktop',
       downloadTitle: 'Baixar o app desktop',
-      starAria: 'Dar Star no Open Design no GitHub',
+      starAria: 'Dar Star no Auto Design no GitHub',
       starTitle: 'Dar Star no GitHub',
       starPrefix: 'Star',
     },
@@ -1270,9 +1270,9 @@ const COMMON_COPY: Record<LandingLocaleCode, CommonCopy> = {
         contact: 'Contatto',
       },
       download: 'Scarica',
-      downloadAria: 'Scarica Open Design Desktop',
+      downloadAria: 'Scarica Auto Design Desktop',
       downloadTitle: "Scarica l'app desktop",
-      starAria: 'Metti una Star a Open Design su GitHub',
+      starAria: 'Metti una Star a Auto Design su GitHub',
       starTitle: 'Metti una Star su GitHub',
       starPrefix: 'Star',
     },
@@ -1301,9 +1301,9 @@ const COMMON_COPY: Record<LandingLocaleCode, CommonCopy> = {
         contact: 'Liên hệ',
       },
       download: 'Tải xuống',
-      downloadAria: 'Tải Open Design Desktop',
+      downloadAria: 'Tải Auto Design Desktop',
       downloadTitle: 'Tải ứng dụng desktop',
-      starAria: 'Star Open Design trên GitHub',
+      starAria: 'Star Auto Design trên GitHub',
       starTitle: 'Star trên GitHub',
       starPrefix: 'Star',
     },
@@ -1332,9 +1332,9 @@ const COMMON_COPY: Record<LandingLocaleCode, CommonCopy> = {
         contact: 'Kontakt',
       },
       download: 'Pobierz',
-      downloadAria: 'Pobierz Open Design Desktop',
+      downloadAria: 'Pobierz Auto Design Desktop',
       downloadTitle: 'Pobierz aplikację desktop',
-      starAria: 'Daj gwiazdkę Open Design na GitHubie',
+      starAria: 'Daj gwiazdkę Auto Design na GitHubie',
       starTitle: 'Daj gwiazdkę na GitHubie',
       starPrefix: 'Star',
     },
@@ -1363,9 +1363,9 @@ const COMMON_COPY: Record<LandingLocaleCode, CommonCopy> = {
         contact: 'Kontak',
       },
       download: 'Unduh',
-      downloadAria: 'Unduh Open Design Desktop',
+      downloadAria: 'Unduh Auto Design Desktop',
       downloadTitle: 'Unduh aplikasi desktop',
-      starAria: 'Beri Star Open Design di GitHub',
+      starAria: 'Beri Star Auto Design di GitHub',
       starTitle: 'Beri Star di GitHub',
       starPrefix: 'Star',
     },
@@ -1394,9 +1394,9 @@ const COMMON_COPY: Record<LandingLocaleCode, CommonCopy> = {
         contact: 'Contact',
       },
       download: 'Download',
-      downloadAria: 'Open Design Desktop downloaden',
+      downloadAria: 'Auto Design Desktop downloaden',
       downloadTitle: 'Desktop-app downloaden',
-      starAria: 'Geef Open Design een Star op GitHub',
+      starAria: 'Geef Auto Design een Star op GitHub',
       starTitle: 'Star op GitHub',
       starPrefix: 'Star',
     },
@@ -1425,9 +1425,9 @@ const COMMON_COPY: Record<LandingLocaleCode, CommonCopy> = {
         contact: 'تواصل',
       },
       download: 'تنزيل',
-      downloadAria: 'تنزيل Open Design Desktop',
+      downloadAria: 'تنزيل Auto Design Desktop',
       downloadTitle: 'تنزيل تطبيق سطح المكتب',
-      starAria: 'ضع نجمة لـ Open Design على GitHub',
+      starAria: 'ضع نجمة لـ Auto Design على GitHub',
       starTitle: 'ضع نجمة على GitHub',
       starPrefix: 'Star',
     },
@@ -1456,9 +1456,9 @@ const COMMON_COPY: Record<LandingLocaleCode, CommonCopy> = {
         contact: 'İletişim',
       },
       download: 'İndir',
-      downloadAria: 'Open Design Desktop indir',
+      downloadAria: 'Auto Design Desktop indir',
       downloadTitle: 'Desktop uygulamasını indir',
-      starAria: "GitHub'da Open Design'a Star ver",
+      starAria: "GitHub'da Auto Design'a Star ver",
       starTitle: "GitHub'da Star ver",
       starPrefix: 'Star',
     },
@@ -1487,9 +1487,9 @@ const COMMON_COPY: Record<LandingLocaleCode, CommonCopy> = {
         contact: 'Контакт',
       },
       download: 'Завантажити',
-      downloadAria: 'Завантажити Open Design Desktop',
+      downloadAria: 'Завантажити Auto Design Desktop',
       downloadTitle: 'Завантажити desktop-застосунок',
-      starAria: 'Поставити зірку Open Design на GitHub',
+      starAria: 'Поставити зірку Auto Design на GitHub',
       starTitle: 'Поставити зірку на GitHub',
       starPrefix: 'Star',
     },
@@ -1498,119 +1498,119 @@ const COMMON_COPY: Record<LandingLocaleCode, CommonCopy> = {
 
 const HOME_SEO_COPY: Record<LandingLocaleCode, HomeSeoCopy> = {
   en: {
-    title: 'Open Design — Official open-source Claude Design alternative',
+    title: 'Auto Design — Official open-source Claude Design alternative',
     description:
-      'Open Design is the official open-source, local-first Claude Design alternative. Generate decks, landing pages, dashboards, and brand systems with Claude Code, Codex, Cursor, Gemini, OpenCode, or Qwen — driven by {skills} composable skills and {systems} portable DESIGN.md systems.',
+      'Auto Design is the official open-source, local-first Claude Design alternative. Generate decks, landing pages, dashboards, and brand systems with Claude Code, Codex, Cursor, Gemini, OpenCode, or Qwen — driven by {skills} composable skills and {systems} portable DESIGN.md systems.',
   },
   zh: {
-    title: 'Open Design —— 官方 Claude Design 开源替代',
+    title: 'Auto Design —— 官方 Claude Design 开源替代',
     description:
-      'Open Design 是官方的开源、本地优先 Claude Design 替代方案。用 Claude Code、Codex、Cursor、Gemini、OpenCode 或 Qwen 生成演示文稿、落地页、仪表盘和品牌系统，背后由 {skills} 个可组合 Skill 与 {systems} 套 DESIGN.md 系统驱动。',
+      'Auto Design 是官方的开源、本地优先 Claude Design 替代方案。用 Claude Code、Codex、Cursor、Gemini、OpenCode 或 Qwen 生成演示文稿、落地页、仪表盘和品牌系统，背后由 {skills} 个可组合 Skill 与 {systems} 套 DESIGN.md 系统驱动。',
   },
   'zh-tw': {
-    title: 'Open Design —— 官方 Claude Design 開源替代',
+    title: 'Auto Design —— 官方 Claude Design 開源替代',
     description:
-      'Open Design 是官方的開源、本地優先 Claude Design 替代方案。用 Claude Code、Codex、Cursor、Gemini、OpenCode 或 Qwen 生成簡報、落地頁、儀表板與品牌系統，背後由 {skills} 個可組合 Skill 與 {systems} 套 DESIGN.md 系統驅動。',
+      'Auto Design 是官方的開源、本地優先 Claude Design 替代方案。用 Claude Code、Codex、Cursor、Gemini、OpenCode 或 Qwen 生成簡報、落地頁、儀表板與品牌系統，背後由 {skills} 個可組合 Skill 與 {systems} 套 DESIGN.md 系統驅動。',
   },
   ja: {
-    title: 'Open Design — 公式のオープンソース Claude Design 代替',
+    title: 'Auto Design — 公式のオープンソース Claude Design 代替',
     description:
-      'Open Design は公式のオープンソースかつローカル優先の Claude Design 代替です。Claude Code、Codex、Cursor、Gemini、OpenCode、Qwen と {skills} 個のスキル、{systems} 個の DESIGN.md システムでデッキ、ランディングページ、ダッシュボード、ブランドシステムを生成します。',
+      'Auto Design は公式のオープンソースかつローカル優先の Claude Design 代替です。Claude Code、Codex、Cursor、Gemini、OpenCode、Qwen と {skills} 個のスキル、{systems} 個の DESIGN.md システムでデッキ、ランディングページ、ダッシュボード、ブランドシステムを生成します。',
   },
   ko: {
-    title: 'Open Design — 공식 오픈소스 Claude Design 대안',
+    title: 'Auto Design — 공식 오픈소스 Claude Design 대안',
     description:
-      'Open Design은 공식 오픈소스, 로컬 우선 Claude Design 대안입니다. Claude Code, Codex, Cursor, Gemini, OpenCode, Qwen과 {skills}개의 조합형 스킬, {systems}개의 DESIGN.md 시스템으로 덱, 랜딩 페이지, 대시보드, 브랜드 시스템을 만듭니다.',
+      'Auto Design은 공식 오픈소스, 로컬 우선 Claude Design 대안입니다. Claude Code, Codex, Cursor, Gemini, OpenCode, Qwen과 {skills}개의 조합형 스킬, {systems}개의 DESIGN.md 시스템으로 덱, 랜딩 페이지, 대시보드, 브랜드 시스템을 만듭니다.',
   },
   de: {
-    title: 'Open Design — offizielle Open-Source-Alternative zu Claude Design',
+    title: 'Auto Design — offizielle Open-Source-Alternative zu Claude Design',
     description:
-      'Open Design ist die offizielle Open-Source- und Local-first-Alternative zu Claude Design. Erzeuge Decks, Landingpages, Dashboards und Brand-Systeme mit Claude Code, Codex, Cursor, Gemini, OpenCode oder Qwen — mit {skills} kombinierbaren Skills und {systems} portablen DESIGN.md-Systemen.',
+      'Auto Design ist die offizielle Open-Source- und Local-first-Alternative zu Claude Design. Erzeuge Decks, Landingpages, Dashboards und Brand-Systeme mit Claude Code, Codex, Cursor, Gemini, OpenCode oder Qwen — mit {skills} kombinierbaren Skills und {systems} portablen DESIGN.md-Systemen.',
   },
   fr: {
-    title: "Open Design — l'alternative open source officielle à Claude Design",
+    title: "Auto Design — l'alternative open source officielle à Claude Design",
     description:
-      "Open Design est l'alternative officielle, open source et local-first à Claude Design. Générez des decks, landing pages, dashboards et systèmes de marque avec Claude Code, Codex, Cursor, Gemini, OpenCode ou Qwen — grâce à {skills} skills composables et {systems} systèmes DESIGN.md portables.",
+      "Auto Design est l'alternative officielle, open source et local-first à Claude Design. Générez des decks, landing pages, dashboards et systèmes de marque avec Claude Code, Codex, Cursor, Gemini, OpenCode ou Qwen — grâce à {skills} skills composables et {systems} systèmes DESIGN.md portables.",
   },
   ru: {
-    title: 'Open Design — официальная open-source альтернатива Claude Design',
+    title: 'Auto Design — официальная open-source альтернатива Claude Design',
     description:
-      'Open Design — официальная open-source и local-first альтернатива Claude Design. Создавайте презентации, лендинги, дашборды и бренд-системы через Claude Code, Codex, Cursor, Gemini, OpenCode или Qwen на базе {skills} skills и {systems} DESIGN.md-систем.',
+      'Auto Design — официальная open-source и local-first альтернатива Claude Design. Создавайте презентации, лендинги, дашборды и бренд-системы через Claude Code, Codex, Cursor, Gemini, OpenCode или Qwen на базе {skills} skills и {systems} DESIGN.md-систем.',
   },
   es: {
-    title: 'Open Design — alternativa open source oficial a Claude Design',
+    title: 'Auto Design — alternativa open source oficial a Claude Design',
     description:
-      'Open Design es la alternativa oficial, open source y local-first a Claude Design. Genera decks, landing pages, dashboards y sistemas de marca con Claude Code, Codex, Cursor, Gemini, OpenCode o Qwen, impulsado por {skills} skills componibles y {systems} sistemas DESIGN.md portables.',
+      'Auto Design es la alternativa oficial, open source y local-first a Claude Design. Genera decks, landing pages, dashboards y sistemas de marca con Claude Code, Codex, Cursor, Gemini, OpenCode o Qwen, impulsado por {skills} skills componibles y {systems} sistemas DESIGN.md portables.',
   },
   'pt-br': {
-    title: 'Open Design — alternativa open source oficial ao Claude Design',
+    title: 'Auto Design — alternativa open source oficial ao Claude Design',
     description:
-      'Open Design é a alternativa oficial, open source e local-first ao Claude Design. Gere decks, landing pages, dashboards e sistemas de marca com Claude Code, Codex, Cursor, Gemini, OpenCode ou Qwen, usando {skills} skills combináveis e {systems} sistemas DESIGN.md portáteis.',
+      'Auto Design é a alternativa oficial, open source e local-first ao Claude Design. Gere decks, landing pages, dashboards e sistemas de marca com Claude Code, Codex, Cursor, Gemini, OpenCode ou Qwen, usando {skills} skills combináveis e {systems} sistemas DESIGN.md portáteis.',
   },
   it: {
-    title: "Open Design — l'alternativa open source ufficiale a Claude Design",
+    title: "Auto Design — l'alternativa open source ufficiale a Claude Design",
     description:
-      "Open Design è l'alternativa ufficiale, open source e local-first a Claude Design. Genera deck, landing page, dashboard e sistemi di marca con Claude Code, Codex, Cursor, Gemini, OpenCode o Qwen, usando {skills} skill componibili e {systems} sistemi DESIGN.md portabili.",
+      "Auto Design è l'alternativa ufficiale, open source e local-first a Claude Design. Genera deck, landing page, dashboard e sistemi di marca con Claude Code, Codex, Cursor, Gemini, OpenCode o Qwen, usando {skills} skill componibili e {systems} sistemi DESIGN.md portabili.",
   },
   vi: {
-    title: 'Open Design — lựa chọn mã nguồn mở chính thức thay Claude Design',
+    title: 'Auto Design — lựa chọn mã nguồn mở chính thức thay Claude Design',
     description:
-      'Open Design là lựa chọn mã nguồn mở, local-first chính thức thay Claude Design. Tạo deck, landing page, dashboard và hệ thống thương hiệu bằng Claude Code, Codex, Cursor, Gemini, OpenCode hoặc Qwen, với {skills} skill có thể ghép và {systems} hệ DESIGN.md di động.',
+      'Auto Design là lựa chọn mã nguồn mở, local-first chính thức thay Claude Design. Tạo deck, landing page, dashboard và hệ thống thương hiệu bằng Claude Code, Codex, Cursor, Gemini, OpenCode hoặc Qwen, với {skills} skill có thể ghép và {systems} hệ DESIGN.md di động.',
   },
   pl: {
-    title: 'Open Design — oficjalna open-source alternatywa dla Claude Design',
+    title: 'Auto Design — oficjalna open-source alternatywa dla Claude Design',
     description:
-      'Open Design to oficjalna, open-source i local-first alternatywa dla Claude Design. Twórz decki, landing page, dashboardy i systemy marki z Claude Code, Codex, Cursor, Gemini, OpenCode lub Qwen, używając {skills} kompozycyjnych skills i {systems} przenośnych systemów DESIGN.md.',
+      'Auto Design to oficjalna, open-source i local-first alternatywa dla Claude Design. Twórz decki, landing page, dashboardy i systemy marki z Claude Code, Codex, Cursor, Gemini, OpenCode lub Qwen, używając {skills} kompozycyjnych skills i {systems} przenośnych systemów DESIGN.md.',
   },
   id: {
-    title: 'Open Design — alternatif open source resmi untuk Claude Design',
+    title: 'Auto Design — alternatif open source resmi untuk Claude Design',
     description:
-      'Open Design adalah alternatif resmi, open source, dan local-first untuk Claude Design. Buat deck, landing page, dashboard, dan sistem merek dengan Claude Code, Codex, Cursor, Gemini, OpenCode, atau Qwen, didukung {skills} skill komposable dan {systems} sistem DESIGN.md portabel.',
+      'Auto Design adalah alternatif resmi, open source, dan local-first untuk Claude Design. Buat deck, landing page, dashboard, dan sistem merek dengan Claude Code, Codex, Cursor, Gemini, OpenCode, atau Qwen, didukung {skills} skill komposable dan {systems} sistem DESIGN.md portabel.',
   },
   nl: {
-    title: 'Open Design — officieel open-source alternatief voor Claude Design',
+    title: 'Auto Design — officieel open-source alternatief voor Claude Design',
     description:
-      'Open Design is het officiële open-source en local-first alternatief voor Claude Design. Maak decks, landingspagina’s, dashboards en merksystemen met Claude Code, Codex, Cursor, Gemini, OpenCode of Qwen, aangedreven door {skills} combineerbare skills en {systems} draagbare DESIGN.md-systemen.',
+      'Auto Design is het officiële open-source en local-first alternatief voor Claude Design. Maak decks, landingspagina’s, dashboards en merksystemen met Claude Code, Codex, Cursor, Gemini, OpenCode of Qwen, aangedreven door {skills} combineerbare skills en {systems} draagbare DESIGN.md-systemen.',
   },
   ar: {
-    title: 'Open Design — البديل الرسمي مفتوح المصدر لـ Claude Design',
+    title: 'Auto Design — البديل الرسمي مفتوح المصدر لـ Claude Design',
     description:
-      'Open Design هو البديل الرسمي مفتوح المصدر والمحلي أولاً لـ Claude Design. أنشئ عروضاً وصفحات هبوط ولوحات بيانات وأنظمة علامة عبر Claude Code أو Codex أو Cursor أو Gemini أو OpenCode أو Qwen، مع {skills} مهارة قابلة للتركيب و {systems} نظام DESIGN.md قابل للنقل.',
+      'Auto Design هو البديل الرسمي مفتوح المصدر والمحلي أولاً لـ Claude Design. أنشئ عروضاً وصفحات هبوط ولوحات بيانات وأنظمة علامة عبر Claude Code أو Codex أو Cursor أو Gemini أو OpenCode أو Qwen، مع {skills} مهارة قابلة للتركيب و {systems} نظام DESIGN.md قابل للنقل.',
   },
   tr: {
-    title: "Open Design — Claude Design'ın resmi açık kaynak alternatifi",
+    title: "Auto Design — Claude Design'ın resmi açık kaynak alternatifi",
     description:
-      "Open Design, Claude Design'ın resmi, açık kaynak ve local-first alternatifidir. Claude Code, Codex, Cursor, Gemini, OpenCode veya Qwen ile deck, landing page, dashboard ve marka sistemleri üretin; {skills} birleştirilebilir skill ve {systems} taşınabilir DESIGN.md sistemiyle çalışır.",
+      "Auto Design, Claude Design'ın resmi, açık kaynak ve local-first alternatifidir. Claude Code, Codex, Cursor, Gemini, OpenCode veya Qwen ile deck, landing page, dashboard ve marka sistemleri üretin; {skills} birleştirilebilir skill ve {systems} taşınabilir DESIGN.md sistemiyle çalışır.",
   },
   uk: {
-    title: 'Open Design — офіційна open-source альтернатива Claude Design',
+    title: 'Auto Design — офіційна open-source альтернатива Claude Design',
     description:
-      'Open Design — офіційна open-source і local-first альтернатива Claude Design. Створюйте презентації, лендинги, дашборди та бренд-системи через Claude Code, Codex, Cursor, Gemini, OpenCode або Qwen на базі {skills} skills і {systems} DESIGN.md-систем.',
+      'Auto Design — офіційна open-source і local-first альтернатива Claude Design. Створюйте презентації, лендинги, дашборди та бренд-системи через Claude Code, Codex, Cursor, Gemini, OpenCode або Qwen на базі {skills} skills і {systems} DESIGN.md-систем.',
   },
 };
 
 const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   en: [
     {
-      q: 'What is Open Design?',
-      a: 'Open Design is the official open-source AI design workspace from the nexu-io/open-design project. It turns a local coding agent — Claude Code, Codex, Cursor, Gemini CLI, OpenCode, or Qwen — into a design engine driven by composable skills and portable DESIGN.md systems.',
+      q: 'What is Auto Design?',
+      a: 'Auto Design is the official open-source AI design workspace from the nexu-io/open-design project. It turns a local coding agent — Claude Code, Codex, Cursor, Gemini CLI, OpenCode, or Qwen — into a design engine driven by composable skills and portable DESIGN.md systems.',
     },
     {
-      q: 'Is Open Design official?',
-      a: 'Yes. The canonical project lives at {origin} and the source is on GitHub at {repo}. "Open Design", "OpenDesign", "open-design", and "Open Design AI" all refer to this same project.',
+      q: 'Is Auto Design official?',
+      a: 'Yes. The canonical project lives at {origin} and the source is on GitHub at {repo}. "Auto Design", "OpenDesign", "open-design", and "Auto Design AI" all refer to this same project.',
       official: true,
     },
     {
-      q: 'How is Open Design different from Claude Design?',
-      a: 'Claude Design is a hosted product tied to a single vendor. Open Design is local-first, open source under Apache-2.0, and BYOK: you bring your own agent, credentials, and DESIGN.md system.',
+      q: 'How is Auto Design different from Claude Design?',
+      a: 'Claude Design is a hosted product tied to a single vendor. Auto Design is local-first, open source under Apache-2.0, and BYOK: you bring your own agent, credentials, and DESIGN.md system.',
     },
     {
-      q: 'Does Open Design run locally?',
+      q: 'Does Auto Design run locally?',
       a: 'Yes. The desktop app, daemon, and skill runtime run on your machine. Generated artifacts land in your project directory instead of being forced through a vendor cloud.',
     },
     {
-      q: 'Which coding agents does Open Design support?',
-      a: 'Open Design ships 17 first-party BYOK adapters out of the box: Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot CLI, Grok, Hermes, Kimi, Devin for Terminal, OpenCode, Qwen, DeepSeek, Pi, Mistral Vibe, Kiro, Kilo, and Qoder. Any adapter that speaks the same skill protocol works — switching agents is a config change, not a redesign.',
+      q: 'Which coding agents does Auto Design support?',
+      a: 'Auto Design ships 17 first-party BYOK adapters out of the box: Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot CLI, Grok, Hermes, Kimi, Devin for Terminal, OpenCode, Qwen, DeepSeek, Pi, Mistral Vibe, Kiro, Kilo, and Qoder. Any adapter that speaks the same skill protocol works — switching agents is a config change, not a redesign.',
     },
     {
       q: 'Can I self-host or fork it?',
@@ -1622,22 +1622,22 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
     // (the highest evaluator concerns), then workflow / roadmap. ----
     {
       q: 'Is my data sent to Anthropic, OpenAI, or Google?',
-      a: 'Only your prompt and skill context goes to whichever provider you bring keys for (BYOK). Open Design has no server of its own — the daemon talks to your provider directly. Generated artifacts land as files in your project directory, not in any vendor cloud.',
+      a: 'Only your prompt and skill context goes to whichever provider you bring keys for (BYOK). Auto Design has no server of its own — the daemon talks to your provider directly. Generated artifacts land as files in your project directory, not in any vendor cloud.',
     },
     {
-      q: 'Can I run Open Design without installing the CLI or desktop app?',
-      a: 'Not today. Open Design is local-first by design — the minimum is a local daemon plus an agent (Claude Code, Codex, Cursor, Gemini CLI, or one of the 17 supported adapters). A hosted sandbox is on the roadmap but not the priority: artifacts in your repo beat documents in someone else\'s database.',
+      q: 'Can I run Auto Design without installing the CLI or desktop app?',
+      a: 'Not today. Auto Design is local-first by design — the minimum is a local daemon plus an agent (Claude Code, Codex, Cursor, Gemini CLI, or one of the 17 supported adapters). A hosted sandbox is on the roadmap but not the priority: artifacts in your repo beat documents in someone else\'s database.',
     },
     {
-      q: 'How much does Open Design cost?',
-      a: 'The product is free and Apache-2.0 — there is no Open Design subscription. You pay the API costs of whichever provider you use (Anthropic, OpenAI, Google, Mistral, xAI, Moonshot, etc.), billed directly to your account. BYOK keeps both the credentials and the spend on your side of the line.',
+      q: 'How much does Auto Design cost?',
+      a: 'The product is free and Apache-2.0 — there is no Auto Design subscription. You pay the API costs of whichever provider you use (Anthropic, OpenAI, Google, Mistral, xAI, Moonshot, etc.), billed directly to your account. BYOK keeps both the credentials and the spend on your side of the line.',
     },
     {
-      q: 'Can I self-host Open Design on Vercel, Cloudflare, or my own server?',
+      q: 'Can I self-host Auto Design on Vercel, Cloudflare, or my own server?',
       a: 'Yes. The daemon runs anywhere Node 24 runs, and the landing page is a static Astro build that deploys to Cloudflare Pages, Vercel, or Netlify as-is. Teams running shared deployments typically pin the daemon to a machine inside their network and point each developer\'s CLI at it.',
     },
     {
-      q: 'How do I move my brand into Open Design?',
+      q: 'How do I move my brand into Auto Design?',
       a: 'Drop a screenshot or a Figma export into the web UI and ask your agent to extract a brand into a DESIGN.md file. Save that file under design-systems/<your-brand>/ in your repo; every skill then renders in that brand without re-prompting. /alternatives/claude-design/ describes the same flow in step form.',
     },
     {
@@ -1645,26 +1645,26 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
       a: 'Yes. Skills and DESIGN.md systems are agent-agnostic — the same SKILL.md file renders against Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot, Grok, Hermes, Qwen, or any other supported adapter. Switching agents is a config change in the daemon, not a redesign.',
     },
     {
-      q: 'What\'s on the Open Design roadmap?',
+      q: 'What\'s on the Auto Design roadmap?',
       a: 'The live roadmap is at docs/roadmap.md in the GitHub repo, and weekly release notes ship through GitHub Releases. Major themes for the next quarter: more agent adapters, richer template families (3D, video, audio), and an optional shared-daemon mode for design teams.',
     },
   ],
   zh: [
     {
-      q: 'Open Design 是什么？',
-      a: 'Open Design 是 nexu-io/open-design 项目的官方开源 AI 设计工作台。它把本地编码 Agent（Claude Code、Codex、Cursor、Gemini CLI、OpenCode 或 Qwen）变成设计引擎，并由可组合 Skill 与可移植 DESIGN.md 系统驱动。',
+      q: 'Auto Design 是什么？',
+      a: 'Auto Design 是 nexu-io/open-design 项目的官方开源 AI 设计工作台。它把本地编码 Agent（Claude Code、Codex、Cursor、Gemini CLI、OpenCode 或 Qwen）变成设计引擎，并由可组合 Skill 与可移植 DESIGN.md 系统驱动。',
     },
     {
-      q: 'Open Design 是官方项目吗？',
-      a: '是。官方站点是 {origin}，源代码在 GitHub：{repo}。"Open Design"、"OpenDesign"、"open-design" 和 "Open Design AI" 都指向同一个项目。',
+      q: 'Auto Design 是官方项目吗？',
+      a: '是。官方站点是 {origin}，源代码在 GitHub：{repo}。"Auto Design"、"OpenDesign"、"open-design" 和 "Auto Design AI" 都指向同一个项目。',
       official: true,
     },
     {
       q: '它和 Claude Design 有什么不同？',
-      a: 'Claude Design 是绑定单一厂商的云端产品。Open Design 本地优先、Apache-2.0 开源，并且 BYOK：你使用自己的 Agent、密钥和 DESIGN.md 设计系统。',
+      a: 'Claude Design 是绑定单一厂商的云端产品。Auto Design 本地优先、Apache-2.0 开源，并且 BYOK：你使用自己的 Agent、密钥和 DESIGN.md 设计系统。',
     },
     {
-      q: 'Open Design 可以本地运行吗？',
+      q: 'Auto Design 可以本地运行吗？',
       a: '可以。桌面端、daemon 和 Skill 运行时都在你的机器上运行，生成的 artifact 会落在你的项目目录里。',
     },
     {
@@ -1678,20 +1678,20 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   ],
   'zh-tw': [
     {
-      q: 'Open Design 是什麼？',
-      a: 'Open Design 是 nexu-io/open-design 專案的官方開源 AI 設計工作台。它把本地 coding agent（Claude Code、Codex、Cursor、Gemini CLI、OpenCode 或 Qwen）變成設計引擎，並由可組合 Skill 與可攜式 DESIGN.md 系統驅動。',
+      q: 'Auto Design 是什麼？',
+      a: 'Auto Design 是 nexu-io/open-design 專案的官方開源 AI 設計工作台。它把本地 coding agent（Claude Code、Codex、Cursor、Gemini CLI、OpenCode 或 Qwen）變成設計引擎，並由可組合 Skill 與可攜式 DESIGN.md 系統驅動。',
     },
     {
-      q: 'Open Design 是官方專案嗎？',
-      a: '是。官方站點是 {origin}，原始碼在 GitHub：{repo}。"Open Design"、"OpenDesign"、"open-design" 與 "Open Design AI" 都指同一個專案。',
+      q: 'Auto Design 是官方專案嗎？',
+      a: '是。官方站點是 {origin}，原始碼在 GitHub：{repo}。"Auto Design"、"OpenDesign"、"open-design" 與 "Auto Design AI" 都指同一個專案。',
       official: true,
     },
     {
       q: '它和 Claude Design 有什麼不同？',
-      a: 'Claude Design 是綁定單一供應商的雲端產品。Open Design 本地優先、Apache-2.0 開源，並且 BYOK：你使用自己的 agent、密鑰與 DESIGN.md 設計系統。',
+      a: 'Claude Design 是綁定單一供應商的雲端產品。Auto Design 本地優先、Apache-2.0 開源，並且 BYOK：你使用自己的 agent、密鑰與 DESIGN.md 設計系統。',
     },
     {
-      q: 'Open Design 可以本地執行嗎？',
+      q: 'Auto Design 可以本地執行嗎？',
       a: '可以。桌面端、daemon 與 Skill runtime 都在你的機器上執行，生成的 artifact 會落在你的專案目錄。',
     },
     {
@@ -1705,17 +1705,17 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   ],
   ja: [
     {
-      q: 'Open Design とは何ですか？',
-      a: 'Open Design は nexu-io/open-design プロジェクト公式のオープンソース AI デザインワークスペースです。Claude Code、Codex、Cursor、Gemini CLI、OpenCode、Qwen などのローカル coding agent を、スキルと DESIGN.md システムで動くデザインエンジンにします。',
+      q: 'Auto Design とは何ですか？',
+      a: 'Auto Design は nexu-io/open-design プロジェクト公式のオープンソース AI デザインワークスペースです。Claude Code、Codex、Cursor、Gemini CLI、OpenCode、Qwen などのローカル coding agent を、スキルと DESIGN.md システムで動くデザインエンジンにします。',
     },
     {
-      q: 'Open Design は公式ですか？',
-      a: 'はい。公式サイトは {origin}、ソースコードは GitHub の {repo} です。"Open Design"、"OpenDesign"、"open-design"、"Open Design AI" は同じプロジェクトを指します。',
+      q: 'Auto Design は公式ですか？',
+      a: 'はい。公式サイトは {origin}、ソースコードは GitHub の {repo} です。"Auto Design"、"OpenDesign"、"open-design"、"Auto Design AI" は同じプロジェクトを指します。',
       official: true,
     },
     {
       q: 'Claude Design と何が違いますか？',
-      a: 'Claude Design は単一ベンダーに紐づくホスト型製品です。Open Design はローカル優先、Apache-2.0 のオープンソース、BYOK で、自分の agent、鍵、DESIGN.md を使います。',
+      a: 'Claude Design は単一ベンダーに紐づくホスト型製品です。Auto Design はローカル優先、Apache-2.0 のオープンソース、BYOK で、自分の agent、鍵、DESIGN.md を使います。',
     },
     {
       q: 'ローカルで動きますか？',
@@ -1732,17 +1732,17 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   ],
   ko: [
     {
-      q: 'Open Design은 무엇인가요?',
-      a: 'Open Design은 nexu-io/open-design 프로젝트의 공식 오픈소스 AI 디자인 워크스페이스입니다. Claude Code, Codex, Cursor, Gemini CLI, OpenCode, Qwen 같은 로컬 coding agent를 조합형 skill과 DESIGN.md 시스템으로 구동되는 디자인 엔진으로 바꿉니다.',
+      q: 'Auto Design은 무엇인가요?',
+      a: 'Auto Design은 nexu-io/open-design 프로젝트의 공식 오픈소스 AI 디자인 워크스페이스입니다. Claude Code, Codex, Cursor, Gemini CLI, OpenCode, Qwen 같은 로컬 coding agent를 조합형 skill과 DESIGN.md 시스템으로 구동되는 디자인 엔진으로 바꿉니다.',
     },
     {
-      q: 'Open Design은 공식 프로젝트인가요?',
-      a: '네. 공식 사이트는 {origin}이고 소스는 GitHub의 {repo}에 있습니다. "Open Design", "OpenDesign", "open-design", "Open Design AI"는 같은 프로젝트를 가리킵니다.',
+      q: 'Auto Design은 공식 프로젝트인가요?',
+      a: '네. 공식 사이트는 {origin}이고 소스는 GitHub의 {repo}에 있습니다. "Auto Design", "OpenDesign", "open-design", "Auto Design AI"는 같은 프로젝트를 가리킵니다.',
       official: true,
     },
     {
       q: 'Claude Design과 무엇이 다른가요?',
-      a: 'Claude Design은 단일 벤더에 묶인 호스팅 제품입니다. Open Design은 로컬 우선, Apache-2.0 오픈소스, BYOK이며 사용자의 agent, 키, DESIGN.md 시스템을 그대로 씁니다.',
+      a: 'Claude Design은 단일 벤더에 묶인 호스팅 제품입니다. Auto Design은 로컬 우선, Apache-2.0 오픈소스, BYOK이며 사용자의 agent, 키, DESIGN.md 시스템을 그대로 씁니다.',
     },
     {
       q: '로컬에서 실행되나요?',
@@ -1759,20 +1759,20 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   ],
   de: [
     {
-      q: 'Was ist Open Design?',
-      a: 'Open Design ist der offizielle Open-Source-AI-Design-Workspace des Projekts nexu-io/open-design. Es macht lokale Coding-Agents wie Claude Code, Codex, Cursor, Gemini CLI, OpenCode oder Qwen zu einer Design-Engine auf Basis von Skills und DESIGN.md-Systemen.',
+      q: 'Was ist Auto Design?',
+      a: 'Auto Design ist der offizielle Open-Source-AI-Design-Workspace des Projekts nexu-io/open-design. Es macht lokale Coding-Agents wie Claude Code, Codex, Cursor, Gemini CLI, OpenCode oder Qwen zu einer Design-Engine auf Basis von Skills und DESIGN.md-Systemen.',
     },
     {
-      q: 'Ist Open Design offiziell?',
-      a: 'Ja. Die kanonische Website ist {origin}, der Quellcode liegt auf GitHub unter {repo}. "Open Design", "OpenDesign", "open-design" und "Open Design AI" meinen dasselbe Projekt.',
+      q: 'Ist Auto Design offiziell?',
+      a: 'Ja. Die kanonische Website ist {origin}, der Quellcode liegt auf GitHub unter {repo}. "Auto Design", "OpenDesign", "open-design" und "Auto Design AI" meinen dasselbe Projekt.',
       official: true,
     },
     {
       q: 'Worin unterscheidet es sich von Claude Design?',
-      a: 'Claude Design ist ein gehostetes Produkt eines einzelnen Anbieters. Open Design ist local-first, Apache-2.0 Open Source und BYOK: Sie bringen Agent, Schlüssel und DESIGN.md-System selbst mit.',
+      a: 'Claude Design ist ein gehostetes Produkt eines einzelnen Anbieters. Auto Design ist local-first, Apache-2.0 Open Source und BYOK: Sie bringen Agent, Schlüssel und DESIGN.md-System selbst mit.',
     },
     {
-      q: 'Läuft Open Design lokal?',
+      q: 'Läuft Auto Design lokal?',
       a: 'Ja. Desktop-App, Daemon und Skill-Runtime laufen auf Ihrem Rechner. Generierte Artifacts landen in Ihrem Projektverzeichnis.',
     },
     {
@@ -1786,20 +1786,20 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   ],
   fr: [
     {
-      q: "Qu'est-ce qu'Open Design ?",
-      a: "Open Design est l'espace de travail officiel et open source du projet nexu-io/open-design. Il transforme un agent local — Claude Code, Codex, Cursor, Gemini CLI, OpenCode ou Qwen — en moteur de design piloté par des skills composables et des systèmes DESIGN.md portables.",
+      q: "Qu'est-ce qu'Auto Design ?",
+      a: "Auto Design est l'espace de travail officiel et open source du projet nexu-io/open-design. Il transforme un agent local — Claude Code, Codex, Cursor, Gemini CLI, OpenCode ou Qwen — en moteur de design piloté par des skills composables et des systèmes DESIGN.md portables.",
     },
     {
-      q: 'Open Design est-il officiel ?',
-      a: 'Oui. Le site canonique est {origin} et le code source est sur GitHub à {repo}. "Open Design", "OpenDesign", "open-design" et "Open Design AI" désignent le même projet.',
+      q: 'Auto Design est-il officiel ?',
+      a: 'Oui. Le site canonique est {origin} et le code source est sur GitHub à {repo}. "Auto Design", "OpenDesign", "open-design" et "Auto Design AI" désignent le même projet.',
       official: true,
     },
     {
       q: 'Quelle différence avec Claude Design ?',
-      a: 'Claude Design est un produit hébergé lié à un fournisseur unique. Open Design est local-first, open source Apache-2.0 et BYOK : vous apportez votre agent, vos clés et votre système DESIGN.md.',
+      a: 'Claude Design est un produit hébergé lié à un fournisseur unique. Auto Design est local-first, open source Apache-2.0 et BYOK : vous apportez votre agent, vos clés et votre système DESIGN.md.',
     },
     {
-      q: 'Open Design fonctionne-t-il en local ?',
+      q: 'Auto Design fonctionne-t-il en local ?',
       a: 'Oui. L’app desktop, le daemon et le runtime de skills tournent sur votre machine, et les artifacts générés restent dans votre répertoire de projet.',
     },
     {
@@ -1813,20 +1813,20 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   ],
   ru: [
     {
-      q: 'Что такое Open Design?',
-      a: 'Open Design — официальный open-source AI design workspace проекта nexu-io/open-design. Он превращает локальный coding agent — Claude Code, Codex, Cursor, Gemini CLI, OpenCode или Qwen — в design-движок на базе composable skills и переносимых DESIGN.md-систем.',
+      q: 'Что такое Auto Design?',
+      a: 'Auto Design — официальный open-source AI design workspace проекта nexu-io/open-design. Он превращает локальный coding agent — Claude Code, Codex, Cursor, Gemini CLI, OpenCode или Qwen — в design-движок на базе composable skills и переносимых DESIGN.md-систем.',
     },
     {
-      q: 'Open Design официальный?',
-      a: 'Да. Канонический сайт — {origin}, исходный код — на GitHub: {repo}. "Open Design", "OpenDesign", "open-design" и "Open Design AI" обозначают один проект.',
+      q: 'Auto Design официальный?',
+      a: 'Да. Канонический сайт — {origin}, исходный код — на GitHub: {repo}. "Auto Design", "OpenDesign", "open-design" и "Auto Design AI" обозначают один проект.',
       official: true,
     },
     {
       q: 'Чем он отличается от Claude Design?',
-      a: 'Claude Design — hosted-продукт одного вендора. Open Design — local-first, Apache-2.0 open source и BYOK: вы используете своего agent, свои ключи и свою DESIGN.md-систему.',
+      a: 'Claude Design — hosted-продукт одного вендора. Auto Design — local-first, Apache-2.0 open source и BYOK: вы используете своего agent, свои ключи и свою DESIGN.md-систему.',
     },
     {
-      q: 'Open Design запускается локально?',
+      q: 'Auto Design запускается локально?',
       a: 'Да. Desktop app, daemon и skill runtime работают на вашей машине, а generated artifacts сохраняются в папку проекта.',
     },
     {
@@ -1840,20 +1840,20 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   ],
   es: [
     {
-      q: '¿Qué es Open Design?',
-      a: 'Open Design es el workspace oficial y open source de IA de diseño del proyecto nexu-io/open-design. Convierte un coding agent local — Claude Code, Codex, Cursor, Gemini CLI, OpenCode o Qwen — en un motor de diseño con skills componibles y sistemas DESIGN.md portables.',
+      q: '¿Qué es Auto Design?',
+      a: 'Auto Design es el workspace oficial y open source de IA de diseño del proyecto nexu-io/open-design. Convierte un coding agent local — Claude Code, Codex, Cursor, Gemini CLI, OpenCode o Qwen — en un motor de diseño con skills componibles y sistemas DESIGN.md portables.',
     },
     {
-      q: '¿Open Design es oficial?',
-      a: 'Sí. El sitio canónico es {origin} y el código fuente está en GitHub en {repo}. "Open Design", "OpenDesign", "open-design" y "Open Design AI" apuntan al mismo proyecto.',
+      q: '¿Auto Design es oficial?',
+      a: 'Sí. El sitio canónico es {origin} y el código fuente está en GitHub en {repo}. "Auto Design", "OpenDesign", "open-design" y "Auto Design AI" apuntan al mismo proyecto.',
       official: true,
     },
     {
       q: '¿En qué se diferencia de Claude Design?',
-      a: 'Claude Design es un producto alojado ligado a un solo proveedor. Open Design es local-first, open source Apache-2.0 y BYOK: usas tu propio agent, claves y sistema DESIGN.md.',
+      a: 'Claude Design es un producto alojado ligado a un solo proveedor. Auto Design es local-first, open source Apache-2.0 y BYOK: usas tu propio agent, claves y sistema DESIGN.md.',
     },
     {
-      q: '¿Open Design corre localmente?',
+      q: '¿Auto Design corre localmente?',
       a: 'Sí. La app desktop, el daemon y el runtime de skills corren en tu máquina. Los artifacts generados quedan en tu directorio de proyecto.',
     },
     {
@@ -1867,20 +1867,20 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   ],
   'pt-br': [
     {
-      q: 'O que é Open Design?',
-      a: 'Open Design é o workspace oficial, open source, de design com IA do projeto nexu-io/open-design. Ele transforma um coding agent local — Claude Code, Codex, Cursor, Gemini CLI, OpenCode ou Qwen — em um motor de design movido por skills componíveis e sistemas DESIGN.md portáteis.',
+      q: 'O que é Auto Design?',
+      a: 'Auto Design é o workspace oficial, open source, de design com IA do projeto nexu-io/open-design. Ele transforma um coding agent local — Claude Code, Codex, Cursor, Gemini CLI, OpenCode ou Qwen — em um motor de design movido por skills componíveis e sistemas DESIGN.md portáteis.',
     },
     {
-      q: 'Open Design é oficial?',
-      a: 'Sim. O site canônico é {origin} e o código-fonte está no GitHub em {repo}. "Open Design", "OpenDesign", "open-design" e "Open Design AI" apontam para o mesmo projeto.',
+      q: 'Auto Design é oficial?',
+      a: 'Sim. O site canônico é {origin} e o código-fonte está no GitHub em {repo}. "Auto Design", "OpenDesign", "open-design" e "Auto Design AI" apontam para o mesmo projeto.',
       official: true,
     },
     {
       q: 'Qual a diferença para o Claude Design?',
-      a: 'Claude Design é um produto hospedado preso a um fornecedor. Open Design é local-first, open source Apache-2.0 e BYOK: você traz seu agent, suas chaves e seu sistema DESIGN.md.',
+      a: 'Claude Design é um produto hospedado preso a um fornecedor. Auto Design é local-first, open source Apache-2.0 e BYOK: você traz seu agent, suas chaves e seu sistema DESIGN.md.',
     },
     {
-      q: 'Open Design roda localmente?',
+      q: 'Auto Design roda localmente?',
       a: 'Sim. O app desktop, o daemon e o runtime de skills rodam na sua máquina, e os artifacts gerados ficam no diretório do projeto.',
     },
     {
@@ -1894,20 +1894,20 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   ],
   it: [
     {
-      q: "Cos'è Open Design?",
-      a: 'Open Design è il workspace ufficiale e open source di AI design del progetto nexu-io/open-design. Trasforma un coding agent locale — Claude Code, Codex, Cursor, Gemini CLI, OpenCode o Qwen — in un motore di design guidato da skill componibili e sistemi DESIGN.md portabili.',
+      q: "Cos'è Auto Design?",
+      a: 'Auto Design è il workspace ufficiale e open source di AI design del progetto nexu-io/open-design. Trasforma un coding agent locale — Claude Code, Codex, Cursor, Gemini CLI, OpenCode o Qwen — in un motore di design guidato da skill componibili e sistemi DESIGN.md portabili.',
     },
     {
-      q: 'Open Design è ufficiale?',
-      a: 'Sì. Il sito canonico è {origin} e il codice sorgente è su GitHub in {repo}. "Open Design", "OpenDesign", "open-design" e "Open Design AI" indicano lo stesso progetto.',
+      q: 'Auto Design è ufficiale?',
+      a: 'Sì. Il sito canonico è {origin} e il codice sorgente è su GitHub in {repo}. "Auto Design", "OpenDesign", "open-design" e "Auto Design AI" indicano lo stesso progetto.',
       official: true,
     },
     {
       q: 'In cosa differisce da Claude Design?',
-      a: 'Claude Design è un prodotto hosted legato a un solo vendor. Open Design è local-first, open source Apache-2.0 e BYOK: usi il tuo agent, le tue chiavi e il tuo sistema DESIGN.md.',
+      a: 'Claude Design è un prodotto hosted legato a un solo vendor. Auto Design è local-first, open source Apache-2.0 e BYOK: usi il tuo agent, le tue chiavi e il tuo sistema DESIGN.md.',
     },
     {
-      q: 'Open Design gira in locale?',
+      q: 'Auto Design gira in locale?',
       a: "Sì. App desktop, daemon e runtime delle skill girano sulla tua macchina. Gli artifact generati restano nella directory del progetto.",
     },
     {
@@ -1921,20 +1921,20 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   ],
   vi: [
     {
-      q: 'Open Design là gì?',
-      a: 'Open Design là workspace thiết kế AI mã nguồn mở chính thức của dự án nexu-io/open-design. Nó biến coding agent chạy trên máy bạn — Claude Code, Codex, Cursor, Gemini CLI, OpenCode hoặc Qwen — thành engine thiết kế dựa trên skill ghép được và hệ DESIGN.md di động.',
+      q: 'Auto Design là gì?',
+      a: 'Auto Design là workspace thiết kế AI mã nguồn mở chính thức của dự án nexu-io/open-design. Nó biến coding agent chạy trên máy bạn — Claude Code, Codex, Cursor, Gemini CLI, OpenCode hoặc Qwen — thành engine thiết kế dựa trên skill ghép được và hệ DESIGN.md di động.',
     },
     {
-      q: 'Open Design có phải dự án chính thức không?',
-      a: 'Có. Trang canonical là {origin}, mã nguồn ở GitHub: {repo}. "Open Design", "OpenDesign", "open-design" và "Open Design AI" đều chỉ cùng một dự án.',
+      q: 'Auto Design có phải dự án chính thức không?',
+      a: 'Có. Trang canonical là {origin}, mã nguồn ở GitHub: {repo}. "Auto Design", "OpenDesign", "open-design" và "Auto Design AI" đều chỉ cùng một dự án.',
       official: true,
     },
     {
       q: 'Khác gì Claude Design?',
-      a: 'Claude Design là sản phẩm hosted gắn với một nhà cung cấp. Open Design local-first, open source Apache-2.0 và BYOK: bạn dùng agent, key và hệ DESIGN.md của chính mình.',
+      a: 'Claude Design là sản phẩm hosted gắn với một nhà cung cấp. Auto Design local-first, open source Apache-2.0 và BYOK: bạn dùng agent, key và hệ DESIGN.md của chính mình.',
     },
     {
-      q: 'Open Design chạy local được không?',
+      q: 'Auto Design chạy local được không?',
       a: 'Có. Ứng dụng desktop, daemon và skill runtime chạy trên máy bạn. Artifact tạo ra nằm trong thư mục dự án của bạn.',
     },
     {
@@ -1948,20 +1948,20 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   ],
   pl: [
     {
-      q: 'Czym jest Open Design?',
-      a: 'Open Design to oficjalny, open-source workspace AI design projektu nexu-io/open-design. Zamienia lokalnego coding agenta — Claude Code, Codex, Cursor, Gemini CLI, OpenCode albo Qwen — w silnik designu oparty o kompozycyjne skills i przenośne systemy DESIGN.md.',
+      q: 'Czym jest Auto Design?',
+      a: 'Auto Design to oficjalny, open-source workspace AI design projektu nexu-io/open-design. Zamienia lokalnego coding agenta — Claude Code, Codex, Cursor, Gemini CLI, OpenCode albo Qwen — w silnik designu oparty o kompozycyjne skills i przenośne systemy DESIGN.md.',
     },
     {
-      q: 'Czy Open Design jest oficjalne?',
-      a: 'Tak. Kanoniczna strona to {origin}, a kod źródłowy jest na GitHubie: {repo}. "Open Design", "OpenDesign", "open-design" i "Open Design AI" oznaczają ten sam projekt.',
+      q: 'Czy Auto Design jest oficjalne?',
+      a: 'Tak. Kanoniczna strona to {origin}, a kod źródłowy jest na GitHubie: {repo}. "Auto Design", "OpenDesign", "open-design" i "Auto Design AI" oznaczają ten sam projekt.',
       official: true,
     },
     {
       q: 'Czym różni się od Claude Design?',
-      a: 'Claude Design to hostowany produkt jednego dostawcy. Open Design jest local-first, open source Apache-2.0 i BYOK: używasz własnego agenta, kluczy i systemu DESIGN.md.',
+      a: 'Claude Design to hostowany produkt jednego dostawcy. Auto Design jest local-first, open source Apache-2.0 i BYOK: używasz własnego agenta, kluczy i systemu DESIGN.md.',
     },
     {
-      q: 'Czy Open Design działa lokalnie?',
+      q: 'Czy Auto Design działa lokalnie?',
       a: 'Tak. Aplikacja desktop, daemon i runtime skills działają na Twojej maszynie, a wygenerowane artifacts trafiają do katalogu projektu.',
     },
     {
@@ -1975,20 +1975,20 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   ],
   id: [
     {
-      q: 'Apa itu Open Design?',
-      a: 'Open Design adalah workspace AI design resmi dan open source dari proyek nexu-io/open-design. Ia mengubah coding agent lokal — Claude Code, Codex, Cursor, Gemini CLI, OpenCode, atau Qwen — menjadi mesin desain berbasis skill komposable dan sistem DESIGN.md portabel.',
+      q: 'Apa itu Auto Design?',
+      a: 'Auto Design adalah workspace AI design resmi dan open source dari proyek nexu-io/open-design. Ia mengubah coding agent lokal — Claude Code, Codex, Cursor, Gemini CLI, OpenCode, atau Qwen — menjadi mesin desain berbasis skill komposable dan sistem DESIGN.md portabel.',
     },
     {
-      q: 'Apakah Open Design resmi?',
-      a: 'Ya. Situs canonical ada di {origin} dan source code ada di GitHub: {repo}. "Open Design", "OpenDesign", "open-design", dan "Open Design AI" merujuk ke proyek yang sama.',
+      q: 'Apakah Auto Design resmi?',
+      a: 'Ya. Situs canonical ada di {origin} dan source code ada di GitHub: {repo}. "Auto Design", "OpenDesign", "open-design", dan "Auto Design AI" merujuk ke proyek yang sama.',
       official: true,
     },
     {
       q: 'Apa bedanya dengan Claude Design?',
-      a: 'Claude Design adalah produk hosted yang terikat pada satu vendor. Open Design local-first, open source Apache-2.0, dan BYOK: Anda memakai agent, key, dan sistem DESIGN.md sendiri.',
+      a: 'Claude Design adalah produk hosted yang terikat pada satu vendor. Auto Design local-first, open source Apache-2.0, dan BYOK: Anda memakai agent, key, dan sistem DESIGN.md sendiri.',
     },
     {
-      q: 'Apakah Open Design berjalan lokal?',
+      q: 'Apakah Auto Design berjalan lokal?',
       a: 'Ya. Aplikasi desktop, daemon, dan skill runtime berjalan di mesin Anda. Artifact yang dibuat masuk ke direktori proyek Anda.',
     },
     {
@@ -2002,20 +2002,20 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   ],
   nl: [
     {
-      q: 'Wat is Open Design?',
-      a: 'Open Design is de officiële open-source AI design workspace van het project nexu-io/open-design. Het verandert een lokale coding agent — Claude Code, Codex, Cursor, Gemini CLI, OpenCode of Qwen — in een design-engine met combineerbare skills en draagbare DESIGN.md-systemen.',
+      q: 'Wat is Auto Design?',
+      a: 'Auto Design is de officiële open-source AI design workspace van het project nexu-io/open-design. Het verandert een lokale coding agent — Claude Code, Codex, Cursor, Gemini CLI, OpenCode of Qwen — in een design-engine met combineerbare skills en draagbare DESIGN.md-systemen.',
     },
     {
-      q: 'Is Open Design officieel?',
-      a: 'Ja. De canonieke site is {origin} en de broncode staat op GitHub: {repo}. "Open Design", "OpenDesign", "open-design" en "Open Design AI" verwijzen naar hetzelfde project.',
+      q: 'Is Auto Design officieel?',
+      a: 'Ja. De canonieke site is {origin} en de broncode staat op GitHub: {repo}. "Auto Design", "OpenDesign", "open-design" en "Auto Design AI" verwijzen naar hetzelfde project.',
       official: true,
     },
     {
       q: 'Wat is het verschil met Claude Design?',
-      a: 'Claude Design is een hosted product van één leverancier. Open Design is local-first, Apache-2.0 open source en BYOK: je gebruikt je eigen agent, sleutels en DESIGN.md-systeem.',
+      a: 'Claude Design is een hosted product van één leverancier. Auto Design is local-first, Apache-2.0 open source en BYOK: je gebruikt je eigen agent, sleutels en DESIGN.md-systeem.',
     },
     {
-      q: 'Draait Open Design lokaal?',
+      q: 'Draait Auto Design lokaal?',
       a: 'Ja. De desktop-app, daemon en skill runtime draaien op je eigen machine. Gegenereerde artifacts komen in je projectdirectory terecht.',
     },
     {
@@ -2029,20 +2029,20 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   ],
   ar: [
     {
-      q: 'ما هو Open Design؟',
-      a: 'Open Design هو مساحة عمل تصميم بالذكاء الاصطناعي رسمية ومفتوحة المصدر من مشروع nexu-io/open-design. يحوّل coding agent محلياً مثل Claude Code أو Codex أو Cursor أو Gemini CLI أو OpenCode أو Qwen إلى محرك تصميم يعمل عبر skills قابلة للتركيب وأنظمة DESIGN.md قابلة للنقل.',
+      q: 'ما هو Auto Design؟',
+      a: 'Auto Design هو مساحة عمل تصميم بالذكاء الاصطناعي رسمية ومفتوحة المصدر من مشروع nexu-io/open-design. يحوّل coding agent محلياً مثل Claude Code أو Codex أو Cursor أو Gemini CLI أو OpenCode أو Qwen إلى محرك تصميم يعمل عبر skills قابلة للتركيب وأنظمة DESIGN.md قابلة للنقل.',
     },
     {
-      q: 'هل Open Design رسمي؟',
-      a: 'نعم. الموقع canonical هو {origin} والمصدر على GitHub في {repo}. تشير "Open Design" و"OpenDesign" و"open-design" و"Open Design AI" إلى المشروع نفسه.',
+      q: 'هل Auto Design رسمي؟',
+      a: 'نعم. الموقع canonical هو {origin} والمصدر على GitHub في {repo}. تشير "Auto Design" و"OpenDesign" و"open-design" و"Auto Design AI" إلى المشروع نفسه.',
       official: true,
     },
     {
       q: 'ما الفرق عن Claude Design؟',
-      a: 'Claude Design منتج مستضاف مرتبط بمورّد واحد. Open Design محلي أولاً، مفتوح المصدر وفق Apache-2.0، وBYOK: تستخدم agent ومفاتيحك ونظام DESIGN.md الخاص بك.',
+      a: 'Claude Design منتج مستضاف مرتبط بمورّد واحد. Auto Design محلي أولاً، مفتوح المصدر وفق Apache-2.0، وBYOK: تستخدم agent ومفاتيحك ونظام DESIGN.md الخاص بك.',
     },
     {
-      q: 'هل يعمل Open Design محلياً؟',
+      q: 'هل يعمل Auto Design محلياً؟',
       a: 'نعم. تطبيق سطح المكتب والdaemon وskill runtime تعمل على جهازك، والartifacts الناتجة تحفظ في مجلد مشروعك.',
     },
     {
@@ -2056,20 +2056,20 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   ],
   tr: [
     {
-      q: 'Open Design nedir?',
-      a: "Open Design, nexu-io/open-design projesinin resmi açık kaynak AI design workspace'idir. Claude Code, Codex, Cursor, Gemini CLI, OpenCode veya Qwen gibi yerel coding agent'ları, birleştirilebilir skill'ler ve taşınabilir DESIGN.md sistemleriyle çalışan bir tasarım motoruna dönüştürür.",
+      q: 'Auto Design nedir?',
+      a: "Auto Design, nexu-io/open-design projesinin resmi açık kaynak AI design workspace'idir. Claude Code, Codex, Cursor, Gemini CLI, OpenCode veya Qwen gibi yerel coding agent'ları, birleştirilebilir skill'ler ve taşınabilir DESIGN.md sistemleriyle çalışan bir tasarım motoruna dönüştürür.",
     },
     {
-      q: 'Open Design resmi mi?',
-      a: 'Evet. Kanonik site {origin}, kaynak kod GitHub üzerinde {repo}. "Open Design", "OpenDesign", "open-design" ve "Open Design AI" aynı projeyi anlatır.',
+      q: 'Auto Design resmi mi?',
+      a: 'Evet. Kanonik site {origin}, kaynak kod GitHub üzerinde {repo}. "Auto Design", "OpenDesign", "open-design" ve "Auto Design AI" aynı projeyi anlatır.',
       official: true,
     },
     {
       q: "Claude Design'dan farkı ne?",
-      a: 'Claude Design tek bir vendor’a bağlı hosted bir üründür. Open Design local-first, Apache-2.0 açık kaynak ve BYOK’tur: kendi agent’ını, anahtarlarını ve DESIGN.md sistemini kullanırsın.',
+      a: 'Claude Design tek bir vendor’a bağlı hosted bir üründür. Auto Design local-first, Apache-2.0 açık kaynak ve BYOK’tur: kendi agent’ını, anahtarlarını ve DESIGN.md sistemini kullanırsın.',
     },
     {
-      q: 'Open Design yerelde çalışır mı?',
+      q: 'Auto Design yerelde çalışır mı?',
       a: 'Evet. Desktop app, daemon ve skill runtime kendi makinenizde çalışır. Üretilen artifact’ler proje dizininize düşer.',
     },
     {
@@ -2083,20 +2083,20 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   ],
   uk: [
     {
-      q: 'Що таке Open Design?',
-      a: 'Open Design — офіційний open-source AI design workspace проєкту nexu-io/open-design. Він перетворює локальний coding agent — Claude Code, Codex, Cursor, Gemini CLI, OpenCode або Qwen — на design-двигун із composable skills і переносними DESIGN.md-системами.',
+      q: 'Що таке Auto Design?',
+      a: 'Auto Design — офіційний open-source AI design workspace проєкту nexu-io/open-design. Він перетворює локальний coding agent — Claude Code, Codex, Cursor, Gemini CLI, OpenCode або Qwen — на design-двигун із composable skills і переносними DESIGN.md-системами.',
     },
     {
-      q: 'Open Design офіційний?',
-      a: 'Так. Канонічний сайт — {origin}, вихідний код на GitHub: {repo}. "Open Design", "OpenDesign", "open-design" і "Open Design AI" означають один проєкт.',
+      q: 'Auto Design офіційний?',
+      a: 'Так. Канонічний сайт — {origin}, вихідний код на GitHub: {repo}. "Auto Design", "OpenDesign", "open-design" і "Auto Design AI" означають один проєкт.',
       official: true,
     },
     {
       q: 'Чим він відрізняється від Claude Design?',
-      a: 'Claude Design — hosted-продукт одного вендора. Open Design — local-first, Apache-2.0 open source і BYOK: ви використовуєте свого agent, свої ключі та свою DESIGN.md-систему.',
+      a: 'Claude Design — hosted-продукт одного вендора. Auto Design — local-first, Apache-2.0 open source і BYOK: ви використовуєте свого agent, свої ключі та свою DESIGN.md-систему.',
     },
     {
-      q: 'Open Design запускається локально?',
+      q: 'Auto Design запускається локально?',
       a: 'Так. Desktop app, daemon і skill runtime працюють на вашій машині, а generated artifacts зберігаються в папку проєкту.',
     },
     {
@@ -2112,11 +2112,11 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
 
 const HOME_PAGE_COPY_EN: HomePageCopy = {
   rail: {
-    right: 'Open Design — Vol. 01 · Issue Nº 26 · Apache-2.0',
+    right: 'Auto Design — Vol. 01 · Issue Nº 26 · Apache-2.0',
     left: 'Skills · Systems · Agents · BYOK · Local-first',
   },
   hero: {
-    discordAria: 'Join the Open Design Discord',
+    discordAria: 'Join the Auto Design Discord',
     joinDiscord: 'Join Discord',
     label: 'Open-source design studio',
     issue: 'Nº 01',
@@ -2125,7 +2125,7 @@ const HOME_PAGE_COPY_EN: HomePageCopy = {
     titleMiddle: 'running on',
     titleSecondEmphasis: 'your own agent',
     lead: (skills, systems) =>
-      `Open Design is the official, local-first alternative to Claude Design. Your existing coding agent — Claude Code · Codex · Cursor · Gemini · OpenCode · Qwen — becomes the design engine, driven by ${skills} composable skills and ${systems} portable DESIGN.md systems.`,
+      `Auto Design is the official, local-first alternative to Claude Design. Your existing coding agent — Claude Code · Codex · Cursor · Gemini · OpenCode · Qwen — becomes the design engine, driven by ${skills} composable skills and ${systems} portable DESIGN.md systems.`,
     star: 'Star us on GitHub',
     download: 'Download desktop',
     plate: 'Plate Nº 08',
@@ -2139,7 +2139,7 @@ const HOME_PAGE_COPY_EN: HomePageCopy = {
     index: ['Detect', 'Discover', 'Direct', 'Deliver'],
   },
   official: {
-    aria: 'Official Open Design sources',
+    aria: 'Official Auto Design sources',
     label: 'Official source',
     items: [
       { label: 'Official site', value: 'open-design.ai' },
@@ -2152,7 +2152,7 @@ const HOME_PAGE_COPY_EN: HomePageCopy = {
   },
   about: {
     rule: 'About / Manifesto',
-    volume: 'Open Design / Volume 01',
+    volume: 'Auto Design / Volume 01',
     label: 'About the studio',
     titlePrefix: 'We treat',
     titleAgent: 'your agent',
@@ -2166,7 +2166,7 @@ const HOME_PAGE_COPY_EN: HomePageCopy = {
     stampTop: 'Studio practice',
     stampBottom: 'Est. MMXXVI',
     sideNote: ['From model behavior', 'to visual taste, we', 'prototype the full', 'stack of creative', 'systems.'],
-    caption: 'Studies in form · perception · machine imagination. (Open Design, MMXXVI)',
+    caption: 'Studies in form · perception · machine imagination. (Auto Design, MMXXVI)',
   },
   capabilities: {
     rule: 'Capabilities · Skills · Systems',
@@ -2291,7 +2291,7 @@ const HOME_PAGE_COPY_EN: HomePageCopy = {
   },
   work: {
     rule: 'Selected Work · 2026 Catalog',
-    editedBy: 'Edited by Open Design',
+    editedBy: 'Edited by Auto Design',
     label: 'Selected work',
     titlePrefix: 'Skills that turn briefs into',
     titleEmphasisA: 'memorable',
@@ -2321,7 +2321,7 @@ const HOME_PAGE_COPY_EN: HomePageCopy = {
     shoulders: 'Standing on shoulders',
     label: 'Collaborators',
     quote:
-      '“Open Design helped us turn vague AI ideas into a visual system that felt sharp, believable, and genuinely new.”',
+      '“Auto Design helped us turn vague AI ideas into a visual system that felt sharp, believable, and genuinely new.”',
     authorName: 'Mina Kovac',
     authorTitle: 'Creative Director · North Form',
     partnersText:
@@ -2332,7 +2332,7 @@ const HOME_PAGE_COPY_EN: HomePageCopy = {
   faqSection: {
     rule: 'Frequently asked',
     answers: 'Official answers, no marketing fluff',
-    label: 'Open Design 常见问题',
+    label: 'Auto Design 常见问题',
     titlePrefix: 'Questions about',
     titleMiddle: 'and the',
     titleSuffix: 'open-source Claude Design alternative',
@@ -2356,13 +2356,13 @@ const HOME_PAGE_COPY_EN: HomePageCopy = {
   footer: {
     summary:
       'The open-source alternative to Claude Design. Built on the shoulders of huashu-design, guizang-ppt, multica-ai, and open-codesign.',
-    downloadAria: 'Download the Open Design desktop app',
+    downloadAria: 'Download the Auto Design desktop app',
     download: 'Download desktop',
     columns: {
       studio: 'Studio',
       library: 'Library',
       connect: 'Connect',
-      openDesign: 'Open Design',
+      openDesign: 'Auto Design',
     },
     studioLinks: ['Capabilities', 'Labs', 'Method', 'Manifesto'],
     connectLinks: ['GitHub', 'Issues', 'Contributors', 'Releases', 'Discord'],
@@ -2379,10 +2379,10 @@ const HOME_PAGE_COPY_EN: HomePageCopy = {
       compare: 'Compare',
       alternative: 'Claude Design alternative',
     },
-    bottomLeft: 'Open Design · Apache-2.0 · 2026 / Volume 01 / Issue Nº 26',
+    bottomLeft: 'Auto Design · Apache-2.0 · 2026 / Volume 01 / Issue Nº 26',
     bottomRightA: 'Berlin / Open / Earth',
     bottomRightB: '52.5200° N · 13.4050° E',
-    mega: 'Open Design.',
+    mega: 'Auto Design.',
   },
 };
 
@@ -2390,11 +2390,11 @@ const HOME_PAGE_COPY: Partial<Record<LandingLocaleCode, HomePageCopy>> = {
   en: HOME_PAGE_COPY_EN,
   zh: {
     rail: {
-      right: 'Open Design — 第 01 卷 · 第 26 期 · Apache-2.0',
+      right: 'Auto Design — 第 01 卷 · 第 26 期 · Apache-2.0',
       left: 'Skills · 设计系统 · Agents · BYOK · 本地优先',
     },
     hero: {
-      discordAria: '加入 Open Design Discord',
+      discordAria: '加入 Auto Design Discord',
       joinDiscord: '加入 Discord',
       label: '开源设计工作室',
       issue: 'Nº 01',
@@ -2403,7 +2403,7 @@ const HOME_PAGE_COPY: Partial<Record<LandingLocaleCode, HomePageCopy>> = {
       titleMiddle: '运行在',
       titleSecondEmphasis: '你自己的 Agent 上',
       lead: (skills, systems) =>
-        `Open Design 是官方、本地优先的 Claude Design 替代方案。你现有的编码 Agent —— Claude Code · Codex · Cursor · Gemini · OpenCode · Qwen —— 会变成设计引擎，并由 ${skills} 个可组合 Skill 与 ${systems} 套可移植 DESIGN.md 系统驱动。`,
+        `Auto Design 是官方、本地优先的 Claude Design 替代方案。你现有的编码 Agent —— Claude Code · Codex · Cursor · Gemini · OpenCode · Qwen —— 会变成设计引擎，并由 ${skills} 个可组合 Skill 与 ${systems} 套可移植 DESIGN.md 系统驱动。`,
       star: '在 GitHub 点 Star',
       download: '下载桌面端',
       plate: '图版 Nº 08',
@@ -2417,7 +2417,7 @@ const HOME_PAGE_COPY: Partial<Record<LandingLocaleCode, HomePageCopy>> = {
       index: ['检测', '发现', '指挥', '交付'],
     },
     official: {
-      aria: 'Open Design 官方来源',
+      aria: 'Auto Design 官方来源',
       label: '官方来源',
       items: [
         { label: '官方网站', value: 'open-design.ai' },
@@ -2430,7 +2430,7 @@ const HOME_PAGE_COPY: Partial<Record<LandingLocaleCode, HomePageCopy>> = {
     },
     about: {
       rule: '关于 / 宣言',
-      volume: 'Open Design / 第 01 卷',
+      volume: 'Auto Design / 第 01 卷',
       label: '关于工作室',
       titlePrefix: '我们把',
       titleAgent: '你的 Agent',
@@ -2444,7 +2444,7 @@ const HOME_PAGE_COPY: Partial<Record<LandingLocaleCode, HomePageCopy>> = {
       stampTop: '工作室实践',
       stampBottom: '始于 MMXXVI',
       sideNote: ['从模型行为', '到视觉品味，', '我们原型化', '完整的创意', '系统栈。'],
-      caption: '形式 · 感知 · 机器想象力研究。（Open Design，MMXXVI）',
+      caption: '形式 · 感知 · 机器想象力研究。（Auto Design，MMXXVI）',
     },
     capabilities: {
       rule: '能力 · Skill · 系统',
@@ -2568,7 +2568,7 @@ const HOME_PAGE_COPY: Partial<Record<LandingLocaleCode, HomePageCopy>> = {
     },
     work: {
       rule: '精选作品 · 2026 目录',
-      editedBy: 'Open Design 编辑',
+      editedBy: 'Auto Design 编辑',
       label: '精选作品',
       titlePrefix: '把 brief 变成',
       titleEmphasisA: '难忘',
@@ -2597,7 +2597,7 @@ const HOME_PAGE_COPY: Partial<Record<LandingLocaleCode, HomePageCopy>> = {
       rule: '协作者 / 来源脉络',
       shoulders: '站在前人的肩膀上',
       label: '协作者',
-      quote: '“Open Design 帮我们把模糊的 AI 想法变成了一个视觉系统：锋利、可信，而且真的有新意。”',
+      quote: '“Auto Design 帮我们把模糊的 AI 想法变成了一个视觉系统：锋利、可信，而且真的有新意。”',
       authorName: 'Mina Kovac',
       authorTitle: '创意总监 · North Form',
       partnersText: '站在那些持续交付开源设计文化的团队肩膀上。',
@@ -2607,7 +2607,7 @@ const HOME_PAGE_COPY: Partial<Record<LandingLocaleCode, HomePageCopy>> = {
     faqSection: {
       rule: '常见问题',
       answers: '官方回答，没有营销废话',
-      label: 'Open Design 常見問題',
+      label: 'Auto Design 常見問題',
       titlePrefix: '关于',
       titleMiddle: '以及',
       titleSuffix: 'Claude Design 开源替代方案的问题',
@@ -2631,13 +2631,13 @@ const HOME_PAGE_COPY: Partial<Record<LandingLocaleCode, HomePageCopy>> = {
     footer: {
       summary:
         'Claude Design 的开源替代方案。站在 huashu-design、guizang-ppt、multica-ai 和 open-codesign 的肩膀上构建。',
-      downloadAria: '下载 Open Design 桌面应用',
+      downloadAria: '下载 Auto Design 桌面应用',
       download: '下载桌面端',
       columns: {
         studio: '工作室',
         library: '资源库',
         connect: '连接',
-        openDesign: 'Open Design',
+        openDesign: 'Auto Design',
     },
     studioLinks: ['能力', '实验室', '方法', '宣言'],
     connectLinks: ['GitHub', '议题', '贡献者', '版本发布', 'Discord'],
@@ -2654,10 +2654,10 @@ const HOME_PAGE_COPY: Partial<Record<LandingLocaleCode, HomePageCopy>> = {
         compare: '对比',
         alternative: 'Claude Design 替代方案',
       },
-      bottomLeft: 'Open Design · Apache-2.0 · 2026 / 第 01 卷 / 第 26 期',
+      bottomLeft: 'Auto Design · Apache-2.0 · 2026 / 第 01 卷 / 第 26 期',
       bottomRightA: '柏林 / 开放 / 地球',
       bottomRightB: '52.5200° N · 13.4050° E',
-      mega: 'Open Design.',
+      mega: 'Auto Design.',
     },
   },
 };
@@ -2665,7 +2665,7 @@ const HOME_PAGE_COPY: Partial<Record<LandingLocaleCode, HomePageCopy>> = {
 HOME_PAGE_COPY['zh-tw'] = {
   ...HOME_PAGE_COPY.zh!,
   rail: {
-    right: 'Open Design — 第 01 卷 · 第 26 期 · Apache-2.0',
+    right: 'Auto Design — 第 01 卷 · 第 26 期 · Apache-2.0',
     left: 'Skills · 設計系統 · Agents · BYOK · 本地優先',
   },
   hero: {
@@ -2676,7 +2676,7 @@ HOME_PAGE_COPY['zh-tw'] = {
     titleMiddle: '運行在',
     titleSecondEmphasis: '你自己的 Agent 上',
     lead: (skills, systems) =>
-      `Open Design 是官方、本地優先的 Claude Design 替代方案。你現有的 coding agent —— Claude Code · Codex · Cursor · Gemini · OpenCode · Qwen —— 會變成設計引擎，並由 ${skills} 個可組合 Skill 與 ${systems} 套可攜式 DESIGN.md 系統驅動。`,
+      `Auto Design 是官方、本地優先的 Claude Design 替代方案。你現有的 coding agent —— Claude Code · Codex · Cursor · Gemini · OpenCode · Qwen —— 會變成設計引擎，並由 ${skills} 個可組合 Skill 與 ${systems} 套可攜式 DESIGN.md 系統驅動。`,
     star: '在 GitHub 點 Star',
     download: '下載桌面端',
     plate: '圖版 Nº 08',
@@ -2704,7 +2704,7 @@ HOME_PAGE_COPY['zh-tw'] = {
   about: {
     ...HOME_PAGE_COPY.zh!.about,
     rule: '關於 / 宣言',
-    volume: 'Open Design / 第 01 卷',
+    volume: 'Auto Design / 第 01 卷',
     label: '關於工作室',
     titlePrefix: '我們把',
     titleAgent: '你的 Agent',
@@ -2717,7 +2717,7 @@ HOME_PAGE_COPY['zh-tw'] = {
     practice: '研究 · 設計 · 工程 · 循環',
     stampBottom: '始於 MMXXVI',
     sideNote: ['從模型行為', '到視覺品味，', '我們原型化', '完整的創意', '系統棧。'],
-    caption: '形式 · 感知 · 機器想像力研究。（Open Design，MMXXVI）',
+    caption: '形式 · 感知 · 機器想像力研究。（Auto Design，MMXXVI）',
   },
   capabilities: {
     ...HOME_PAGE_COPY.zh!.capabilities,
@@ -2841,7 +2841,7 @@ HOME_PAGE_COPY['zh-tw'] = {
   work: {
     ...HOME_PAGE_COPY.zh!.work,
     rule: '精選作品 · 2026 目錄',
-    editedBy: 'Open Design 編輯',
+    editedBy: 'Auto Design 編輯',
     label: '精選作品',
     titlePrefix: '把 brief 變成',
     titleEmphasisA: '難忘',
@@ -2871,7 +2871,7 @@ HOME_PAGE_COPY['zh-tw'] = {
     rule: '協作者 / 來源脈絡',
     shoulders: '站在前人的肩膀上',
     label: '協作者',
-    quote: '“Open Design 幫我們把模糊的 AI 想法變成了一個視覺系統：鋒利、可信，而且真的有新意。”',
+    quote: '“Auto Design 幫我們把模糊的 AI 想法變成了一個視覺系統：鋒利、可信，而且真的有新意。”',
     authorTitle: '創意總監 · North Form',
     partnersText: '站在那些持續交付開源設計文化的團隊肩膀上。',
     partnerLabels: ['理念', '簡報', 'UX', '終端', '影格'],
@@ -2906,13 +2906,13 @@ HOME_PAGE_COPY['zh-tw'] = {
     ...HOME_PAGE_COPY.zh!.footer,
     summary:
       'Claude Design 的開源替代方案。站在 huashu-design、guizang-ppt、multica-ai 和 open-codesign 的肩膀上構建。',
-    downloadAria: '下載 Open Design 桌面應用',
+    downloadAria: '下載 Auto Design 桌面應用',
     download: '下載桌面端',
     columns: {
       studio: '工作室',
       library: '資源庫',
       connect: '連結',
-      openDesign: 'Open Design',
+      openDesign: 'Auto Design',
     },
     studioLinks: ['能力', '實驗室', '方法', '宣言'],
     connectLinks: ['GitHub', '議題', '貢獻者', '版本發布', 'Discord'],
@@ -2929,7 +2929,7 @@ HOME_PAGE_COPY['zh-tw'] = {
       compare: '比較',
       alternative: 'Claude Design 替代方案',
     },
-    bottomLeft: 'Open Design · Apache-2.0 · 2026 / 第 01 卷 / 第 26 期',
+    bottomLeft: 'Auto Design · Apache-2.0 · 2026 / 第 01 卷 / 第 26 期',
     bottomRightA: '柏林 / 開放 / 地球',
   },
 };
@@ -2947,7 +2947,7 @@ const LANDING_UI_COPY: LandingUiCopy = {
     summary:
       'The official open-source, local-first alternative to Claude Design. Apache-2.0, BYOK at every layer.',
     catalog: 'Catalog',
-    openDesign: 'Open Design',
+    openDesign: 'Auto Design',
     official: 'Official source page',
     quickstart: 'Quickstart',
     agents: 'Agents locaux',
@@ -2960,14 +2960,14 @@ const LANDING_UI_COPY: LandingUiCopy = {
     releases: 'Releases',
     discord: 'Discord',
     rss: 'RSS',
-    bottomLeft: '● Open Design · Apache-2.0 · 2026 / Volume 01 / Issue Nº 26',
+    bottomLeft: '● Auto Design · Apache-2.0 · 2026 / Volume 01 / Issue Nº 26',
     bottomRight: 'Berlin / Open / Earth · 52.5200° N · 13.4050° E',
   },
   blog: {
     title: 'Blog',
-    seoTitle: 'Blog — Open Design',
+    seoTitle: 'Blog — Auto Design',
     description:
-      'Notes to help you understand, explore, and build with Open Design — across product, guides, use cases, and community.',
+      'Notes to help you understand, explore, and build with Auto Design — across product, guides, use cases, and community.',
     categoriesLabel: 'Blog categories',
     categories: {
       all: 'All',
@@ -3002,9 +3002,9 @@ const LANDING_UI_COPY: LandingUiCopy = {
   },
   tutorials: {
     title: 'Tutorials',
-    seoTitle: 'Tutorials — Open Design',
+    seoTitle: 'Tutorials — Auto Design',
     description:
-      'Watch Open Design from the inside — getting-started walkthroughs, plugin tutorials, demos, and community deep-dives, curated from YouTube and embedded for in-page playback.',
+      'Watch Auto Design from the inside — getting-started walkthroughs, plugin tutorials, demos, and community deep-dives, curated from YouTube and embedded for in-page playback.',
     categoriesLabel: 'Tutorial categories',
     categories: {
       all: 'All',
@@ -3025,7 +3025,7 @@ const LANDING_UI_COPY: LandingUiCopy = {
     suggestVideo: 'suggest a video',
     noCategory: 'No tutorials in this category yet. More are on the way.',
     thumbnailAlt: (title) => `Thumbnail for ${title}`,
-    detailTitle: (title) => `${title} — Open Design Tutorials`,
+    detailTitle: (title) => `${title} — Auto Design Tutorials`,
     localizedTitle: (title) => title,
     localizedSummary: (_title, _author, summary) => summary,
     localizedBodyHtml: (_title, _author, summary) => `<p>${summary}</p>`,
@@ -3033,9 +3033,9 @@ const LANDING_UI_COPY: LandingUiCopy = {
   catalog: {
     breadcrumbLabel: 'Breadcrumb',
     skills: {
-      title: (count) => `Skills — ${count} composable design capabilities | Open Design`,
+      title: (count) => `Skills — ${count} composable design capabilities | Auto Design`,
       description:
-        'Browse the full Open Design skills catalog: 100+ file-based SKILL.md bundles spanning decks, prototypes, dashboards, mobile flows, video, and live artifacts. Each skill is a folder you drop into the daemon.',
+        'Browse the full Auto Design skills catalog: 100+ file-based SKILL.md bundles spanning decks, prototypes, dashboards, mobile flows, video, and live artifacts. Each skill is a folder you drop into the daemon.',
       label: 'Catalog · Nº 01',
       heading: (count) => `Skills — ${count} composable design capabilities.`,
       lead:
@@ -3045,8 +3045,8 @@ const LANDING_UI_COPY: LandingUiCopy = {
       platform: 'Platform',
       featured: 'Featured',
       allAria: 'All skills',
-      detailTitle: (name) => `${name} — Open Design skill`,
-      detailFallbackDescription: (name) => `Open Design skill bundle: ${name}.`,
+      detailTitle: (name) => `${name} — Auto Design skill`,
+      detailFallbackDescription: (name) => `Auto Design skill bundle: ${name}.`,
       detailLabel: 'Skill',
       featuredNumber: (rank) => `· Featured Nº ${rank}`,
       viewOnGithub: 'View on GitHub',
@@ -3058,11 +3058,11 @@ const LANDING_UI_COPY: LandingUiCopy = {
       examplePrompt: 'Example prompt',
       related: 'Related skills',
       filterTitle: (heading, count) =>
-        `${heading} skills — ${count} Open Design ${heading.toLowerCase()} agents`,
+        `${heading} skills — ${count} Auto Design ${heading.toLowerCase()} agents`,
       modeDescription: (heading, count) =>
-        `Every Open Design skill that produces ${heading.toLowerCase()} artifacts. ${count} ready-to-run, system-aware agents — installable through the daemon, brand-locked through any DESIGN.md system.`,
+        `Every Auto Design skill that produces ${heading.toLowerCase()} artifacts. ${count} ready-to-run, system-aware agents — installable through the daemon, brand-locked through any DESIGN.md system.`,
       scenarioDescription: (heading, count) =>
-        `Every Open Design skill in the ${heading.toLowerCase()} scenario. ${count} ready-to-run agents covering decks, prototypes, templates, and live artifacts — all brand-locked through any DESIGN.md.`,
+        `Every Auto Design skill in the ${heading.toLowerCase()} scenario. ${count} ready-to-run agents covering decks, prototypes, templates, and live artifacts — all brand-locked through any DESIGN.md.`,
       modeHeading: (heading, count) =>
         `${heading} — ${count} brand-grade ${heading.toLowerCase()} agents.`,
       scenarioHeading: (heading, count) =>
@@ -3074,18 +3074,18 @@ const LANDING_UI_COPY: LandingUiCopy = {
       allSkills: (count) => `← All skills${typeof count === 'number' ? ` (${count} of total)` : ''}`,
     },
     systems: {
-      title: (count) => `Design Systems — ${count} portable visual systems | Open Design`,
+      title: (count) => `Design Systems — ${count} portable visual systems | Auto Design`,
       description:
-        'Browse the full Open Design design systems catalog: 100+ DESIGN.md token bundles spanning editorial, productivity, brand, futuristic, and minimalist systems. Pick one in the daemon top-bar and every skill renders in that visual language.',
+        'Browse the full Auto Design design systems catalog: 100+ DESIGN.md token bundles spanning editorial, productivity, brand, futuristic, and minimalist systems. Pick one in the daemon top-bar and every skill renders in that visual language.',
       label: 'Catalog · Nº 02',
       heading: (count) => `Design Systems — ${count} portable visual systems.`,
       lead:
         'Each system is a single DESIGN.md token spec. Pick one in the daemon top-bar and every skill reads it as part of its system prompt — colors, type, spacing, components, all consistent.',
       category: 'Category',
       allAria: 'All systems',
-      detailTitle: (name) => `${name} — Open Design design system`,
+      detailTitle: (name) => `${name} — Auto Design design system`,
       detailFallbackDescription: (name, category) =>
-        `Open Design system bundle: ${name}, ${category}.`,
+        `Auto Design system bundle: ${name}, ${category}.`,
       detailLabel: 'Design system',
       viewOnGithub: 'View DESIGN.md on GitHub',
       paletteSample: 'Palette sample',
@@ -3094,7 +3094,7 @@ const LANDING_UI_COPY: LandingUiCopy = {
       visualTheme: 'Visual theme',
       related: (category) => `Related systems in ${category}`,
       categoryDescription: (heading, count) =>
-        `Every Open Design design system tagged ${heading.toLowerCase()}. ${count} portable DESIGN.md token bundles — ready to pair with any skill in the catalog for instant brand-grade output.`,
+        `Every Auto Design design system tagged ${heading.toLowerCase()}. ${count} portable DESIGN.md token bundles — ready to pair with any skill in the catalog for instant brand-grade output.`,
       categoryHeading: (heading, count) =>
         `${heading} — ${count} portable visual systems.`,
       categoryLead: (label) =>
@@ -3102,7 +3102,7 @@ const LANDING_UI_COPY: LandingUiCopy = {
       allSystems: '← All design systems',
     },
     templates: {
-      title: (count) => `Templates — ${count} ready-to-fork artifact templates | Open Design`,
+      title: (count) => `Templates — ${count} ready-to-fork artifact templates | Auto Design`,
       description:
         'Ready-to-fork artifact templates: refreshable Live Artifacts (Notion-style team dashboards, ops briefs) plus deck and prototype starting points. Each template ships as a fork-friendly bundle with sample data.',
       label: 'Catalog · Nº 04',
@@ -3112,7 +3112,7 @@ const LANDING_UI_COPY: LandingUiCopy = {
       allAria: 'All templates',
       liveArtifact: 'Live Artifact',
       skillTemplate: 'Skill template',
-      detailTitle: (name) => `${name} — Open Design template`,
+      detailTitle: (name) => `${name} — Auto Design template`,
       detailLabel: 'Template',
       forkOnGithub: 'Fork on GitHub',
       previewCaption: "Rendered from the template's seed data.",
@@ -3124,26 +3124,26 @@ const LANDING_UI_COPY: LandingUiCopy = {
       readme: 'connector wiring, refresh cadence, customization notes',
     },
     craft: {
-      title: (count) => `Craft — ${count} brand-agnostic rendering principles | Open Design`,
+      title: (count) => `Craft — ${count} brand-agnostic rendering principles | Auto Design`,
       description:
-        'Universal craft rules every Open Design skill can opt into: accessibility, animation discipline, color, form validation, laws of UX, RTL/Bidi, state coverage, and typography hierarchy.',
+        'Universal craft rules every Auto Design skill can opt into: accessibility, animation discipline, color, form validation, laws of UX, RTL/Bidi, state coverage, and typography hierarchy.',
       label: 'Catalog · Nº 03',
       heading: (count) => `Craft — ${count} brand-agnostic rendering principles.`,
       lead:
         'Skills declare which craft rules they require. The agent loads the matching rules into its system prompt so quality concerns (a11y, motion, color, type) stay invariant across visual systems.',
       allAria: 'All craft principles',
-      detailTitle: (name) => `${name} — Open Design craft principle`,
-      detailFallbackDescription: (name) => `Open Design craft rule: ${name}.`,
+      detailTitle: (name) => `${name} — Auto Design craft principle`,
+      detailFallbackDescription: (name) => `Auto Design craft rule: ${name}.`,
       detailLabel: 'Craft principle',
       readFullRule: 'Read the full rule on GitHub',
       related: 'Other craft principles',
     },
   },
   plugins: {
-    registryTitle: 'Open Design Plugins — Official and community registries',
+    registryTitle: 'Auto Design Plugins — Official and community registries',
     registryDescription: (count) =>
-      `Browse ${count} Open Design plugins from official and community registries. Search installable agent-native design workflows with stable vendor/plugin IDs.`,
-    directoryRailRight: 'Open Design Registry · Official · Community',
+      `Browse ${count} Auto Design plugins from official and community registries. Search installable agent-native design workflows with stable vendor/plugin IDs.`,
+    directoryRailRight: 'Auto Design Registry · Official · Community',
     directoryRailLeft: 'vendor/plugin-name · marketplace.json',
     topbarTitle: 'OD / REGISTRY',
     topbarSubtitle: 'Public index',
@@ -3170,9 +3170,9 @@ const LANDING_UI_COPY: LandingUiCopy = {
     visiblePlugins: 'visible plugins',
     openDetails: (title) => `Open ${title} details`,
     details: 'Details',
-    detailTitle: (title) => `${title} — Open Design Plugin`,
+    detailTitle: (title) => `${title} — Auto Design Plugin`,
     detailDescription: (description, command) => `${description} Install with ${command}.`,
-    detailRailRight: (id) => `Open Design Plugin · ${id}`,
+    detailRailRight: (id) => `Auto Design Plugin · ${id}`,
     allPlugins: 'All plugins',
     registry: 'Registry',
     deprecated: 'Deprecated',
@@ -3239,14 +3239,14 @@ const LANDING_UI_COPY_OVERRIDES: Partial<
       releases: '版本发布',
       discord: 'Discord',
       rss: 'RSS',
-      bottomLeft: '● Open Design · Apache-2.0 · 2026 / 第 01 卷 / 第 26 期',
+      bottomLeft: '● Auto Design · Apache-2.0 · 2026 / 第 01 卷 / 第 26 期',
       bottomRight: '柏林 / 开放 / 地球 · 52.5200° N · 13.4050° E',
     },
     blog: {
       title: '博客',
-      seoTitle: '博客 — Open Design',
+      seoTitle: '博客 — Auto Design',
       description:
-        '理解、探索和构建 Open Design 的笔记，覆盖产品、指南、使用场景与社区。',
+        '理解、探索和构建 Auto Design 的笔记，覆盖产品、指南、使用场景与社区。',
       categoriesLabel: '博客分类',
       categories: {
         all: '全部',
@@ -3281,9 +3281,9 @@ const LANDING_UI_COPY_OVERRIDES: Partial<
     },
     tutorials: {
       title: '教程',
-      seoTitle: '教程 — Open Design',
+      seoTitle: '教程 — Auto Design',
       description:
-        '观看 Open Design 的上手 walkthrough、插件教程、演示、评测与社区视频。所有视频都在页面内播放，并保留原始 YouTube 来源。',
+        '观看 Auto Design 的上手 walkthrough、插件教程、演示、评测与社区视频。所有视频都在页面内播放，并保留原始 YouTube 来源。',
       categoriesLabel: '教程分类',
       categories: {
         all: '全部',
@@ -3304,18 +3304,18 @@ const LANDING_UI_COPY_OVERRIDES: Partial<
       suggestVideo: '推荐一个视频',
       noCategory: '这个分类还没有教程，更多内容正在整理。',
       thumbnailAlt: (title) => `${title} 的视频封面`,
-      detailTitle: (title) => `${title} — Open Design 教程`,
-      localizedTitle: (_title, author) => `Open Design 教程：${author}`,
+      detailTitle: (title) => `${title} — Auto Design 教程`,
+      localizedTitle: (_title, author) => `Auto Design 教程：${author}`,
       localizedSummary: (_title, author, category) =>
-        `${author} 通过一段 ${category} 视频讲解 Open Design 的本地优先设计工作流、Skill、设计系统与可复用模板。`,
+        `${author} 通过一段 ${category} 视频讲解 Auto Design 的本地优先设计工作流、Skill、设计系统与可复用模板。`,
       localizedBodyHtml: (_title, author, summary) =>
-        `<p>${summary}</p><h2>本地化摘要</h2><p>这段视频来自 ${author}，围绕 Open Design 的安装、能力演示、设计系统、Skill 和本地 Agent 工作流展开。页面保留原始视频来源，非英文页面使用站内 i18n 摘要，让正文不会回退成英文。</p>`,
+        `<p>${summary}</p><h2>本地化摘要</h2><p>这段视频来自 ${author}，围绕 Auto Design 的安装、能力演示、设计系统、Skill 和本地 Agent 工作流展开。页面保留原始视频来源，非英文页面使用站内 i18n 摘要，让正文不会回退成英文。</p>`,
     },
     catalog: {
       skills: {
-        title: (count) => `Skill — ${count} 个可组合设计能力 | Open Design`,
+        title: (count) => `Skill — ${count} 个可组合设计能力 | Auto Design`,
         description:
-          '浏览完整的 Open Design Skill 目录：100+ 个基于 SKILL.md 的文件夹，覆盖演示文稿、原型、仪表盘、移动流程、视频与实时 Artifact。每个 Skill 都是一个可放入 daemon 的文件夹。',
+          '浏览完整的 Auto Design Skill 目录：100+ 个基于 SKILL.md 的文件夹，覆盖演示文稿、原型、仪表盘、移动流程、视频与实时 Artifact。每个 Skill 都是一个可放入 daemon 的文件夹。',
         label: '目录 · Nº 01',
         heading: (count) => `Skill — ${count} 个可组合设计能力。`,
         lead:
@@ -3325,8 +3325,8 @@ const LANDING_UI_COPY_OVERRIDES: Partial<
         platform: '平台',
         featured: '精选',
         allAria: '全部 Skill',
-        detailTitle: (name) => `${name} — Open Design Skill`,
-        detailFallbackDescription: (name) => `Open Design Skill 包：${name}。`,
+        detailTitle: (name) => `${name} — Auto Design Skill`,
+        detailFallbackDescription: (name) => `Auto Design Skill 包：${name}。`,
         detailLabel: 'Skill',
         featuredNumber: (rank) => `· 精选 Nº ${rank}`,
         viewOnGithub: '在 GitHub 查看',
@@ -3337,11 +3337,11 @@ const LANDING_UI_COPY_OVERRIDES: Partial<
         examplePrompt: '示例提示词',
         related: '相关 Skill',
         filterTitle: (heading, count) =>
-          `${heading} Skill — ${count} 个 Open Design ${heading.toLowerCase()} Agent`,
+          `${heading} Skill — ${count} 个 Auto Design ${heading.toLowerCase()} Agent`,
         modeDescription: (heading, count) =>
-          `所有生成 ${heading.toLowerCase()} Artifact 的 Open Design Skill。${count} 个可直接运行、读取系统上下文的 Agent，可以通过 daemon 安装，并通过任意 DESIGN.md 系统锁定品牌。`,
+          `所有生成 ${heading.toLowerCase()} Artifact 的 Auto Design Skill。${count} 个可直接运行、读取系统上下文的 Agent，可以通过 daemon 安装，并通过任意 DESIGN.md 系统锁定品牌。`,
         scenarioDescription: (heading, count) =>
-          `${heading.toLowerCase()} 场景下的全部 Open Design Skill。${count} 个可运行 Agent，覆盖演示文稿、原型、模板与实时 Artifact，并可通过任意 DESIGN.md 锁定品牌。`,
+          `${heading.toLowerCase()} 场景下的全部 Auto Design Skill。${count} 个可运行 Agent，覆盖演示文稿、原型、模板与实时 Artifact，并可通过任意 DESIGN.md 锁定品牌。`,
         modeHeading: (heading, count) =>
           `${heading} — ${count} 个品牌级 ${heading.toLowerCase()} Agent。`,
         scenarioHeading: (heading, count) =>
@@ -3353,18 +3353,18 @@ const LANDING_UI_COPY_OVERRIDES: Partial<
         allSkills: (count) => `← 全部 Skill${typeof count === 'number' ? `（共 ${count} 个）` : ''}`,
       },
       systems: {
-        title: (count) => `设计系统 — ${count} 套可移植视觉系统 | Open Design`,
+        title: (count) => `设计系统 — ${count} 套可移植视觉系统 | Auto Design`,
         description:
-          '浏览完整的 Open Design 设计系统目录：100+ 个 DESIGN.md token 包，覆盖 editorial、productivity、brand、futuristic 与 minimalist 等系统。你可以在 daemon 顶栏选择一个系统，让所有 Skill 以同一种视觉语言渲染。',
+          '浏览完整的 Auto Design 设计系统目录：100+ 个 DESIGN.md token 包，覆盖 editorial、productivity、brand、futuristic 与 minimalist 等系统。你可以在 daemon 顶栏选择一个系统，让所有 Skill 以同一种视觉语言渲染。',
         label: '目录 · Nº 02',
         heading: (count) => `设计系统 — ${count} 套可移植视觉系统。`,
         lead:
           '每套系统都是一个 DESIGN.md token spec。在 daemon 顶栏选择后，每个 Skill 都会把它作为系统提示的一部分读取，颜色、字体、间距和组件保持一致。',
         category: '分类',
         allAria: '全部设计系统',
-        detailTitle: (name) => `${name} — Open Design 设计系统`,
+        detailTitle: (name) => `${name} — Auto Design 设计系统`,
         detailFallbackDescription: (name, category) =>
-          `Open Design 系统包：${name}，${category}。`,
+          `Auto Design 系统包：${name}，${category}。`,
         detailLabel: '设计系统',
         viewOnGithub: '在 GitHub 查看 DESIGN.md',
         paletteSample: '色板示例',
@@ -3373,7 +3373,7 @@ const LANDING_UI_COPY_OVERRIDES: Partial<
         visualTheme: '视觉主题',
         related: (category) => `${category} 中的相关系统`,
         categoryDescription: (heading, count) =>
-          `所有标记为 ${heading.toLowerCase()} 的 Open Design 设计系统。${count} 套可移植 DESIGN.md token 包，可与目录中任意 Skill 搭配，快速得到品牌级输出。`,
+          `所有标记为 ${heading.toLowerCase()} 的 Auto Design 设计系统。${count} 套可移植 DESIGN.md token 包，可与目录中任意 Skill 搭配，快速得到品牌级输出。`,
         categoryHeading: (heading, count) =>
           `${heading} — ${count} 套可移植视觉系统。`,
         categoryLead: (label) =>
@@ -3381,7 +3381,7 @@ const LANDING_UI_COPY_OVERRIDES: Partial<
         allSystems: '← 全部设计系统',
       },
       templates: {
-        title: (count) => `模板 — ${count} 个可 fork 的 Artifact 模板 | Open Design`,
+        title: (count) => `模板 — ${count} 个可 fork 的 Artifact 模板 | Auto Design`,
         description:
           '可直接 fork 的 Artifact 模板：可刷新的 Live Artifact（类似 Notion 的团队仪表盘、运营简报）以及演示文稿和原型起点。每个模板都带有示例数据，适合复制改造。',
         label: '目录 · Nº 04',
@@ -3391,7 +3391,7 @@ const LANDING_UI_COPY_OVERRIDES: Partial<
         allAria: '全部模板',
         liveArtifact: 'Live Artifact',
         skillTemplate: 'Skill 模板',
-        detailTitle: (name) => `${name} — Open Design 模板`,
+        detailTitle: (name) => `${name} — Auto Design 模板`,
         detailLabel: '模板',
         forkOnGithub: '在 GitHub fork',
         previewCaption: '由模板种子数据渲染。',
@@ -3403,26 +3403,26 @@ const LANDING_UI_COPY_OVERRIDES: Partial<
         readme: 'connector 接线、刷新节奏和自定义说明',
       },
       craft: {
-        title: (count) => `工艺规则 — ${count} 条品牌无关渲染原则 | Open Design`,
+        title: (count) => `工艺规则 — ${count} 条品牌无关渲染原则 | Auto Design`,
         description:
-          '每个 Open Design Skill 都可以声明要加载的通用工艺规则：无障碍、动画纪律、颜色、表单验证、UX 法则、RTL/Bidi、状态覆盖和字体层级。',
+          '每个 Auto Design Skill 都可以声明要加载的通用工艺规则：无障碍、动画纪律、颜色、表单验证、UX 法则、RTL/Bidi、状态覆盖和字体层级。',
         label: '目录 · Nº 03',
         heading: (count) => `工艺规则 — ${count} 条品牌无关渲染原则。`,
         lead:
           'Skill 会声明它需要哪些工艺规则。Agent 会把匹配的规则加载进系统提示，让无障碍、动效、颜色和字体等质量要求在不同视觉系统中保持不变。',
         allAria: '全部工艺规则',
-        detailTitle: (name) => `${name} — Open Design 工艺规则`,
-        detailFallbackDescription: (name) => `Open Design 工艺规则：${name}。`,
+        detailTitle: (name) => `${name} — Auto Design 工艺规则`,
+        detailFallbackDescription: (name) => `Auto Design 工艺规则：${name}。`,
         detailLabel: '工艺规则',
         readFullRule: '在 GitHub 阅读完整规则',
         related: '其他工艺规则',
       },
     },
     plugins: {
-      registryTitle: 'Open Design 插件 — 官方与社区注册表',
+      registryTitle: 'Auto Design 插件 — 官方与社区注册表',
       registryDescription: (count) =>
-        `浏览来自官方与社区注册表的 ${count} 个 Open Design 插件。搜索可安装的 Agent 原生设计工作流，每个条目都有稳定的 vendor/plugin ID。`,
-      directoryRailRight: 'Open Design 注册表 · 官方 · 社区',
+        `浏览来自官方与社区注册表的 ${count} 个 Auto Design 插件。搜索可安装的 Agent 原生设计工作流，每个条目都有稳定的 vendor/plugin ID。`,
+      directoryRailRight: 'Auto Design 注册表 · 官方 · 社区',
       directoryRailLeft: 'vendor/plugin-name · marketplace.json',
       topbarTitle: 'OD / 注册表',
       topbarSubtitle: '公开索引',
@@ -3449,9 +3449,9 @@ const LANDING_UI_COPY_OVERRIDES: Partial<
       visiblePlugins: '个可见插件',
       openDetails: (title) => `打开 ${title} 详情`,
       details: '详情',
-      detailTitle: (title) => `${title} — Open Design 插件`,
+      detailTitle: (title) => `${title} — Auto Design 插件`,
       detailDescription: (description, command) => `${description} 使用 ${command} 安装。`,
-      detailRailRight: (id) => `Open Design 插件 · ${id}`,
+      detailRailRight: (id) => `Auto Design 插件 · ${id}`,
       allPlugins: '全部插件',
       registry: '注册表',
       deprecated: '已弃用',
@@ -3514,14 +3514,14 @@ const LANDING_UI_COPY_OVERRIDES: Partial<
       releases: '版本發布',
       discord: 'Discord',
       rss: 'RSS',
-      bottomLeft: '● Open Design · Apache-2.0 · 2026 / 第 01 卷 / 第 26 期',
+      bottomLeft: '● Auto Design · Apache-2.0 · 2026 / 第 01 卷 / 第 26 期',
       bottomRight: '柏林 / 開放 / 地球 · 52.5200° N · 13.4050° E',
     },
     blog: {
       title: '部落格',
-      seoTitle: '部落格 — Open Design',
+      seoTitle: '部落格 — Auto Design',
       description:
-        '理解、探索與建構 Open Design 的筆記，涵蓋產品、指南、使用場景與社群。',
+        '理解、探索與建構 Auto Design 的筆記，涵蓋產品、指南、使用場景與社群。',
       categoriesLabel: '部落格分類',
       categories: {
         all: '全部',
@@ -3542,9 +3542,9 @@ const LANDING_UI_COPY_OVERRIDES: Partial<
     },
     tutorials: {
       title: '教學',
-      seoTitle: '教學 — Open Design',
+      seoTitle: '教學 — Auto Design',
       description:
-        '觀看 Open Design 的上手 walkthrough、外掛教學、演示、評測與社群影片。所有影片都在頁面內播放，並保留原始 YouTube 來源。',
+        '觀看 Auto Design 的上手 walkthrough、外掛教學、演示、評測與社群影片。所有影片都在頁面內播放，並保留原始 YouTube 來源。',
       categoriesLabel: '教學分類',
       categories: {
         all: '全部',
@@ -3565,12 +3565,12 @@ const LANDING_UI_COPY_OVERRIDES: Partial<
       suggestVideo: '推薦一支影片',
       noCategory: '這個分類還沒有教學，更多內容正在整理。',
       thumbnailAlt: (title) => `${title} 的影片封面`,
-      detailTitle: (title) => `${title} — Open Design 教學`,
-      localizedTitle: (_title, author) => `Open Design 教學：${author}`,
+      detailTitle: (title) => `${title} — Auto Design 教學`,
+      localizedTitle: (_title, author) => `Auto Design 教學：${author}`,
       localizedSummary: (_title, author, category) =>
-        `${author} 透過一支 ${category} 影片講解 Open Design 的本地優先設計工作流、Skill、設計系統與可複用模板。`,
+        `${author} 透過一支 ${category} 影片講解 Auto Design 的本地優先設計工作流、Skill、設計系統與可複用模板。`,
       localizedBodyHtml: (_title, author, summary) =>
-        `<p>${summary}</p><h2>本地化摘要</h2><p>這支影片來自 ${author}，圍繞 Open Design 的安裝、能力演示、設計系統、Skill 與本地 Agent 工作流展開。頁面保留原始影片來源，非英文頁面使用站內 i18n 摘要，避免正文回退成英文。</p>`,
+        `<p>${summary}</p><h2>本地化摘要</h2><p>這支影片來自 ${author}，圍繞 Auto Design 的安裝、能力演示、設計系統、Skill 與本地 Agent 工作流展開。頁面保留原始影片來源，非英文頁面使用站內 i18n 摘要，避免正文回退成英文。</p>`,
     },
   },
 };
@@ -3605,7 +3605,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
       titleMiddle: 'を',
       titleSecondEmphasis: '自分の Agent で動かす',
       lead: (skills, systems) =>
-        `Open Design は公式のローカル優先 Claude Design 代替です。Claude Code、Codex、Cursor、Gemini、OpenCode、Qwen など既存の coding agent が、${skills} 個の composable skill と ${systems} 個の portable DESIGN.md system で動くデザインエンジンになります。`,
+        `Auto Design は公式のローカル優先 Claude Design 代替です。Claude Code、Codex、Cursor、Gemini、OpenCode、Qwen など既存の coding agent が、${skills} 個の composable skill と ${systems} 個の portable DESIGN.md system で動くデザインエンジンになります。`,
       star: 'GitHub で Star',
       download: 'デスクトップをダウンロード',
     },
@@ -3614,7 +3614,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
     labs: { label: 'ラボ', titlePrefix: '成長し続ける', titleEmphasis: '実験アーカイブ', titleSuffix: '：Skill、デッキ、機械生成の形式' },
     method: { label: 'メソッド', titlePrefix: '', titleEmphasis: 'シグナル', titleSuffix: 'からシステムへ' },
     work: { label: '選定作品', titlePrefix: 'Brief を', titleEmphasisA: '記憶に残る', titleMiddle: '出荷可能な', titleEmphasisB: 'artifact', titleSuffix: 'へ変える Skill' },
-    faqSection: { rule: 'FAQ', answers: '公式回答', label: 'Open Design よくある質問', titlePrefix: '', titleMiddle: 'と', titleSuffix: 'Claude Design のオープンソース代替について' },
+    faqSection: { rule: 'FAQ', answers: '公式回答', label: 'Auto Design よくある質問', titlePrefix: '', titleMiddle: 'と', titleSuffix: 'Claude Design のオープンソース代替について' },
     cta: { label: '始める', titlePrefix: '', titleOpen: 'オープン', titleMiddle: 'で', titleVisual: '視覚的に強い', titleSuffix: 'ものを一緒に作る', star: 'GitHub で Star' },
     footer: { summary: 'Claude Design のオープンソース代替。local-first、BYOK、Apache-2.0。', download: 'デスクトップをダウンロード' },
   },
@@ -3625,7 +3625,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
       titleMiddle: '을',
       titleSecondEmphasis: '내 Agent에서 실행',
       lead: (skills, systems) =>
-        `Open Design은 공식 local-first Claude Design 대안입니다. 이미 쓰는 Claude Code, Codex, Cursor, Gemini, OpenCode, Qwen 같은 coding agent가 ${skills}개의 조합형 skill과 ${systems}개의 portable DESIGN.md system으로 구동되는 디자인 엔진이 됩니다.`,
+        `Auto Design은 공식 local-first Claude Design 대안입니다. 이미 쓰는 Claude Code, Codex, Cursor, Gemini, OpenCode, Qwen 같은 coding agent가 ${skills}개의 조합형 skill과 ${systems}개의 portable DESIGN.md system으로 구동되는 디자인 엔진이 됩니다.`,
       star: 'GitHub에서 Star',
       download: '데스크톱 다운로드',
     },
@@ -3634,7 +3634,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
     labs: { label: '랩', titlePrefix: '계속 자라는', titleEmphasis: '실험 아카이브', titleSuffix: '— Skill, deck, 생성 형식' },
     method: { label: '방법', titlePrefix: '', titleEmphasis: '신호', titleSuffix: '에서 시스템으로' },
     work: { label: '선정 작업', titlePrefix: 'Brief를', titleEmphasisA: '기억에 남는', titleMiddle: '출하 가능한', titleEmphasisB: 'artifact', titleSuffix: '로 바꾸는 Skill' },
-    faqSection: { rule: 'FAQ', answers: '공식 답변', label: 'Open Design 자주 묻는 질문', titlePrefix: '', titleMiddle: '및', titleSuffix: 'Claude Design 오픈소스 대안 질문' },
+    faqSection: { rule: 'FAQ', answers: '공식 답변', label: 'Auto Design 자주 묻는 질문', titlePrefix: '', titleMiddle: '및', titleSuffix: 'Claude Design 오픈소스 대안 질문' },
     cta: { label: '시작하기', titlePrefix: '함께', titleOpen: '열린', titleMiddle: '그리고', titleVisual: '시각적으로 강한', titleSuffix: '것을 만듭니다', star: 'GitHub에서 Star' },
     footer: { summary: 'Claude Design의 오픈소스 대안. Local-first, BYOK, Apache-2.0.', download: '데스크톱 다운로드' },
   },
@@ -3645,7 +3645,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
       titleMiddle: 'läuft auf',
       titleSecondEmphasis: 'deinem eigenen Agent',
       lead: (skills, systems) =>
-        `Open Design ist die offizielle local-first Alternative zu Claude Design. Dein vorhandener Coding-Agent — Claude Code, Codex, Cursor, Gemini, OpenCode oder Qwen — wird zur Design-Engine, gesteuert von ${skills} kombinierbaren Skills und ${systems} portablen DESIGN.md-Systemen.`,
+        `Auto Design ist die offizielle local-first Alternative zu Claude Design. Dein vorhandener Coding-Agent — Claude Code, Codex, Cursor, Gemini, OpenCode oder Qwen — wird zur Design-Engine, gesteuert von ${skills} kombinierbaren Skills und ${systems} portablen DESIGN.md-Systemen.`,
       star: 'Auf GitHub sternen',
       download: 'Desktop herunterladen',
     },
@@ -3665,7 +3665,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
       titleMiddle: 'open source, sur',
       titleSecondEmphasis: 'votre propre agent',
       lead: (skills, systems) =>
-        `Open Design est l'alternative officielle, local-first, à Claude Design. Votre agent de coding — Claude Code, Codex, Cursor, Gemini, OpenCode ou Qwen — devient un moteur de design piloté par ${skills} skills composables et ${systems} systèmes DESIGN.md portables.`,
+        `Auto Design est l'alternative officielle, local-first, à Claude Design. Votre agent de coding — Claude Code, Codex, Cursor, Gemini, OpenCode ou Qwen — devient un moteur de design piloté par ${skills} skills composables et ${systems} systèmes DESIGN.md portables.`,
       star: 'Mettre une Star sur GitHub',
       download: 'Télécharger le desktop',
     },
@@ -3674,7 +3674,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
     labs: { label: 'Lab', titlePrefix: 'Une', titleEmphasis: "archive d'expériences", titleSuffix: 'en croissance : skills, decks et formes générées' },
     method: { label: 'Méthode', titlePrefix: 'Du', titleEmphasis: 'signal', titleSuffix: 'au système' },
     work: { label: 'Travaux choisis', titlePrefix: 'Des skills qui transforment les briefs en', titleEmphasisA: 'artifacts', titleMiddle: 'mémorables et', titleEmphasisB: 'livrables', titleSuffix: '' },
-    faqSection: { rule: 'FAQ', answers: 'Réponses officielles', label: 'FAQ Open Design', titlePrefix: 'Questions sur', titleMiddle: 'et', titleSuffix: "l'alternative open source à Claude Design" },
+    faqSection: { rule: 'FAQ', answers: 'Réponses officielles', label: 'FAQ Auto Design', titlePrefix: 'Questions sur', titleMiddle: 'et', titleSuffix: "l'alternative open source à Claude Design" },
     cta: { label: 'Commencer', titlePrefix: 'Construisons quelque chose', titleOpen: "d'ouvert", titleMiddle: 'et', titleVisual: 'visuellement mémorable', titleSuffix: '', star: 'Mettre une Star sur GitHub' },
     footer: { summary: "L'alternative open source à Claude Design. Local-first, BYOK, Apache-2.0.", download: 'Télécharger le desktop' },
   },
@@ -3685,7 +3685,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
       titleMiddle: 'работает на',
       titleSecondEmphasis: 'вашем собственном Agent',
       lead: (skills, systems) =>
-        `Open Design — официальная local-first альтернатива Claude Design. Ваш coding agent — Claude Code, Codex, Cursor, Gemini, OpenCode или Qwen — становится design engine на базе ${skills} composable skills и ${systems} portable DESIGN.md systems.`,
+        `Auto Design — официальная local-first альтернатива Claude Design. Ваш coding agent — Claude Code, Codex, Cursor, Gemini, OpenCode или Qwen — становится design engine на базе ${skills} composable skills и ${systems} portable DESIGN.md systems.`,
       star: 'Поставить Star на GitHub',
       download: 'Скачать desktop',
     },
@@ -3694,7 +3694,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
     labs: { label: 'Лаборатория', titlePrefix: 'Растущий', titleEmphasis: 'архив экспериментов', titleSuffix: 'со skills, deck и машинными формами' },
     method: { label: 'Метод', titlePrefix: 'От', titleEmphasis: 'сигнала', titleSuffix: 'к системе' },
     work: { label: 'Избранные работы', titlePrefix: 'Skills превращают brief в', titleEmphasisA: 'запоминающиеся', titleMiddle: 'и готовые к отправке', titleEmphasisB: 'artifacts', titleSuffix: '' },
-    faqSection: { rule: 'FAQ', answers: 'Официальные ответы', label: 'Вопросы об Open Design', titlePrefix: 'Вопросы про', titleMiddle: 'и', titleSuffix: 'open-source альтернативу Claude Design' },
+    faqSection: { rule: 'FAQ', answers: 'Официальные ответы', label: 'Вопросы об Auto Design', titlePrefix: 'Вопросы про', titleMiddle: 'и', titleSuffix: 'open-source альтернативу Claude Design' },
     cta: { label: 'Начать', titlePrefix: 'Давайте создадим что-то', titleOpen: 'открытое', titleMiddle: 'и', titleVisual: 'визуально сильное', titleSuffix: '', star: 'Поставить Star на GitHub' },
     footer: { summary: 'Open-source альтернатива Claude Design. Local-first, BYOK, Apache-2.0.', download: 'Скачать desktop' },
   },
@@ -3705,7 +3705,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
       titleMiddle: 'open source, corriendo en',
       titleSecondEmphasis: 'tu propio agent',
       lead: (skills, systems) =>
-        `Open Design es la alternativa oficial, local-first, a Claude Design. Tu coding agent — Claude Code, Codex, Cursor, Gemini, OpenCode o Qwen — se convierte en motor de diseño con ${skills} skills componibles y ${systems} sistemas DESIGN.md portables.`,
+        `Auto Design es la alternativa oficial, local-first, a Claude Design. Tu coding agent — Claude Code, Codex, Cursor, Gemini, OpenCode o Qwen — se convierte en motor de diseño con ${skills} skills componibles y ${systems} sistemas DESIGN.md portables.`,
       star: 'Dar Star en GitHub',
       download: 'Descargar desktop',
     },
@@ -3714,7 +3714,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
     labs: { label: 'Lab', titlePrefix: 'Un', titleEmphasis: 'archivo experimental', titleSuffix: 'en crecimiento para skills, decks y formas generadas' },
     method: { label: 'Método', titlePrefix: 'De la', titleEmphasis: 'señal', titleSuffix: 'al sistema' },
     work: { label: 'Trabajos seleccionados', titlePrefix: 'Skills que convierten briefs en', titleEmphasisA: 'artifacts', titleMiddle: 'memorables y', titleEmphasisB: 'entregables', titleSuffix: '' },
-    faqSection: { rule: 'FAQ', answers: 'Respuestas oficiales', label: 'FAQ de Open Design', titlePrefix: 'Preguntas sobre', titleMiddle: 'y', titleSuffix: 'la alternativa open source a Claude Design' },
+    faqSection: { rule: 'FAQ', answers: 'Respuestas oficiales', label: 'FAQ de Auto Design', titlePrefix: 'Preguntas sobre', titleMiddle: 'y', titleSuffix: 'la alternativa open source a Claude Design' },
     cta: { label: 'Empezar', titlePrefix: 'Construyamos algo', titleOpen: 'abierto', titleMiddle: 'y', titleVisual: 'visualmente memorable', titleSuffix: '', star: 'Dar Star en GitHub' },
     footer: { summary: 'La alternativa open source a Claude Design. Local-first, BYOK, Apache-2.0.', download: 'Descargar desktop' },
   },
@@ -3725,7 +3725,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
       titleMiddle: 'open source, rodando no',
       titleSecondEmphasis: 'seu próprio agent',
       lead: (skills, systems) =>
-        `Open Design é a alternativa oficial, local-first, ao Claude Design. Seu coding agent — Claude Code, Codex, Cursor, Gemini, OpenCode ou Qwen — vira um motor de design com ${skills} skills componíveis e ${systems} sistemas DESIGN.md portáteis.`,
+        `Auto Design é a alternativa oficial, local-first, ao Claude Design. Seu coding agent — Claude Code, Codex, Cursor, Gemini, OpenCode ou Qwen — vira um motor de design com ${skills} skills componíveis e ${systems} sistemas DESIGN.md portáteis.`,
       star: 'Dar Star no GitHub',
       download: 'Baixar desktop',
     },
@@ -3734,7 +3734,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
     labs: { label: 'Lab', titlePrefix: 'Um', titleEmphasis: 'arquivo experimental', titleSuffix: 'em crescimento para skills, decks e formas geradas' },
     method: { label: 'Método', titlePrefix: 'Do', titleEmphasis: 'sinal', titleSuffix: 'ao sistema' },
     work: { label: 'Trabalhos selecionados', titlePrefix: 'Skills que transformam briefs em', titleEmphasisA: 'artifacts', titleMiddle: 'memoráveis e', titleEmphasisB: 'entregáveis', titleSuffix: '' },
-    faqSection: { rule: 'FAQ', answers: 'Respostas oficiais', label: 'FAQ Open Design', titlePrefix: 'Perguntas sobre', titleMiddle: 'e', titleSuffix: 'a alternativa open source ao Claude Design' },
+    faqSection: { rule: 'FAQ', answers: 'Respostas oficiais', label: 'FAQ Auto Design', titlePrefix: 'Perguntas sobre', titleMiddle: 'e', titleSuffix: 'a alternativa open source ao Claude Design' },
     cta: { label: 'Começar', titlePrefix: 'Vamos criar algo', titleOpen: 'aberto', titleMiddle: 'e', titleVisual: 'visualmente memorável', titleSuffix: '', star: 'Dar Star no GitHub' },
     footer: { summary: 'A alternativa open source ao Claude Design. Local-first, BYOK, Apache-2.0.', download: 'Baixar desktop' },
   },
@@ -3745,7 +3745,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
       titleMiddle: 'open source, sul',
       titleSecondEmphasis: 'tuo agent',
       lead: (skills, systems) =>
-        `Open Design è l'alternativa ufficiale, local-first, a Claude Design. Il tuo coding agent — Claude Code, Codex, Cursor, Gemini, OpenCode o Qwen — diventa un motore di design con ${skills} skill componibili e ${systems} sistemi DESIGN.md portabili.`,
+        `Auto Design è l'alternativa ufficiale, local-first, a Claude Design. Il tuo coding agent — Claude Code, Codex, Cursor, Gemini, OpenCode o Qwen — diventa un motore di design con ${skills} skill componibili e ${systems} sistemi DESIGN.md portabili.`,
       star: 'Metti Star su GitHub',
       download: 'Scarica desktop',
     },
@@ -3754,7 +3754,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
     labs: { label: 'Lab', titlePrefix: 'Un', titleEmphasis: 'archivio sperimentale', titleSuffix: 'in crescita per skill, deck e forme generate' },
     method: { label: 'Metodo', titlePrefix: 'Dal', titleEmphasis: 'segnale', titleSuffix: 'al sistema' },
     work: { label: 'Lavori selezionati', titlePrefix: 'Skill che trasformano brief in', titleEmphasisA: 'artifact', titleMiddle: 'memorabili e', titleEmphasisB: 'pronti da consegnare', titleSuffix: '' },
-    faqSection: { rule: 'FAQ', answers: 'Risposte ufficiali', label: 'FAQ Open Design', titlePrefix: 'Domande su', titleMiddle: 'e', titleSuffix: "l'alternativa open source a Claude Design" },
+    faqSection: { rule: 'FAQ', answers: 'Risposte ufficiali', label: 'FAQ Auto Design', titlePrefix: 'Domande su', titleMiddle: 'e', titleSuffix: "l'alternativa open source a Claude Design" },
     cta: { label: 'Inizia', titlePrefix: 'Costruiamo qualcosa di', titleOpen: 'aperto', titleMiddle: 'e', titleVisual: 'visivamente memorabile', titleSuffix: '', star: 'Metti Star su GitHub' },
     footer: { summary: "L'alternativa open source a Claude Design. Local-first, BYOK, Apache-2.0.", download: 'Scarica desktop' },
   },
@@ -3765,7 +3765,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
       titleMiddle: 'mã nguồn mở, chạy trên',
       titleSecondEmphasis: 'agent của bạn',
       lead: (skills, systems) =>
-        `Open Design là lựa chọn chính thức, local-first, thay Claude Design. Coding agent bạn đang dùng — Claude Code, Codex, Cursor, Gemini, OpenCode hoặc Qwen — trở thành engine thiết kế với ${skills} skill có thể ghép và ${systems} hệ DESIGN.md di động.`,
+        `Auto Design là lựa chọn chính thức, local-first, thay Claude Design. Coding agent bạn đang dùng — Claude Code, Codex, Cursor, Gemini, OpenCode hoặc Qwen — trở thành engine thiết kế với ${skills} skill có thể ghép và ${systems} hệ DESIGN.md di động.`,
       star: 'Star trên GitHub',
       download: 'Tải desktop',
     },
@@ -3774,7 +3774,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
     labs: { label: 'Lab', titlePrefix: 'Một', titleEmphasis: 'kho thử nghiệm', titleSuffix: 'đang lớn lên cho skill, deck và hình thức tạo sinh' },
     method: { label: 'Phương pháp', titlePrefix: 'Từ', titleEmphasis: 'tín hiệu', titleSuffix: 'đến hệ thống' },
     work: { label: 'Tác phẩm chọn lọc', titlePrefix: 'Skill biến brief thành', titleEmphasisA: 'artifact', titleMiddle: 'đáng nhớ và', titleEmphasisB: 'có thể giao', titleSuffix: '' },
-    faqSection: { rule: 'FAQ', answers: 'Câu trả lời chính thức', label: 'FAQ Open Design', titlePrefix: 'Câu hỏi về', titleMiddle: 'và', titleSuffix: 'lựa chọn mã nguồn mở thay Claude Design' },
+    faqSection: { rule: 'FAQ', answers: 'Câu trả lời chính thức', label: 'FAQ Auto Design', titlePrefix: 'Câu hỏi về', titleMiddle: 'và', titleSuffix: 'lựa chọn mã nguồn mở thay Claude Design' },
     cta: { label: 'Bắt đầu', titlePrefix: 'Cùng tạo ra thứ', titleOpen: 'mở', titleMiddle: 'và', titleVisual: 'ấn tượng về thị giác', titleSuffix: '', star: 'Star trên GitHub' },
     footer: { summary: 'Lựa chọn mã nguồn mở thay Claude Design. Local-first, BYOK, Apache-2.0.', download: 'Tải desktop' },
   },
@@ -3785,7 +3785,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
       titleMiddle: 'open source, na',
       titleSecondEmphasis: 'Twoim agencie',
       lead: (skills, systems) =>
-        `Open Design to oficjalna, local-first alternatywa dla Claude Design. Twój coding agent — Claude Code, Codex, Cursor, Gemini, OpenCode albo Qwen — staje się silnikiem designu z ${skills} kompozycyjnymi skills i ${systems} przenośnymi systemami DESIGN.md.`,
+        `Auto Design to oficjalna, local-first alternatywa dla Claude Design. Twój coding agent — Claude Code, Codex, Cursor, Gemini, OpenCode albo Qwen — staje się silnikiem designu z ${skills} kompozycyjnymi skills i ${systems} przenośnymi systemami DESIGN.md.`,
       star: 'Daj Star na GitHubie',
       download: 'Pobierz desktop',
     },
@@ -3794,7 +3794,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
     labs: { label: 'Lab', titlePrefix: 'Rosnące', titleEmphasis: 'archiwum eksperymentów', titleSuffix: 'dla skills, decków i form generatywnych' },
     method: { label: 'Metoda', titlePrefix: 'Od', titleEmphasis: 'sygnału', titleSuffix: 'do systemu' },
     work: { label: 'Wybrane prace', titlePrefix: 'Skills zmieniają briefy w', titleEmphasisA: 'zapadające w pamięć', titleMiddle: 'i gotowe do wysyłki', titleEmphasisB: 'artifacts', titleSuffix: '' },
-    faqSection: { rule: 'FAQ', answers: 'Oficjalne odpowiedzi', label: 'FAQ Open Design', titlePrefix: 'Pytania o', titleMiddle: 'i', titleSuffix: 'open-source alternatywę dla Claude Design' },
+    faqSection: { rule: 'FAQ', answers: 'Oficjalne odpowiedzi', label: 'FAQ Auto Design', titlePrefix: 'Pytania o', titleMiddle: 'i', titleSuffix: 'open-source alternatywę dla Claude Design' },
     cta: { label: 'Zacznij', titlePrefix: 'Zbudujmy coś', titleOpen: 'otwartego', titleMiddle: 'i', titleVisual: 'wizualnie mocnego', titleSuffix: '', star: 'Daj Star na GitHubie' },
     footer: { summary: 'Open-source alternatywa dla Claude Design. Local-first, BYOK, Apache-2.0.', download: 'Pobierz desktop' },
   },
@@ -3805,7 +3805,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
       titleMiddle: 'open source, berjalan di',
       titleSecondEmphasis: 'agent Anda sendiri',
       lead: (skills, systems) =>
-        `Open Design adalah alternatif resmi, local-first, untuk Claude Design. Coding agent yang sudah Anda pakai — Claude Code, Codex, Cursor, Gemini, OpenCode, atau Qwen — menjadi mesin desain dengan ${skills} skill komposable dan ${systems} sistem DESIGN.md portabel.`,
+        `Auto Design adalah alternatif resmi, local-first, untuk Claude Design. Coding agent yang sudah Anda pakai — Claude Code, Codex, Cursor, Gemini, OpenCode, atau Qwen — menjadi mesin desain dengan ${skills} skill komposable dan ${systems} sistem DESIGN.md portabel.`,
       star: 'Beri Star di GitHub',
       download: 'Unduh desktop',
     },
@@ -3814,7 +3814,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
     labs: { label: 'Lab', titlePrefix: 'Arsip', titleEmphasis: 'eksperimen', titleSuffix: 'yang terus tumbuh untuk skill, deck, dan bentuk generatif' },
     method: { label: 'Metode', titlePrefix: 'Dari', titleEmphasis: 'sinyal', titleSuffix: 'ke sistem' },
     work: { label: 'Karya pilihan', titlePrefix: 'Skill yang mengubah brief menjadi', titleEmphasisA: 'artifact', titleMiddle: 'berkesan dan', titleEmphasisB: 'siap dikirim', titleSuffix: '' },
-    faqSection: { rule: 'FAQ', answers: 'Jawaban resmi', label: 'FAQ Open Design', titlePrefix: 'Pertanyaan tentang', titleMiddle: 'dan', titleSuffix: 'alternatif open source untuk Claude Design' },
+    faqSection: { rule: 'FAQ', answers: 'Jawaban resmi', label: 'FAQ Auto Design', titlePrefix: 'Pertanyaan tentang', titleMiddle: 'dan', titleSuffix: 'alternatif open source untuk Claude Design' },
     cta: { label: 'Mulai', titlePrefix: 'Mari bangun sesuatu yang', titleOpen: 'terbuka', titleMiddle: 'dan', titleVisual: 'kuat secara visual', titleSuffix: '', star: 'Beri Star di GitHub' },
     footer: { summary: 'Alternatif open source untuk Claude Design. Local-first, BYOK, Apache-2.0.', download: 'Unduh desktop' },
   },
@@ -3825,7 +3825,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
       titleMiddle: 'open source, draaiend op',
       titleSecondEmphasis: 'je eigen agent',
       lead: (skills, systems) =>
-        `Open Design is het officiële local-first alternatief voor Claude Design. Je bestaande coding agent — Claude Code, Codex, Cursor, Gemini, OpenCode of Qwen — wordt een design-engine met ${skills} combineerbare skills en ${systems} draagbare DESIGN.md-systemen.`,
+        `Auto Design is het officiële local-first alternatief voor Claude Design. Je bestaande coding agent — Claude Code, Codex, Cursor, Gemini, OpenCode of Qwen — wordt een design-engine met ${skills} combineerbare skills en ${systems} draagbare DESIGN.md-systemen.`,
       star: 'Star op GitHub',
       download: 'Desktop downloaden',
     },
@@ -3834,7 +3834,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
     labs: { label: 'Lab', titlePrefix: 'Een groeiend', titleEmphasis: 'experimenteel archief', titleSuffix: 'voor skills, decks en machinevormen' },
     method: { label: 'Methode', titlePrefix: 'Van', titleEmphasis: 'signaal', titleSuffix: 'naar systeem' },
     work: { label: 'Geselecteerd werk', titlePrefix: 'Skills die briefings omzetten in', titleEmphasisA: 'memorabele', titleMiddle: 'en leverbare', titleEmphasisB: 'artifacts', titleSuffix: '' },
-    faqSection: { rule: 'FAQ', answers: 'Officiële antwoorden', label: 'Open Design-FAQ', titlePrefix: 'Vragen over', titleMiddle: 'en', titleSuffix: 'het open-source alternatief voor Claude Design' },
+    faqSection: { rule: 'FAQ', answers: 'Officiële antwoorden', label: 'Auto Design-FAQ', titlePrefix: 'Vragen over', titleMiddle: 'en', titleSuffix: 'het open-source alternatief voor Claude Design' },
     cta: { label: 'Starten', titlePrefix: 'Laten we iets', titleOpen: 'opens', titleMiddle: 'en', titleVisual: 'visueel memorabels', titleSuffix: 'bouwen', star: 'Star op GitHub' },
     footer: { summary: 'Het open-source alternatief voor Claude Design. Local-first, BYOK, Apache-2.0.', download: 'Desktop downloaden' },
   },
@@ -3845,7 +3845,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
       titleMiddle: 'مفتوح المصدر يعمل على',
       titleSecondEmphasis: 'الـ Agent الخاص بك',
       lead: (skills, systems) =>
-        `Open Design هو البديل الرسمي المحلي أولاً لـ Claude Design. يتحول coding agent الذي تستخدمه — Claude Code أو Codex أو Cursor أو Gemini أو OpenCode أو Qwen — إلى محرك تصميم مدفوع بـ ${skills} skills قابلة للتركيب و ${systems} أنظمة DESIGN.md قابلة للنقل.`,
+        `Auto Design هو البديل الرسمي المحلي أولاً لـ Claude Design. يتحول coding agent الذي تستخدمه — Claude Code أو Codex أو Cursor أو Gemini أو OpenCode أو Qwen — إلى محرك تصميم مدفوع بـ ${skills} skills قابلة للتركيب و ${systems} أنظمة DESIGN.md قابلة للنقل.`,
       star: 'ضع Star على GitHub',
       download: 'تنزيل سطح المكتب',
     },
@@ -3854,7 +3854,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
     labs: { label: 'المختبر', titlePrefix: 'أرشيف', titleEmphasis: 'تجارب', titleSuffix: 'ينمو للـ skills والعروض والأشكال التوليدية' },
     method: { label: 'المنهج', titlePrefix: 'من', titleEmphasis: 'الإشارة', titleSuffix: 'إلى النظام' },
     work: { label: 'أعمال مختارة', titlePrefix: 'Skills تحول الـ brief إلى', titleEmphasisA: 'artifacts', titleMiddle: 'لا تُنسى و', titleEmphasisB: 'قابلة للتسليم', titleSuffix: '' },
-    faqSection: { rule: 'FAQ', answers: 'إجابات رسمية', label: 'أسئلة Open Design', titlePrefix: 'أسئلة حول', titleMiddle: 'و', titleSuffix: 'البديل مفتوح المصدر لـ Claude Design' },
+    faqSection: { rule: 'FAQ', answers: 'إجابات رسمية', label: 'أسئلة Auto Design', titlePrefix: 'أسئلة حول', titleMiddle: 'و', titleSuffix: 'البديل مفتوح المصدر لـ Claude Design' },
     cta: { label: 'ابدأ', titlePrefix: 'لنبن شيئاً', titleOpen: 'مفتوحاً', titleMiddle: 'و', titleVisual: 'قوياً بصرياً', titleSuffix: '', star: 'ضع Star على GitHub' },
     footer: { summary: 'البديل مفتوح المصدر لـ Claude Design. محلي أولاً، BYOK، Apache-2.0.', download: 'تنزيل سطح المكتب' },
   },
@@ -3865,7 +3865,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
       titleMiddle: 'açık kaynak,',
       titleSecondEmphasis: 'kendi Agentında çalışır',
       lead: (skills, systems) =>
-        `Open Design, Claude Design'ın resmi local-first alternatifidir. Zaten kullandığın coding agent — Claude Code, Codex, Cursor, Gemini, OpenCode veya Qwen — ${skills} birleştirilebilir skill ve ${systems} taşınabilir DESIGN.md sistemiyle çalışan bir tasarım motoruna dönüşür.`,
+        `Auto Design, Claude Design'ın resmi local-first alternatifidir. Zaten kullandığın coding agent — Claude Code, Codex, Cursor, Gemini, OpenCode veya Qwen — ${skills} birleştirilebilir skill ve ${systems} taşınabilir DESIGN.md sistemiyle çalışan bir tasarım motoruna dönüşür.`,
       star: "GitHub'da Star ver",
       download: 'Desktop indir',
     },
@@ -3874,7 +3874,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
     labs: { label: 'Lab', titlePrefix: 'Büyüyen bir', titleEmphasis: 'deney arşivi', titleSuffix: ': skill, deck ve üretken formlar' },
     method: { label: 'Yöntem', titlePrefix: '', titleEmphasis: 'Sinyalden', titleSuffix: 'sisteme' },
     work: { label: 'Seçilmiş işler', titlePrefix: 'Briefleri', titleEmphasisA: 'akılda kalan', titleMiddle: 've teslim edilebilir', titleEmphasisB: 'artifactlara', titleSuffix: 'çeviren skilller' },
-    faqSection: { rule: 'FAQ', answers: 'Resmi yanıtlar', label: 'Open Design SSS', titlePrefix: '', titleMiddle: 've', titleSuffix: "Claude Design'ın açık kaynak alternatifi hakkında sorular" },
+    faqSection: { rule: 'FAQ', answers: 'Resmi yanıtlar', label: 'Auto Design SSS', titlePrefix: '', titleMiddle: 've', titleSuffix: "Claude Design'ın açık kaynak alternatifi hakkında sorular" },
     cta: { label: 'Başla', titlePrefix: 'Birlikte', titleOpen: 'açık', titleMiddle: 've', titleVisual: 'görsel olarak güçlü', titleSuffix: 'bir şey üretelim', star: "GitHub'da Star ver" },
     footer: { summary: "Claude Design'ın açık kaynak alternatifi. Local-first, BYOK, Apache-2.0.", download: 'Desktop indir' },
   },
@@ -3885,7 +3885,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
       titleMiddle: 'працює на',
       titleSecondEmphasis: 'вашому власному Agent',
       lead: (skills, systems) =>
-        `Open Design — офіційна local-first альтернатива Claude Design. Ваш coding agent — Claude Code, Codex, Cursor, Gemini, OpenCode або Qwen — стає design engine на базі ${skills} composable skills і ${systems} portable DESIGN.md systems.`,
+        `Auto Design — офіційна local-first альтернатива Claude Design. Ваш coding agent — Claude Code, Codex, Cursor, Gemini, OpenCode або Qwen — стає design engine на базі ${skills} composable skills і ${systems} portable DESIGN.md systems.`,
       star: 'Поставити Star на GitHub',
       download: 'Завантажити desktop',
     },
@@ -3894,7 +3894,7 @@ const HOME_PAGE_COPY_OVERRIDES: Partial<Record<LandingLocaleCode, DeepPartial<Ho
     labs: { label: 'Лабораторія', titlePrefix: 'Зростаючий', titleEmphasis: 'архів експериментів', titleSuffix: 'зі skills, deck та машинними формами' },
     method: { label: 'Метод', titlePrefix: 'Від', titleEmphasis: 'сигналу', titleSuffix: 'до системи' },
     work: { label: 'Вибрані роботи', titlePrefix: 'Skills перетворюють brief на', titleEmphasisA: 'пам’ятні', titleMiddle: 'і готові до відправки', titleEmphasisB: 'artifacts', titleSuffix: '' },
-    faqSection: { rule: 'FAQ', answers: 'Офіційні відповіді', label: 'FAQ Open Design українською', titlePrefix: 'Питання про', titleMiddle: 'і', titleSuffix: 'open-source альтернативу Claude Design' },
+    faqSection: { rule: 'FAQ', answers: 'Офіційні відповіді', label: 'FAQ Auto Design українською', titlePrefix: 'Питання про', titleMiddle: 'і', titleSuffix: 'open-source альтернативу Claude Design' },
     cta: { label: 'Почати', titlePrefix: 'Давайте створимо щось', titleOpen: 'відкрите', titleMiddle: 'і', titleVisual: 'візуально сильне', titleSuffix: '', star: 'Поставити Star на GitHub' },
     footer: { summary: 'Open-source альтернатива Claude Design. Local-first, BYOK, Apache-2.0.', download: 'Завантажити desktop' },
   },
@@ -3919,7 +3919,7 @@ const LOCALIZED_LANDING_FOOTER_COPY: Partial<
     releases: 'リリース',
     discord: 'Discord',
     rss: 'RSS',
-    bottomLeft: '● Open Design · Apache-2.0 · 2026 / 第 01 巻 / 第 26 号',
+    bottomLeft: '● Auto Design · Apache-2.0 · 2026 / 第 01 巻 / 第 26 号',
     bottomRight: 'ベルリン / オープン / 地球 · 52.5200° N · 13.4050° E',
   },
   ko: {
@@ -3938,7 +3938,7 @@ const LOCALIZED_LANDING_FOOTER_COPY: Partial<
     releases: '릴리스',
     discord: 'Discord',
     rss: 'RSS',
-    bottomLeft: '● Open Design · Apache-2.0 · 2026 / 01권 / 26호',
+    bottomLeft: '● Auto Design · Apache-2.0 · 2026 / 01권 / 26호',
     bottomRight: '베를린 / 오픈 / 지구 · 52.5200° N · 13.4050° E',
   },
   de: {
@@ -3957,7 +3957,7 @@ const LOCALIZED_LANDING_FOOTER_COPY: Partial<
     releases: 'Versionen',
     discord: 'Discord',
     rss: 'RSS',
-    bottomLeft: '● Open Design · Apache-2.0 · 2026 / Band 01 / Ausgabe Nr. 26',
+    bottomLeft: '● Auto Design · Apache-2.0 · 2026 / Band 01 / Ausgabe Nr. 26',
     bottomRight: 'Berlin / Offen / Erde · 52.5200° N · 13.4050° E',
   },
   fr: {
@@ -3976,7 +3976,7 @@ const LOCALIZED_LANDING_FOOTER_COPY: Partial<
     releases: 'Versions',
     discord: 'Discord',
     rss: 'RSS',
-    bottomLeft: '● Open Design · Apache-2.0 · 2026 / Volume 01 / Numéro 26',
+    bottomLeft: '● Auto Design · Apache-2.0 · 2026 / Volume 01 / Numéro 26',
     bottomRight: 'Berlin / Ouvert / Terre · 52.5200° N · 13.4050° E',
   },
   ru: {
@@ -3995,7 +3995,7 @@ const LOCALIZED_LANDING_FOOTER_COPY: Partial<
     releases: 'Релизы',
     discord: 'Discord',
     rss: 'RSS',
-    bottomLeft: '● Open Design · Apache-2.0 · 2026 / Том 01 / Выпуск № 26',
+    bottomLeft: '● Auto Design · Apache-2.0 · 2026 / Том 01 / Выпуск № 26',
     bottomRight: 'Берлин / Открыто / Земля · 52.5200° N · 13.4050° E',
   },
   es: {
@@ -4014,7 +4014,7 @@ const LOCALIZED_LANDING_FOOTER_COPY: Partial<
     releases: 'Versiones',
     discord: 'Discord',
     rss: 'RSS',
-    bottomLeft: '● Open Design · Apache-2.0 · 2026 / Volumen 01 / Número 26',
+    bottomLeft: '● Auto Design · Apache-2.0 · 2026 / Volumen 01 / Número 26',
     bottomRight: 'Berlín / Abierto / Tierra · 52.5200° N · 13.4050° E',
   },
   'pt-br': {
@@ -4033,7 +4033,7 @@ const LOCALIZED_LANDING_FOOTER_COPY: Partial<
     releases: 'Versões',
     discord: 'Discord',
     rss: 'RSS',
-    bottomLeft: '● Open Design · Apache-2.0 · 2026 / Volume 01 / Edição Nº 26',
+    bottomLeft: '● Auto Design · Apache-2.0 · 2026 / Volume 01 / Edição Nº 26',
     bottomRight: 'Berlim / Aberto / Terra · 52.5200° N · 13.4050° E',
   },
   it: {
@@ -4052,7 +4052,7 @@ const LOCALIZED_LANDING_FOOTER_COPY: Partial<
     releases: 'Rilasci',
     discord: 'Discord',
     rss: 'RSS',
-    bottomLeft: '● Open Design · Apache-2.0 · 2026 / Volume 01 / Numero 26',
+    bottomLeft: '● Auto Design · Apache-2.0 · 2026 / Volume 01 / Numero 26',
     bottomRight: 'Berlino / Aperto / Terra · 52.5200° N · 13.4050° E',
   },
   vi: {
@@ -4071,7 +4071,7 @@ const LOCALIZED_LANDING_FOOTER_COPY: Partial<
     releases: 'Bản phát hành',
     discord: 'Discord',
     rss: 'RSS',
-    bottomLeft: '● Open Design · Apache-2.0 · 2026 / Tập 01 / Số 26',
+    bottomLeft: '● Auto Design · Apache-2.0 · 2026 / Tập 01 / Số 26',
     bottomRight: 'Berlin / Mở / Trái đất · 52.5200° N · 13.4050° E',
   },
   pl: {
@@ -4090,7 +4090,7 @@ const LOCALIZED_LANDING_FOOTER_COPY: Partial<
     releases: 'Wydania',
     discord: 'Discord',
     rss: 'RSS',
-    bottomLeft: '● Open Design · Apache-2.0 · 2026 / Tom 01 / Numer 26',
+    bottomLeft: '● Auto Design · Apache-2.0 · 2026 / Tom 01 / Numer 26',
     bottomRight: 'Berlin / Otwarte / Ziemia · 52.5200° N · 13.4050° E',
   },
   id: {
@@ -4109,7 +4109,7 @@ const LOCALIZED_LANDING_FOOTER_COPY: Partial<
     releases: 'Rilis',
     discord: 'Discord',
     rss: 'RSS',
-    bottomLeft: '● Open Design · Apache-2.0 · 2026 / Volume 01 / Edisi Nº 26',
+    bottomLeft: '● Auto Design · Apache-2.0 · 2026 / Volume 01 / Edisi Nº 26',
     bottomRight: 'Berlin / Terbuka / Bumi · 52.5200° N · 13.4050° E',
   },
   nl: {
@@ -4128,7 +4128,7 @@ const LOCALIZED_LANDING_FOOTER_COPY: Partial<
     releases: 'Uitgaven',
     discord: 'Discord',
     rss: 'RSS',
-    bottomLeft: '● Open Design · Apache-2.0 · 2026 / Volume 01 / Editie Nº 26',
+    bottomLeft: '● Auto Design · Apache-2.0 · 2026 / Volume 01 / Editie Nº 26',
     bottomRight: 'Berlijn / Open / Aarde · 52.5200° N · 13.4050° E',
   },
   ar: {
@@ -4147,7 +4147,7 @@ const LOCALIZED_LANDING_FOOTER_COPY: Partial<
     releases: 'الإصدارات',
     discord: 'Discord',
     rss: 'RSS',
-    bottomLeft: '● Open Design · Apache-2.0 · 2026 / المجلد 01 / العدد 26',
+    bottomLeft: '● Auto Design · Apache-2.0 · 2026 / المجلد 01 / العدد 26',
     bottomRight: 'برلين / مفتوح / الأرض · 52.5200° N · 13.4050° E',
   },
   tr: {
@@ -4166,7 +4166,7 @@ const LOCALIZED_LANDING_FOOTER_COPY: Partial<
     releases: 'Sürümler',
     discord: 'Discord',
     rss: 'RSS',
-    bottomLeft: '● Open Design · Apache-2.0 · 2026 / Cilt 01 / Sayı Nº 26',
+    bottomLeft: '● Auto Design · Apache-2.0 · 2026 / Cilt 01 / Sayı Nº 26',
     bottomRight: 'Berlin / Açık / Dünya · 52.5200° N · 13.4050° E',
   },
   uk: {
@@ -4185,7 +4185,7 @@ const LOCALIZED_LANDING_FOOTER_COPY: Partial<
     releases: 'Релізи',
     discord: 'Discord',
     rss: 'RSS',
-    bottomLeft: '● Open Design · Apache-2.0 · 2026 / Том 01 / Випуск № 26',
+    bottomLeft: '● Auto Design · Apache-2.0 · 2026 / Том 01 / Випуск № 26',
     bottomRight: 'Берлін / Відкрито / Земля · 52.5200° N · 13.4050° E',
   },
 };
@@ -4196,9 +4196,9 @@ const LOCALIZED_HOME_FOOTER_COPY: Partial<
   ja: {
     summary:
       'Claude Design のオープンソース代替。huashu-design、guizang-ppt、multica-ai、open-codesign の蓄積の上に構築されています。',
-    downloadAria: 'Open Design デスクトップアプリをダウンロード',
+    downloadAria: 'Auto Design デスクトップアプリをダウンロード',
     download: 'デスクトップをダウンロード',
-    columns: { studio: 'スタジオ', library: 'ライブラリ', connect: '接続', openDesign: 'Open Design' },
+    columns: { studio: 'スタジオ', library: 'ライブラリ', connect: '接続', openDesign: 'Auto Design' },
     studioLinks: ['機能', 'ラボ', 'メソッド', 'マニフェスト'],
     connectLinks: ['GitHub', '課題', '貢献者', 'リリース', 'Discord'],
     libraryLinks: {
@@ -4214,16 +4214,16 @@ const LOCALIZED_HOME_FOOTER_COPY: Partial<
       compare: '比較',
       alternative: 'Claude Design の代替',
     },
-    bottomLeft: 'Open Design · Apache-2.0 · 2026 / 第 01 巻 / 第 26 号',
+    bottomLeft: 'Auto Design · Apache-2.0 · 2026 / 第 01 巻 / 第 26 号',
     bottomRightA: 'ベルリン / オープン / 地球',
     bottomRightB: '52.5200° N · 13.4050° E',
   },
   ko: {
     summary:
       'Claude Design의 오픈소스 대안입니다. huashu-design, guizang-ppt, multica-ai, open-codesign의 축적 위에 구축되었습니다.',
-    downloadAria: 'Open Design 데스크톱 앱 다운로드',
+    downloadAria: 'Auto Design 데스크톱 앱 다운로드',
     download: '데스크톱 다운로드',
-    columns: { studio: '스튜디오', library: '라이브러리', connect: '연결', openDesign: 'Open Design' },
+    columns: { studio: '스튜디오', library: '라이브러리', connect: '연결', openDesign: 'Auto Design' },
     studioLinks: ['기능', '랩', '방법', '매니페스토'],
     connectLinks: ['GitHub', '이슈', '기여자', '릴리스', 'Discord'],
     libraryLinks: {
@@ -4239,7 +4239,7 @@ const LOCALIZED_HOME_FOOTER_COPY: Partial<
       compare: '비교',
       alternative: 'Claude Design 대안',
     },
-    bottomLeft: 'Open Design · Apache-2.0 · 2026 / 01권 / 26호',
+    bottomLeft: 'Auto Design · Apache-2.0 · 2026 / 01권 / 26호',
     bottomRightA: '베를린 / 오픈 / 지구',
     bottomRightB: '52.5200° N · 13.4050° E',
   },
@@ -4248,7 +4248,7 @@ const LOCALIZED_HOME_FOOTER_COPY: Partial<
       'Die quelloffene Alternative zu Claude Design. Gebaut auf den Vorarbeiten von huashu-design, guizang-ppt, multica-ai und open-codesign.',
     downloadAria: 'Open-Design-Desktop-App herunterladen',
     download: 'Desktop herunterladen',
-    columns: { studio: 'Studio', library: 'Bibliothek', connect: 'Verbinden', openDesign: 'Open Design' },
+    columns: { studio: 'Studio', library: 'Bibliothek', connect: 'Verbinden', openDesign: 'Auto Design' },
     studioLinks: ['Fähigkeiten', 'Labor', 'Methode', 'Manifest'],
     connectLinks: ['GitHub', 'Tickets', 'Mitwirkende', 'Versionen', 'Discord'],
     libraryLinks: {
@@ -4264,16 +4264,16 @@ const LOCALIZED_HOME_FOOTER_COPY: Partial<
       compare: 'Vergleich',
       alternative: 'Claude-Design-Alternative',
     },
-    bottomLeft: 'Open Design · Apache-2.0 · 2026 / Band 01 / Ausgabe Nr. 26',
+    bottomLeft: 'Auto Design · Apache-2.0 · 2026 / Band 01 / Ausgabe Nr. 26',
     bottomRightA: 'Berlin / Offen / Erde',
     bottomRightB: '52.5200° N · 13.4050° E',
   },
   fr: {
     summary:
       "L'alternative open source à Claude Design. Construite sur les travaux de huashu-design, guizang-ppt, multica-ai et open-codesign.",
-    downloadAria: "Télécharger l'application desktop Open Design",
+    downloadAria: "Télécharger l'application desktop Auto Design",
     download: 'Télécharger le desktop',
-    columns: { studio: 'Studio', library: 'Bibliothèque', connect: 'Connexion', openDesign: 'Open Design' },
+    columns: { studio: 'Studio', library: 'Bibliothèque', connect: 'Connexion', openDesign: 'Auto Design' },
     studioLinks: ['Capacités', 'Lab', 'Méthode', 'Manifeste'],
     connectLinks: ['GitHub', 'Tickets', 'Contributeurs', 'Versions', 'Discord'],
     libraryLinks: {
@@ -4289,16 +4289,16 @@ const LOCALIZED_HOME_FOOTER_COPY: Partial<
       compare: 'Comparaison',
       alternative: 'Alternative à Claude Design',
     },
-    bottomLeft: 'Open Design · Apache-2.0 · 2026 / Volume 01 / Numéro 26',
+    bottomLeft: 'Auto Design · Apache-2.0 · 2026 / Volume 01 / Numéro 26',
     bottomRightA: 'Berlin / Ouvert / Terre',
     bottomRightB: '52.5200° N · 13.4050° E',
   },
   ru: {
     summary:
       'Открытая альтернатива Claude Design, созданная на основе работ huashu-design, guizang-ppt, multica-ai и open-codesign.',
-    downloadAria: 'Скачать настольное приложение Open Design',
+    downloadAria: 'Скачать настольное приложение Auto Design',
     download: 'Скачать desktop',
-    columns: { studio: 'Студия', library: 'Библиотека', connect: 'Связь', openDesign: 'Open Design' },
+    columns: { studio: 'Студия', library: 'Библиотека', connect: 'Связь', openDesign: 'Auto Design' },
     studioLinks: ['Возможности', 'Лаборатория', 'Метод', 'Манифест'],
     connectLinks: ['GitHub', 'Задачи', 'Участники', 'Релизы', 'Discord'],
     libraryLinks: {
@@ -4314,16 +4314,16 @@ const LOCALIZED_HOME_FOOTER_COPY: Partial<
       compare: 'Сравнение',
       alternative: 'Альтернатива Claude Design',
     },
-    bottomLeft: 'Open Design · Apache-2.0 · 2026 / Том 01 / Выпуск № 26',
+    bottomLeft: 'Auto Design · Apache-2.0 · 2026 / Том 01 / Выпуск № 26',
     bottomRightA: 'Берлин / Открыто / Земля',
     bottomRightB: '52.5200° N · 13.4050° E',
   },
   es: {
     summary:
       'La alternativa de código abierto a Claude Design, construida sobre huashu-design, guizang-ppt, multica-ai y open-codesign.',
-    downloadAria: 'Descargar la aplicación de escritorio de Open Design',
+    downloadAria: 'Descargar la aplicación de escritorio de Auto Design',
     download: 'Descargar desktop',
-    columns: { studio: 'Estudio', library: 'Biblioteca', connect: 'Conectar', openDesign: 'Open Design' },
+    columns: { studio: 'Estudio', library: 'Biblioteca', connect: 'Conectar', openDesign: 'Auto Design' },
     studioLinks: ['Capacidades', 'Lab', 'Método', 'Manifiesto'],
     connectLinks: ['GitHub', 'Incidencias', 'Colaboradores', 'Versiones', 'Discord'],
     libraryLinks: {
@@ -4339,16 +4339,16 @@ const LOCALIZED_HOME_FOOTER_COPY: Partial<
       compare: 'Comparación',
       alternative: 'Alternativa a Claude Design',
     },
-    bottomLeft: 'Open Design · Apache-2.0 · 2026 / Volumen 01 / Número 26',
+    bottomLeft: 'Auto Design · Apache-2.0 · 2026 / Volumen 01 / Número 26',
     bottomRightA: 'Berlín / Abierto / Tierra',
     bottomRightB: '52.5200° N · 13.4050° E',
   },
   'pt-br': {
     summary:
       'A alternativa de código aberto ao Claude Design, construída sobre huashu-design, guizang-ppt, multica-ai e open-codesign.',
-    downloadAria: 'Baixar o aplicativo desktop do Open Design',
+    downloadAria: 'Baixar o aplicativo desktop do Auto Design',
     download: 'Baixar desktop',
-    columns: { studio: 'Estúdio', library: 'Biblioteca', connect: 'Conectar', openDesign: 'Open Design' },
+    columns: { studio: 'Estúdio', library: 'Biblioteca', connect: 'Conectar', openDesign: 'Auto Design' },
     studioLinks: ['Capacidades', 'Lab', 'Método', 'Manifesto aberto'],
     connectLinks: ['GitHub', 'Problemas', 'Colaboradores', 'Versões', 'Discord'],
     libraryLinks: {
@@ -4364,16 +4364,16 @@ const LOCALIZED_HOME_FOOTER_COPY: Partial<
       compare: 'Comparação',
       alternative: 'Alternativa ao Claude Design',
     },
-    bottomLeft: 'Open Design · Apache-2.0 · 2026 / Volume 01 / Edição Nº 26',
+    bottomLeft: 'Auto Design · Apache-2.0 · 2026 / Volume 01 / Edição Nº 26',
     bottomRightA: 'Berlim / Aberto / Terra',
     bottomRightB: '52.5200° N · 13.4050° E',
   },
   it: {
     summary:
       "L'alternativa open source a Claude Design, costruita sulle basi di huashu-design, guizang-ppt, multica-ai e open-codesign.",
-    downloadAria: "Scarica l'app desktop di Open Design",
+    downloadAria: "Scarica l'app desktop di Auto Design",
     download: 'Scarica desktop',
-    columns: { studio: 'Studio', library: 'Libreria', connect: 'Connessione', openDesign: 'Open Design' },
+    columns: { studio: 'Studio', library: 'Libreria', connect: 'Connessione', openDesign: 'Auto Design' },
     studioLinks: ['Capacità', 'Lab', 'Metodo', 'Manifesto aperto'],
     connectLinks: ['GitHub', 'Problemi', 'Contributori', 'Rilasci', 'Discord'],
     libraryLinks: {
@@ -4389,16 +4389,16 @@ const LOCALIZED_HOME_FOOTER_COPY: Partial<
       compare: 'Confronto',
       alternative: 'Alternativa a Claude Design',
     },
-    bottomLeft: 'Open Design · Apache-2.0 · 2026 / Volume 01 / Numero 26',
+    bottomLeft: 'Auto Design · Apache-2.0 · 2026 / Volume 01 / Numero 26',
     bottomRightA: 'Berlino / Aperto / Terra',
     bottomRightB: '52.5200° N · 13.4050° E',
   },
   vi: {
     summary:
       'Lựa chọn mã nguồn mở thay Claude Design, xây trên nền tảng của huashu-design, guizang-ppt, multica-ai và open-codesign.',
-    downloadAria: 'Tải ứng dụng desktop Open Design',
+    downloadAria: 'Tải ứng dụng desktop Auto Design',
     download: 'Tải desktop',
-    columns: { studio: 'Studio', library: 'Thư viện', connect: 'Kết nối', openDesign: 'Open Design' },
+    columns: { studio: 'Studio', library: 'Thư viện', connect: 'Kết nối', openDesign: 'Auto Design' },
     studioLinks: ['Năng lực', 'Lab', 'Phương pháp', 'Tuyên ngôn'],
     connectLinks: ['GitHub', 'Vấn đề', 'Người đóng góp', 'Bản phát hành', 'Discord'],
     libraryLinks: {
@@ -4414,16 +4414,16 @@ const LOCALIZED_HOME_FOOTER_COPY: Partial<
       compare: 'So sánh',
       alternative: 'Lựa chọn thay Claude Design',
     },
-    bottomLeft: 'Open Design · Apache-2.0 · 2026 / Tập 01 / Số 26',
+    bottomLeft: 'Auto Design · Apache-2.0 · 2026 / Tập 01 / Số 26',
     bottomRightA: 'Berlin / Mở / Trái đất',
     bottomRightB: '52.5200° N · 13.4050° E',
   },
   pl: {
     summary:
       'Otwarta alternatywa dla Claude Design, zbudowana na dorobku huashu-design, guizang-ppt, multica-ai i open-codesign.',
-    downloadAria: 'Pobierz aplikację desktop Open Design',
+    downloadAria: 'Pobierz aplikację desktop Auto Design',
     download: 'Pobierz desktop',
-    columns: { studio: 'Studio', library: 'Biblioteka', connect: 'Kontakt', openDesign: 'Open Design' },
+    columns: { studio: 'Studio', library: 'Biblioteka', connect: 'Kontakt', openDesign: 'Auto Design' },
     studioLinks: ['Możliwości', 'Lab', 'Metoda', 'Manifest'],
     connectLinks: ['GitHub', 'Zgłoszenia', 'Współtwórcy', 'Wydania', 'Discord'],
     libraryLinks: {
@@ -4439,16 +4439,16 @@ const LOCALIZED_HOME_FOOTER_COPY: Partial<
       compare: 'Porównanie',
       alternative: 'Alternatywa dla Claude Design',
     },
-    bottomLeft: 'Open Design · Apache-2.0 · 2026 / Tom 01 / Numer 26',
+    bottomLeft: 'Auto Design · Apache-2.0 · 2026 / Tom 01 / Numer 26',
     bottomRightA: 'Berlin / Otwarte / Ziemia',
     bottomRightB: '52.5200° N · 13.4050° E',
   },
   id: {
     summary:
       'Alternatif sumber terbuka untuk Claude Design, dibangun di atas karya huashu-design, guizang-ppt, multica-ai, dan open-codesign.',
-    downloadAria: 'Unduh aplikasi desktop Open Design',
+    downloadAria: 'Unduh aplikasi desktop Auto Design',
     download: 'Unduh desktop',
-    columns: { studio: 'Studio', library: 'Pustaka', connect: 'Koneksi', openDesign: 'Open Design' },
+    columns: { studio: 'Studio', library: 'Pustaka', connect: 'Koneksi', openDesign: 'Auto Design' },
     studioLinks: ['Kapabilitas', 'Lab', 'Metode', 'Manifesto terbuka'],
     connectLinks: ['GitHub', 'Isu', 'Kontributor', 'Rilis', 'Discord'],
     libraryLinks: {
@@ -4464,16 +4464,16 @@ const LOCALIZED_HOME_FOOTER_COPY: Partial<
       compare: 'Perbandingan',
       alternative: 'Alternatif Claude Design',
     },
-    bottomLeft: 'Open Design · Apache-2.0 · 2026 / Volume 01 / Edisi Nº 26',
+    bottomLeft: 'Auto Design · Apache-2.0 · 2026 / Volume 01 / Edisi Nº 26',
     bottomRightA: 'Berlin / Terbuka / Bumi',
     bottomRightB: '52.5200° N · 13.4050° E',
   },
   nl: {
     summary:
       'Het open-source alternatief voor Claude Design, gebouwd op het werk van huashu-design, guizang-ppt, multica-ai en open-codesign.',
-    downloadAria: 'Download de Open Design desktop-app',
+    downloadAria: 'Download de Auto Design desktop-app',
     download: 'Desktop downloaden',
-    columns: { studio: 'Studio', library: 'Bibliotheek', connect: 'Verbinden', openDesign: 'Open Design' },
+    columns: { studio: 'Studio', library: 'Bibliotheek', connect: 'Verbinden', openDesign: 'Auto Design' },
     studioLinks: ['Mogelijkheden', 'Lab', 'Methode', 'Manifest'],
     connectLinks: ['GitHub', 'Meldingen', 'Bijdragers', 'Uitgaven', 'Discord'],
     libraryLinks: {
@@ -4489,16 +4489,16 @@ const LOCALIZED_HOME_FOOTER_COPY: Partial<
       compare: 'Vergelijking',
       alternative: 'Claude Design-alternatief',
     },
-    bottomLeft: 'Open Design · Apache-2.0 · 2026 / Volume 01 / Editie Nº 26',
+    bottomLeft: 'Auto Design · Apache-2.0 · 2026 / Volume 01 / Editie Nº 26',
     bottomRightA: 'Berlijn / Open / Aarde',
     bottomRightB: '52.5200° N · 13.4050° E',
   },
   ar: {
     summary:
       'البديل مفتوح المصدر لـ Claude Design، مبني على أعمال huashu-design وguizang-ppt وmultica-ai وopen-codesign.',
-    downloadAria: 'تنزيل تطبيق Open Design لسطح المكتب',
+    downloadAria: 'تنزيل تطبيق Auto Design لسطح المكتب',
     download: 'تنزيل سطح المكتب',
-    columns: { studio: 'الاستوديو', library: 'المكتبة', connect: 'التواصل', openDesign: 'Open Design' },
+    columns: { studio: 'الاستوديو', library: 'المكتبة', connect: 'التواصل', openDesign: 'Auto Design' },
     studioLinks: ['القدرات', 'المختبر', 'المنهج', 'البيان'],
     connectLinks: ['GitHub', 'المسائل', 'المساهمون', 'الإصدارات', 'Discord'],
     libraryLinks: {
@@ -4514,16 +4514,16 @@ const LOCALIZED_HOME_FOOTER_COPY: Partial<
       compare: 'المقارنة',
       alternative: 'بديل Claude Design',
     },
-    bottomLeft: 'Open Design · Apache-2.0 · 2026 / المجلد 01 / العدد 26',
+    bottomLeft: 'Auto Design · Apache-2.0 · 2026 / المجلد 01 / العدد 26',
     bottomRightA: 'برلين / مفتوح / الأرض',
     bottomRightB: '52.5200° N · 13.4050° E',
   },
   tr: {
     summary:
       "Claude Design'ın açık kaynak alternatifi; huashu-design, guizang-ppt, multica-ai ve open-codesign çalışmalarının üzerine kuruldu.",
-    downloadAria: 'Open Design desktop uygulamasını indir',
+    downloadAria: 'Auto Design desktop uygulamasını indir',
     download: 'Desktop indir',
-    columns: { studio: 'Stüdyo', library: 'Kütüphane', connect: 'Bağlantı', openDesign: 'Open Design' },
+    columns: { studio: 'Stüdyo', library: 'Kütüphane', connect: 'Bağlantı', openDesign: 'Auto Design' },
     studioLinks: ['Yetenekler', 'Lab', 'Yöntem', 'Açık manifesto'],
     connectLinks: ['GitHub', 'Sorunlar', 'Katkıda bulunanlar', 'Sürümler', 'Discord'],
     libraryLinks: {
@@ -4539,16 +4539,16 @@ const LOCALIZED_HOME_FOOTER_COPY: Partial<
       compare: 'Karşılaştırma',
       alternative: 'Claude Design alternatifi',
     },
-    bottomLeft: 'Open Design · Apache-2.0 · 2026 / Cilt 01 / Sayı Nº 26',
+    bottomLeft: 'Auto Design · Apache-2.0 · 2026 / Cilt 01 / Sayı Nº 26',
     bottomRightA: 'Berlin / Açık / Dünya',
     bottomRightB: '52.5200° N · 13.4050° E',
   },
   uk: {
     summary:
       'Відкрита альтернатива Claude Design, побудована на роботах huashu-design, guizang-ppt, multica-ai та open-codesign.',
-    downloadAria: 'Завантажити настільний застосунок Open Design',
+    downloadAria: 'Завантажити настільний застосунок Auto Design',
     download: 'Завантажити desktop',
-    columns: { studio: 'Студія', library: 'Бібліотека', connect: "Зв'язок", openDesign: 'Open Design' },
+    columns: { studio: 'Студія', library: 'Бібліотека', connect: "Зв'язок", openDesign: 'Auto Design' },
     studioLinks: ['Можливості', 'Лабораторія', 'Метод', 'Маніфест'],
     connectLinks: ['GitHub', 'Задачі', 'Учасники', 'Релізи', 'Discord'],
     libraryLinks: {
@@ -4564,7 +4564,7 @@ const LOCALIZED_HOME_FOOTER_COPY: Partial<
       compare: 'Порівняння',
       alternative: 'Альтернатива Claude Design',
     },
-    bottomLeft: 'Open Design · Apache-2.0 · 2026 / Том 01 / Випуск № 26',
+    bottomLeft: 'Auto Design · Apache-2.0 · 2026 / Том 01 / Випуск № 26',
     bottomRightA: 'Берлін / Відкрито / Земля',
     bottomRightB: '52.5200° N · 13.4050° E',
   },
@@ -4765,9 +4765,9 @@ function homeFallbackCopy(text: HomeFallbackText): DeepPartial<HomePageCopy> {
 
 const LOCALIZED_HOME_BODY_COPY: Partial<Record<LandingLocaleCode, DeepPartial<HomePageCopy>>> = {
   ja: homeFallbackCopy({
-    railRight: 'Open Design — 第 01 巻 · 第 26 号 · Apache-2.0',
+    railRight: 'Auto Design — 第 01 巻 · 第 26 号 · Apache-2.0',
     railLeft: 'Skill · Design System · Agent · BYOK · ローカル優先',
-    discordAria: 'Open Design Discord に参加',
+    discordAria: 'Auto Design Discord に参加',
     joinDiscord: 'Discord に参加',
     heroLabel: 'オープンソースのデザインスタジオ',
     heroTitlePrefix: 'オープンソースの',
@@ -4775,7 +4775,7 @@ const LOCALIZED_HOME_BODY_COPY: Partial<Record<LandingLocaleCode, DeepPartial<Ho
     heroTitleMiddle: '自分の',
     heroTitleSecondEmphasis: 'Agent で動かす',
     heroLead: (skills, systems) =>
-      `Open Design は Claude Design の公式ローカル優先代替です。Claude Code、Codex、Cursor、Gemini、OpenCode、Qwen など既存の coding agent が、${skills} 個の組み合わせ可能な Skill と ${systems} 個のポータブル DESIGN.md システムで動くデザインエンジンになります。`,
+      `Auto Design は Claude Design の公式ローカル優先代替です。Claude Code、Codex、Cursor、Gemini、OpenCode、Qwen など既存の coding agent が、${skills} 個の組み合わせ可能な Skill と ${systems} 個のポータブル DESIGN.md システムで動くデザインエンジンになります。`,
     star: 'GitHub で Star',
     download: 'デスクトップをダウンロード',
     plate: '図版 Nº 08',
@@ -4787,7 +4787,7 @@ const LOCALIZED_HOME_BODY_COPY: Partial<Record<LandingLocaleCode, DeepPartial<Ho
     ],
     heroFoot: 'pnpm tools-dev · 3 コマンドで開始',
     heroIndex: ['検出', '発見', '指示', '納品'],
-    officialAria: 'Open Design の公式ソース',
+    officialAria: 'Auto Design の公式ソース',
     officialLabel: '公式ソース',
     officialItems: [
       { label: '公式サイト', value: 'open-design.ai' },
@@ -4799,7 +4799,7 @@ const LOCALIZED_HOME_BODY_COPY: Partial<Record<LandingLocaleCode, DeepPartial<Ho
     ],
     about: {
       rule: '概要 / マニフェスト',
-      volume: 'Open Design / 第 01 巻',
+      volume: 'Auto Design / 第 01 巻',
       label: 'スタジオについて',
       titlePrefix: '私たちは',
       titleAgent: 'あなたの Agent',
@@ -4813,7 +4813,7 @@ const LOCALIZED_HOME_BODY_COPY: Partial<Record<LandingLocaleCode, DeepPartial<Ho
       stampTop: 'スタジオ実践',
       stampBottom: '創業 MMXXVI',
       sideNote: ['モデル挙動から', '視覚的な趣味まで', '創造システムの', '全スタックを', 'プロトタイプ化します。'],
-      caption: '形 · 知覚 · 機械の想像力の研究。（Open Design, MMXXVI）',
+      caption: '形 · 知覚 · 機械の想像力の研究。（Auto Design, MMXXVI）',
     },
     capabilities: {
       rule: '機能 · Skill · System',
@@ -4871,7 +4871,7 @@ const LOCALIZED_HOME_BODY_COPY: Partial<Record<LandingLocaleCode, DeepPartial<Ho
     },
     work: {
       rule: '選定作品 · 2026 カタログ',
-      editedBy: 'Open Design 編集',
+      editedBy: 'Auto Design 編集',
       label: '選定作品',
       titlePrefix: 'brief を',
       titleEmphasisA: '記憶に残る',
@@ -4888,7 +4888,7 @@ const LOCALIZED_HOME_BODY_COPY: Partial<Record<LandingLocaleCode, DeepPartial<Ho
       rule: '協働者 / 系譜',
       shoulders: '先人の肩の上に立つ',
       label: '協働者',
-      quote: '「Open Design は曖昧な AI のアイデアを、鋭く、信頼でき、本当に新しい視覚システムへ変えてくれました。」',
+      quote: '「Auto Design は曖昧な AI のアイデアを、鋭く、信頼でき、本当に新しい視覚システムへ変えてくれました。」',
       authorTitle: 'クリエイティブディレクター · North Form',
       partnersText: 'オープンソースのデザイン文化を出荷してきたチームの蓄積の上に立っています。',
       partnerLabels: ['思想', 'Deck', 'UX', 'Terminal', 'Frame'],
@@ -4897,7 +4897,7 @@ const LOCALIZED_HOME_BODY_COPY: Partial<Record<LandingLocaleCode, DeepPartial<Ho
     faqSection: {
       rule: 'よくある質問',
       answers: '公式回答、宣伝文句なし',
-      label: 'Open Design よくある質問',
+      label: 'Auto Design よくある質問',
       titlePrefix: '',
       titleMiddle: 'と',
       titleSuffix: 'Claude Design のオープンソース代替について',
@@ -4921,9 +4921,9 @@ const LOCALIZED_HOME_BODY_COPY: Partial<Record<LandingLocaleCode, DeepPartial<Ho
 };
 
 LOCALIZED_HOME_BODY_COPY.ko = homeFallbackCopy({
-  railRight: 'Open Design — 01권 · 26호 · Apache-2.0',
+  railRight: 'Auto Design — 01권 · 26호 · Apache-2.0',
   railLeft: 'Skill · 디자인 시스템 · Agent · BYOK · 로컬 우선',
-  discordAria: 'Open Design Discord 참여',
+  discordAria: 'Auto Design Discord 참여',
   joinDiscord: 'Discord 참여',
   heroLabel: '오픈소스 디자인 스튜디오',
   heroTitlePrefix: '오픈소스',
@@ -4931,7 +4931,7 @@ LOCALIZED_HOME_BODY_COPY.ko = homeFallbackCopy({
   heroTitleMiddle: '내',
   heroTitleSecondEmphasis: 'Agent에서 실행',
   heroLead: (skills, systems) =>
-    `Open Design은 Claude Design의 공식 로컬 우선 대안입니다. Claude Code, Codex, Cursor, Gemini, OpenCode, Qwen 같은 기존 coding agent가 ${skills}개의 조합 가능한 Skill과 ${systems}개의 portable DESIGN.md 시스템으로 움직이는 디자인 엔진이 됩니다.`,
+    `Auto Design은 Claude Design의 공식 로컬 우선 대안입니다. Claude Code, Codex, Cursor, Gemini, OpenCode, Qwen 같은 기존 coding agent가 ${skills}개의 조합 가능한 Skill과 ${systems}개의 portable DESIGN.md 시스템으로 움직이는 디자인 엔진이 됩니다.`,
   star: 'GitHub에서 Star',
   download: '데스크톱 다운로드',
   plate: '도판 Nº 08',
@@ -4943,7 +4943,7 @@ LOCALIZED_HOME_BODY_COPY.ko = homeFallbackCopy({
   ],
   heroFoot: 'pnpm tools-dev · 3개 명령으로 시작',
   heroIndex: ['감지', '발견', '지시', '전달'],
-  officialAria: 'Open Design 공식 출처',
+  officialAria: 'Auto Design 공식 출처',
   officialLabel: '공식 출처',
   officialItems: [
     { label: '공식 사이트', value: 'open-design.ai' },
@@ -4955,7 +4955,7 @@ LOCALIZED_HOME_BODY_COPY.ko = homeFallbackCopy({
   ],
   about: {
     rule: '소개 / 선언',
-    volume: 'Open Design / 01권',
+    volume: 'Auto Design / 01권',
     label: '스튜디오 소개',
     titlePrefix: '우리는',
     titleAgent: '당신의 Agent',
@@ -4969,7 +4969,7 @@ LOCALIZED_HOME_BODY_COPY.ko = homeFallbackCopy({
     stampTop: '스튜디오 실천',
     stampBottom: '설립 MMXXVI',
     sideNote: ['모델 행동에서', '시각적 취향까지', '창작 시스템의', '전체 스택을', '프로토타입합니다.'],
-    caption: '형태 · 지각 · 기계적 상상력 연구. (Open Design, MMXXVI)',
+    caption: '형태 · 지각 · 기계적 상상력 연구. (Auto Design, MMXXVI)',
   },
   capabilities: {
     rule: '기능 · Skill · System',
@@ -5027,7 +5027,7 @@ LOCALIZED_HOME_BODY_COPY.ko = homeFallbackCopy({
   },
   work: {
     rule: '선정 작업 · 2026 카탈로그',
-    editedBy: 'Open Design 편집',
+    editedBy: 'Auto Design 편집',
     label: '선정 작업',
     titlePrefix: 'brief를',
     titleEmphasisA: '기억에 남는',
@@ -5044,7 +5044,7 @@ LOCALIZED_HOME_BODY_COPY.ko = homeFallbackCopy({
     rule: '협업자 / 계보',
     shoulders: '선행 작업 위에 서기',
     label: '협업자',
-    quote: '“Open Design은 모호한 AI 아이디어를 날카롭고 믿을 수 있으며 실제로 새로운 시각 시스템으로 바꾸어 주었습니다.”',
+    quote: '“Auto Design은 모호한 AI 아이디어를 날카롭고 믿을 수 있으며 실제로 새로운 시각 시스템으로 바꾸어 주었습니다.”',
     authorTitle: '크리에이티브 디렉터 · North Form',
     partnersText: '오픈소스 디자인 문화를 출하해 온 팀들의 축적 위에 서 있습니다.',
     partnerLabels: ['철학', 'Deck', 'UX', 'Terminal', 'Frame'],
@@ -5053,7 +5053,7 @@ LOCALIZED_HOME_BODY_COPY.ko = homeFallbackCopy({
   faqSection: {
     rule: '자주 묻는 질문',
     answers: '공식 답변, 마케팅 문구 없음',
-    label: 'Open Design 자주 묻는 질문',
+    label: 'Auto Design 자주 묻는 질문',
     titlePrefix: '',
     titleMiddle: '및',
     titleSuffix: 'Claude Design 오픈소스 대안에 관한 질문',
@@ -5076,9 +5076,9 @@ LOCALIZED_HOME_BODY_COPY.ko = homeFallbackCopy({
 });
 
 LOCALIZED_HOME_BODY_COPY.de = homeFallbackCopy({
-  railRight: 'Open Design — Band 01 · Ausgabe Nr. 26 · Apache-2.0',
+  railRight: 'Auto Design — Band 01 · Ausgabe Nr. 26 · Apache-2.0',
   railLeft: 'Skills · Systeme · Agents · BYOK · lokal zuerst',
-  discordAria: 'Open Design Discord beitreten',
+  discordAria: 'Auto Design Discord beitreten',
   joinDiscord: 'Discord beitreten',
   heroLabel: 'Open-Source-Designstudio',
   heroTitlePrefix: 'Offenes',
@@ -5086,7 +5086,7 @@ LOCALIZED_HOME_BODY_COPY.de = homeFallbackCopy({
   heroTitleMiddle: 'läuft mit',
   heroTitleSecondEmphasis: 'deinem eigenen Agent',
   heroLead: (skills, systems) =>
-    `Open Design ist die offizielle lokal zuerst gedachte Alternative zu Claude Design. Dein vorhandener Coding-Agent — Claude Code, Codex, Cursor, Gemini, OpenCode oder Qwen — wird zur Design-Engine mit ${skills} kombinierbaren Skills und ${systems} portablen DESIGN.md-Systemen.`,
+    `Auto Design ist die offizielle lokal zuerst gedachte Alternative zu Claude Design. Dein vorhandener Coding-Agent — Claude Code, Codex, Cursor, Gemini, OpenCode oder Qwen — wird zur Design-Engine mit ${skills} kombinierbaren Skills und ${systems} portablen DESIGN.md-Systemen.`,
   star: 'Auf GitHub sternen',
   download: 'Desktop herunterladen',
   plate: 'Tafel Nr. 08',
@@ -5110,7 +5110,7 @@ LOCALIZED_HOME_BODY_COPY.de = homeFallbackCopy({
   ],
   about: {
     rule: 'Überblick / Manifest',
-    volume: 'Open Design / Band 01',
+    volume: 'Auto Design / Band 01',
     label: 'Über das Studio',
     titlePrefix: 'Wir behandeln',
     titleAgent: 'deinen Agent',
@@ -5124,7 +5124,7 @@ LOCALIZED_HOME_BODY_COPY.de = homeFallbackCopy({
     stampTop: 'Studiopraxis',
     stampBottom: 'Seit MMXXVI',
     sideNote: ['Vom Modellverhalten', 'bis zum visuellen Geschmack', 'prototypisieren wir', 'den ganzen Stack', 'kreativer Systeme.'],
-    caption: 'Studien zu Form · Wahrnehmung · maschinischer Vorstellungskraft. (Open Design, MMXXVI)',
+    caption: 'Studien zu Form · Wahrnehmung · maschinischer Vorstellungskraft. (Auto Design, MMXXVI)',
   },
   capabilities: {
     rule: 'Fähigkeiten · Skills · Systeme',
@@ -5182,7 +5182,7 @@ LOCALIZED_HOME_BODY_COPY.de = homeFallbackCopy({
   },
   work: {
     rule: 'Ausgewählte Arbeiten · Katalog 2026',
-    editedBy: 'Redaktion Open Design',
+    editedBy: 'Redaktion Auto Design',
     label: 'Ausgewählte Arbeiten',
     titlePrefix: 'Skills verwandeln Briefings in',
     titleEmphasisA: 'prägnante',
@@ -5199,7 +5199,7 @@ LOCALIZED_HOME_BODY_COPY.de = homeFallbackCopy({
     rule: 'Mitwirkende / Herkunft',
     shoulders: 'Auf den Schultern anderer',
     label: 'Mitwirkende',
-    quote: '„Open Design half uns, vage KI-Ideen in ein visuelles System zu verwandeln, das scharf, glaubwürdig und wirklich neu wirkte.“',
+    quote: '„Auto Design half uns, vage KI-Ideen in ein visuelles System zu verwandeln, das scharf, glaubwürdig und wirklich neu wirkte.“',
     authorTitle: 'Kreativdirektorin · North Form',
     partnersText: 'Wir bauen auf Teams auf, die Open-Source-Designkultur tatsächlich ausliefern.',
     partnerLabels: ['Philosophie', 'Decks', 'UX', 'Terminal', 'Frames'],

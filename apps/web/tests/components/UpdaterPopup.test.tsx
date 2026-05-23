@@ -32,7 +32,7 @@ function downloadedStatus(overrides: Partial<OpenDesignHostUpdaterStatusSnapshot
   return {
     ...idleStatus(),
     availableVersion: '1.2.3-beta.4',
-    downloadPath: '/tmp/open-design-updater/Open Design Beta.dmg',
+    downloadPath: '/tmp/open-design-updater/Auto Design Beta.dmg',
     state: 'downloaded',
     ...overrides,
   };
@@ -54,7 +54,7 @@ describe('UpdaterPopup', () => {
         installResult: {
           dryRun: true,
           openedAt: '2026-05-19T00:00:00.000Z',
-          path: status.downloadPath ?? '/tmp/open-design-updater/Open Design Beta.dmg',
+          path: status.downloadPath ?? '/tmp/open-design-updater/Auto Design Beta.dmg',
         },
       });
       return status;
@@ -124,7 +124,7 @@ describe('UpdaterPopup', () => {
 
     expect(await screen.findByRole('dialog', { name: '更新已就绪' })).toBeTruthy();
     expect(screen.getByTestId('updater-install-button').textContent).toBe('打开安装器');
-    expect(screen.getByText('Open Design 1.2.3-beta.4 已就绪。')).toBeTruthy();
+    expect(screen.getByText('Auto Design 1.2.3-beta.4 已就绪。')).toBeTruthy();
   });
 
   it('shows disabled left-rail progress while an update is downloading', async () => {

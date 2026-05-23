@@ -235,7 +235,7 @@ jobs:
           output="$RUNNER_TEMP/mac-framework-diagnostics.txt"
           source_resolve_log="$RUNNER_TEMP/mac-framework-source-resolve.err"
           source_framework="$(node -e 'const path = require("node:path"); const { createRequire } = require("node:module"); const requireFromDesktop = createRequire(path.join(process.cwd(), "apps/desktop/package.json")); const electron = requireFromDesktop.resolve("electron"); process.stdout.write(path.join(path.dirname(electron), "dist", "Electron.app", "Contents", "Frameworks", "Electron Framework.framework"));' 2>"$source_resolve_log" || true)"
-          built_framework="$RUNNER_TEMP/tools-pack/out/mac/namespaces/release-stable/builder/mac-arm64/Open Design.app/Contents/Frameworks/Electron Framework.framework"
+          built_framework="$RUNNER_TEMP/tools-pack/out/mac/namespaces/release-stable/builder/mac-arm64/Auto Design.app/Contents/Frameworks/Electron Framework.framework"
 
           dump_framework() {
             local label="$1"

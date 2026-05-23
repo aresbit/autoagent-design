@@ -55,8 +55,8 @@ const faq = getHomeFaq(locale, {
 const websiteSchema = {
   '@type': 'WebSite',
   '@id': `${origin}#website`,
-  name: 'Open Design',
-  alternateName: ['OpenDesign', 'open-design', 'opendesign', 'Open Design AI', 'OD'],
+  name: 'Auto Design',
+  alternateName: ['OpenDesign', 'open-design', 'opendesign', 'Auto Design AI', 'OD'],
   url: origin,
   inLanguage: localeDef.htmlLang,
   availableLanguage: LANDING_LOCALES.map((entry) => entry.htmlLang),
@@ -66,8 +66,8 @@ const websiteSchema = {
 const organizationSchema = {
   '@type': 'Organization',
   '@id': `${origin}#organization`,
-  name: 'Open Design',
-  alternateName: ['OpenDesign', 'open-design', 'opendesign', 'Open Design AI', 'OD', 'nexu-io/open-design'],
+  name: 'Auto Design',
+  alternateName: ['OpenDesign', 'open-design', 'opendesign', 'Auto Design AI', 'OD', 'nexu-io/open-design'],
   url: origin,
   logo: {
     '@type': 'ImageObject',
@@ -85,8 +85,8 @@ const organizationSchema = {
 const softwareSchema = {
   '@type': 'SoftwareApplication',
   '@id': `${origin}#software`,
-  name: 'Open Design',
-  alternateName: ['OpenDesign', 'open-design', 'opendesign', 'Open Design AI', 'OD'],
+  name: 'Auto Design',
+  alternateName: ['OpenDesign', 'open-design', 'opendesign', 'Auto Design AI', 'OD'],
   description,
   url: origin,
   inLanguage: localeDef.htmlLang,
@@ -167,7 +167,7 @@ const pageHtml = renderToStaticMarkup(
     />
 
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Open Design" />
+    <meta property="og:site_name" content="Auto Design" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
@@ -202,13 +202,13 @@ const pageHtml = renderToStaticMarkup(
         };
 
         // Pull a clean 'v0.3.0'-style label from a GitHub release record.
-        // We prefer release.name (e.g. 'Open Design 0.3.0') because that's
+        // We prefer release.name (e.g. 'Auto Design 0.3.0') because that's
         // what we hand-author; fall back to tag_name (e.g.
         // 'open-design-v0.3.0') with the project prefix stripped.
         //
         // Expected input shapes (release.name / release.tag_name):
-        //   { name: 'Open Design 0.3.0',  tag_name: 'v0.3.0' }            → 'v0.3.0'
-        //   { name: 'Open Design v0.3.0', tag_name: 'open-design-v0.3.0' } → 'v0.3.0'
+        //   { name: 'Auto Design 0.3.0',  tag_name: 'v0.3.0' }            → 'v0.3.0'
+        //   { name: 'Auto Design v0.3.0', tag_name: 'open-design-v0.3.0' } → 'v0.3.0'
         //   { name: '0.3.0-beta.1',       tag_name: 'open-design_0.3.0' }  → 'v0.3.0-beta.1' (name wins)
         //   { name: null,                 tag_name: 'open-design-v0.3.0' } → 'v0.3.0' (tag fallback)
         //   { name: null,                 tag_name: null }                  → null (caller skips)

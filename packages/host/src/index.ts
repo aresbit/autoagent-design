@@ -381,7 +381,7 @@ function unavailable(reason: string): OpenDesignHostFailure {
 
 export async function openHostExternalUrl(url: string, scope: OpenDesignHostGlobalScope = globalThis): Promise<OpenDesignHostActionResult> {
   const host = getOpenDesignHost(scope);
-  if (host == null) return unavailable("Open Design host is not available");
+  if (host == null) return unavailable("Auto Design host is not available");
   try {
     return await host.shell.openExternal(url);
   } catch (error) {
@@ -391,7 +391,7 @@ export async function openHostExternalUrl(url: string, scope: OpenDesignHostGlob
 
 export async function openHostProjectPath(projectId: string, scope: OpenDesignHostGlobalScope = globalThis): Promise<OpenDesignHostActionResult> {
   const host = getOpenDesignHost(scope);
-  if (host == null) return unavailable("Open Design host is not available");
+  if (host == null) return unavailable("Auto Design host is not available");
   try {
     return await host.shell.openPath(projectId);
   } catch (error) {
@@ -404,7 +404,7 @@ export async function pickAndImportHostProject(
   scope: OpenDesignHostGlobalScope = globalThis,
 ): Promise<OpenDesignHostProjectImportResult> {
   const host = getOpenDesignHost(scope);
-  if (host == null) return unavailable("Open Design host is not available");
+  if (host == null) return unavailable("Auto Design host is not available");
   try {
     return await host.project.pickAndImport(init);
   } catch (error) {
@@ -417,7 +417,7 @@ export async function pickAndReplaceHostProjectWorkingDir(
   scope: OpenDesignHostGlobalScope = globalThis,
 ): Promise<OpenDesignHostProjectReplaceWorkingDirResult> {
   const host = getOpenDesignHost(scope);
-  if (host == null) return unavailable("Open Design host is not available");
+  if (host == null) return unavailable("Auto Design host is not available");
   try {
     return await host.project.pickAndReplaceWorkingDir(projectId);
   } catch (error) {
@@ -432,7 +432,7 @@ export async function printHostPdf(
   scope: OpenDesignHostGlobalScope = globalThis,
 ): Promise<OpenDesignHostActionResult> {
   const host = getOpenDesignHost(scope);
-  if (host == null) return unavailable("Open Design host is not available");
+  if (host == null) return unavailable("Auto Design host is not available");
   try {
     return await host.pdf.print(html, nonce, options);
   } catch (error) {
@@ -442,7 +442,7 @@ export async function printHostPdf(
 
 export function setHostPetVisible(visible: boolean, scope: OpenDesignHostGlobalScope = globalThis): OpenDesignHostActionResult {
   const host = getOpenDesignHost(scope);
-  if (host == null) return unavailable("Open Design host is not available");
+  if (host == null) return unavailable("Auto Design host is not available");
   try {
     host.pet.setVisible(visible);
     return { ok: true };
@@ -457,7 +457,7 @@ async function runHostUpdaterAction(
   scope: OpenDesignHostGlobalScope = globalThis,
 ): Promise<OpenDesignHostUpdaterResult> {
   const host = getOpenDesignHost(scope);
-  if (host == null) return unavailable("Open Design host is not available");
+  if (host == null) return unavailable("Auto Design host is not available");
   try {
     return {
       ok: true,
@@ -501,7 +501,7 @@ export async function quitHostAfterUpdaterInstallerOpen(
   scope: OpenDesignHostGlobalScope = globalThis,
 ): Promise<OpenDesignHostActionResult> {
   const host = getOpenDesignHost(scope);
-  if (host == null) return unavailable("Open Design host is not available");
+  if (host == null) return unavailable("Auto Design host is not available");
   try {
     return await host.updater.quit(options);
   } catch (error) {

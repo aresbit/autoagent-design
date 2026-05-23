@@ -1,16 +1,16 @@
 ---
-title: "Why we built Open Design as a skill layer, not a product"
+title: "Why we built Auto Design as a skill layer, not a product"
 date: 2026-05-13
 category: "Product"
 readingTime: 5
-summary: "Most AI design tools try to replace the agent already on your laptop. Open Design takes the opposite bet: ship a thin layer of skills, systems, and adapters that turn any coding agent into a design engine — without locking you into a new app."
+summary: "Most AI design tools try to replace the agent already on your laptop. Auto Design takes the opposite bet: ship a thin layer of skills, systems, and adapters that turn any coding agent into a design engine — without locking you into a new app."
 ---
 
 The strongest coding agent on your laptop right now is Claude, Codex, Cursor, Gemini, OpenCode, or Qwen. We don't think you need another one. What's missing is not raw intelligence — it's **taste, structure, and a workflow that respects design as a craft**.
 
-Open Design is our attempt at that missing layer. It's not a chat product. It's not a design tool that "uses AI under the hood." It's a thin skill layer — a folder of `SKILL.md` files, a portable library of design systems, and a daemon that auto-detects your existing CLI agents and wires them together.
+Auto Design is our attempt at that missing layer. It's not a chat product. It's not a design tool that "uses AI under the hood." It's a thin skill layer — a folder of `SKILL.md` files, a portable library of design systems, and a daemon that auto-detects your existing CLI agents and wires them together.
 
-This post explains why we made that choice, and what it implies for how you'll use Open Design.
+This post explains why we made that choice, and what it implies for how you'll use Auto Design.
 
 ## A product would be the wrong shape
 
@@ -26,7 +26,7 @@ So we built the layer instead. Drop a folder, restart the daemon, the skill appe
 
 ## What a skill actually is
 
-A skill in Open Design is a `SKILL.md` file plus optional supporting assets in the same folder. The Markdown file describes:
+A skill in Auto Design is a `SKILL.md` file plus optional supporting assets in the same folder. The Markdown file describes:
 
 - **What the skill does** — one paragraph, in plain English
 - **When to invoke it** — the trigger conditions, written so the agent can route correctly
@@ -39,7 +39,7 @@ This is intentional. We've watched plugin ecosystems decay for fifteen years —
 
 ## Why systems are also Markdown
 
-Open Design ships 72 design systems — Linear, Vercel, Stripe, Apple, Cursor, Figma, and more — as `DESIGN.md` files. Same idea: portable, readable, agent-ingestible.
+Auto Design ships 72 design systems — Linear, Vercel, Stripe, Apple, Cursor, Figma, and more — as `DESIGN.md` files. Same idea: portable, readable, agent-ingestible.
 
 A design system, in this context, is not a Figma library. It's a contract: here are the colors in OKLch, here is the type ramp, here is the spacing scale, here is the layout posture, here is the voice. The agent reads the contract and produces work that respects it.
 
@@ -47,7 +47,7 @@ You can fork a system, edit it in place, ship a variant. You can write your own 
 
 ## BYOK is the only honest model
 
-Open Design runs on **bring-your-own-key**. You paste a base URL and an API key for any OpenAI-compatible endpoint — DeepSeek, Groq, OpenRouter, your own self-hosted vLLM — and you're done.
+Auto Design runs on **bring-your-own-key**. You paste a base URL and an API key for any OpenAI-compatible endpoint — DeepSeek, Groq, OpenRouter, your own self-hosted vLLM — and you're done.
 
 We don't run inference. We don't take a margin on tokens. We don't have a billing relationship with you. That's not a sustainability problem — it's the only honest answer to the question "who pays when the agent runs?"
 
@@ -64,6 +64,6 @@ If you want a workflow where:
 - the design systems are portable across projects and agents,
 - and the bill goes to the model provider, not us —
 
-then Open Design is built for you. Drop into the GitHub repo, run `pnpm tools-dev`, point your agent at a skill, and ship.
+then Auto Design is built for you. Drop into the GitHub repo, run `pnpm tools-dev`, point your agent at a skill, and ship.
 
 The skill layer wins because it doesn't compete with the agent on your laptop. It augments it.

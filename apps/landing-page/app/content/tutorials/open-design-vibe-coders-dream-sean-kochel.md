@@ -1,5 +1,5 @@
 ---
-title: 'Open Design Is Every Vibe Coder''s Dream'
+title: 'Auto Design Is Every Vibe Coder''s Dream'
 youtubeId: MmTBkDmunk4
 summary: Sean Kochel demos the new open-source competitor to Claude Design across landing page, mobile app, and desktop app prototypes — turning rough PRDs into shippable UI in minutes.
 date: 2026-05-04
@@ -9,7 +9,7 @@ author: Sean Kochel
 official: false
 ---
 
-Sean Kochel runs Open Design through three back-to-back demos — landing page, mobile app, desktop app — to show how a vibe-coding workflow plugs into the project.
+Sean Kochel runs Auto Design through three back-to-back demos — landing page, mobile app, desktop app — to show how a vibe-coding workflow plugs into the project.
 
 Chapter map:
 

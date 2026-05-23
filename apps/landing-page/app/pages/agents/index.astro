@@ -4,7 +4,7 @@
  *
  * Captures "claude code design", "codex design", "cursor agent design",
  * "gemini cli design", "opencode design", "qwen design" queries. Each
- * agent gets a short card explaining how it plugs into Open Design.
+ * agent gets a short card explaining how it plugs into Auto Design.
  * Per-agent detail pages (e.g. `/agents/claude-code/`) will follow as
  * P2 work — this hub is the SEO entry point.
  */
@@ -27,7 +27,7 @@ const description = page.description;
 
 // 17 first-party adapters live in `apps/daemon/src/runtimes/defs/`. Keep
 // this list in lockstep with that directory; opendesigner.io advertises
-// "16 out of the box" — Open Design ships one more, and the names below
+// "16 out of the box" — Auto Design ships one more, and the names below
 // match the canonical `name:` field on each `RuntimeAgentDef`.
 const tiers = [
   {
@@ -139,14 +139,14 @@ const jsonLd = [
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Open Design', item: SITE },
+      { '@type': 'ListItem', position: 1, name: 'Auto Design', item: SITE },
       { '@type': 'ListItem', position: 2, name: page.breadcrumb, item: `${SITE}agents/` },
     ],
   },
   {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Open Design supported agents',
+    name: 'Auto Design supported agents',
     numberOfItems: allAgents.length,
     itemListElement: allAgents.map((a, idx) => ({
       '@type': 'ListItem',
@@ -160,7 +160,7 @@ const jsonLd = [
 
 <Layout title={title} description={description} active="home" jsonLd={jsonLd}>
   <nav class="breadcrumb" aria-label={common.breadcrumbAria}>
-    <a href={href('/')}>Open Design</a>
+    <a href={href('/')}>Auto Design</a>
     <span>/</span>
     <span aria-current="page">{page.breadcrumb}</span>
   </nav>
@@ -213,7 +213,7 @@ const jsonLd = [
       </ul>
     </section>
 
-    <section class="info-cta" aria-label="Open Design call to action">
+    <section class="info-cta" aria-label="Auto Design call to action">
       <div>
         <h2>{page.ctaTitle(allAgents.length)}</h2>
         <p>{page.ctaBody}</p>

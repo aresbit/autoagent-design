@@ -95,7 +95,7 @@ ls -la apps/daemon/dist/cli.js
 curl -s http://127.0.0.1:7457/api/health
 ```
 
-隨後，在 Open Design 應用程式中**重新開啟**該專案，請勿重複使用先前 terminal 中的 agent 會話。由 daemon 啟動的 agent 應當能夠看到類似如下的值：
+隨後，在 Auto Design 應用程式中**重新開啟**該專案，請勿重複使用先前 terminal 中的 agent 會話。由 daemon 啟動的 agent 應當能夠看到類似如下的值：
 
 ```bash
 echo "OD_BIN=$OD_BIN"
@@ -179,7 +179,7 @@ open-design/
 │   └── desktop/               # Electron runtime，由 tools-dev 啟動 / 檢查
 ├── packages/
 │   ├── contracts/             # 共享的 web/daemon 應用程式契約
-│   ├── sidecar-proto/         # Open Design sidecar 協定契約
+│   ├── sidecar-proto/         # Auto Design sidecar 協定契約
 │   ├── sidecar/               # 通用 sidecar runtime 原語
 │   └── platform/              # 通用 process/platform 原語
 ├── tools/dev/                 # `pnpm tools-dev` 生命週期與 inspect CLI
@@ -216,8 +216,8 @@ open-design/
 
 - **"no agents found on PATH"** —— 安裝以下 CLI 之一：`claude`、`codex`、`devin`、`gemini`、`opencode`、`cursor-agent`、`qwen`、`qodercli`、`copilot`。或者在 Settings 中切換至 API mode，填入 provider key。
 - **daemon 在 /api/chat 上返回 500** —— 查看 daemon 終端機的 stderr 尾部；通常是 CLI 拒絕了傳入的參數。不同 CLI 的 argv 結構各異；如需調整，請參閱 `apps/daemon/src/agents.ts` 中的 `buildArgs`。
-- **媒體生成發生錯誤，`OD_BIN` 缺失、或 daemon URL 為 `:0`** —— 執行上述媒體 dispatcher 問題排除步驟。請勿重複使用既有的 CLI 會話；從 Open Design 應用程式中重新開啟專案，daemon 才會注入新的 `OD_*` 變數。
-- **Codex 載入的插件上下文過多** —— 使用 `OD_CODEX_DISABLE_PLUGINS=1 pnpm tools-dev` 啟動 Open Design，daemon 啟動 Codex 時會傳入 `--disable plugins`。
+- **媒體生成發生錯誤，`OD_BIN` 缺失、或 daemon URL 為 `:0`** —— 執行上述媒體 dispatcher 問題排除步驟。請勿重複使用既有的 CLI 會話；從 Auto Design 應用程式中重新開啟專案，daemon 才會注入新的 `OD_*` 變數。
+- **Codex 載入的插件上下文過多** —— 使用 `OD_CODEX_DISABLE_PLUGINS=1 pnpm tools-dev` 啟動 Auto Design，daemon 啟動 Codex 時會傳入 `--disable plugins`。
 - **artifact 始終不渲染** —— 模型輸出了文字但未使用 `<artifact>` 包裹。請確認 system prompt 已正確傳遞（查看 daemon 日誌），然後考慮更換能力更強的模型或更嚴格的 skill。
 
 ## 回到產品願景

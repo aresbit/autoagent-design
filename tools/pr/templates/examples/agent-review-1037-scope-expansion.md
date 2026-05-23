@@ -33,7 +33,7 @@ The PR title declares a symlink-follow fix. The diff actually contains three dis
 
 ### Product-relevance test
 
-`renderReturningAiShowcase` is triggered by `id === 'returning-ai' || /ReturningAI|CFD-brokerage/i.test(raw)` and renders a vendor-specific design-system showcase. The PR body doesn't name an Open Design capability this branch validates. `code-review-guidelines.md §1` lists "customer vertical / marketing experiment / unrelated rendering demo / arbitrary product page" as out-of-scope unless first-party and motivated, and this matches.
+`renderReturningAiShowcase` is triggered by `id === 'returning-ai' || /ReturningAI|CFD-brokerage/i.test(raw)` and renders a vendor-specific design-system showcase. The PR body doesn't name an Auto Design capability this branch validates. `code-review-guidelines.md §1` lists "customer vertical / marketing experiment / unrelated rendering demo / arbitrary product page" as out-of-scope unless first-party and motivated, and this matches.
 
 ### Symlink fix itself is clean
 

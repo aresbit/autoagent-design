@@ -23,8 +23,8 @@ interface ParsedOptions {
 const USAGE = `Usage:
   od artifacts create --name <path> --input <file> [--project <id-or-name>] [--manifest artifact.json] [--encoding utf8|base64] [--daemon-url <url>]
 
-Creates one normal Open Design project artifact entry file through the local daemon.
-When --project is omitted, the active Open Design project is used.
+Creates one normal Auto Design project artifact entry file through the local daemon.
+When --project is omitted, the active Auto Design project is used.
 Existing target paths are rejected.
 `;
 

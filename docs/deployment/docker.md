@@ -18,7 +18,7 @@ What this does:
 - Downloads the project
 - Moves into the folder that contains `docker-compose.yml`
 
-## Step 2: Start Open Design
+## Step 2: Start Auto Design
 
 ```bash
 docker-compose up -d
@@ -53,15 +53,15 @@ Success looks like:
 
 ![curl HTTP 200 output (sanitized)](../screenshots/deployment/docker/05-curl-http-200-proof.png)
 
-## Step 5: Open Open Design in Your Browser
+## Step 5: Open Auto Design in Your Browser
 
 Open:
 - `http://localhost:7456/`
 
-You should see the Open Design interface.
+You should see the Auto Design interface.
 
-![Open Design home (desktop)](../screenshots/deployment/docker/01-open-design-home.png)
-![Open Design home (mobile)](../screenshots/deployment/docker/03-open-design-mobile.png)
+![Auto Design home (desktop)](../screenshots/deployment/docker/01-open-design-home.png)
+![Auto Design home (mobile)](../screenshots/deployment/docker/03-open-design-mobile.png)
 
 ## Common Issues
 

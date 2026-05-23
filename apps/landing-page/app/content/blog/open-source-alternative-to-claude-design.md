@@ -21,7 +21,7 @@ It does four things well:
 
 Exports include Canva, PDF, PPTX, HTML, and standalone URLs. Pricing is bundled — Claude Pro at $20, Max at $100–$200, Enterprise at the usual call-us tier. It's currently a research preview for paying Claude subscribers.
 
-If you read [the official tutorial](https://support.claude.com/en/articles/14604416-get-started-with-claude-design), the workflow Anthropic describes is the same one Open Design ships: a brief, a direction, an artifact, a handoff. The differences live one layer down.
+If you read [the official tutorial](https://support.claude.com/en/articles/14604416-get-started-with-claude-design), the workflow Anthropic describes is the same one Auto Design ships: a brief, a direction, an artifact, a handoff. The differences live one layer down.
 
 ## Where it locks you in
 
@@ -43,7 +43,7 @@ Two open-source projects show up when you search for an alternative. It's worth 
 
 **`open-codesign`** ([OpenCoworkAI/open-codesign](https://github.com/OpenCoworkAI/open-codesign)) is an Electron desktop app under MIT. It supports Claude, GPT, Gemini, Kimi, GLM, and Ollama, leans on a "one-click import your Claude Code / Codex API key" onboarding hook, and produces prototypes, slides, and PDFs from prompts. It's the closest one-to-one mirror of Claude Design's surface area in open source today.
 
-**Open Design** (this site) is a different bet. It's not a Claude Design clone — it's a thin skill layer that turns the coding agent you already use into a design engine. The four primitives are [skills, systems, adapters, and the daemon](/blog/31-skills-72-systems-how-the-library-works/). Every skill is a `SKILL.md` file. Every design system is a `DESIGN.md` file. Every agent adapter is ~80 lines of TypeScript.
+**Auto Design** (this site) is a different bet. It's not a Claude Design clone — it's a thin skill layer that turns the coding agent you already use into a design engine. The four primitives are [skills, systems, adapters, and the daemon](/blog/31-skills-72-systems-how-the-library-works/). Every skill is a `SKILL.md` file. Every design system is a `DESIGN.md` file. Every agent adapter is ~80 lines of TypeScript.
 
 What ships in the box today:
 
@@ -54,11 +54,11 @@ What ships in the box today:
 - **BYOK by default** — paste any OpenAI-compatible `base_url` and key, [your tokens go straight to the provider](/blog/byok-design-workflow-claude-codex-qwen/)
 - **Apache-2.0, no signup, runs on `pnpm tools-dev`**
 
-The mental model: Claude Design is a product. `open-codesign` is a clone. Open Design is a layer.
+The mental model: Claude Design is a product. `open-codesign` is a clone. Auto Design is a layer.
 
 ## Side-by-side
 
-| | **Claude Design** | **`open-codesign`** | **Open Design** |
+| | **Claude Design** | **`open-codesign`** | **Auto Design** |
 |---|---|---|---|
 | License | Proprietary | MIT | Apache-2.0 |
 | Runtime | Hosted (Anthropic) | Local Electron app | Local daemon (`pnpm tools-dev`) + optional Vercel deploy |
@@ -71,7 +71,7 @@ The mental model: Claude Design is a product. `open-codesign` is a clone. Open D
 | Self-hostable | No | Yes (desktop) | Yes (laptop or Vercel) |
 | Data path | Prompts → Anthropic | Prompts → your chosen provider | Prompts → your chosen provider; nothing through us |
 
-The honest summary: Claude Design has the most polished single-product experience. `open-codesign` is the closest visual analog if what you want is "Claude Design but free." Open Design trades the polished single-product surface for a library — more skills, more systems, more agents, designed to compose with the agent already on your laptop.
+The honest summary: Claude Design has the most polished single-product experience. `open-codesign` is the closest visual analog if what you want is "Claude Design but free." Auto Design trades the polished single-product surface for a library — more skills, more systems, more agents, designed to compose with the agent already on your laptop.
 
 ## Who should pick what
 
@@ -80,10 +80,10 @@ The honest summary: Claude Design has the most polished single-product experienc
 | A solo PM at a company already on Claude Pro who needs a prototype before lunch | **Claude Design.** The $20/month is sunk; the interface is genuinely fast. |
 | An enterprise design team where Anthropic already cleared procurement | **Claude Design.** You've paid the integration cost once; spend it. |
 | A solo designer who wants "Claude Design but free" with a desktop app feel | **`open-codesign`.** Single binary, Electron UX, no concept of skills to learn. |
-| A design engineer who already drives Claude Code, Codex, or Cursor from the terminal | **Open Design.** Your agent is the design engine; the skill layer adds taste and structure without a new app. |
-| Anyone who needs BYOK, model choice mid-project, or local-only for sensitive briefs | **Open Design.** [The reality is rougher than the marketing](/blog/byok-reality-check-5-things-that-break/), but the contract is the only one that actually holds. |
-| An open-source contributor who wants to ship a new design skill the project can adopt | **Open Design.** Drop a folder, restart the daemon, send the PR. |
-| A team standardising on a portable design system that survives tool churn | **Open Design.** `DESIGN.md` files outlive the tool that reads them. |
+| A design engineer who already drives Claude Code, Codex, or Cursor from the terminal | **Auto Design.** Your agent is the design engine; the skill layer adds taste and structure without a new app. |
+| Anyone who needs BYOK, model choice mid-project, or local-only for sensitive briefs | **Auto Design.** [The reality is rougher than the marketing](/blog/byok-reality-check-5-things-that-break/), but the contract is the only one that actually holds. |
+| An open-source contributor who wants to ship a new design skill the project can adopt | **Auto Design.** Drop a folder, restart the daemon, send the PR. |
+| A team standardising on a portable design system that survives tool churn | **Auto Design.** `DESIGN.md` files outlive the tool that reads them. |
 
 The dimension that decides it for most teams isn't quality. It's whether you'd rather rent the workflow or own it.
 
@@ -95,6 +95,6 @@ If you want to see what owning the workflow feels like before you spend a Pro su
 
 ## Related reading
 
-- [Why we built Open Design as a skill layer, not a product](/blog/why-we-built-open-design-as-a-skill-layer/) — the longer manifesto behind the "layer, not product" bet
+- [Why we built Auto Design as a skill layer, not a product](/blog/why-we-built-open-design-as-a-skill-layer/) — the longer manifesto behind the "layer, not product" bet
 - [BYOK design workflow — run Claude, Codex, or Qwen on your own key](/blog/byok-design-workflow-claude-codex-qwen/) — the cost math behind picking your own model
 - [BYOK reality check — five things that break](/blog/byok-reality-check-5-things-that-break/) — what the open path actually breaks today, and the workarounds

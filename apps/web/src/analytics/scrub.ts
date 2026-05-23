@@ -56,7 +56,7 @@ function scrubUrl(url: unknown): unknown {
 }
 
 // Rewrite absolute filesystem paths in exception stack traces. Packaged
-// builds expose `file:///Applications/Open Design.app/Contents/Resources/…`
+// builds expose `file:///Applications/Auto Design.app/Contents/Resources/…`
 // which leaks both the install root and the user's home dir in homebrew /
 // custom installs. Reduce to the repo-relative tail.
 function scrubFilePath(value: unknown): unknown {

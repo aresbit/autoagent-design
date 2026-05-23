@@ -428,7 +428,7 @@ The daemon owns one hidden folder at the repo root. Everything in it is gitignor
 If you ran the repo first and only later installed the packaged Desktop app, the two writers point at different roots:
 
 - Repo dev-server (`pnpm tools-dev start web`) writes to `<repo-root>/.od/`.
-- Installed Desktop app writes under `<appData>/Open Design/namespaces/<channel>/data/`, where `<appData>` is Electron's per-OS app-data base (everything before the `Auto Design` segment that `app.getPath("userData")` already includes). The channel suffix is **platform-specific** — the release workflows append `-win`/`-linux`:
+- Installed Desktop app writes under `<appData>/Auto Design/namespaces/<channel>/data/`, where `<appData>` is Electron's per-OS app-data base (everything before the `Auto Design` segment that `app.getPath("userData")` already includes). The channel suffix is **platform-specific** — the release workflows append `-win`/`-linux`:
 
   | Platform | `<appData>` (Electron `appData` base) | Stable channel | Beta channel |
   |---|---|---|---|
@@ -437,9 +437,9 @@ If you ran the repo first and only later installed the packaged Desktop app, the
   | Linux | `$XDG_CONFIG_HOME` (default `~/.config`) | `release-stable-linux` | `release-beta-linux` |
 
   Example resolved paths:
-  - macOS beta: `~/Library/Application Support/Open Design/namespaces/release-beta/data/`
+  - macOS beta: `~/Library/Application Support/Auto Design/namespaces/release-beta/data/`
   - Windows beta: `%APPDATA%\Auto Design\namespaces\release-beta-win\data\`
-  - Linux beta: `~/.config/Open Design/namespaces/release-beta-linux/data/`
+  - Linux beta: `~/.config/Auto Design/namespaces/release-beta-linux/data/`
 
   If unsure, inspect the packaged daemon log right after the app boots; it logs the resolved `daemonDataRoot`.
 
@@ -462,14 +462,14 @@ Quit the Desktop app first, then re-launch with this env set. The launcher must 
 
 ```bash
 OD_LEGACY_DATA_DIR="/path/to/old/repo/.od" \
-  "/Applications/Open Design.app/Contents/MacOS/Open Design"
+  "/Applications/Auto Design.app/Contents/MacOS/Auto Design"
 ```
 
 If you prefer the Dock launcher, set the variable in `launchctl` first, open the app, then unset it:
 
 ```bash
 launchctl setenv OD_LEGACY_DATA_DIR "/path/to/old/repo/.od"
-open "/Applications/Open Design.app"
+open "/Applications/Auto Design.app"
 # After the migration log line appears:
 launchctl unsetenv OD_LEGACY_DATA_DIR
 ```
@@ -503,7 +503,7 @@ set -euo pipefail
 #    - Stop the repo dev-server: `pnpm tools-dev stop` from the repo root.
 # 2. Set REPO and APP_DATA to your actual paths; the example below is macOS + beta.
 REPO="/path/to/open-design"
-APP_DATA="$HOME/Library/Application Support/Open Design/namespaces/release-beta/data"
+APP_DATA="$HOME/Library/Application Support/Auto Design/namespaces/release-beta/data"
 
 # 3. Preflight: see what (if anything) the Desktop app already has.
 ls "$APP_DATA/projects" 2>/dev/null && echo "Desktop already has projects, confirm this is a replace, not a merge."
@@ -560,7 +560,7 @@ If anything looks wrong after relaunch, restore the original Desktop data by del
 > **⚠️ Advanced: sharing one data dir between repo dev-server and Desktop app.** Pointing both at the same dir via `OD_DATA_DIR` is possible but **only safe one-at-a-time**. The daemon opens `app.sqlite` in WAL mode and writes uncoordinated files under `projects/` and `artifacts/`; running both writers concurrently can corrupt SQLite or clobber artifacts. Always stop the Desktop app before starting the dev-server, and stop the dev-server before opening the Desktop app:
 >
 > ```bash
-> OD_DATA_DIR="$HOME/Library/Application Support/Open Design/namespaces/release-beta/data" \
+> OD_DATA_DIR="$HOME/Library/Application Support/Auto Design/namespaces/release-beta/data" \
 >   pnpm tools-dev start web
 > ```
 

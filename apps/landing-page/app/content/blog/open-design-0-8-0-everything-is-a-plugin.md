@@ -1,9 +1,9 @@
 ---
-title: "Open Design 0.8.0: everything is a plugin"
+title: "Auto Design 0.8.0: everything is a plugin"
 date: 2026-05-22
 category: "Product"
 readingTime: 7
-summary: "Open Design 0.8.0 isn't a release, it's a rebuild. A small plugin engine, a headless-by-default CLI, packaged auto-update on macOS and Windows, and 149 design systems shipped in seven days."
+summary: "Auto Design 0.8.0 isn't a release, it's a rebuild. A small plugin engine, a headless-by-default CLI, packaged auto-update on macOS and Windows, and 149 design systems shipped in seven days."
 ---
 
 Tag `open-design-v0.8.0` (`c20d156`), shipped 22 May 2026, 12:43 UTC. 305 PRs from 75 contributors in seven days. This is the release where we stopped trying to extend the old shape and rebuilt the engine underneath. The desktop app you'll download today is a thin wrapper around a CLI you can also point at from Claude Code, Cursor, or a Slack bot. The design systems, slices, prototypes, exports, and the old Figma-style workflows are no longer features baked into the engine — they're plugins, written against a small, boring core.
@@ -51,8 +51,8 @@ Three paths, depending on where you start.
 
 | If you're… | Start here |
 |---|---|
-| New to Open Design | Download the desktop app and let it bootstrap a project against an existing design system |
-| Already running Open Design | Let the packaged auto-update bring you to 0.8.0; the in-app updater popup walks you through the validated install |
+| New to Auto Design | Download the desktop app and let it bootstrap a project against an existing design system |
+| Already running Auto Design | Let the packaged auto-update bring you to 0.8.0; the in-app updater popup walks you through the validated install |
 | Building a plugin | Scaffold with `od plugin scaffold --id <name>`, validate with `od plugin validate ./<path> --no-daemon`, and open a PR through the same OD publish path that ships every other plugin in the marketplace |
 
 If you've been waiting for the agent-native loop to feel like the canonical loop instead of a demo, this is the release. Point Claude Code, Cursor, Codex, or any of the 16 detected CLI agents at the same OD CLI the desktop app ships with, and the two paths converge after the first prompt.
@@ -65,6 +65,6 @@ The fastest way to feel the difference between 0.7 and 0.8 is to install the des
 
 ## Related reading
 
-- [Why we built Open Design as a skill layer, not a product](/blog/why-we-built-open-design-as-a-skill-layer/) — the longer manifesto behind the "engine plus plugins" bet 0.8.0 finishes paying off
-- [How to port a Figma workflow into an Open Design plugin](/blog/port-figma-workflow-open-design-plugin/) — the practical version of the "plugins create plugins" loop
+- [Why we built Auto Design as a skill layer, not a product](/blog/why-we-built-open-design-as-a-skill-layer/) — the longer manifesto behind the "engine plus plugins" bet 0.8.0 finishes paying off
+- [How to port a Figma workflow into an Auto Design plugin](/blog/port-figma-workflow-open-design-plugin/) — the practical version of the "plugins create plugins" loop
 - [The open-source alternative to Claude Design](/blog/open-source-alternative-to-claude-design/) — where this release fits in the agent-native design landscape

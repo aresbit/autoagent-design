@@ -152,7 +152,7 @@ const PROJECT_STRING_FLAGS = new Set([
 const PROJECT_BOOLEAN_FLAGS = new Set(['help', 'h', 'json', 'follow']);
 // `od automation …` mirrors the Automations tab. Same surface, same
 // /api/routines store. The CLI form is the embeddability contract:
-// external agents (hermes-agent, openclaw, etc.) can drive Open Design
+// external agents (hermes-agent, openclaw, etc.) can drive Auto Design
 // automations headlessly without going through the web UI.
 const AUTOMATION_STRING_FLAGS = new Set([
   'daemon-url', 'name', 'prompt', 'prompt-file', 'schedule', 'target',
@@ -334,9 +334,9 @@ function printRootHelp() {
 
   od mcp [--daemon-url <url>]
       Run a stdio MCP server that proxies project tool calls to a
-      running Open Design daemon. Wire it into a coding agent
+      running Auto Design daemon. Wire it into a coding agent
       (Claude Code, Cursor, VS Code, Zed, Windsurf) in another repo
-      to pull files from a local Open Design project and create
+      to pull files from a local Auto Design project and create
       project-scoped artifacts without exporting a zip.
 
 Options:
@@ -424,7 +424,7 @@ function printResearchHelp() {
   console.log(`Usage:
   od research search --query <text> [--max-sources 5] [--daemon-url <url>]
 
-Runs Tavily-backed shallow research through the local Open Design daemon.
+Runs Tavily-backed shallow research through the local Auto Design daemon.
 Output is JSON only on stdout:
   { "query": "...", "summary": "...", "sources": [...], "provider": "tavily", "depth": "shallow", "fetchedAt": 0 }
 
@@ -685,7 +685,7 @@ function surfaceFetchError(err, daemonUrl) {
     console.error(
       'hint: outbound connect was denied by a sandbox. If you launched ' +
         'this command from a code agent, check the agent\'s sandbox / ' +
-        'network policy. The Open Design daemon itself is unaffected - it can be ' +
+        'network policy. The Auto Design daemon itself is unaffected - it can be ' +
         'reached from a regular shell.',
     );
   }
@@ -819,13 +819,13 @@ function printMcpHelp() {
   console.log(`Usage: od mcp [--daemon-url <url>]
 
 Run a stdio MCP (Model Context Protocol) server that proxies project
-tool calls to a running Open Design daemon. Wire it into a coding agent
-in another repo so the agent can pull files from a local Open Design
+tool calls to a running Auto Design daemon. Wire it into a coding agent
+in another repo so the agent can pull files from a local Auto Design
 project and create project-scoped artifacts without exporting a zip
 every iteration.
 
 Options:
-  --daemon-url <url>   Open Design daemon HTTP base URL. Resolution
+  --daemon-url <url>   Auto Design daemon HTTP base URL. Resolution
                        order: this flag, OD_DAEMON_URL, OD_SIDECAR_IPC_PATH,
                        then http://127.0.0.1:7456. Each new MCP spawn
                        discovers the live daemon URL at startup, so
@@ -836,7 +836,7 @@ Options:
                        new port.
 
 Tools exposed:
-  list_projects                  list every Open Design project
+  list_projects                  list every Auto Design project
   get_active_context             what project/file the user has open right now
   get_artifact([project, entry]) bundle: entry file + every referenced sibling
   get_project([project])         single project metadata
@@ -847,13 +847,13 @@ Tools exposed:
 
 When project is omitted, get_artifact / get_project / get_file /
 search_files / list_files / create_artifact default to the project the
-user has open in Open Design; get_artifact and get_file additionally
+user has open in Auto Design; get_artifact and get_file additionally
 default to the active file. The response stamps usedActiveContext so
 callers can see which project/file got resolved.
 
 For the copy-paste, per-client snippet (with absolute paths resolved
 for your machine, plus a one-click deeplink for Cursor), open Settings
-→ MCP server in the Open Design app. The daemon must be running locally
+→ MCP server in the Auto Design app. The daemon must be running locally
 for tool calls to succeed.`);
 }
 
@@ -1172,7 +1172,7 @@ async function runPluginLogin(rest) {
     console.log(`Usage:
   od plugin login [--host github.com]
 
-Wraps GitHub CLI auth for Open Design registry publishing. The token stays in gh.`);
+Wraps GitHub CLI auth for Auto Design registry publishing. The token stays in gh.`);
     return;
   }
   const host = typeof flags.host === 'string' ? flags.host : 'github.com';
@@ -1194,7 +1194,7 @@ async function runPluginWhoami(rest) {
     console.log(`Usage:
   od plugin whoami [--host github.com] [--json]
 
-Shows the GitHub account gh will use for Open Design registry publishing.`);
+Shows the GitHub account gh will use for Auto Design registry publishing.`);
     return;
   }
   const host = typeof flags.host === 'string' ? flags.host : 'github.com';
@@ -1350,7 +1350,7 @@ async function runMarketplace(args) {
                                                               Update the marketplace trust tier.
 
 Common options:
-  --daemon-url <url>   Open Design daemon HTTP base (default OD_DAEMON_URL, OD_SIDECAR_IPC_PATH discovery, or http://127.0.0.1:7456).
+  --daemon-url <url>   Auto Design daemon HTTP base (default OD_DAEMON_URL, OD_SIDECAR_IPC_PATH discovery, or http://127.0.0.1:7456).
   --json               Emit raw JSON (suitable for scripts).`);
     process.exit(args.length === 0 ? 2 : 0);
   }
@@ -1497,7 +1497,7 @@ Common options:
         console.error('[marketplace login] GitHub CLI is required. Install gh from https://cli.github.com/ and retry.');
         process.exit(1);
       }
-      console.log(`[marketplace login] authenticating gh for ${host}. Tokens stay in gh, not Open Design.`);
+      console.log(`[marketplace login] authenticating gh for ${host}. Tokens stay in gh, not Auto Design.`);
       const result = await spawnPassthrough('gh', ['auth', 'login', '--hostname', host, '--web']);
       process.exit(result.code ?? 0);
     }
@@ -3601,7 +3601,7 @@ function printUiHelp() {
                                                      Pre-answer a surface so the run never broadcasts it.
 
 Common options:
-  --daemon-url <url>   Open Design daemon HTTP base (default OD_DAEMON_URL, OD_SIDECAR_IPC_PATH discovery, or http://127.0.0.1:7456).
+  --daemon-url <url>   Auto Design daemon HTTP base (default OD_DAEMON_URL, OD_SIDECAR_IPC_PATH discovery, or http://127.0.0.1:7456).
   --json               Emit raw JSON (suitable for scripts) instead of human-readable output.`);
 }
 
@@ -3644,7 +3644,7 @@ function printPluginHelp() {
   od plugin whoami [--host github.com]     Show the gh account used for publishing.
 
 Common options:
-  --daemon-url <url>   Open Design daemon HTTP base (default OD_DAEMON_URL, OD_SIDECAR_IPC_PATH discovery, or http://127.0.0.1:7456).
+  --daemon-url <url>   Auto Design daemon HTTP base (default OD_DAEMON_URL, OD_SIDECAR_IPC_PATH discovery, or http://127.0.0.1:7456).
   --json               Emit raw JSON (suitable for scripts) instead of human-readable output.
 
 Installs support local folders, github:owner/repo refs, HTTPS .tgz archives,
@@ -3657,7 +3657,7 @@ and bare marketplace names resolved through configured registry sources.`);
 // Plan §6 Phase 1 follow-up + Phase 2C: thin CLI wrappers over the
 // existing daemon HTTP endpoints (POST /api/projects, POST /api/runs,
 // GET /api/projects/:id/files, …). The §12.5 walkthrough relies on
-// these so a code agent can drive Open Design end-to-end without
+// these so a code agent can drive Auto Design end-to-end without
 // hitting `/api/*` directly. Spec §11.7 invariant: every UI feature is
 // reachable via the CLI; we wrap rather than duplicate.
 // ---------------------------------------------------------------------------
@@ -3695,7 +3695,7 @@ async function runProject(args) {
                     Synthesize a resume-conversation handoff prompt.
 
 Common options:
-  --daemon-url <url>   Open Design daemon HTTP base.
+  --daemon-url <url>   Auto Design daemon HTTP base.
   --json               Emit raw JSON.`);
     process.exit(args.length === 0 ? 2 : 0);
   }
@@ -3855,7 +3855,7 @@ async function runRun(args) {
   od run info   <runId>                     One run's status.
 
 Common options:
-  --daemon-url <url>   Open Design daemon HTTP base.
+  --daemon-url <url>   Auto Design daemon HTTP base.
   --json               Emit raw JSON.`);
     process.exit(args.length === 0 ? 2 : 0);
   }
@@ -4016,7 +4016,7 @@ async function runFiles(args) {
   od files delete <projectId> <name>           Delete a project file.
 
 Common options:
-  --daemon-url <url>   Open Design daemon HTTP base.
+  --daemon-url <url>   Auto Design daemon HTTP base.
   --json               Emit raw JSON.`);
     process.exit(args.length === 0 ? 2 : 0);
   }
@@ -4139,7 +4139,7 @@ async function runConversation(args) {
   od conversation info <conversationId>      Print one conversation.
 
 Common options:
-  --daemon-url <url>   Open Design daemon HTTP base.
+  --daemon-url <url>   Auto Design daemon HTTP base.
   --json               Emit raw JSON.`);
     process.exit(args.length === 0 ? 2 : 0);
   }
@@ -4207,7 +4207,7 @@ async function runDaemon(args) {
   od daemon db     vacuum                 Run SQLite VACUUM to reclaim space after deletes.
 
 Common options:
-  --daemon-url <url>   Open Design daemon HTTP base.
+  --daemon-url <url>   Auto Design daemon HTTP base.
   --headless           No browser auto-open; aliased --no-open.
   --serve-web          Serve the web UI over the existing port (no electron).
   --json               Emit raw JSON.`);
@@ -4434,7 +4434,7 @@ async function runAtoms(args) {
   od atoms info <id>        Print metadata + the bundled SKILL.md body.
 
 Common options:
-  --daemon-url <url>   Open Design daemon HTTP base.
+  --daemon-url <url>   Auto Design daemon HTTP base.
   --json               Emit raw JSON.`);
     process.exit(args.length === 0 ? 2 : 0);
   }
@@ -4794,7 +4794,7 @@ async function runConfig(args) {
   od config unset <key>               Remove a top-level key.
 
 Common options:
-  --daemon-url <url>   Open Design daemon HTTP base.
+  --daemon-url <url>   Auto Design daemon HTTP base.
   --json               Emit raw JSON.`);
     process.exit(args.length === 0 ? 2 : 0);
   }
@@ -4921,7 +4921,7 @@ function printMemoryHelp() {
       Move an entry node to a different memory bucket while preserving its id.
 
 Common options:
-  --daemon-url <url>   Open Design daemon HTTP base.`);
+  --daemon-url <url>   Auto Design daemon HTTP base.`);
 }
 
 function memoryPositionals(values) {
@@ -5339,7 +5339,7 @@ Output:
   can drive the full automation lifecycle headlessly.
 
 Common options:
-  --daemon-url <url>   Open Design daemon HTTP base.`);
+  --daemon-url <url>   Auto Design daemon HTTP base.`);
 }
 
 async function runAutomation(args) {

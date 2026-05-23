@@ -29,7 +29,7 @@ import ResourceHints from './resource-hints.astro';
 export interface SeoHeadProps {
   /** 'website' for landing/list pages, 'article' for blog posts. */
   kind: 'website' | 'article';
-  /** For article: raw post title (component appends " — Open Design"). For website: the full title string. */
+  /** For article: raw post title (component appends " — Auto Design"). For website: the full title string. */
   title: string;
   /** Meta description, 150–160 chars recommended. */
   description: string;
@@ -42,7 +42,7 @@ export interface SeoHeadProps {
   dateModified?: Date;
   /** Required for kind: 'article'. e.g. "Guides". */
   category?: string;
-  /** Defaults to "Open Design". */
+  /** Defaults to "Auto Design". */
   author?: string;
   /**
    * Optional Google Search Console verification token. When set, renders
@@ -55,7 +55,7 @@ export interface SeoHeadProps {
 
 const props = Astro.props as SeoHeadProps;
 
-const SITE_NAME = 'Open Design';
+const SITE_NAME = 'Auto Design';
 const TAGLINE = 'Design with the agent already on your laptop.';
 const isArticle = props.kind === 'article';
 const locale = localeFromPath(props.pathname);
@@ -133,7 +133,7 @@ const blogJsonLd =
     ? {
         '@context': 'https://schema.org',
         '@type': 'Blog',
-        name: 'Open Design — Blog',
+        name: 'Auto Design — Blog',
         description: props.description,
         url: canonical,
         inLanguage: localeDef.htmlLang,
@@ -154,7 +154,7 @@ const blogJsonLd =
   <link rel='alternate' hreflang={entry.hreflang} href={entry.href} />
 ))}
 <link rel='alternate' hreflang='x-default' href={xDefaultHref} />
-<link rel='alternate' type='application/rss+xml' title='Open Design Blog' href={rssUrl} />
+<link rel='alternate' type='application/rss+xml' title='Auto Design Blog' href={rssUrl} />
 <FaviconLinks />
 <ResourceHints />
 

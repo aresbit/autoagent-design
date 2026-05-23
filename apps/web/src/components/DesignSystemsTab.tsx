@@ -276,7 +276,7 @@ export function DesignSystemsTab({
           <button type="button" className="ds-create-row" onClick={onCreate}>
             <span>
               <strong>Create new design system</strong>
-              <small>Teach Open Design your brand, product, code, assets, and design references.</small>
+              <small>Teach Auto Design your brand, product, code, assets, and design references.</small>
             </span>
             <span className="ds-create-row__action">Create</span>
           </button>

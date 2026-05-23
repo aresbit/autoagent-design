@@ -1,6 +1,6 @@
 ---
 name: refine-critique-loop
-description: Use this plugin when the user has an existing Open Design artifact and wants targeted critique, patching, brand tightening, responsive fixes, or quality improvement without starting over.
+description: Use this plugin when the user has an existing Auto Design artifact and wants targeted critique, patching, brand tightening, responsive fixes, or quality improvement without starting over.
 license: MIT
 metadata:
   author: open-design-spec
@@ -20,4 +20,3 @@ metadata:
 ## Output Contract
 
 Patch the existing artifact and produce `refine-summary.md`.
-

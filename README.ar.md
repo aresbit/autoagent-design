@@ -1,20 +1,20 @@
 <div dir="rtl">
 
-# Open Design — البديل الرسمي مفتوح المصدر لـ [Claude Design][cd]
+# Auto Design — البديل الرسمي مفتوح المصدر لـ [Claude Design][cd]
 
-> **Open Design هو البديل مفتوح المصدر والمحلي أولاً لـ [Claude Design][cd].** قابل للنشر على Vercel، ويدعم BYOK في كل طبقة — **16 أداة CLI لوكلاء البرمجة** يكتشفها تلقائياً من `PATH` (Claude Code, Codex, Devin for Terminal, Cursor Agent, Gemini CLI, OpenCode, Qwen, Qoder CLI, GitHub Copilot CLI, Hermes, Kimi, Pi, Kiro, Kilo, Mistral Vibe, DeepSeek TUI) لتصبح هي محرّك التصميم، مدفوعةً بـ **31 Skill قابلة للتركيب** و**72 نظام تصميم بمستوى الهوية البصرية**. لا توجد لديك CLI؟ بروكسي BYOK متوافق مع OpenAI يقدّم نفس الحلقة بدون عملية الـ spawn.
+> **Auto Design هو البديل مفتوح المصدر والمحلي أولاً لـ [Claude Design][cd].** قابل للنشر على Vercel، ويدعم BYOK في كل طبقة — **16 أداة CLI لوكلاء البرمجة** يكتشفها تلقائياً من `PATH` (Claude Code, Codex, Devin for Terminal, Cursor Agent, Gemini CLI, OpenCode, Qwen, Qoder CLI, GitHub Copilot CLI, Hermes, Kimi, Pi, Kiro, Kilo, Mistral Vibe, DeepSeek TUI) لتصبح هي محرّك التصميم، مدفوعةً بـ **31 Skill قابلة للتركيب** و**72 نظام تصميم بمستوى الهوية البصرية**. لا توجد لديك CLI؟ بروكسي BYOK متوافق مع OpenAI يقدّم نفس الحلقة بدون عملية الـ spawn.
 
 > [!IMPORTANT]
 > ### 🔥 وصلت النسخة `0.8.0-preview`. عالم التصميم القديم ينتهي هنا.
 >
 > بديل مفتوح المصدر لـ Claude Design / Figma — 40k نجمة في أسبوعين أوصلتنا إلى هنا. **نحتاجك لدفعنا بقية الطريق.**
 >
-> **تكرار سريع على `main`** — 0.8.0 هي المرحلة التالية من Open Design. أرسل PR، اطرح فكرة جامحة، أبلغ عن عُلّة — ما تجلبه أنت هو ما تصير إليه هذه الحركة.
+> **تكرار سريع على `main`** — 0.8.0 هي المرحلة التالية من Auto Design. أرسل PR، اطرح فكرة جامحة، أبلغ عن عُلّة — ما تجلبه أنت هو ما تصير إليه هذه الحركة.
 >
 > → [**اقرأ الإعلان · حمّل المثبّت · انضم إلى الحركة**](https://github.com/nexu-io/open-design/discussions/1727) · يعمل جنبًا إلى جنب مع نسخة 0.7 الحالية لديك.
 
 <p align="center">
-  <img src="docs/assets/banner.png" alt="Open Design — غلاف افتتاحي: صمّم مع الوكيل على حاسوبك المحمول" width="100%" />
+  <img src="docs/assets/banner.png" alt="Auto Design — غلاف افتتاحي: صمّم مع الوكيل على حاسوبك المحمول" width="100%" />
 </p>
 
 <p align="center">
@@ -46,7 +46,7 @@
 
 أظهر [Claude Design][cd] من Anthropic (الذي صدر في 2026-04-17 مبنياً على Opus 4.7) ما يحدث حين يتوقّف الـ LLM عن كتابة النصوص ويبدأ بتسليم منتجات تصميم فعلية. انتشر بسرعة — وبقي **مغلق المصدر**، مدفوعاً، يعمل في السحابة فقط، ومرتبطاً بنماذج Anthropic ومهاراتها الداخلية. لا checkout، لا استضافة ذاتية، لا نشر على Vercel، ولا إمكانية لاستبدال الوكيل.
 
-**Open Design (OD) هو البديل مفتوح المصدر.** نفس الحلقة، نفس النموذج الذهني المتمحور حول الـ artifact، بدون أيّ قيود. نحن لا نشحن وكيلاً — أقوى وكلاء البرمجة موجودون أصلاً على حاسوبك. ما نقدّمه هو ربطهم بسير عمل تصميمي مدفوع بالـ Skills يعمل محلياً عبر `pnpm tools-dev`، يمكن نشر طبقة الويب منه على Vercel، ويبقى BYOK في كل طبقة.
+**Auto Design (AD) هو البديل مفتوح المصدر.** نفس الحلقة، نفس النموذج الذهني المتمحور حول الـ artifact، بدون أيّ قيود. نحن لا نشحن وكيلاً — أقوى وكلاء البرمجة موجودون أصلاً على حاسوبك. ما نقدّمه هو ربطهم بسير عمل تصميمي مدفوع بالـ Skills يعمل محلياً عبر `pnpm tools-dev`، يمكن نشر طبقة الويب منه على Vercel، ويبقى BYOK في كل طبقة.
 
 اكتب `اصنع لي pitch deck بأسلوب مجلّة لجولة seed`. ينبثق نموذج الأسئلة التفاعلي قبل أن يرتجل النموذج بكسلاً واحداً. يختار الوكيل أحد خمسة اتجاهات بصرية منتقاة. تنساب خطّة `TodoWrite` حيّة إلى الواجهة. يبني الـ daemon مجلد مشروع حقيقياً على القرص يحوي قالب seed، مكتبة layouts، و checklist للفحص الذاتي. يقرأها الوكيل — pre-flight إلزامي — ثم يجري تقييماً ذاتياً خماسي الأبعاد على ناتجه، ويُصدر `<artifact>` واحداً يُعرض في iframe معزول خلال ثوانٍ.
 
@@ -314,7 +314,7 @@ DISCOVERY directives  (turn-1 form, turn-2 brand branch, TodoWrite, 5-dim critiq
 
 ### تنزيل تطبيق سطح المكتب (بدون بناء)
 
-أسرع طريقة لتجربة Open Design هي تطبيق سطح المكتب الجاهز — بدون Node، بدون pnpm، بدون clone:
+أسرع طريقة لتجربة Auto Design هي تطبيق سطح المكتب الجاهز — بدون Node، بدون pnpm، بدون clone:
 
 - **[open-design.ai](https://open-design.ai/)** — صفحة التنزيل الرسمية
 - **[إصدارات GitHub](https://github.com/nexu-io/open-design/releases)**
@@ -367,7 +367,7 @@ pnpm tools-dev run web
 
 ## تشغيل المشروع
 
-يمكن تشغيل Open Design كتطبيق ويب في متصفّحك، أو كتطبيق سطح مكتب Electron. كلا الوضعين يتشاركان نفس معمارية الـ daemon المحلي + الويب.
+يمكن تشغيل Auto Design كتطبيق ويب في متصفّحك، أو كتطبيق سطح مكتب Electron. كلا الوضعين يتشاركان نفس معمارية الـ daemon المحلي + الويب.
 
 ### الويب / Localhost (الافتراضي)
 
@@ -421,17 +421,17 @@ pnpm tools-dev inspect desktop screenshot --path /tmp/open-design.png
 
 لإعادة التشغيل بمنافذ ثابتة، الإقلاع في الخلفية، واستكشاف الأخطاء الكامل، راجع [`QUICKSTART.md`](QUICKSTART.md).
 
-## استخدام Open Design من وكيل البرمجة لديك
+## استخدام Auto Design من وكيل البرمجة لديك
 
-يشحن Open Design خادم MCP عبر stdio. اربطه بـ Claude Code أو Codex أو Cursor أو VS Code أو Antigravity أو Zed أو Windsurf أو أيّ عميل متوافق مع MCP، وسيتمكّن الوكيل في مستودع آخر من قراءة الملفات من مشاريع Open Design المحلية مباشرة. يحلّ هذا محلّ حلقة export-ثم-attach. حين يستدعي الوكيل `search_files` أو `get_file` أو `get_artifact` بدون وسيط مشروع، يأخذ MCP افتراضياً المشروع (والملف) المفتوح حالياً في Open Design، بحيث تعمل برومبتات مثل *«ابنِ هذا في تطبيقي»* أو *«طابِق هذه الأنماط»* مباشرة.
+يشحن Auto Design خادم MCP عبر stdio. اربطه بـ Claude Code أو Codex أو Cursor أو VS Code أو Antigravity أو Zed أو Windsurf أو أيّ عميل متوافق مع MCP، وسيتمكّن الوكيل في مستودع آخر من قراءة الملفات من مشاريع Auto Design المحلية مباشرة. يحلّ هذا محلّ حلقة export-ثم-attach. حين يستدعي الوكيل `search_files` أو `get_file` أو `get_artifact` بدون وسيط مشروع، يأخذ MCP افتراضياً المشروع (والملف) المفتوح حالياً في Auto Design، بحيث تعمل برومبتات مثل *«ابنِ هذا في تطبيقي»* أو *«طابِق هذه الأنماط»* مباشرة.
 
 **لماذا MCP؟** تصدير zip وإعادة إرفاقه مع كل دورة تصميم يكسر التدفّق. خادم MCP يكشف مصدر تصميمك مباشرة — tokens CSS، مكوّنات JSX، entry HTML — كـ API منظَّم يمكن للوكيل الاستعلام منه بالاسم. الوكيل يرى دائماً الملف الحيّ، لا نسخة قديمة من آخر export.
 
-افتح **Settings → MCP server** في تطبيق Open Design للحصول على تدفّق تثبيت لكلّ عميل. تُضمِّن اللوحة المسار المطلق لـ `node` ولـ `cli.js` المبني للـ daemon داخل كل snippet، فتعمل على نسخة source جديدة لا يكون فيها `od` على الـ PATH. Cursor يحصل على deeplink بنقرة واحدة؛ والباقي يحصلون على JSON snippet للنسخ واللصق بالشكل الذي يتوقّعه ملفّ تكوينهم (Claude Code يتضمّن سطر `claude mcp add-json` واحداً، فلا تحتاج لتحرير `~/.claude.json` يدوياً). أعد تشغيل أو reload لعميلك بعد التثبيت ليظهر الخادم.
+افتح **Settings → MCP server** في تطبيق Auto Design للحصول على تدفّق تثبيت لكلّ عميل. تُضمِّن اللوحة المسار المطلق لـ `node` ولـ `cli.js` المبني للـ daemon داخل كل snippet، فتعمل على نسخة source جديدة لا يكون فيها `od` على الـ PATH. Cursor يحصل على deeplink بنقرة واحدة؛ والباقي يحصلون على JSON snippet للنسخ واللصق بالشكل الذي يتوقّعه ملفّ تكوينهم (Claude Code يتضمّن سطر `claude mcp add-json` واحداً، فلا تحتاج لتحرير `~/.claude.json` يدوياً). أعد تشغيل أو reload لعميلك بعد التثبيت ليظهر الخادم.
 
-يجب أن يكون الـ daemon يعمل محلياً لتنجح استدعاءات أدوات MCP. إن كان الوكيل قد أُقلع قبل Open Design، أعد تشغيل الوكيل بعد جاهزية Open Design ليصل إلى الـ daemon الحيّ. الاستدعاءات أثناء توقّف الـ daemon تعيد خطأً واضحاً `"daemon not reachable"` بدلاً من crash.
+يجب أن يكون الـ daemon يعمل محلياً لتنجح استدعاءات أدوات MCP. إن كان الوكيل قد أُقلع قبل Auto Design، أعد تشغيل الوكيل بعد جاهزية Auto Design ليصل إلى الـ daemon الحيّ. الاستدعاءات أثناء توقّف الـ daemon تعيد خطأً واضحاً `"daemon not reachable"` بدلاً من crash.
 
-**نموذج الأمان.** خادم MCP للقراءة فقط؛ يكشف قراءة ملفات، metadata، وبحث — لا شيء يكتب على القرص أو يستدعي خدمة خارجية. يعمل كعملية ابن لوكيل البرمجة عبر stdio، لذا أيّ عميل MCP تسجّله يرث صلاحية قراءة لمشاريع Open Design المحلية لديك. عامله مثل تثبيت إضافة VS Code: لا تسجّل إلا العملاء الذين تثق بهم. الـ daemon يربط نفسه بـ `127.0.0.1` افتراضياً؛ التعرّض للشبكة المحلية بأكملها يتطلّب `OD_BIND_HOST` صريحاً.
+**نموذج الأمان.** خادم MCP للقراءة فقط؛ يكشف قراءة ملفات، metadata، وبحث — لا شيء يكتب على القرص أو يستدعي خدمة خارجية. يعمل كعملية ابن لوكيل البرمجة عبر stdio، لذا أيّ عميل MCP تسجّله يرث صلاحية قراءة لمشاريع Auto Design المحلية لديك. عامله مثل تثبيت إضافة VS Code: لا تسجّل إلا العملاء الذين تثق بهم. الـ daemon يربط نفسه بـ `127.0.0.1` افتراضياً؛ التعرّض للشبكة المحلية بأكملها يتطلّب `OD_BIND_HOST` صريحاً.
 
 ## بنية المستودع
 
@@ -476,7 +476,7 @@ open-design/
 │
 ├── packages/
 │   ├── contracts/                 ← shared web/daemon app contracts
-│   ├── sidecar-proto/             ← Open Design sidecar protocol contract
+│   ├── sidecar-proto/             ← Auto Design sidecar protocol contract
 │   ├── sidecar/                   ← generic sidecar runtime primitives
 │   └── platform/                  ← generic process/platform primitives
 │
@@ -624,7 +624,7 @@ OD لا يقف عند الكود. نفس واجهة الـ chat التي تنت�
 
 ### HyperFrames — HTML→MP4 motion graphics (11 قالباً جاهزاً للاستنساخ)
 
-[**`heygen-com/hyperframes`**](https://github.com/heygen-com/hyperframes) هو إطار فيديو agent-native مفتوح المصدر من HeyGen — تكتب أنت (أو الوكيل) HTML + CSS + GSAP، فيرنده HyperFrames إلى MP4 حتمي عبر headless Chrome + FFmpeg. يشحن Open Design لـ HyperFrames كنموذج فيديو من الدرجة الأولى (`hyperframes-html`) موصول في dispatch الـ daemon، إضافة إلى `skills/hyperframes/` التي تعلّم الوكيل عقد timeline، قواعد الانتقال بين المشاهد، أنماط audio-reactive، captions/TTS، وكتل الكتالوج (`npx hyperframes add <slug>`).
+[**`heygen-com/hyperframes`**](https://github.com/heygen-com/hyperframes) هو إطار فيديو agent-native مفتوح المصدر من HeyGen — تكتب أنت (أو الوكيل) HTML + CSS + GSAP، فيرنده HyperFrames إلى MP4 حتمي عبر headless Chrome + FFmpeg. يشحن Auto Design لـ HyperFrames كنموذج فيديو من الدرجة الأولى (`hyperframes-html`) موصول في dispatch الـ daemon، إضافة إلى `skills/hyperframes/` التي تعلّم الوكيل عقد timeline، قواعد الانتقال بين المشاهد، أنماط audio-reactive، captions/TTS، وكتل الكتالوج (`npx hyperframes add <slug>`).
 
 11 برومبت hyperframes تُشحن تحت [`prompt-templates/video/hyperframes-*.json`](prompt-templates/video/)، كل واحد brief محدّد ينتج archetype بعينه:
 
@@ -679,7 +679,7 @@ OD لا يقف عند الكود. نفس واجهة الـ chat التي تنت�
 
 ## مقارنة
 
-| المحور | [Claude Design][cd] (Anthropic) | [Open CoDesign][ocod] | **Open Design** |
+| المحور | [Claude Design][cd] (Anthropic) | [Open CoDesign][ocod] | **Auto Design** |
 |---|---|---|---|
 | الترخيص | مغلق | MIT | **Apache-2.0** |
 | الشكل | ويب (claude.ai) | سطح مكتب (Electron) | **تطبيق ويب + daemon محلي** |
@@ -780,7 +780,7 @@ OD لا يقف عند الكود. نفس واجهة الـ chat التي تنت�
 ## أعطنا ★
 
 <p align="center">
-  <a href="https://github.com/nexu-io/open-design"><img src="docs/assets/star-us.png" alt="Star Open Design on GitHub — github.com/nexu-io/open-design" width="100%" /></a>
+  <a href="https://github.com/nexu-io/open-design"><img src="docs/assets/star-us.png" alt="Star Auto Design on GitHub — github.com/nexu-io/open-design" width="100%" /></a>
 </p>
 
 إن وفّر هذا عليك ثلاثين دقيقة — أعطه ★. النجوم لا تدفع الإيجار، لكنها تخبر المصمّم والوكيل والمساهم القادم أن هذه التجربة تستحقّ انتباههم. نقرة واحدة، ثلاث ثوانٍ، إشارة حقيقية: [github.com/nexu-io/open-design](https://github.com/nexu-io/open-design).
@@ -797,10 +797,10 @@ Issues و PRs و skills جديدة وأنظمة تصميم جديدة، كلّه
 
 ## المساهمون
 
-شكراً لكلّ من ساعد في دفع Open Design للأمام — بكود، بوثائق، بملاحظات، بـ skills جديدة، بأنظمة تصميم جديدة، أو حتى بـ issue حادّة. كلّ مساهمة حقيقية تهمّ، والجدار أدناه أسهل طريقة لقول ذلك علناً.
+شكراً لكلّ من ساعد في دفع Auto Design للأمام — بكود، بوثائق، بملاحظات، بـ skills جديدة، بأنظمة تصميم جديدة، أو حتى بـ issue حادّة. كلّ مساهمة حقيقية تهمّ، والجدار أدناه أسهل طريقة لقول ذلك علناً.
 
 <a href="https://github.com/nexu-io/open-design/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=nexu-io/open-design&cache_bust=2026-05-22" alt="Open Design contributors" />
+  <img src="https://contrib.rocks/image?repo=nexu-io/open-design&cache_bust=2026-05-22" alt="Auto Design contributors" />
 </a>
 
 إن شحنت أوّل PR — مرحباً. تصنيف [`good-first-issue`](https://github.com/nexu-io/open-design/labels/good-first-issue) هو نقطة الدخول.
@@ -808,7 +808,7 @@ Issues و PRs و skills جديدة وأنظمة تصميم جديدة، كلّه
 ## نشاط المستودع
 
 <picture>
-  <img alt="Open Design — repository metrics" src="docs/assets/github-metrics.svg" />
+  <img alt="Auto Design — repository metrics" src="docs/assets/github-metrics.svg" />
 </picture>
 
 يُعاد توليد SVG أعلاه يومياً عبر [`.github/workflows/metrics.yml`](.github/workflows/metrics.yml) باستخدام [`lowlighter/metrics`](https://github.com/lowlighter/metrics). أطلق تحديثاً يدوياً من تبويب **Actions** إن أردته أسرع؛ لإضافات أغنى (traffic، follow-up time)، أضف سرّ مستودع `METRICS_TOKEN` بـ PAT دقيق التحكّم.
@@ -819,7 +819,7 @@ Issues و PRs و skills جديدة وأنظمة تصميم جديدة، كلّه
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&theme=dark&cache_bust=2026-05-22" />
     <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-22" />
-    <img alt="Open Design star history" src="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-22" />
+    <img alt="Auto Design star history" src="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-22" />
   </picture>
 </a>
 

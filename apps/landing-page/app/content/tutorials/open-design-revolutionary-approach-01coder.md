@@ -1,7 +1,7 @@
 ---
-title: '42k ⭐ Open Design — 颠覆传统的设计方式'
+title: '42k ⭐ Auto Design — 颠覆传统的设计方式'
 youtubeId: Zktt5gwh6DU
-summary: 01Coder 在 Open Design 冲到 42k Star 时做的中文深度评测，从产品定位、技术架构到实际产出质量逐项拆解。
+summary: 01Coder 在 Auto Design 冲到 42k Star 时做的中文深度评测，从产品定位、技术架构到实际产出质量逐项拆解。
 date: 2026-05-17
 category: Review
 durationSeconds: 745
@@ -9,7 +9,7 @@ author: 01Coder
 official: false
 ---
 
-01Coder 在 Open Design 触达 42k ⭐ 的节点上做的一期评测，串起产品定位、技术架构、与 Claude Design 的差异，以及社区接下来可能的走向。
+01Coder 在 Auto Design 触达 42k ⭐ 的节点上做的一期评测，串起产品定位、技术架构、与 Claude Design 的差异，以及社区接下来可能的走向。
 
 视频内容：
 

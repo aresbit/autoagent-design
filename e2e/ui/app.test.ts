@@ -131,8 +131,8 @@ for (const entry of automatedUiScenarios().filter(
           json: {
             designSystems: [
               {
-                id: 'nexu-soft-tech',
-                title: 'Nexu Soft Tech',
+                id: 'auto-soft-tech',
+                title: 'Auto Soft Tech',
                 category: 'Product',
                 summary: 'Warm utility system for product interfaces.',
                 swatches: ['#F7F4EE', '#D6CBBF', '#1F2937', '#D97757'],
@@ -673,13 +673,13 @@ async function runDesignSystemSelectionFlow(
   await createProjectNameOnly(page, entry);
   await page.getByTestId('design-system-trigger').click();
   await expect(page.getByTestId('design-system-search')).toBeVisible();
-  await page.getByTestId('design-system-search').fill('Nexu');
-  await page.getByRole('option', { name: /Nexu Soft Tech/i }).click();
-  await expect(page.getByTestId('design-system-trigger')).toContainText('Nexu Soft Tech');
+  await page.getByTestId('design-system-search').fill('Auto');
+  await page.getByRole('option', { name: /Auto Soft Tech/i }).click();
+  await expect(page.getByTestId('design-system-trigger')).toContainText('Auto Soft Tech');
   await page.getByTestId('create-project').click();
 
   await expect(page).toHaveURL(/\/projects\//);
-  await expect(page.getByTestId('project-meta')).toContainText('Nexu Soft Tech');
+  await expect(page.getByTestId('project-meta')).toContainText('Auto Soft Tech');
   await expect(page.getByTestId('chat-composer')).toBeVisible();
   const { projectId } = await getCurrentProjectContext(page);
   await expectScenarioProjectState(page, entry, projectId);
@@ -717,7 +717,7 @@ async function runPluginCreateImportFlow(
 
   await page.getByTestId('plugins-create-button').click();
   const homeInput = page.getByTestId('home-hero-input');
-  await expect(homeInput).toHaveValue(/Create an Open Design plugin/);
+  await expect(homeInput).toHaveValue(/Create an Auto Design plugin/);
   await expect(page.getByTestId('home-hero-active-plugin')).toContainText('Create plugin');
 
   await page.getByTestId('entry-nav-plugins').click();
@@ -1210,7 +1210,7 @@ async function createProjectNameOnly(
 async function gotoEntryHome(page: Page) {
   await page.goto('/', { waitUntil: 'domcontentloaded' });
   await waitForLoadingToClear(page);
-  const privacyDialog = page.getByRole('dialog').filter({ hasText: 'Help us improve Open Design' });
+  const privacyDialog = page.getByRole('dialog').filter({ hasText: 'Help us improve Auto Design' });
   if (await privacyDialog.isVisible()) {
     await privacyDialog.getByRole('button', { name: /not now/i }).click();
     await expect(privacyDialog).toHaveCount(0);
@@ -1226,7 +1226,7 @@ async function openNewProjectModal(page: Page) {
 }
 
 async function waitForLoadingToClear(page: Page) {
-  await page.getByText('Loading Open Design…').waitFor({ state: 'hidden', timeout: T.medium });
+  await page.getByText('Loading Auto Design…').waitFor({ state: 'hidden', timeout: T.medium });
 }
 
 async function getCurrentProjectContext(

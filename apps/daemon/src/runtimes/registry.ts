@@ -6,7 +6,6 @@ import { geminiAgentDef } from './defs/gemini.js';
 import { opencodeAgentDef } from './defs/opencode.js';
 import { hermesAgentDef } from './defs/hermes.js';
 import { grokBuildAgentDef } from './defs/grok-build.js';
-import { kimiAgentDef } from './defs/kimi.js';
 import { cursorAgentDef } from './defs/cursor-agent.js';
 import { qwenAgentDef } from './defs/qwen.js';
 import { qoderAgentDef } from './defs/qoder.js';
@@ -19,6 +18,10 @@ import { deepseekAgentDef } from './defs/deepseek.js';
 import { readLocalAgentProfileDefs as readLocalAgentProfileDefsFromFile } from './local-profiles.js';
 import type { RuntimeAgentDef } from './types.js';
 
+// NOTE: kimiAgentDef is intentionally removed from BASE_AGENT_DEFS because
+// Kimi Desktop (Electron GUI app) uses the same binary name `kimi` as the
+// CLI, causing the daemon to accidentally launch the GUI when scanning PATH.
+// See task_plan.md: "kimi-desktop auto-launch fix".
 const BASE_AGENT_DEFS: RuntimeAgentDef[] = [
   openccAgentDef,
   claudeAgentDef,
@@ -28,7 +31,6 @@ const BASE_AGENT_DEFS: RuntimeAgentDef[] = [
   opencodeAgentDef,
   hermesAgentDef,
   grokBuildAgentDef,
-  kimiAgentDef,
   cursorAgentDef,
   qwenAgentDef,
   qoderAgentDef,

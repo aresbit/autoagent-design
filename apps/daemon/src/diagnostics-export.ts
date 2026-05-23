@@ -113,11 +113,11 @@ export function createDiagnosticsExportHandler(options: DiagnosticsHandlerOption
         sources,
         redaction: { username },
         crashReports: {
-          // Restrict to Open Design's own process names. A generic "Electron"
+          // Restrict to Auto Design's own process names. A generic "Electron"
           // substring would sweep up crash reports from any other Electron
           // app on the host (VS Code, Slack, …) and leak unrelated user data
           // into the support bundle.
-          matchSubstrings: ['Open Design', 'open-design'],
+          matchSubstrings: ['Auto Design', 'open-design'],
           withinDays: 7,
           maxReports: 10,
           homeDir: home,

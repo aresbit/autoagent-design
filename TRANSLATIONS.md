@@ -1,6 +1,6 @@
 # Translation Guide
 
-> **Quick start for contributors:** This guide helps you add a new language translation to Open Design in ~2 hours instead of ~8 hours. Follow the checklist, avoid common mistakes, and ship your PR with confidence.
+> **Quick start for contributors:** This guide helps you add a new language translation to Auto Design in ~2 hours instead of ~8 hours. Follow the checklist, avoid common mistakes, and ship your PR with confidence.
 
 For general contribution flow, see [CONTRIBUTING.md](CONTRIBUTING.md). The "Localization maintenance" section there documents the boundary between translated surfaces and agent-facing source material. This file covers **how** to add and maintain a locale across the surfaces contributors touch most often: UI chrome, root READMEs, core docs, and display metadata.
 
@@ -29,13 +29,13 @@ cp README.md README.it.md
 
 **What to translate:**
 - ✅ All text, headings, descriptions
-- ✅ Alt text: `alt="Open Design banner"`
+- ✅ Alt text: `alt="Auto Design banner"`
 - ✅ Link text: `[Quickstart](QUICKSTART.md)` → `[Guida rapida](QUICKSTART.it.md)` (if that file exists; otherwise keep `QUICKSTART.md` target)
 
 **What NOT to translate:**
 - ❌ Code snippets, commands, file paths
 - ❌ URLs, GitHub usernames, repo names
-- ❌ Brand names: "Open Design", "Claude Code"
+- ❌ Brand names: "Auto Design", "Claude Code"
 - ❌ Technical terms: CLI, API, BYOK, daemon
 
 ### Step 3: Update ALL Language Switchers (Critical!)
@@ -104,7 +104,7 @@ pnpm i18n:check
 
 ## 📋 Supported Languages
 
-Open Design currently supports **18 languages** across different surfaces:
+Auto Design currently supports **18 languages** across different surfaces:
 
 | Language             | Code    | README | UI Dict | Core Docs | Status |
 | -------------------- | ------- | ------ | ------- | --------- | ------ |
@@ -262,7 +262,7 @@ The `LOCALES` array in [`apps/web/src/i18n/types.ts`](apps/web/src/i18n/types.ts
 
 **What to translate:**
 - ✅ All prose text, headings, descriptions
-- ✅ Alt text in images: `alt="Open Design banner"` → `alt="Banner di Open Design"`
+- ✅ Alt text in images: `alt="Auto Design banner"` → `alt="Banner di Auto Design"`
 - ✅ Badge labels where appropriate: `discord-join` → `discord-unisciti`
 - ✅ Code comments in examples (if instructional)
 - ✅ Link text: `[Quickstart](QUICKSTART.md)` → `[Guida rapida](QUICKSTART.it.md)` (if that file exists; otherwise keep `QUICKSTART.md` target)
@@ -271,14 +271,14 @@ The `LOCALES` array in [`apps/web/src/i18n/types.ts`](apps/web/src/i18n/types.ts
 - ❌ Code snippets (commands, file paths, variable names)
 - ❌ URLs and domain names
 - ❌ GitHub usernames and repository names
-- ❌ Brand names: "Open Design", "Claude Code", "Anthropic", "Vercel"
+- ❌ Brand names: "Auto Design", "Claude Code", "Anthropic", "Vercel"
 - ❌ Technical terms with no standard translation: CLI, API, SDK, BYOK, daemon, sidecar, monorepo, artifact, iframe
 - ❌ Command output (keep terminal output in English as it appears in actual software)
 
 **Terminology guidelines:**
 - Use the English term with a brief explanation in parentheses on first use if no standard translation exists:
   ```
-  Open Design è un'alternativa open-source (codice aperto) a Claude Design.
+  Auto Design è un'alternativa open-source (codice aperto) a Claude Design.
   ```
 - For regional variants (zh-CN vs zh-TW, pt-BR vs pt-PT), choose the most widely understood variant for your target audience
 - See [Regional terminology](#regional-terminology) section for specific glossaries
@@ -315,7 +315,7 @@ Some badges in the README can be localized by changing the badge URL:
 Translations follow the conventions of the target region's tech writing community. Maintainers trust contributors to make idiomatic choices and will not gate-keep on style.
 
 **Technical terms to keep in English:**
-- Open Design, Claude Code, Claude Design
+- Auto Design, Claude Code, Claude Design
 - Skills, Design Systems
 - BYOK (Bring Your Own Key)
 - CLI, API, SDK
@@ -418,7 +418,7 @@ If a contributor wants neutral or Latin American Spanish, propose a separate loc
 
 **Example:**
 ```markdown
-Open Design هو البديل مفتوح المصدر لـ Claude Design
+Auto Design هو البديل مفتوح المصدر لـ Claude Design
 ```
 
 ### Other Languages
@@ -507,7 +507,7 @@ feat(i18n): add [Language] translation
 
 ```markdown
 ## Summary
-Adds [Language] translation for Open Design documentation.
+Adds [Language] translation for Auto Design documentation.
 
 ## Translation Scope
 - [x] README.[lang].md
@@ -688,7 +688,7 @@ Web server running at http://localhost:17573
 **A:** Use the English term with a brief explanation in parentheses on first use:
 
 ```markdown
-Open Design è un'alternativa open-source (codice aperto) a Claude Design.
+Auto Design è un'alternativa open-source (codice aperto) a Claude Design.
 ```
 
 After the first use, you can use just the English term.
@@ -701,7 +701,7 @@ After the first use, you can use just the English term.
 
 ```markdown
 <!-- README: Arabic text flows RTL automatically -->
-Open Design هو البديل مفتوح المصدر لـ Claude Design
+Auto Design هو البديل مفتوح المصدر لـ Claude Design
 
 <!-- Code blocks stay LTR -->
 ```bash
@@ -799,11 +799,11 @@ These items are **decided to defer** — the team has agreed not to act on them 
 
 Thank you to all our translation contributors! 🌍
 
-Every translation makes Open Design accessible to more developers worldwide.
+Every translation makes Auto Design accessible to more developers worldwide.
 
 **Current contributors:**
 - See [Contributors](https://github.com/nexu-io/open-design/graphs/contributors) for the full list
 
 ---
 
-**Ready to contribute?** Pick a language, follow the [Quick Start](#-quick-start-adding-your-language-in-5-steps), and submit your PR. We can't wait to see Open Design in your language! 🚀
+**Ready to contribute?** Pick a language, follow the [Quick Start](#-quick-start-adding-your-language-in-5-steps), and submit your PR. We can't wait to see Auto Design in your language! 🚀

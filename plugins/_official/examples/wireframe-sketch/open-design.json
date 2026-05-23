@@ -7,7 +7,7 @@
   "description": "A hand-drawn wireframe exploration — graph-paper background, marker /\npencil tone, multiple tab labels for variants, sticky-note annotations,\nscribbled chart placeholders, hatched fills. Reads like a designer's\nwhiteboard before any pixels are committed. Use when the brief asks for\n\"wireframe\", \"sketch wireframe\", \"hand-drawn\", \"lo-fi\", \"whiteboard\",\n\"草稿\", or \"手绘原型\".",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/nexu-io"
   },
   "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/examples/wireframe-sketch",

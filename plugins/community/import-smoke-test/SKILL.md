@@ -1,11 +1,11 @@
 ---
 name: community-import-smoke-test
-description: A portable community plugin for validating Open Design plugin import flows.
+description: A portable community plugin for validating Auto Design plugin import flows.
 ---
 
 # Community Import Smoke Test
 
-Use this plugin when validating that Open Design can import community plugins
+Use this plugin when validating that Auto Design can import community plugins
 from a local folder, a zip archive, a GitHub subpath, or a marketplace entry.
 
 When this plugin is applied:

@@ -4,10 +4,10 @@
   "name": "od-design-refine",
   "title": "Design refine",
   "version": "0.1.0",
-  "description": "Baseline Refine plugin for improving an existing Open Design artifact with a focused critique, small patch, and handoff summary.",
+  "description": "Baseline Refine plugin for improving an existing Auto Design artifact with a focused critique, small patch, and handoff summary.",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/nexu-io"
   },
   "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/scenarios/od-design-refine",

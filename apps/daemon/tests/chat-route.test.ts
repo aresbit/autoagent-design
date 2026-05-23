@@ -774,7 +774,7 @@ process.stdin.on('end', () => {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             agentId: 'opencode',
-            message: 'build the Open Design landing page',
+            message: 'build the Auto Design landing page',
             skillId: 'editorial-collage',
             skillIds: ['open-design-landing'],
           }),

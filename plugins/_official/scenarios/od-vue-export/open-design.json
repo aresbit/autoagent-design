@@ -4,10 +4,10 @@
   "name": "od-vue-export",
   "title": "Export to Vue",
   "version": "0.1.0",
-  "description": "Starter downstream export plugin for turning an accepted Open Design artifact into a Vue 3 single-file component handoff.",
+  "description": "Starter downstream export plugin for turning an accepted Auto Design artifact into a Vue 3 single-file component handoff.",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/nexu-io"
   },
   "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/scenarios/od-vue-export",
@@ -49,8 +49,8 @@
     ],
     "useCase": {
       "query": {
-        "en": "Export the accepted Open Design artifact to a Vue 3 single-file component. Preserve the visual system, use Composition API patterns where state is needed, and finish with integration notes.",
-        "zh-CN": "将已确认的 Open Design 产物导出为 Vue 3 单文件组件。保持视觉系统一致，在需要状态时使用 Composition API 模式，并在最后给出集成说明。"
+        "en": "Export the accepted Auto Design artifact to a Vue 3 single-file component. Preserve the visual system, use Composition API patterns where state is needed, and finish with integration notes.",
+        "zh-CN": "将已确认的 Auto Design 产物导出为 Vue 3 单文件组件。保持视觉系统一致，在需要状态时使用 Composition API 模式，并在最后给出集成说明。"
       },
       "exampleOutputs": []
     },

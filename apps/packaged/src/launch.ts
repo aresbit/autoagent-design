@@ -13,7 +13,7 @@ export class PackagedPathAccessError extends Error {
   constructor(message: string, options?: { cause?: unknown; title?: string }) {
     super(message, options);
     this.name = "PackagedPathAccessError";
-    this.title = options?.title ?? "Open Design cannot access its data folder";
+    this.title = options?.title ?? "Auto Design cannot access its data folder";
   }
 }
 
@@ -48,7 +48,7 @@ function formatWritablePathError(options: {
   const message = error instanceof Error ? error.message : String(error);
   const parentPath = dirname(attemptedPath);
   const diagLines = [
-    `Open Design could not create or write to:`,
+    `Auto Design could not create or write to:`,
     attemptedPath,
     "",
     `Current user: ${currentUser}`,

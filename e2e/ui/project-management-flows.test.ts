@@ -5,8 +5,8 @@ const STORAGE_KEY = 'open-design:config';
 
 const DESIGN_SYSTEMS = [
   {
-    id: 'nexu-soft-tech',
-    title: 'Nexu Soft Tech',
+    id: 'auto-soft-tech',
+    title: 'Auto Soft Tech',
     category: 'Product',
     summary: 'Warm utility system for product interfaces.',
     swatches: ['#F7F4EE', '#D6CBBF', '#1F2937', '#D97757'],
@@ -149,7 +149,7 @@ test('design system multi-select stores primary and inspiration metadata', async
   await openNewProjectPanel(page);
   await page.getByTestId('new-project-tab-prototype').click();
   await page.getByTestId('new-project-name').fill('Design system multi select metadata');
-  await expect(page.getByTestId('design-system-trigger')).toContainText('Nexu Soft Tech');
+  await expect(page.getByTestId('design-system-trigger')).toContainText('Auto Soft Tech');
 
   await page.getByTestId('design-system-trigger').click();
   const multiTab = page.getByRole('tab', { name: /multi/i });
@@ -158,7 +158,7 @@ test('design system multi-select stores primary and inspiration metadata', async
   await page.getByRole('option', { name: /Editorial Noir/i }).click();
   await page.getByRole('option', { name: /Data Mist/i }).click();
 
-  await expect(page.getByTestId('design-system-trigger')).toContainText('Nexu Soft Tech');
+  await expect(page.getByTestId('design-system-trigger')).toContainText('Auto Soft Tech');
   await expect(page.getByTestId('design-system-trigger')).toContainText('+2');
   await page.getByTestId('design-system-trigger').click();
   await expect(page.locator('.ds-picker-popover')).toHaveCount(0);
@@ -172,7 +172,7 @@ test('design system multi-select stores primary and inspiration metadata', async
       inspirationDesignSystemIds?: string[];
     };
   };
-  expect(body.designSystemId).toBe('nexu-soft-tech');
+  expect(body.designSystemId).toBe('auto-soft-tech');
   expect(body.metadata?.inspirationDesignSystemIds).toEqual([
     'editorial-noir',
     'data-mist',
@@ -193,7 +193,7 @@ test('design system picker searches and switches the single selected system', as
   await page.getByTestId('design-system-trigger').click();
   await page.getByTestId('design-system-search').fill('mist');
   await expect(page.getByRole('option', { name: /Data Mist/i })).toBeVisible();
-  await expect(page.getByRole('option', { name: /Nexu Soft Tech/i })).toHaveCount(0);
+  await expect(page.getByRole('option', { name: /Auto Soft Tech/i })).toHaveCount(0);
   await page.getByRole('option', { name: /Data Mist/i }).click();
 
   await expect(page.getByTestId('design-system-trigger')).toContainText('Data Mist');

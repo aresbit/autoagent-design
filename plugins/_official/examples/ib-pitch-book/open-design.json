@@ -7,7 +7,7 @@
   "description": "Investment-banking pitch book for strategic alternatives — trading comps,\nprecedent transactions, valuation football field, DCF sensitivity,\nstrategic-options matrix, process recommendation. Built by adapting\n`assets/template.html` so IB-specific chrome, disclosure bands, and source\nlabels are preserved. Use for Board / sell-side discussion materials. Not a\nVC fundraising deck (see html-ppt-pitch-deck). Workflow adapted from\nAnthropic financial-services Pitch Agent (Apache-2.0).",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/nexu-io"
   },
   "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/examples/ib-pitch-book",

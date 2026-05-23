@@ -1,6 +1,6 @@
-# Open Design Telemetry Relay
+# Auto Design Telemetry Relay
 
-Cloudflare Worker relay for opt-in Open Design telemetry. The shipped desktop
+Cloudflare Worker relay for opt-in Auto Design telemetry. The shipped desktop
 client sends redacted Langfuse ingestion batches here after the user enables
 metrics. This Worker holds the Langfuse write credentials and forwards valid
 batches to Langfuse.
@@ -17,7 +17,7 @@ release config should use only `OPEN_DESIGN_TELEMETRY_RELAY_URL`.
 
 ## Abuse controls
 
-The Worker requires the Open Design telemetry marker header, validates the
+The Worker requires the Auto Design telemetry marker header, validates the
 Langfuse ingestion batch shape and size before forwarding, and uses Cloudflare
 Rate Limiting bindings for two independent keys:
 

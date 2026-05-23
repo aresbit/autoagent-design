@@ -40,7 +40,7 @@ Node `~24` and pnpm `10.33.x` are required. `nvm` / `fnm` are optional; use `nvm
 
 ## Docker Setup
 
-Run Open Design without installing Node.js or pnpm.
+Run Auto Design without installing Node.js or pnpm.
 
 ### Prerequisites
 
@@ -50,7 +50,7 @@ Make sure Docker Desktop with Compose v2 is installed:
 docker compose version
 ```
 
-### Start Open Design
+### Start Auto Design
 
 ```bash
 cd deploy

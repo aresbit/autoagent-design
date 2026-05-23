@@ -248,7 +248,7 @@ describe('Plan §8 e2e-3 (entry slice) — headless install → project → run'
     expect(shareBody.sourcePluginId).toBe('sample-plugin');
     expect(shareBody.appliedPluginSnapshotId).toBeTruthy();
     expect(shareBody.stagedPath).toBe('plugin-source/sample-plugin');
-    expect(shareBody.prompt).toContain('Publish the local Open Design plugin');
+    expect(shareBody.prompt).toContain('Publish the local Auto Design plugin');
     expect(shareBody.prompt).toContain('/api/projects/$OD_PROJECT_ID/plugins/publish-github');
     expect(shareBody.prompt).toContain('plugin-source/sample-plugin');
     expect(shareBody.project.pendingPrompt).toBe(shareBody.prompt);

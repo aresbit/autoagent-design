@@ -539,7 +539,7 @@ test('home starters can jump into plugin creation through the registry browse fl
   await expect(page.locator('h1').filter({ hasText: 'Plugins' })).toBeVisible();
   await page.getByTestId('plugins-create-button').click();
 
-  await expect(page.getByTestId('home-hero-input')).toHaveValue(/Create an Open Design plugin/i);
+  await expect(page.getByTestId('home-hero-input')).toHaveValue(/Create an Auto Design plugin/i);
 });
 
 test('home starters search can enter a no-results state and recover with clear', async ({ page }) => {
@@ -644,7 +644,7 @@ test('home starters html details modal shows metadata links, supports copy query
     inputs: [{ name: 'topic', type: 'string', default: 'editorial systems' }],
     previewEntry: './example.html',
     tags: ['deck', 'marketing'],
-    authorName: 'Open Design',
+    authorName: 'Auto Design',
     authorUrl: 'https://github.com/nexu-io/open-design',
     homepage: 'https://example.com/html-metadata-plugin',
     context: {
@@ -693,7 +693,7 @@ test('home starters html details modal shows metadata links, supports copy query
 
   const dialog = page.getByRole('dialog', { name: /HTML Metadata Plugin preview/i });
   await expect(dialog).toBeVisible();
-  await expect(page.getByTestId('plugin-details-author')).toContainText('Open Design');
+  await expect(page.getByTestId('plugin-details-author')).toContainText('Auto Design');
   await expect(page.getByTestId('plugin-details-author-profile')).toHaveAttribute(
     'href',
     'https://github.com/nexu-io/open-design',
@@ -923,7 +923,7 @@ test('home hero attachment-only submit uploads the file and sends it with the fi
 
 async function gotoEntryHome(page: Page) {
   await page.goto('/');
-  const privacyDialog = page.getByRole('dialog').filter({ hasText: 'Help us improve Open Design' });
+  const privacyDialog = page.getByRole('dialog').filter({ hasText: 'Help us improve Auto Design' });
   if (await privacyDialog.isVisible()) {
     await privacyDialog.getByRole('button', { name: /not now/i }).click();
     await expect(privacyDialog).toHaveCount(0);

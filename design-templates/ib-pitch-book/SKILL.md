@@ -44,7 +44,7 @@ End-to-end **investment-banking-style** pitch materials for a **strategic
 alternatives** conversation (coverage & advisory). This is the workflow shape
 of Anthropic's **Pitch Agent** from
 [`financial-services`](https://github.com/anthropics/financial-services),
-repackaged as an Open Design `deck` skill.
+repackaged as an Auto Design `deck` skill.
 
 ## When to use
 
@@ -143,10 +143,10 @@ Default **10-slide** spine unless the brief says otherwise:
 
 ### Step 3 — Export
 
-Follow Open Design's deck export path for the active session (HTML / PDF /
+Follow Auto Design's deck export path for the active session (HTML / PDF /
 PPTX per daemon capabilities).
 
-## Relationship to Open Design financial skills
+## Relationship to Auto Design financial skills
 
 - **`dcf-valuation`** produces a Markdown valuation memo — complementary; this
   deck embeds DCF **summary** slides, not the full memo file.
@@ -157,4 +157,4 @@ PPTX per daemon capabilities).
 
 See **`references/attribution.md`**. Source workflow and naming derive from
 Anthropic's Apache-2.0 **financial-services** repository; this skill file is an
-original adaptation for Open Design.
+original adaptation for Auto Design.

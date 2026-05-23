@@ -19,7 +19,7 @@ const TRUST_META: Record<
 > = {
   official: {
     label: 'Official',
-    description: 'Open Design official',
+    description: 'Auto Design official',
   },
   trusted: {
     label: 'Trusted',

@@ -1,4 +1,4 @@
-# Open Design Helm chart
+# Auto Design Helm chart
 
 > Spec §15.5 reference deployment.
 > Status: **values + templates shipped; per-cloud override files pending.**

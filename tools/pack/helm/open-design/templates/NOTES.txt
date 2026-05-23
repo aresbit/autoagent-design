@@ -1,4 +1,4 @@
-Open Design has been deployed.
+Auto Design has been deployed.
 
   Image:    {{ .Values.image.repository }}:{{ .Values.image.tag }}
   Replicas: {{ .Values.replicaCount }}

@@ -1537,7 +1537,7 @@ function DesignSystemProjectPanel({
             <Icon name="help-circle" size={16} />
             <span>
               <strong>Missing brand fonts</strong>
-              <small>Open Design is rendering typography with substitute web fonts.</small>
+              <small>Auto Design is rendering typography with substitute web fonts.</small>
             </span>
             <button type="button" className="ghost compact" onClick={onUploadAssets}>
               <Icon name="upload" size={13} />
@@ -2373,7 +2373,7 @@ function designSystemSectionRunningNotice(
   activity: DesignSystemSectionActivity,
 ): string {
   if (activity.phase === 'reading') {
-    return `Open Design is reading ${section.title} context for this section.`;
+    return `Auto Design is reading ${section.title} context for this section.`;
   }
   return `${designSystemSectionPhaseLabel(section, activity)} now.`;
 }

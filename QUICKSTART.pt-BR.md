@@ -95,7 +95,7 @@ ls -la apps/daemon/dist/cli.js
 curl -s http://127.0.0.1:7457/api/health
 ```
 
-Em seguida, abra o projeto pelo app Open Design novamente em vez de retomar uma sessão antiga de agente no terminal. Um agente spawnado pelo daemon deve ver valores como:
+Em seguida, abra o projeto pelo app Auto Design novamente em vez de retomar uma sessão antiga de agente no terminal. Um agente spawnado pelo daemon deve ver valores como:
 
 ```bash
 echo "OD_BIN=$OD_BIN"
@@ -179,7 +179,7 @@ open-design/
 │   └── desktop/               # Electron runtime, launched/inspected by tools-dev
 ├── packages/
 │   ├── contracts/             # shared web/daemon app contracts
-│   ├── sidecar-proto/         # Open Design sidecar protocol contract
+│   ├── sidecar-proto/         # Auto Design sidecar protocol contract
 │   ├── sidecar/               # generic sidecar runtime primitives
 │   └── platform/              # generic process/platform primitives
 ├── tools/dev/                 # `pnpm tools-dev` lifecycle and inspect CLI
@@ -216,8 +216,8 @@ open-design/
 
 - **"no agents found on PATH"** — instale um destes: `claude`, `codex`, `devin`, `gemini`, `opencode`, `cursor-agent`, `qwen`, `copilot`. Ou troque para o modo API em Settings e cole uma chave de provider.
 - **daemon 500 em /api/chat** — confira o terminal do daemon para a tail de stderr; geralmente o CLI rejeitou os args. CLIs diferentes aceitam formatos de argv diferentes; veja `buildArgs` em `apps/daemon/src/agents.ts` se precisar ajustar.
-- **geração de mídia diz que `OD_BIN` está faltando ou que a URL do daemon é `:0`** — rode as verificações do dispatcher de mídia acima. Não retome a sessão antiga do CLI; reabra o projeto pelo app Open Design para o daemon injetar variáveis `OD_*` novas.
-- **Codex carrega muito contexto de plugin** — suba o Open Design com `OD_CODEX_DISABLE_PLUGINS=1 pnpm tools-dev` para que processos Codex spawnados pelo daemon rodem com `--disable plugins`.
+- **geração de mídia diz que `OD_BIN` está faltando ou que a URL do daemon é `:0`** — rode as verificações do dispatcher de mídia acima. Não retome a sessão antiga do CLI; reabra o projeto pelo app Auto Design para o daemon injetar variáveis `OD_*` novas.
+- **Codex carrega muito contexto de plugin** — suba o Auto Design com `OD_CODEX_DISABLE_PLUGINS=1 pnpm tools-dev` para que processos Codex spawnados pelo daemon rodem com `--disable plugins`.
 - **artifact nunca renderiza** — o modelo emitiu texto sem empacotar em `<artifact>`. Confirme que o system prompt está chegando (cheque o log do daemon) e considere trocar para um modelo mais capaz ou um skill mais estrito.
 
 ## Voltando à visão

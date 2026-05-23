@@ -79,7 +79,7 @@ in
     };
 
     meta = with lib; {
-      description = "Open Design — Next.js static SPA (apps/web)";
+      description = "Auto Design — Next.js static SPA (apps/web)";
       homepage = "https://github.com/nexu-io/open-design";
       license = licenses.asl20;
       platforms = platforms.linux ++ platforms.darwin;

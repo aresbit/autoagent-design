@@ -141,9 +141,9 @@ interface PendingPluginUseHandoff {
 }
 
 const AUTHORING_DEFAULT_SCENARIO_INPUTS = {
-  artifactKind: 'Open Design plugin',
-  audience: 'Open Design plugin authors',
-  topic: 'packaging a reusable workflow as an Open Design plugin',
+  artifactKind: 'Auto Design plugin',
+  audience: 'Auto Design plugin authors',
+  topic: 'packaging a reusable workflow as an Auto Design plugin',
 };
 
 type HomeDesignSystemOption = {

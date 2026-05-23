@@ -59,7 +59,7 @@ describe('buildPluginFolderAgentActionPrompt', () => {
         /Do NOT (call|route through) `?od plugin publish --to open-design`?/i,
       );
       expect(prompt).toMatch(
-        /registry[- ]submission|registry-submission flow|Open Design PR/i,
+        /registry[- ]submission|registry-submission flow|Auto Design PR/i,
       );
     });
 

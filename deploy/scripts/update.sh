@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Open Design — Updater
+# Auto Design — Updater
 # Pulls the latest image and restarts the service
 #
 # Usage: ./update.sh [--image <ref>] [--non-interactive]
@@ -72,7 +72,7 @@ done
 printf "\n"
 printf "${BOLD}  ┌──────────────────────────────────────┐${RESET}\n"
 printf "${BOLD}  │${RESET}                                      ${BOLD}│${RESET}\n"
-printf "${BOLD}  │${RESET}   ${CYAN}◈${RESET}  ${BOLD}Open Design${RESET}                     ${BOLD}│${RESET}\n"
+printf "${BOLD}  │${RESET}   ${CYAN}◈${RESET}  ${BOLD}Auto Design${RESET}                     ${BOLD}│${RESET}\n"
 printf "${BOLD}  │${RESET}      ${DIM}Updater${RESET}                         ${BOLD}│${RESET}\n"
 printf "${BOLD}  │${RESET}                                      ${BOLD}│${RESET}\n"
 printf "${BOLD}  └──────────────────────────────────────┘${RESET}\n"

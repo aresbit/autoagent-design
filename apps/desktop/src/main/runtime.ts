@@ -1127,7 +1127,7 @@ export async function createDesktopRuntime(options: DesktopRuntimeOptions): Prom
   const unsubscribeUpdater = options.updater?.subscribe(() => sendUpdaterStatus()) ?? (() => undefined);
   const requireMainWindowSender = (event: Electron.IpcMainInvokeEvent): void => {
     if (event.sender !== window.webContents) {
-      throw new Error("updater IPC is only available to the main Open Design window");
+      throw new Error("updater IPC is only available to the main Auto Design window");
     }
   };
   ipcMain.handle("od:update:status", async (event) => {

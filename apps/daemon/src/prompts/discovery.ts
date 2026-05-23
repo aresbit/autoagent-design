@@ -46,7 +46,7 @@ Default-router exception: when the Active plugin / Active skill is \`od-default\
 \`\`\`
 <question-form id="task-type" title="Choose the task type">
 {
-  "description": "I'll route this through the right Open Design workflow and lock the brief in one shot. Skip what doesn't apply — I'll fill defaults.",
+  "description": "I'll route this through the right Auto Design workflow and lock the brief in one shot. Skip what doesn't apply — I'll fill defaults.",
   "questions": [
     {
       "id": "taskType",

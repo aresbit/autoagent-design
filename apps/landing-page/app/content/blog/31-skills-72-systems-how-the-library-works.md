@@ -1,12 +1,12 @@
 ---
-title: "31 skills, 72 systems: how the Open Design library works"
+title: "31 skills, 72 systems: how the Auto Design library works"
 date: 2026-05-13
 category: "Guides"
 readingTime: 6
-summary: "A walk through the four primitives that make Open Design composable: skills, systems, adapters, and the daemon. With concrete examples of how a Markdown file becomes a pixel-perfect deliverable."
+summary: "A walk through the four primitives that make Auto Design composable: skills, systems, adapters, and the daemon. With concrete examples of how a Markdown file becomes a pixel-perfect deliverable."
 ---
 
-Open Design is, mechanically, four primitives stacked on top of each other:
+Auto Design is, mechanically, four primitives stacked on top of each other:
 
 1. **Skills** — what the agent should do
 2. **Systems** — what the output should look like
@@ -87,7 +87,7 @@ The output is real. The files are yours. You can edit them in any editor, hand t
 
 ## Why files, not a database
 
-Every primitive — skills, systems, adapters — is a folder of text files. There is no central database. There is no "Open Design account." There is no hosted service that has to keep working for your work to keep working.
+Every primitive — skills, systems, adapters — is a folder of text files. There is no central database. There is no "Auto Design account." There is no hosted service that has to keep working for your work to keep working.
 
 This is a deliberate trade. We give up the ability to do clever cross-user analytics, cross-project memory, or hosted collaboration. We get back: portability, longevity, auditability, and the ability for anyone to fork the entire library and ship their own variant.
 

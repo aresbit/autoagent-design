@@ -86,12 +86,12 @@ jobs:
             echo "::warning title=Blog indexing monitor not fully configured::GSC auth is missing; URL Inspection, Search Analytics, status refresh, and escalation checks will be skipped."
           fi
           if [ "$bot" != "true" ]; then
-            echo "::warning title=Blog indexing monitor writes disabled::Open Design bot secrets are missing; issue and status PR writes will be skipped."
+            echo "::warning title=Blog indexing monitor writes disabled::Auto Design bot secrets are missing; issue and status PR writes will be skipped."
           fi
           {
             echo "### Blog indexing monitor configuration"
             echo "- GSC auth configured: \`$gsc\`"
-            echo "- Open Design bot configured: \`$bot\`"
+            echo "- Auto Design bot configured: \`$bot\`"
             if [ "$gsc" != "true" ]; then
               echo ""
               echo "URL Inspection, Search Analytics, and status refresh steps will be skipped."
@@ -197,7 +197,7 @@ jobs:
           should=$(node -e "console.log(require('./.blog-indexing/low-traffic.json').shouldEscalate)")
           echo "should=$should" >> "$GITHUB_OUTPUT"
 
-      - name: Generate Open Design bot token
+      - name: Generate Auto Design bot token
         if: steps.window.outputs.count != '0' && steps.config.outputs.gsc == 'true' && steps.config.outputs.bot == 'true'
         id: open-design-bot-token
         uses: actions/create-github-app-token@v2

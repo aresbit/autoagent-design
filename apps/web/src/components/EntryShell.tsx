@@ -528,8 +528,8 @@ export function EntryShell({
               <a
                 className="entry-discord-badge"
                 href="https://discord.gg/mHAjSMV6gz"
-                aria-label="Join the Open Design Discord"
-                title="Join the Open Design Discord"
+                aria-label="Join the Auto Design Discord"
+                title="Join the Auto Design Discord"
                 data-testid="entry-discord-badge"
               >
                 <Icon name="discord" size={14} className="entry-discord-badge__icon" />

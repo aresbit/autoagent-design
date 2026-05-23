@@ -144,7 +144,7 @@ describe('readLangfuseConfig', () => {
 });
 
 describe('readTelemetrySinkConfig', () => {
-  it('prefers the Open Design telemetry relay when configured', () => {
+  it('prefers the Auto Design telemetry relay when configured', () => {
     const cfg = readTelemetrySinkConfig({
       OPEN_DESIGN_TELEMETRY_RELAY_URL: 'https://telemetry.open-design.ai/api/langfuse//',
       LANGFUSE_PUBLIC_KEY: 'pk',
@@ -555,7 +555,7 @@ describe('reportRunCompleted', () => {
     ]);
   });
 
-  it('POSTs serialized ingestion batches to the Open Design telemetry relay', async () => {
+  it('POSTs serialized ingestion batches to the Auto Design telemetry relay', async () => {
     const relayConfig: TelemetrySinkConfig = {
       kind: 'relay',
       relayUrl: 'https://telemetry.open-design.ai/api/langfuse',

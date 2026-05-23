@@ -1,7 +1,7 @@
 ---
-title: 'Open Design 全功能巡游：PPT、原型、生图、视频，还有桌面宠物'
+title: 'Auto Design 全功能巡游：PPT、原型、生图、视频，还有桌面宠物'
 youtubeId: iFoPlwKTwrU
-summary: 硅基麻辣拌 在 Open Design 从 6K 冲到 16K Star 的窗口期，把项目当时所有能跑的能力——PPT、海报、App 原型、草图生图、HyperFrame 动效、视频、桌面宠物——一口气过了一遍。
+summary: 硅基麻辣拌 在 Auto Design 从 6K 冲到 16K Star 的窗口期，把项目当时所有能跑的能力——PPT、海报、App 原型、草图生图、HyperFrame 动效、视频、桌面宠物——一口气过了一遍。
 date: 2026-05-03
 category: Demo
 durationSeconds: 783
@@ -9,7 +9,7 @@ author: 硅基麻辣拌
 official: false
 ---
 
-硅基麻辣拌 给 Open Design 做的一次"宽度优先"的能力巡游——视频带时间戳，可以按需跳到自己最想看的能力。
+硅基麻辣拌 给 Auto Design 做的一次"宽度优先"的能力巡游——视频带时间戳，可以按需跳到自己最想看的能力。
 
 章节速览：
 

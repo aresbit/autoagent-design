@@ -1745,9 +1745,9 @@ describe('SettingsDialog connectors interactions', () => {
 
 describe('SettingsDialog MCP server interactions', () => {
   const installInfo = {
-    command: '/Applications/Open Design.app/Contents/Resources/open-design/bin/node',
+    command: '/Applications/Auto Design.app/Contents/Resources/open-design/bin/node',
     args: [
-      '/Applications/Open Design.app/Contents/Resources/app/node_modules/@open-design/daemon/dist/cli.js',
+      '/Applications/Auto Design.app/Contents/Resources/app/node_modules/@open-design/daemon/dist/cli.js',
       'mcp',
       '--daemon-url',
       'http://127.0.0.1:51706',
@@ -1805,7 +1805,7 @@ describe('SettingsDialog MCP server interactions', () => {
       expect(screen.getByText(/claude mcp add-json --scope user open-design/i)).toBeTruthy();
     });
     expect(screen.getByText(/Restart your client to pick up the new server/i)).toBeTruthy();
-    expect(screen.getByText(/Open Design must be running for MCP tool calls to succeed/i)).toBeTruthy();
+    expect(screen.getByText(/Auto Design must be running for MCP tool calls to succeed/i)).toBeTruthy();
   });
 
   it('switches client instructions and snippet content when a different MCP client is selected', async () => {

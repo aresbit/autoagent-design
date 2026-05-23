@@ -1,6 +1,6 @@
 # Neutral Modern Usage
 
-Auto-generated package guide for Open Design agents and reviewers.
+Auto-generated package guide for Auto Design agents and reviewers.
 
 ## Read Order
 

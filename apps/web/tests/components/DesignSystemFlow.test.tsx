@@ -316,7 +316,7 @@ describe('DesignSystemCreationFlow', () => {
     await waitFor(() => expect(mocks.patchProject).toHaveBeenCalledWith(
       project.id,
       expect.objectContaining({
-        pendingPrompt: expect.stringContaining('Create this project as a complete Open Design design system workspace.'),
+        pendingPrompt: expect.stringContaining('Create this project as a complete Auto Design design system workspace.'),
       }),
     ));
     await waitFor(() => expect(onProjectPrepared).toHaveBeenCalledWith(
@@ -403,7 +403,7 @@ describe('DesignSystemCreationFlow', () => {
     expect(mocks.patchProject).toHaveBeenCalledWith(
       project.id,
       expect.objectContaining({
-        pendingPrompt: expect.stringContaining('Create this project as a complete Open Design design system workspace.'),
+        pendingPrompt: expect.stringContaining('Create this project as a complete Auto Design design system workspace.'),
       }),
     );
     expect(mocks.patchProject).toHaveBeenCalledWith(
@@ -1340,7 +1340,7 @@ describe('DesignSystemCreationFlow', () => {
 
     fireEvent.click(screen.getByRole('button', { name: 'Show access methods' }));
     expect(screen.getByText('This device')).toBeTruthy();
-    expect(screen.getByText('Open Design account')).toBeTruthy();
+    expect(screen.getByText('Auto Design account')).toBeTruthy();
     expect(screen.getByText('Connector platform')).toBeTruthy();
     expect(screen.getByText('Coming soon')).toBeTruthy();
     expect(screen.getByText('Not configured')).toBeTruthy();
@@ -1507,7 +1507,7 @@ describe('DesignSystemCreationFlow', () => {
         redirectUrl: 'https://example.com/oauth',
         expiresAt: '2099-05-08T10:00:00.000Z',
       },
-      error: 'Popup blocked. Allow popups for Open Design and try again.',
+      error: 'Popup blocked. Allow popups for Auto Design and try again.',
     });
     const openSpy = vi.spyOn(window, 'open').mockImplementation(() => ({ closed: false } as Window));
     const config = {
@@ -1528,7 +1528,7 @@ describe('DesignSystemCreationFlow', () => {
       fireEvent.click(screen.getByRole('button', { name: 'Connect via Composio' }));
 
       await waitFor(() => expect(screen.getByText('Pending')).toBeTruthy());
-      expect(screen.getByText('Popup blocked. Allow popups for Open Design and try again.')).toBeTruthy();
+      expect(screen.getByText('Popup blocked. Allow popups for Auto Design and try again.')).toBeTruthy();
 
       fireEvent.click(screen.getByRole('button', { name: 'Open authorization' }));
 

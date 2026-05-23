@@ -7,7 +7,7 @@
   "description": "A printable invoice page — sender + recipient block, line items table,\ntax breakdown, totals, and payment instructions. Use when the brief\nmentions \"invoice\", \"bill\", \"billing statement\", or \"发票\".",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/nexu-io"
   },
   "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/examples/invoice",

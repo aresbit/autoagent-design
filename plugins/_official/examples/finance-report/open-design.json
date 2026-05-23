@@ -7,7 +7,7 @@
   "description": "Quarterly / monthly financial report — masthead with KPIs, revenue and\nburn charts, P&L summary table, top-line highlights, and an outlook\nparagraph. Use when the brief mentions \"financial report\", \"Q3 report\",\n\"MRR review\", \"P&L\", or \"财报\".",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/nexu-io"
   },
   "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/examples/finance-report",

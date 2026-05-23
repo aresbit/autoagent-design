@@ -494,7 +494,7 @@ export function DesignSystemCreationFlow({
             disabled={!state.company.trim()}
             onClick={() => {
               if (!state.company.trim()) {
-                setError('Tell Open Design about the company or design system first.');
+                setError('Tell Auto Design about the company or design system first.');
                 return;
               }
               setStep('confirm');
@@ -647,7 +647,7 @@ export function DesignSystemCreationFlow({
               disabled={!state.company.trim()}
               onClick={() => {
                 if (!state.company.trim()) {
-                  setError('Tell Open Design about the company or design system first.');
+                  setError('Tell Auto Design about the company or design system first.');
                   return;
                 }
                 setStep('confirm');
@@ -1111,7 +1111,7 @@ export function DesignSystemDetailView({
         conversationId = fresh.id;
       }
       if (config.mode !== 'daemon' || !config.agentId) {
-        setChatError('Pick a local agent first, then ask Open Design to update this design system.');
+        setChatError('Pick a local agent first, then ask Auto Design to update this design system.');
         return;
       }
 
@@ -1484,9 +1484,9 @@ export function DesignSystemDetailView({
               <p>
                 {generationActive
                   ? activeJob?.kind === 'revision'
-                    ? 'Open Design is applying your feedback. You can keep reviewing while the updated draft is prepared.'
-                    : 'Open Design is still working, but you can start giving feedback on the work so far.'
-                  : 'Open Design is ready for review. Give feedback on the work so far, then publish when it is useful for future projects.'}
+                    ? 'Auto Design is applying your feedback. You can keep reviewing while the updated draft is prepared.'
+                    : 'Auto Design is still working, but you can start giving feedback on the work so far.'
+                  : 'Auto Design is ready for review. Give feedback on the work so far, then publish when it is useful for future projects.'}
               </p>
               <label>
                 <input
@@ -1508,7 +1508,7 @@ export function DesignSystemDetailView({
               <Icon name="help-circle" />
               <span>
                 <strong>Missing brand fonts</strong>
-                Open Design is rendering typography with substitute web fonts.
+                Auto Design is rendering typography with substitute web fonts.
               </span>
               <button type="button" className="ghost compact">
                 <Icon name="upload" />
@@ -1902,7 +1902,7 @@ function WorkspaceActivityCard({
         <span>
           <strong>
             {status === 'running'
-              ? 'Open Design is updating this system'
+              ? 'Auto Design is updating this system'
               : status === 'failed'
                 ? 'Workspace update needs attention'
                 : 'Workspace update ready'}
@@ -2116,8 +2116,8 @@ function GenerationStatusCard({ job }: { job: DesignSystemGenerationJob }) {
           <strong>
             {active
               ? job.kind === 'revision'
-                ? 'Open Design is revising'
-                : 'Open Design is still working'
+                ? 'Auto Design is revising'
+                : 'Auto Design is still working'
               : job.status === 'failed'
                 ? `${noun} needs attention`
                 : `${noun} completed`}
@@ -2458,10 +2458,10 @@ function GitHubRepositoryAccessPanel({
     {
       id: 'native-oauth',
       icon: 'link',
-      title: 'Open Design account',
+      title: 'Auto Design account',
       badge: 'Coming soon',
       tone: 'muted',
-      description: 'Native GitHub sign-in managed by Open Design; this build does not use an OD-managed GitHub token yet.',
+      description: 'Native GitHub sign-in managed by Auto Design; this build does not use an OD-managed GitHub token yet.',
     },
     {
       id: 'composio',
@@ -2485,7 +2485,7 @@ function GitHubRepositoryAccessPanel({
       <div className="ds-github-access-header">
         <span>
           <strong>Repository access: Auto</strong>
-          <p>Paste a GitHub URL. Open Design will use the first working access method.</p>
+          <p>Paste a GitHub URL. Auto Design will use the first working access method.</p>
         </span>
         <button
           type="button"
@@ -3103,7 +3103,7 @@ function buildCreationAgentPrompt(
   const localFolderRunbook = buildLocalFolderRunbook(state.codeFolders);
   const title = inferDesignSystemTitle(state);
   return [
-    'Create this project as a complete Open Design design system workspace.',
+    'Create this project as a complete Auto Design design system workspace.',
     '',
     'Autonomy requirement:',
     '- Do not ask setup or clarification questions during design-system generation.',
@@ -3163,7 +3163,7 @@ function buildCreationAgentPrompt(
       ? githubRunbook
       : '',
     state.codeFolders.length
-      ? `Read the linked local code folders that Open Design attached to this project: ${state.codeFolders.join(', ')}. Treat them as source context only unless the user asks you to edit them.\n\n${localFolderRunbook}`
+      ? `Read the linked local code folders that Auto Design attached to this project: ${state.codeFolders.join(', ')}. Treat them as source context only unless the user asks you to edit them.\n\n${localFolderRunbook}`
       : '',
     stagedLocalCode?.uploadedPaths.length
       ? `Inspect the copied local code snapshot files in this project under \`${LOCAL_CODE_UPLOAD_ROOT}/\`: ${stagedLocalCode.uploadedPaths.slice(0, 20).join(', ')}${stagedLocalCode.uploadedPaths.length > 20 ? `, and ${stagedLocalCode.uploadedPaths.length - 20} more` : ''}.`
@@ -3289,7 +3289,7 @@ function buildSourceContextManifest(
     '- DESIGN.md is the canonical source of truth.',
     '- Use the canonical design-system title above for headings, README/SKILL names, preview labels, and UI-kit copy unless inspected evidence proves a more accurate product name. Never title the system from URL protocol text such as `https`.',
     '- colors_and_type.css should hold concrete reusable tokens when the source evidence supports them; if fonts/ contains preserved font files, colors_and_type.css must bind those files with @font-face, @import, or url(...) references so typography does not fall back to substitute fonts.',
-    '- README.md and SKILL.md should make the extracted system reusable as a real Open Design design-system package.',
+    '- README.md and SKILL.md should make the extracted system reusable as a real Auto Design design-system package.',
     '- README.md should include a source-backed Product Overview/Product Context section, source repository or source folder references, package contents, a concrete `## Preview Manifest` listing every generated `preview/*.html` card, and reuse workflow, similar to Claude Design exports.',
     '- SKILL.md should include YAML frontmatter with `name`, `description`, and `user-invocable`, plus Claude-style reusable skill sections: What is inside, Source context, When to use this skill, How to use, and Design system highlights. The usage guidance should point agents at README.md, DESIGN.md, colors_and_type.css, preview/, assets/, build/, fonts/, source_examples/, and ui_kits/app/.',
     '- README.md, SKILL.md, DESIGN.md, and ui_kits/app/README.md must describe the final focused preview cards and `ui_kits/app/` paths, not old scaffold names such as `preview/typography-scale.html` or `ui_kits/generated_interface/`.',

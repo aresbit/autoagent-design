@@ -10,7 +10,7 @@ describe('TrustBadge', () => {
     expect(html).toContain('Official');
     expect(html).toContain('plugin-trust-badge--official');
     expect(html).toContain('data-trust-tier="official"');
-    expect(html).toContain('Open Design official');
+    expect(html).toContain('Auto Design official');
   });
 
   it('uses one visual API for marketplace trust tiers', () => {
@@ -36,6 +36,6 @@ describe('TrustBadge', () => {
 
     expect(html).toContain('Action plugin');
     expect(html).toContain('plugin-trust-badge--official');
-    expect(html).toContain('aria-label="Open Design official: Action plugin"');
+    expect(html).toContain('aria-label="Auto Design official: Action plugin"');
   });
 });

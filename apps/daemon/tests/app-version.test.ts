@@ -31,8 +31,8 @@ describe('app version helpers', () => {
     expect(resolveAppVersionInfo({
       packageMetadata: { version: '0.3.0' },
       env: { OD_APP_VERSION: '0.3.1-beta.1' },
-      resourcesPath: '/Applications/Open Design.app/Contents/Resources',
-      execPath: '/Applications/Open Design.app/Contents/Resources/open-design/bin/node',
+      resourcesPath: '/Applications/Auto Design.app/Contents/Resources',
+      execPath: '/Applications/Auto Design.app/Contents/Resources/open-design/bin/node',
       platform: 'darwin',
       arch: 'arm64',
     })).toEqual({

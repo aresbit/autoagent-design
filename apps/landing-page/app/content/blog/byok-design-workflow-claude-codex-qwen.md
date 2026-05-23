@@ -3,12 +3,12 @@ title: "BYOK design workflow: run Claude, Codex, or Qwen on your own key"
 date: 2026-05-13
 category: "Guides"
 readingTime: 6
-summary: "Most AI design tools quietly add a margin to every token you spend. Open Design takes the opposite stance — bring your own model key, pay the provider directly, and keep full control of where inference runs. Here's how the BYOK layer actually works."
+summary: "Most AI design tools quietly add a margin to every token you spend. Auto Design takes the opposite stance — bring your own model key, pay the provider directly, and keep full control of where inference runs. Here's how the BYOK layer actually works."
 ---
 
 If you've used a hosted AI design product in 2026, you've probably noticed the bill creeping up. A subscription on top of a per-seat charge, layered on top of an inference markup that nobody publishes. The math is opaque on purpose.
 
-Open Design doesn't run inference. We don't have a margin on tokens. The entire workflow is built around **bring-your-own-key (BYOK)** — you point the daemon at any OpenAI-compatible endpoint, paste your own API key, and you're done.
+Auto Design doesn't run inference. We don't have a margin on tokens. The entire workflow is built around **bring-your-own-key (BYOK)** — you point the daemon at any OpenAI-compatible endpoint, paste your own API key, and you're done.
 
 This post explains why we made that choice, how it works under the hood, and what it actually changes in your day-to-day workflow.
 
@@ -19,7 +19,7 @@ There are two definitions of BYOK floating around the AI tooling space, and they
 - **Surface BYOK** — the tool lets you paste a key, but still routes inference through their servers, logs your prompts, and may apply rate limits.
 - **Real BYOK** — the tool calls the model provider directly from your machine (or your infrastructure). Your prompts never touch the vendor's servers. The vendor takes no margin.
 
-Open Design is the second kind. The daemon makes HTTP calls to whichever endpoint you configure, with your key, from your machine. We don't proxy. We don't log. We don't see your prompts.
+Auto Design is the second kind. The daemon makes HTTP calls to whichever endpoint you configure, with your key, from your machine. We don't proxy. We don't log. We don't see your prompts.
 
 ## The OpenAI-compatible adapter
 
@@ -78,7 +78,7 @@ There's a second reason BYOK matters: **the prompts contain your client's brand.
 
 Hosted inference means routing brand documents, unannounced product names, internal pricing, and pre-launch creative through a third party's servers. Most companies have an opinion about that. Some have a contract about it.
 
-With BYOK, the prompt round-trip is between your laptop and the model provider you've already vetted (or self-hosted). Open Design is not in the loop. We have no log to subpoena, no breach surface to leak from, no audit gap to explain.
+With BYOK, the prompt round-trip is between your laptop and the model provider you've already vetted (or self-hosted). Auto Design is not in the loop. We have no log to subpoena, no breach surface to leak from, no audit gap to explain.
 
 For agency work, regulated industries, or anything pre-launch, this is the only stance that holds up.
 
@@ -91,7 +91,7 @@ One of the underrated benefits of BYOK is provider arbitrage during a project:
 - **Sensitive content** — swap to a local Ollama model for client-confidential prompts
 - **Final polish** — burn one pass on the strongest model available (Opus, GPT-5 Pro)
 
-In Open Design, switching is editing two lines in `.env.local`. There's no migration, no re-onboarding, no plan upgrade.
+In Auto Design, switching is editing two lines in `.env.local`. There's no migration, no re-onboarding, no plan upgrade.
 
 This is what owning the workflow actually means: the tool gets out of the way, and the model is a parameter you change as the brief demands.
 

@@ -1,18 +1,18 @@
-# Open Design — la alternativa open source oficial a [Claude Design][cd]
+# Auto Design — la alternativa open source oficial a [Claude Design][cd]
 
-> **Open Design es la alternativa open source y local-first a [Claude Design][cd].** Desplegable en web, BYOK en cada capa: **16 CLI de coding agents** detectadas automáticamente en tu `PATH` (Claude Code, Codex, Devin for Terminal, Cursor Agent, Gemini CLI, OpenCode, Qwen, Qoder CLI, GitHub Copilot CLI, Hermes, Kimi, Pi, Kiro, Kilo, Mistral Vibe, DeepSeek TUI) se convierten en el motor de diseño, impulsadas por **31 Skills componibles** y **72 Design Systems de nivel marca**. ¿No tienes una CLI? Un proxy BYOK compatible con OpenAI ejecuta el mismo bucle sin el spawn local.
+> **Auto Design es la alternativa open source y local-first a [Claude Design][cd].** Desplegable en web, BYOK en cada capa: **16 CLI de coding agents** detectadas automáticamente en tu `PATH` (Claude Code, Codex, Devin for Terminal, Cursor Agent, Gemini CLI, OpenCode, Qwen, Qoder CLI, GitHub Copilot CLI, Hermes, Kimi, Pi, Kiro, Kilo, Mistral Vibe, DeepSeek TUI) se convierten en el motor de diseño, impulsadas por **31 Skills componibles** y **72 Design Systems de nivel marca**. ¿No tienes una CLI? Un proxy BYOK compatible con OpenAI ejecuta el mismo bucle sin el spawn local.
 
 > [!IMPORTANT]
 > ### 🔥 `0.8.0-preview` ya está aquí. El viejo mundo del diseño termina aquí.
 >
 > Una alternativa open source a Claude Design / Figma — 40k estrellas en dos semanas nos trajeron hasta aquí. **Te necesitamos para empujar el resto del camino.**
 >
-> **Iterando rápido sobre `main`** — 0.8.0 es la próxima fase de Open Design. Envía un PR, lanza una idea loca, reporta un bug — lo que traes tú es en lo que este movimiento se convierte.
+> **Iterando rápido sobre `main`** — 0.8.0 es la próxima fase de Auto Design. Envía un PR, lanza una idea loca, reporta un bug — lo que traes tú es en lo que este movimiento se convierte.
 >
 > → [**Lee el anuncio · descarga el instalador · únete al movimiento**](https://github.com/nexu-io/open-design/discussions/1727) · funciona en paralelo con tu 0.7 actual.
 
 <p align="center">
-  <img src="docs/assets/banner.png" alt="Open Design — editorial cover: design with the agent on your laptop" width="100%" />
+  <img src="docs/assets/banner.png" alt="Auto Design — editorial cover: design with the agent on your laptop" width="100%" />
 </p>
 
 <p align="center">
@@ -43,7 +43,7 @@
 
 [Claude Design][cd] de Anthropic (lanzado el 2026-04-17 con Opus 4.7) mostró qué pasa cuando un LLM deja de escribir prosa y empieza a entregar artefactos de diseño. Se volvió viral, pero siguió siendo closed-source, de pago, cloud-only y bloqueado al modelo y las skills de Anthropic. No hay checkout, no hay self-hosting, no hay despliegue en Vercel y no hay forma de cambiarlo por tu propio agente.
 
-**Open Design (OD) es la alternativa open source.** El mismo bucle, el mismo modelo mental artifact-first, sin lock-in. No distribuimos un agente: los coding agents más fuertes ya viven en tu laptop. Los conectamos a un flujo de diseño guiado por skills que corre localmente con `pnpm tools-dev`, puede desplegar la capa web en Vercel y mantiene BYOK en cada capa.
+**Auto Design (AD) es la alternativa open source.** El mismo bucle, el mismo modelo mental artifact-first, sin lock-in. No distribuimos un agente: los coding agents más fuertes ya viven en tu laptop. Los conectamos a un flujo de diseño guiado por skills que corre localmente con `pnpm tools-dev`, puede desplegar la capa web en Vercel y mantiene BYOK en cada capa.
 
 Escribe `make me a magazine-style pitch deck for our seed round`. El formulario interactivo aparece antes de que el modelo improvise un solo píxel. El agente elige una de cinco direcciones visuales curadas. Un plan `TodoWrite` en vivo se transmite en la UI. El daemon crea una carpeta real en disco con una plantilla inicial, una biblioteca de layouts y una checklist de autoevaluación. El agente las lee, con pre-flight obligatorio, ejecuta una crítica de cinco dimensiones sobre su propia salida y emite un único `<artifact>` que se renderiza segundos después en un iframe sandboxed.
 
@@ -355,7 +355,7 @@ Mapa completo de archivos, scripts y troubleshooting → [`QUICKSTART.md`](QUICK
 
 ## Ejecutar el proyecto
 
-Open Design puede ejecutarse como web app en tu navegador o como aplicación desktop de Electron. Ambos modos comparten la misma arquitectura de daemon local + web.
+Auto Design puede ejecutarse como web app en tu navegador o como aplicación desktop de Electron. Ambos modos comparten la misma arquitectura de daemon local + web.
 
 ### Web / Localhost (Default)
 
@@ -409,17 +409,17 @@ La app desktop descubre la URL web automáticamente mediante sidecar IPC — no 
 
 Para reinicios con puertos fijos, arranque en background y troubleshooting completo, consulta [`QUICKSTART.md`](QUICKSTART.md).
 
-## Usar Open Design desde tu coding agent
+## Usar Auto Design desde tu coding agent
 
-Open Design trae un servidor MCP stdio. Conéctalo a Claude Code, Codex, Cursor, VS Code, Antigravity, Zed, Windsurf o cualquier cliente compatible con MCP y el agente en otro repo podrá leer archivos de tus proyectos locales de Open Design directamente. Reemplaza el ciclo exportar-zip-y-adjuntar. Cuando el agente llama `search_files`, `get_file` o `get_artifact` sin argumento de proyecto, el MCP usa por defecto el proyecto (y archivo) que tienes abierto ahora en Open Design, así que prompts como *"build this in my app"* o *"match these styles"* simplemente funcionan.
+Auto Design trae un servidor MCP stdio. Conéctalo a Claude Code, Codex, Cursor, VS Code, Antigravity, Zed, Windsurf o cualquier cliente compatible con MCP y el agente en otro repo podrá leer archivos de tus proyectos locales de Auto Design directamente. Reemplaza el ciclo exportar-zip-y-adjuntar. Cuando el agente llama `search_files`, `get_file` o `get_artifact` sin argumento de proyecto, el MCP usa por defecto el proyecto (y archivo) que tienes abierto ahora en Auto Design, así que prompts como *"build this in my app"* o *"match these styles"* simplemente funcionan.
 
 **¿Por qué MCP?** Exportar y re-adjuntar un zip en cada iteración rompe el flujo. El MCP server expone tu fuente de diseño directamente -- tokens CSS, componentes JSX, entry HTML -- como API estructurada que el agente puede consultar por nombre. El agente siempre ve el archivo vivo, no una copia obsoleta del último export.
 
-Abre **Ajustes → MCP server** en la app Open Design para un flujo de instalación por cliente. El panel inserta la ruta absoluta de tu binario `node` y del `cli.js` compilado del daemon en cada snippet, así funciona en un source clone nuevo donde `od` no está en tu PATH. Cursor recibe un deeplink de un clic; los demás reciben un snippet JSON copy-paste en el schema que espera su archivo de config (Claude Code incluye un one-liner `claude mcp add-json` para no editar a mano `~/.claude.json`). Reinicia o recarga tu cliente después de instalar para que el servidor aparezca.
+Abre **Ajustes → MCP server** en la app Auto Design para un flujo de instalación por cliente. El panel inserta la ruta absoluta de tu binario `node` y del `cli.js` compilado del daemon en cada snippet, así funciona en un source clone nuevo donde `od` no está en tu PATH. Cursor recibe un deeplink de un clic; los demás reciben un snippet JSON copy-paste en el schema que espera su archivo de config (Claude Code incluye un one-liner `claude mcp add-json` para no editar a mano `~/.claude.json`). Reinicia o recarga tu cliente después de instalar para que el servidor aparezca.
 
-El daemon debe estar corriendo localmente para que las tool calls MCP funcionen. Si el agente se inició antes que Open Design, reinicia el agente cuando Open Design ya esté arriba para que alcance el daemon vivo. Las tool calls hechas con el daemon offline devuelven un error claro `"daemon not reachable"` en lugar de crashear.
+El daemon debe estar corriendo localmente para que las tool calls MCP funcionen. Si el agente se inició antes que Auto Design, reinicia el agente cuando Auto Design ya esté arriba para que alcance el daemon vivo. Las tool calls hechas con el daemon offline devuelven un error claro `"daemon not reachable"` en lugar de crashear.
 
-**Modelo de seguridad.** El MCP server es read-only; expone lectura de archivos, metadata y búsqueda, nada que escriba a disco o llame servicios externos. Corre como child process del coding agent sobre stdio, así que cualquier cliente MCP que registres hereda acceso de lectura a tus proyectos locales de Open Design. Trátalo como instalar una extensión de VS Code: solo registra clientes en los que confíes. El daemon se enlaza a `127.0.0.1` por defecto; exponerlo en LAN requiere opt-in explícito con `OD_BIND_HOST`.
+**Modelo de seguridad.** El MCP server es read-only; expone lectura de archivos, metadata y búsqueda, nada que escriba a disco o llame servicios externos. Corre como child process del coding agent sobre stdio, así que cualquier cliente MCP que registres hereda acceso de lectura a tus proyectos locales de Auto Design. Trátalo como instalar una extensión de VS Code: solo registra clientes en los que confíes. El daemon se enlaza a `127.0.0.1` por defecto; exponerlo en LAN requiere opt-in explícito con `OD_BIND_HOST`.
 
 ## Estructura del repositorio
 
@@ -463,7 +463,7 @@ open-design/
 │
 ├── packages/
 │   ├── contracts/                 ← shared web/daemon app contracts
-│   ├── sidecar-proto/             ← Open Design sidecar protocol contract
+│   ├── sidecar-proto/             ← Auto Design sidecar protocol contract
 │   ├── sidecar/                   ← generic sidecar runtime primitives
 │   └── platform/                  ← generic process/platform primitives
 │
@@ -611,7 +611,7 @@ Haz clic en cualquier thumbnail para reproducir el MP4 renderizado. Set completo
 
 ### HyperFrames — motion graphics HTML→MP4 (11 templates listos)
 
-[**`heygen-com/hyperframes`**](https://github.com/heygen-com/hyperframes) es el framework open source agent-native de HeyGen para video: tú (o el agente) escribes HTML + CSS + GSAP, y HyperFrames lo renderiza a un MP4 determinista mediante headless Chrome + FFmpeg. Open Design incluye HyperFrames como modelo de video first-class (`hyperframes-html`) conectado al dispatch del daemon, además de la skill `skills/hyperframes/`, que enseña al agente el contrato de timeline, reglas de transición de escena, patrones audio-reactive, captions/TTS y bloques de catálogo (`npx hyperframes add <slug>`).
+[**`heygen-com/hyperframes`**](https://github.com/heygen-com/hyperframes) es el framework open source agent-native de HeyGen para video: tú (o el agente) escribes HTML + CSS + GSAP, y HyperFrames lo renderiza a un MP4 determinista mediante headless Chrome + FFmpeg. Auto Design incluye HyperFrames como modelo de video first-class (`hyperframes-html`) conectado al dispatch del daemon, además de la skill `skills/hyperframes/`, que enseña al agente el contrato de timeline, reglas de transición de escena, patrones audio-reactive, captions/TTS y bloques de catálogo (`npx hyperframes add <slug>`).
 
 Once prompts hyperframes vienen bajo [`prompt-templates/video/hyperframes-*.json`](prompt-templates/video/), cada uno como brief concreto que produce un arquetipo específico:
 
@@ -666,7 +666,7 @@ Todo lo siguiente es el playbook de [`huashu-design`](https://github.com/alchain
 
 ## Comparación
 
-| Eje | [Claude Design][cd] (Anthropic) | [Open CoDesign][ocod] | **Open Design** |
+| Eje | [Claude Design][cd] (Anthropic) | [Open CoDesign][ocod] | **Auto Design** |
 |---|---|---|---|
 | Licencia | Cerrado | MIT | **Apache-2.0** |
 | Formato | Web (claude.ai) | Desktop (Electron) | **App web + daemon local** |
@@ -767,7 +767,7 @@ Esta es una implementación temprana: el bucle cerrado (detect → pick skill + 
 ## Danos una estrella
 
 <p align="center">
-  <a href="https://github.com/nexu-io/open-design"><img src="docs/assets/star-us.png" alt="Star Open Design on GitHub — github.com/nexu-io/open-design" width="100%" /></a>
+  <a href="https://github.com/nexu-io/open-design"><img src="docs/assets/star-us.png" alt="Star Auto Design on GitHub — github.com/nexu-io/open-design" width="100%" /></a>
 </p>
 
 Si esto te ahorró treinta minutos, dale una ★. Las estrellas no pagan la renta, pero le dicen al próximo diseñador, agente y contributor que este experimento merece atención. Un clic, tres segundos, señal real: [github.com/nexu-io/open-design](https://github.com/nexu-io/open-design).
@@ -784,10 +784,10 @@ Walkthrough completo, estándar de merge, code style y lo que no aceptamos → [
 
 ## Contribuidores
 
-Gracias a todas las personas que han ayudado a mover Open Design hacia adelante: con código, docs, feedback, nuevas skills, nuevos design systems o incluso un issue preciso. Toda contribución real cuenta, y el muro de abajo es la forma más simple de decirlo en voz alta.
+Gracias a todas las personas que han ayudado a mover Auto Design hacia adelante: con código, docs, feedback, nuevas skills, nuevos design systems o incluso un issue preciso. Toda contribución real cuenta, y el muro de abajo es la forma más simple de decirlo en voz alta.
 
 <a href="https://github.com/nexu-io/open-design/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=nexu-io/open-design&cache_bust=2026-05-22" alt="Contribuidores de Open Design" />
+  <img src="https://contrib.rocks/image?repo=nexu-io/open-design&cache_bust=2026-05-22" alt="Contribuidores de Auto Design" />
 </a>
 
 Si ya enviaste tu primer PR, bienvenido. La etiqueta [`good-first-issue`](https://github.com/nexu-io/open-design/labels/good-first-issue) es el punto de entrada.
@@ -795,7 +795,7 @@ Si ya enviaste tu primer PR, bienvenido. La etiqueta [`good-first-issue`](https:
 ## Actividad del repositorio
 
 <picture>
-  <img alt="Open Design — repository metrics" src="docs/assets/github-metrics.svg" />
+  <img alt="Auto Design — repository metrics" src="docs/assets/github-metrics.svg" />
 </picture>
 
 El SVG anterior se regenera diariamente mediante [`.github/workflows/metrics.yml`](.github/workflows/metrics.yml) usando [`lowlighter/metrics`](https://github.com/lowlighter/metrics). Ejecuta un refresh manual desde la pestaña **Actions** si lo quieres antes; para plugins más ricos (traffic, follow-up time), añade un secret `METRICS_TOKEN` con un PAT fine-grained.
@@ -806,7 +806,7 @@ El SVG anterior se regenera diariamente mediante [`.github/workflows/metrics.yml
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&theme=dark&cache_bust=2026-05-22" />
     <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-22" />
-    <img alt="Historial de estrellas de Open Design" src="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-22" />
+    <img alt="Historial de estrellas de Auto Design" src="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-22" />
   </picture>
 </a>
 

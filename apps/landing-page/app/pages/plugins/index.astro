@@ -61,7 +61,7 @@ const headerHtml = renderToStaticMarkup(
 const itemListJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Open Design Plugin Registry',
+  name: 'Auto Design Plugin Registry',
   description,
   url: canonical,
   numberOfItems: counts.all,
@@ -80,7 +80,7 @@ const breadcrumbJsonLd = {
     {
       '@type': 'ListItem',
       position: 1,
-      name: 'Open Design',
+      name: 'Auto Design',
       item: new URL('/', site).toString(),
     },
     {
@@ -123,7 +123,7 @@ const trustLabel = (plugin: (typeof plugins)[number]) =>
     <FaviconLinks />
     <ResourceHints />
     <meta property='og:type' content='website' />
-    <meta property='og:site_name' content='Open Design' />
+    <meta property='og:site_name' content='Auto Design' />
     <meta property='og:title' content={title} />
     <meta property='og:description' content={description} />
     <meta property='og:url' content={canonical} />

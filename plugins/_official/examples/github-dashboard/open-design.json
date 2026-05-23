@@ -7,7 +7,7 @@
   "description": "GitHub repository analytics dashboard — stars, forks, contributors,\nissues, pull requests, recent activity, and top contributors. Use when\nthe brief asks for a GitHub repo dashboard, open-source growth report,\nrepository health page, or GitHub analytics view.",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/nexu-io"
   },
   "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/examples/github-dashboard",

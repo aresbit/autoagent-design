@@ -7,7 +7,7 @@
   "description": "A three-card social-media carousel laid out as 1080×1080 squares —\nthree cinematic, on-brand panels with display headlines that connect\nacross the series (\"onwards.\" → \"to the next one.\" → \"looking ahead.\").\nEach card has a brand mark, a number / total, a caption, and a \"loop\"\naffordance. Use when the brief asks for a \"carousel post\", \"social\ncarousel\", \"Instagram carousel\", \"LinkedIn series\", \"X thread cards\",\nor \"三连发\".",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/nexu-io"
   },
   "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/examples/social-carousel",

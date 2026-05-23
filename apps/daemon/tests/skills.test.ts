@@ -128,7 +128,7 @@ describe('listSkills', () => {
     expect(skill.body).toContain('--remote-debugging-port=9223');
     expect(skill.body).toContain('Chrome crashed before CDP became available');
     expect(skill.body).toContain('command -v agent-browser');
-    expect(skill.body).toContain('Open Design Smoke Path');
+    expect(skill.body).toContain('Auto Design Smoke Path');
   });
 
   it('includes the DCF valuation, X research, and Last30Days research skills', async () => {

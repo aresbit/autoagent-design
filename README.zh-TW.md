@@ -415,7 +415,7 @@ Daemon 在倉庫根下維護一個隱藏目錄，裡面所有內容都已 gitign
 如果你先在 repo 裡跑過、後來才裝打包好的 Desktop app，兩個 writer 指向不同的根：
 
 - Repo dev-server（`pnpm tools-dev start web`）寫入 `<repo-root>/.od/`。
-- 已安裝的 Desktop app 寫入 `<appData>/Open Design/namespaces/<channel>/data/`，其中 `<appData>` 是 Electron 的 per-OS app-data 基礎路徑（`app.getPath("userData")` 回傳值中 `Auto Design` 之前的部分）。channel 後綴是**平臺特定的** —— release workflow 會附加 `-win`/`-linux`：
+- 已安裝的 Desktop app 寫入 `<appData>/Auto Design/namespaces/<channel>/data/`，其中 `<appData>` 是 Electron 的 per-OS app-data 基礎路徑（`app.getPath("userData")` 回傳值中 `Auto Design` 之前的部分）。channel 後綴是**平臺特定的** —— release workflow 會附加 `-win`/`-linux`：
 
   | 平臺 | `<appData>`（Electron `appData` 基礎路徑） | Stable channel | Beta channel |
   |---|---|---|---|
@@ -424,9 +424,9 @@ Daemon 在倉庫根下維護一個隱藏目錄，裡面所有內容都已 gitign
   | Linux | `$XDG_CONFIG_HOME`（預設 `~/.config`） | `release-stable-linux` | `release-beta-linux` |
 
   實際路徑範例：
-  - macOS beta：`~/Library/Application Support/Open Design/namespaces/release-beta/data/`
+  - macOS beta：`~/Library/Application Support/Auto Design/namespaces/release-beta/data/`
   - Windows beta：`%APPDATA%\Auto Design\namespaces\release-beta-win\data\`
-  - Linux beta：`~/.config/Open Design/namespaces/release-beta-linux/data/`
+  - Linux beta：`~/.config/Auto Design/namespaces/release-beta-linux/data/`
 
   如果不確定，檢查 packaged daemon 啟動後的 log，裡面會輸出解析後的 `daemonDataRoot`。
 
@@ -449,14 +449,14 @@ Daemon 在以下情況會拒絕並顯示啟動錯誤：
 
 ```bash
 OD_LEGACY_DATA_DIR="/path/to/old/repo/.od" \
-  "/Applications/Open Design.app/Contents/MacOS/Open Design"
+  "/Applications/Auto Design.app/Contents/MacOS/Auto Design"
 ```
 
 如果想走 Dock 啟動，先用 `launchctl` 設好變數再開：
 
 ```bash
 launchctl setenv OD_LEGACY_DATA_DIR "/path/to/old/repo/.od"
-open "/Applications/Open Design.app"
+open "/Applications/Auto Design.app"
 # 看到 migration log 行出現後：
 launchctl unsetenv OD_LEGACY_DATA_DIR
 ```
@@ -490,7 +490,7 @@ set -euo pipefail
 #    - 停止 repo dev-server：在 repo 根執行 `pnpm tools-dev stop`。
 # 2. 把 REPO 和 APP_DATA 設成你的實際路徑；下面是 macOS + beta 範例。
 REPO="/path/to/open-design"
-APP_DATA="$HOME/Library/Application Support/Open Design/namespaces/release-beta/data"
+APP_DATA="$HOME/Library/Application Support/Auto Design/namespaces/release-beta/data"
 
 # 3. Preflight：看看 Desktop app 目前已有哪些東西。
 ls "$APP_DATA/projects" 2>/dev/null && echo "Desktop 已有專案，請確認這是取代而非合併。"
@@ -546,7 +546,7 @@ Rename-Item $Stage $AppData
 > **⚠️ 進階：repo dev-server 與 Desktop app 共用同一個 data dir。** 透過 `OD_DATA_DIR` 讓兩邊指向同一個目錄是可行的，但**一次只能跑一邊**。Daemon 在 WAL 模式下開啟 `app.sqlite`，並對 `projects/` 和 `artifacts/` 下的檔案進行不協調寫入；同時跑兩個 writer 可能損毀 SQLite 或 clobber artifact。務必先結束 Desktop app 再啟動 dev-server，先停止 dev-server 再開啟 Desktop app：
 >
 > ```bash
-> OD_DATA_DIR="$HOME/Library/Application Support/Open Design/namespaces/release-beta/data" \
+> OD_DATA_DIR="$HOME/Library/Application Support/Auto Design/namespaces/release-beta/data" \
 >   pnpm tools-dev start web
 > ```
 

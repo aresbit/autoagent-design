@@ -1,7 +1,7 @@
 ---
 title: 'Why 40k Developers Abandoned Claude Design'
 youtubeId: B3coWv2ZV68
-summary: Better Stack walks through how Open Design works under the hood, sets it up locally, and stress-tests the output by redesigning a YouTube channel searcher with a non-Claude model.
+summary: Better Stack walks through how Auto Design works under the hood, sets it up locally, and stress-tests the output by redesigning a YouTube channel searcher with a non-Claude model.
 date: 2026-05-15
 category: Review
 durationSeconds: 446
@@ -9,7 +9,7 @@ author: Better Stack
 official: false
 ---
 
-Better Stack breaks down the architecture choices that let Open Design run on whatever coding agent you already have installed — Claude Code, Codex, Cursor, Gemini CLI, or DeepSeek — and benchmarks the result side-by-side with the original Claude Design output.
+Better Stack breaks down the architecture choices that let Auto Design run on whatever coding agent you already have installed — Claude Code, Codex, Cursor, Gemini CLI, or DeepSeek — and benchmarks the result side-by-side with the original Claude Design output.
 
 The walkthrough covers:
 

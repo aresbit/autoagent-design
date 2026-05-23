@@ -13,7 +13,7 @@ export interface AgentInfo {
   path?: string;
   version?: string | null;
   models?: AgentModelOption[];
-  /** Whether models came from the installed CLI or Open Design's static fallback. */
+  /** Whether models came from the installed CLI or Auto Design's static fallback. */
   modelsSource?: 'live' | 'fallback';
   reasoningOptions?: AgentModelOption[];
   /** HTTPS URL to install or download the CLI (vendor docs, GitHub README, npm). */
