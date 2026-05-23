@@ -1,6 +1,6 @@
 # Blog indexing automation
 
-The Auto Design landing page automates the parts of search-engine
+The Open Design landing page automates the parts of search-engine
 indexing that Google officially supports for normal blog content. It
 does NOT pretend to "submit" or "request indexing" for blog posts via
 unsupported APIs or browser automation.
@@ -17,7 +17,7 @@ doc is its concrete implementation in `nexu-io/open-design`.
 | `landing-page-deploy` finishes successfully on `main` | `blog-indexing-on-deploy.yml` | New blog URLs are detected, verified ready, submitted to IndexNow, the sitemap-index is re-submitted to GSC, baseline URL Inspection is captured, and baseline Search Analytics is queried. |
 | Daily `cron: 0 2 * * *` | `blog-indexing-monitor.yml` | Every blog post in the T+1 / T+3 / T+7 / T+14 window is re-inspected; GSC Search Analytics is refreshed; stall and low-traffic issues are opened/refreshed when needed. |
 | Daily `cron: 0 2 * * *` (10:00 Asia/Shanghai) | `blog-3day-report.yml` | T-3 cohort + 30-day rolling cohort traffic digest written to `docs/blog-traffic-digest.md` via the `automation/blog-traffic-digest` PR, with an optional Feishu group push. Read-only against GSC. |
-| Manual `workflow_dispatch` | `blog-indexing-monitor.yml` | Maintainers can dry-run or explicitly publish a token-gated dev.to/Hashnode cross-post with canonical URL pointing back to Auto Design. |
+| Manual `workflow_dispatch` | `blog-indexing-monitor.yml` | Maintainers can dry-run or explicitly publish a token-gated dev.to/Hashnode cross-post with canonical URL pointing back to Open Design. |
 
 The monitor and 3-day digest workflows commit their durable outputs
 back via the `open-design-bot` GitHub App. The monitor opens or

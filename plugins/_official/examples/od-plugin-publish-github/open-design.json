@@ -4,10 +4,10 @@
   "name": "od-plugin-publish-github",
   "title": "Publish Plugin to GitHub",
   "version": "0.1.0",
-  "description": "Creates a public GitHub repository for a local Auto Design plugin using the GitHub CLI.",
+  "description": "Creates a public GitHub repository for a local Open Design plugin using the GitHub CLI.",
   "license": "MIT",
   "author": {
-    "name": "Auto Design",
+    "name": "Open Design",
     "url": "https://github.com/nexu-io"
   },
   "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/examples/od-plugin-publish-github",
@@ -37,8 +37,8 @@
     "surface": "github",
     "useCase": {
       "query": {
-        "en": "Publish the staged Auto Design plugin to a new public GitHub repository with gh CLI.",
-        "zh-CN": "使用 gh CLI 把已暂存的 Auto Design 插件发布成一个新的公开 GitHub 仓库。"
+        "en": "Publish the staged Open Design plugin to a new public GitHub repository with gh CLI.",
+        "zh-CN": "使用 gh CLI 把已暂存的 Open Design 插件发布成一个新的公开 GitHub 仓库。"
       }
     },
     "inputs": [

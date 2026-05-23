@@ -3,7 +3,7 @@ name: create-slides-pitch
 description: Create a concise HTML pitch deck for an early-stage product, with a strong narrative arc and finance-ready slide structure.
 license: MIT
 metadata:
-  author: Auto Design Spec Examples
+  author: Open Design Spec Examples
   version: "0.1.0"
 ---
 

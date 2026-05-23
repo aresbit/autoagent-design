@@ -181,7 +181,7 @@ in
     };
 
     meta = with lib; {
-      description = "Auto Design daemon — local agent orchestrator + API (`od` CLI)";
+      description = "Open Design daemon — local agent orchestrator + API (`od` CLI)";
       homepage = "https://github.com/nexu-io/open-design";
       license = licenses.asl20;
       mainProgram = "od";

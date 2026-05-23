@@ -319,7 +319,7 @@ export async function runMcpStdio({ daemonUrl }: RunMcpOptions): Promise<void> {
     {
       capabilities: { tools: {}, resources: {} },
       instructions: [
-        'Auto Design (AD) is a local-first design workspace. The user typically',
+        'Auto Design (OD) is a local-first design workspace. The user typically',
         'has OD running on their machine; each project contains a rendered',
         'artifact (HTML/JSX/CSS) plus its source files.',
         '',

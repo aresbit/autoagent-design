@@ -1593,7 +1593,7 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   en: [
     {
       q: 'What is Auto Design?',
-      a: 'Auto Design is the official open-source AI design workspace from the nexu-io/open-design project. It turns a local coding agent — Claude Code, Codex, Cursor, Gemini CLI, OpenCode, or Qwen — into a design engine driven by composable skills and portable DESIGN.md systems.',
+      a: 'Auto Design is the official open-source AI design workspace from the aresbit/autoagent-design project. It turns a local coding agent — Claude Code, Codex, Cursor, Gemini CLI, OpenCode, or Qwen — into a design engine driven by composable skills and portable DESIGN.md systems.',
     },
     {
       q: 'Is Auto Design official?',
@@ -1652,7 +1652,7 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   zh: [
     {
       q: 'Auto Design 是什么？',
-      a: 'Auto Design 是 nexu-io/open-design 项目的官方开源 AI 设计工作台。它把本地编码 Agent（Claude Code、Codex、Cursor、Gemini CLI、OpenCode 或 Qwen）变成设计引擎，并由可组合 Skill 与可移植 DESIGN.md 系统驱动。',
+      a: 'Auto Design 是 aresbit/autoagent-design 项目的官方开源 AI 设计工作台。它把本地编码 Agent（Claude Code、Codex、Cursor、Gemini CLI、OpenCode 或 Qwen）变成设计引擎，并由可组合 Skill 与可移植 DESIGN.md 系统驱动。',
     },
     {
       q: 'Auto Design 是官方项目吗？',
@@ -1679,7 +1679,7 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   'zh-tw': [
     {
       q: 'Auto Design 是什麼？',
-      a: 'Auto Design 是 nexu-io/open-design 專案的官方開源 AI 設計工作台。它把本地 coding agent（Claude Code、Codex、Cursor、Gemini CLI、OpenCode 或 Qwen）變成設計引擎，並由可組合 Skill 與可攜式 DESIGN.md 系統驅動。',
+      a: 'Auto Design 是 aresbit/autoagent-design 專案的官方開源 AI 設計工作台。它把本地 coding agent（Claude Code、Codex、Cursor、Gemini CLI、OpenCode 或 Qwen）變成設計引擎，並由可組合 Skill 與可攜式 DESIGN.md 系統驅動。',
     },
     {
       q: 'Auto Design 是官方專案嗎？',
@@ -1706,7 +1706,7 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   ja: [
     {
       q: 'Auto Design とは何ですか？',
-      a: 'Auto Design は nexu-io/open-design プロジェクト公式のオープンソース AI デザインワークスペースです。Claude Code、Codex、Cursor、Gemini CLI、OpenCode、Qwen などのローカル coding agent を、スキルと DESIGN.md システムで動くデザインエンジンにします。',
+      a: 'Auto Design は aresbit/autoagent-design プロジェクト公式のオープンソース AI デザインワークスペースです。Claude Code、Codex、Cursor、Gemini CLI、OpenCode、Qwen などのローカル coding agent を、スキルと DESIGN.md システムで動くデザインエンジンにします。',
     },
     {
       q: 'Auto Design は公式ですか？',
@@ -1733,7 +1733,7 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   ko: [
     {
       q: 'Auto Design은 무엇인가요?',
-      a: 'Auto Design은 nexu-io/open-design 프로젝트의 공식 오픈소스 AI 디자인 워크스페이스입니다. Claude Code, Codex, Cursor, Gemini CLI, OpenCode, Qwen 같은 로컬 coding agent를 조합형 skill과 DESIGN.md 시스템으로 구동되는 디자인 엔진으로 바꿉니다.',
+      a: 'Auto Design은 aresbit/autoagent-design 프로젝트의 공식 오픈소스 AI 디자인 워크스페이스입니다. Claude Code, Codex, Cursor, Gemini CLI, OpenCode, Qwen 같은 로컬 coding agent를 조합형 skill과 DESIGN.md 시스템으로 구동되는 디자인 엔진으로 바꿉니다.',
     },
     {
       q: 'Auto Design은 공식 프로젝트인가요?',
@@ -1760,7 +1760,7 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   de: [
     {
       q: 'Was ist Auto Design?',
-      a: 'Auto Design ist der offizielle Open-Source-AI-Design-Workspace des Projekts nexu-io/open-design. Es macht lokale Coding-Agents wie Claude Code, Codex, Cursor, Gemini CLI, OpenCode oder Qwen zu einer Design-Engine auf Basis von Skills und DESIGN.md-Systemen.',
+      a: 'Auto Design ist der offizielle Open-Source-AI-Design-Workspace des Projekts aresbit/autoagent-design. Es macht lokale Coding-Agents wie Claude Code, Codex, Cursor, Gemini CLI, OpenCode oder Qwen zu einer Design-Engine auf Basis von Skills und DESIGN.md-Systemen.',
     },
     {
       q: 'Ist Auto Design offiziell?',
@@ -1787,7 +1787,7 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   fr: [
     {
       q: "Qu'est-ce qu'Auto Design ?",
-      a: "Auto Design est l'espace de travail officiel et open source du projet nexu-io/open-design. Il transforme un agent local — Claude Code, Codex, Cursor, Gemini CLI, OpenCode ou Qwen — en moteur de design piloté par des skills composables et des systèmes DESIGN.md portables.",
+      a: "Auto Design est l'espace de travail officiel et open source du projet aresbit/autoagent-design. Il transforme un agent local — Claude Code, Codex, Cursor, Gemini CLI, OpenCode ou Qwen — en moteur de design piloté par des skills composables et des systèmes DESIGN.md portables.",
     },
     {
       q: 'Auto Design est-il officiel ?',
@@ -1814,7 +1814,7 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   ru: [
     {
       q: 'Что такое Auto Design?',
-      a: 'Auto Design — официальный open-source AI design workspace проекта nexu-io/open-design. Он превращает локальный coding agent — Claude Code, Codex, Cursor, Gemini CLI, OpenCode или Qwen — в design-движок на базе composable skills и переносимых DESIGN.md-систем.',
+      a: 'Auto Design — официальный open-source AI design workspace проекта aresbit/autoagent-design. Он превращает локальный coding agent — Claude Code, Codex, Cursor, Gemini CLI, OpenCode или Qwen — в design-движок на базе composable skills и переносимых DESIGN.md-систем.',
     },
     {
       q: 'Auto Design официальный?',
@@ -1841,7 +1841,7 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   es: [
     {
       q: '¿Qué es Auto Design?',
-      a: 'Auto Design es el workspace oficial y open source de IA de diseño del proyecto nexu-io/open-design. Convierte un coding agent local — Claude Code, Codex, Cursor, Gemini CLI, OpenCode o Qwen — en un motor de diseño con skills componibles y sistemas DESIGN.md portables.',
+      a: 'Auto Design es el workspace oficial y open source de IA de diseño del proyecto aresbit/autoagent-design. Convierte un coding agent local — Claude Code, Codex, Cursor, Gemini CLI, OpenCode o Qwen — en un motor de diseño con skills componibles y sistemas DESIGN.md portables.',
     },
     {
       q: '¿Auto Design es oficial?',
@@ -1868,7 +1868,7 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   'pt-br': [
     {
       q: 'O que é Auto Design?',
-      a: 'Auto Design é o workspace oficial, open source, de design com IA do projeto nexu-io/open-design. Ele transforma um coding agent local — Claude Code, Codex, Cursor, Gemini CLI, OpenCode ou Qwen — em um motor de design movido por skills componíveis e sistemas DESIGN.md portáteis.',
+      a: 'Auto Design é o workspace oficial, open source, de design com IA do projeto aresbit/autoagent-design. Ele transforma um coding agent local — Claude Code, Codex, Cursor, Gemini CLI, OpenCode ou Qwen — em um motor de design movido por skills componíveis e sistemas DESIGN.md portáteis.',
     },
     {
       q: 'Auto Design é oficial?',
@@ -1895,7 +1895,7 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   it: [
     {
       q: "Cos'è Auto Design?",
-      a: 'Auto Design è il workspace ufficiale e open source di AI design del progetto nexu-io/open-design. Trasforma un coding agent locale — Claude Code, Codex, Cursor, Gemini CLI, OpenCode o Qwen — in un motore di design guidato da skill componibili e sistemi DESIGN.md portabili.',
+      a: 'Auto Design è il workspace ufficiale e open source di AI design del progetto aresbit/autoagent-design. Trasforma un coding agent locale — Claude Code, Codex, Cursor, Gemini CLI, OpenCode o Qwen — in un motore di design guidato da skill componibili e sistemi DESIGN.md portabili.',
     },
     {
       q: 'Auto Design è ufficiale?',
@@ -1922,7 +1922,7 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   vi: [
     {
       q: 'Auto Design là gì?',
-      a: 'Auto Design là workspace thiết kế AI mã nguồn mở chính thức của dự án nexu-io/open-design. Nó biến coding agent chạy trên máy bạn — Claude Code, Codex, Cursor, Gemini CLI, OpenCode hoặc Qwen — thành engine thiết kế dựa trên skill ghép được và hệ DESIGN.md di động.',
+      a: 'Auto Design là workspace thiết kế AI mã nguồn mở chính thức của dự án aresbit/autoagent-design. Nó biến coding agent chạy trên máy bạn — Claude Code, Codex, Cursor, Gemini CLI, OpenCode hoặc Qwen — thành engine thiết kế dựa trên skill ghép được và hệ DESIGN.md di động.',
     },
     {
       q: 'Auto Design có phải dự án chính thức không?',
@@ -1949,7 +1949,7 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   pl: [
     {
       q: 'Czym jest Auto Design?',
-      a: 'Auto Design to oficjalny, open-source workspace AI design projektu nexu-io/open-design. Zamienia lokalnego coding agenta — Claude Code, Codex, Cursor, Gemini CLI, OpenCode albo Qwen — w silnik designu oparty o kompozycyjne skills i przenośne systemy DESIGN.md.',
+      a: 'Auto Design to oficjalny, open-source workspace AI design projektu aresbit/autoagent-design. Zamienia lokalnego coding agenta — Claude Code, Codex, Cursor, Gemini CLI, OpenCode albo Qwen — w silnik designu oparty o kompozycyjne skills i przenośne systemy DESIGN.md.',
     },
     {
       q: 'Czy Auto Design jest oficjalne?',
@@ -1976,7 +1976,7 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   id: [
     {
       q: 'Apa itu Auto Design?',
-      a: 'Auto Design adalah workspace AI design resmi dan open source dari proyek nexu-io/open-design. Ia mengubah coding agent lokal — Claude Code, Codex, Cursor, Gemini CLI, OpenCode, atau Qwen — menjadi mesin desain berbasis skill komposable dan sistem DESIGN.md portabel.',
+      a: 'Auto Design adalah workspace AI design resmi dan open source dari proyek aresbit/autoagent-design. Ia mengubah coding agent lokal — Claude Code, Codex, Cursor, Gemini CLI, OpenCode, atau Qwen — menjadi mesin desain berbasis skill komposable dan sistem DESIGN.md portabel.',
     },
     {
       q: 'Apakah Auto Design resmi?',
@@ -2003,7 +2003,7 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   nl: [
     {
       q: 'Wat is Auto Design?',
-      a: 'Auto Design is de officiële open-source AI design workspace van het project nexu-io/open-design. Het verandert een lokale coding agent — Claude Code, Codex, Cursor, Gemini CLI, OpenCode of Qwen — in een design-engine met combineerbare skills en draagbare DESIGN.md-systemen.',
+      a: 'Auto Design is de officiële open-source AI design workspace van het project aresbit/autoagent-design. Het verandert een lokale coding agent — Claude Code, Codex, Cursor, Gemini CLI, OpenCode of Qwen — in een design-engine met combineerbare skills en draagbare DESIGN.md-systemen.',
     },
     {
       q: 'Is Auto Design officieel?',
@@ -2030,7 +2030,7 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   ar: [
     {
       q: 'ما هو Auto Design؟',
-      a: 'Auto Design هو مساحة عمل تصميم بالذكاء الاصطناعي رسمية ومفتوحة المصدر من مشروع nexu-io/open-design. يحوّل coding agent محلياً مثل Claude Code أو Codex أو Cursor أو Gemini CLI أو OpenCode أو Qwen إلى محرك تصميم يعمل عبر skills قابلة للتركيب وأنظمة DESIGN.md قابلة للنقل.',
+      a: 'Auto Design هو مساحة عمل تصميم بالذكاء الاصطناعي رسمية ومفتوحة المصدر من مشروع aresbit/autoagent-design. يحوّل coding agent محلياً مثل Claude Code أو Codex أو Cursor أو Gemini CLI أو OpenCode أو Qwen إلى محرك تصميم يعمل عبر skills قابلة للتركيب وأنظمة DESIGN.md قابلة للنقل.',
     },
     {
       q: 'هل Auto Design رسمي؟',
@@ -2057,7 +2057,7 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   tr: [
     {
       q: 'Auto Design nedir?',
-      a: "Auto Design, nexu-io/open-design projesinin resmi açık kaynak AI design workspace'idir. Claude Code, Codex, Cursor, Gemini CLI, OpenCode veya Qwen gibi yerel coding agent'ları, birleştirilebilir skill'ler ve taşınabilir DESIGN.md sistemleriyle çalışan bir tasarım motoruna dönüştürür.",
+      a: "Auto Design, aresbit/autoagent-design projesinin resmi açık kaynak AI design workspace'idir. Claude Code, Codex, Cursor, Gemini CLI, OpenCode veya Qwen gibi yerel coding agent'ları, birleştirilebilir skill'ler ve taşınabilir DESIGN.md sistemleriyle çalışan bir tasarım motoruna dönüştürür.",
     },
     {
       q: 'Auto Design resmi mi?',
@@ -2084,7 +2084,7 @@ const HOME_FAQ_COPY: Record<LandingLocaleCode, HomeFaqTemplate[]> = {
   uk: [
     {
       q: 'Що таке Auto Design?',
-      a: 'Auto Design — офіційний open-source AI design workspace проєкту nexu-io/open-design. Він перетворює локальний coding agent — Claude Code, Codex, Cursor, Gemini CLI, OpenCode або Qwen — на design-двигун із composable skills і переносними DESIGN.md-системами.',
+      a: 'Auto Design — офіційний open-source AI design workspace проєкту aresbit/autoagent-design. Він перетворює локальний coding agent — Claude Code, Codex, Cursor, Gemini CLI, OpenCode або Qwen — на design-двигун із composable skills і переносними DESIGN.md-системами.',
     },
     {
       q: 'Auto Design офіційний?',
@@ -2143,7 +2143,7 @@ const HOME_PAGE_COPY_EN: HomePageCopy = {
     label: 'Official source',
     items: [
       { label: 'Official site', value: 'open-design.ai' },
-      { label: 'Source', value: 'nexu-io/open-design' },
+      { label: 'Source', value: 'aresbit/autoagent-design' },
       { label: 'Releases', value: 'version' },
       { label: 'Download', value: 'Desktop · macOS · Win · Linux' },
       { label: 'Docs', value: 'README + /quickstart/' },
@@ -2421,7 +2421,7 @@ const HOME_PAGE_COPY: Partial<Record<LandingLocaleCode, HomePageCopy>> = {
       label: '官方来源',
       items: [
         { label: '官方网站', value: 'open-design.ai' },
-        { label: '源码', value: 'nexu-io/open-design' },
+        { label: '源码', value: 'aresbit/autoagent-design' },
         { label: '版本发布', value: 'version' },
         { label: '下载', value: '桌面端 · macOS · Win · Linux' },
         { label: '文档', value: 'README + /quickstart/' },
@@ -2694,7 +2694,7 @@ HOME_PAGE_COPY['zh-tw'] = {
     label: '官方來源',
     items: [
       { label: '官方網站', value: 'open-design.ai' },
-      { label: '原始碼', value: 'nexu-io/open-design' },
+      { label: '原始碼', value: 'aresbit/autoagent-design' },
       { label: '版本發布', value: 'version' },
       { label: '下載', value: '桌面端 · macOS · Win · Linux' },
       { label: '文件', value: 'README + /quickstart/' },
@@ -4791,7 +4791,7 @@ const LOCALIZED_HOME_BODY_COPY: Partial<Record<LandingLocaleCode, DeepPartial<Ho
     officialLabel: '公式ソース',
     officialItems: [
       { label: '公式サイト', value: 'open-design.ai' },
-      { label: 'ソースコード', value: 'nexu-io/open-design' },
+      { label: 'ソースコード', value: 'aresbit/autoagent-design' },
       { label: 'リリース', value: 'version' },
       { label: 'ダウンロード', value: 'デスクトップ · macOS · Win · Linux' },
       { label: 'ドキュメント', value: 'README + /quickstart/' },
@@ -4947,7 +4947,7 @@ LOCALIZED_HOME_BODY_COPY.ko = homeFallbackCopy({
   officialLabel: '공식 출처',
   officialItems: [
     { label: '공식 사이트', value: 'open-design.ai' },
-    { label: '소스 코드', value: 'nexu-io/open-design' },
+    { label: '소스 코드', value: 'aresbit/autoagent-design' },
     { label: '릴리스', value: 'version' },
     { label: '다운로드', value: '데스크톱 · macOS · Win · Linux' },
     { label: '문서', value: 'README + /quickstart/' },
@@ -5102,7 +5102,7 @@ LOCALIZED_HOME_BODY_COPY.de = homeFallbackCopy({
   officialLabel: 'Offizielle Quelle',
   officialItems: [
     { label: 'Offizielle Website', value: 'open-design.ai' },
-    { label: 'Quellcode', value: 'nexu-io/open-design' },
+    { label: 'Quellcode', value: 'aresbit/autoagent-design' },
     { label: 'Versionen', value: 'version' },
     { label: 'Download', value: 'Desktop · macOS · Win · Linux' },
     { label: 'Dokumentation', value: 'README + /quickstart/' },

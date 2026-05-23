@@ -7,7 +7,7 @@
   "description": "Single-file horizontal-swipe HTML deck in the style of Replit Slides's\nlanding-page template gallery. Eight distinct themes (helix, holm, vance,\nbevel, world-dark, world-mint, atlas, bluehouse) — each a complete visual\nsystem (palette + type + accent) captured from replit.com/slides. Pick one\ntheme, do not mix. For pitch decks, board reports, brand memos, campaign\nreveals — when the user explicitly wants \"Replit Slides style\".",
   "license": "MIT",
   "author": {
-    "name": "Auto Design",
+    "name": "Open Design",
     "url": "https://github.com/nexu-io"
   },
   "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/examples/replit-deck",

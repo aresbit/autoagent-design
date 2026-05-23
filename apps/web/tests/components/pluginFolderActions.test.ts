@@ -1,7 +1,7 @@
 // Contract test for the prompts the plugin-folder card buttons send to the
 // agent. `install` uses the simple shared template; `contribute` drives the
 // `gh repo fork → branch → commit → gh pr create --web` flow against
-// `nexu-io/open-design`; `publish` drives `gh repo create / push` against the
+// `aresbit/autoagent-design`; `publish` drives `gh repo create / push` against the
 // author's own `plugin.repo` URL. The tests below lock the *shape* of each
 // prompt (keywords + folder interpolation) without coupling to exact wording,
 // so prose tweaks don't break the suite but accidental removal of a critical
@@ -95,15 +95,15 @@ describe('buildPluginFolderAgentActionPrompt', () => {
   describe('contribute (PR-based flow)', () => {
     const prompt = buildPluginFolderAgentActionPrompt(FOLDER, 'contribute');
 
-    it('targets the nexu-io/open-design community catalog', () => {
-      expect(prompt).toContain('nexu-io/open-design');
+    it('targets the aresbit/autoagent-design community catalog', () => {
+      expect(prompt).toContain('aresbit/autoagent-design');
       expect(prompt).toContain('plugins/community/<name>/');
     });
 
     it('drives the full PR flow via gh, not via the issue-URL CLI', () => {
       // The agent must drive raw gh commands rather than fall back to the
       // legacy `od plugin publish --to open-design` issue-URL launcher.
-      expect(prompt).toContain('gh repo fork nexu-io/open-design');
+      expect(prompt).toContain('gh repo fork aresbit/autoagent-design');
       expect(prompt).toContain('gh repo clone');
       expect(prompt).toContain('git checkout -b plugin/');
       expect(prompt).toContain('gh pr create');

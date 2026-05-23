@@ -96,7 +96,7 @@ export async function startUpdaterFixtureServer(options: UpdaterFixtureOptions =
     : "application/x-apple-diskimage";
   const artifactBody = Buffer.isBuffer(options.artifactBody)
     ? options.artifactBody
-    : Buffer.from(options.artifactBody ?? `Auto Design updater fixture ${version}\n`, "utf8");
+    : Buffer.from(options.artifactBody ?? `Open Design updater fixture ${version}\n`, "utf8");
   const sha256 = createHash("sha256").update(artifactBody).digest("hex");
 
   let info: UpdaterFixtureInfo | null = null;

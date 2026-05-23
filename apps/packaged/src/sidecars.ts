@@ -2,6 +2,7 @@ import { spawn, type ChildProcess } from "node:child_process";
 import { mkdir, open, type FileHandle } from "node:fs/promises";
 import { createRequire } from "node:module";
 import { delimiter, dirname, join } from "node:path";
+import { performance } from "node:perf_hooks";
 import { setTimeout as sleep } from "node:timers/promises";
 
 import {
@@ -97,7 +98,7 @@ const DAEMON_MIGRATION_STATUS_TIMEOUT_MS = 30 * 60 * 1000;
  * not tear the daemon down before the migration can complete.
  *
  * @see apps/daemon/src/legacy-data-migrator.ts
- * @see https://github.com/nexu-io/open-design/issues/710
+ * @see https://github.com/aresbit/autoagent-design/issues/710
  */
 export function resolveDaemonStatusTimeoutMs(
   env: NodeJS.ProcessEnv = process.env,
@@ -380,6 +381,7 @@ export async function startPackagedSidecars(
     webOutputMode: PackagedWebOutputMode;
   },
 ): Promise<PackagedSidecarHandle> {
+  performance.mark("packaged:sidecars:mkdir-start");
   await mkdir(paths.namespaceRoot, { recursive: true });
   await mkdir(paths.cacheRoot, { recursive: true });
   await mkdir(paths.dataRoot, { recursive: true });
@@ -389,10 +391,12 @@ export async function startPackagedSidecars(
   await mkdir(paths.updateRoot, { recursive: true });
   await mkdir(paths.electronUserDataRoot, { recursive: true });
   await mkdir(paths.electronSessionDataRoot, { recursive: true });
+  performance.mark("packaged:sidecars:mkdir-done");
 
   const children: ManagedSidecarChild[] = [];
 
   try {
+    performance.mark("packaged:sidecars:daemon-spawn-start");
     const daemon = await spawnSidecarChild({
       app: APP_KEYS.DAEMON,
       entryPath: options.daemonSidecarEntry ?? resolveSidecarEntry("@open-design/daemon", "sidecar"),
@@ -410,6 +414,7 @@ export async function startPackagedSidecars(
       runtime,
     });
     children.push(daemon);
+    performance.mark("packaged:sidecars:daemon-spawned");
     const daemonStatus = await waitForStatus<DaemonStatusSnapshot>(
       daemon.ipcPath,
       (status) => status.url != null,
@@ -422,7 +427,9 @@ export async function startPackagedSidecars(
       { child: daemon.child, logPath: logPathFor(paths, APP_KEYS.DAEMON) },
     );
     if (daemonStatus.url == null) throw new Error("daemon did not report a URL");
+    performance.mark("packaged:sidecars:daemon-ready");
 
+    performance.mark("packaged:sidecars:web-spawn-start");
     const web = await spawnSidecarChild({
       app: APP_KEYS.WEB,
       entryPath: options.webSidecarEntry ?? resolveSidecarEntry("@open-design/web", "sidecar"),
@@ -438,11 +445,32 @@ export async function startPackagedSidecars(
       runtime,
     });
     children.push(web);
+    performance.mark("packaged:sidecars:web-spawned");
     const webStatus = await waitForStatus<WebStatusSnapshot>(
       web.ipcPath,
       (status) => status.url != null,
     );
     if (webStatus.url == null) throw new Error("web did not report a URL");
+    performance.mark("packaged:sidecars:web-ready");
+
+    // Log sidecar startup timing breakdown
+    try {
+      performance.measure("packaged:sidecars:mkdir", "packaged:sidecars:mkdir-start", "packaged:sidecars:mkdir-done");
+      performance.measure("packaged:sidecars:daemon-spawn", "packaged:sidecars:daemon-spawn-start", "packaged:sidecars:daemon-spawned");
+      performance.measure("packaged:sidecars:daemon-wait", "packaged:sidecars:daemon-spawned", "packaged:sidecars:daemon-ready");
+      performance.measure("packaged:sidecars:web-spawn", "packaged:sidecars:web-spawn-start", "packaged:sidecars:web-spawned");
+      performance.measure("packaged:sidecars:web-wait", "packaged:sidecars:web-spawned", "packaged:sidecars:web-ready");
+      performance.measure("packaged:sidecars:total", "packaged:sidecars:mkdir-start", "packaged:sidecars:web-ready");
+      for (const entry of performance.getEntriesByType("measure")) {
+        if (entry.name.startsWith("packaged:sidecars:")) {
+          console.log(`[auto-design packaged] sidecar timing — ${entry.name}: ${Math.round(entry.duration)}ms`);
+        }
+      }
+      performance.clearMarks();
+      performance.clearMeasures();
+    } catch {
+      // ignore timing errors
+    }
 
     return {
       daemon: daemonStatus,

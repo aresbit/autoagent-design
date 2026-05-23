@@ -1,4 +1,4 @@
-# Auto Design Studio — Issue №26
+# Open Design Studio — Issue №26
 
 > An open-source design studio for editorial documents and slide decks — typeset by your own coding agent.
 

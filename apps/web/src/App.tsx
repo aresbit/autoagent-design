@@ -502,11 +502,14 @@ export function App() {
   useEffect(() => {
     if (!daemonConfigLoaded || agentsLoading) return;
     if (config.agentId) return;
-    const firstAvailable = agents.find((a) => a.available);
-    if (!firstAvailable) return;
+    // Prefer opencc as the default agent — it's the bundled reverse-engineered
+    // Claude Code CLI that ships with the project and targets DeepSeek by default.
+    const preferred = agents.find((a) => a.available && a.id === 'opencc')
+      ?? agents.find((a) => a.available);
+    if (!preferred) return;
     setConfig((prev) => {
       if (prev.agentId) return prev;
-      const next: AppConfig = { ...prev, agentId: firstAvailable.id };
+      const next: AppConfig = { ...prev, agentId: preferred.id };
       saveConfig(next);
       void syncConfigToDaemon(next);
       return next;
@@ -1403,13 +1406,11 @@ export function App() {
         />
         <div className="workspace-shell__body">{appMain}</div>
       </div>
-      {clientType === 'desktop' ? null : (
-        <PetOverlay
-          pet={config.pet?.enabled ? config.pet : undefined}
-          taskCenter={petTaskCenter}
-          onOpenProject={handleOpenProject}
-        />
-      )}
+      <PetOverlay
+        pet={config.pet?.enabled ? config.pet : undefined}
+        taskCenter={petTaskCenter}
+        onOpenProject={handleOpenProject}
+      />
       {settingsOpen ? (
         <SettingsDialog
           initial={config}

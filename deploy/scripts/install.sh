@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Auto Design — One-Click Installer
+# Open Design — One-Click Installer
 # Docker Compose wrapper for Linux and macOS
 #
 # Usage:
@@ -116,7 +116,7 @@ done
 printf "\n"
 printf "${BOLD}  ┌──────────────────────────────────────┐${RESET}\n"
 printf "${BOLD}  │${RESET}                                      ${BOLD}│${RESET}\n"
-printf "${BOLD}  │${RESET}   ${CYAN}◈${RESET}  ${BOLD}Auto Design${RESET}                     ${BOLD}│${RESET}\n"
+printf "${BOLD}  │${RESET}   ${CYAN}◈${RESET}  ${BOLD}Open Design${RESET}                     ${BOLD}│${RESET}\n"
 printf "${BOLD}  │${RESET}      ${DIM}One-Click Installer${RESET}             ${BOLD}│${RESET}\n"
 printf "${BOLD}  │${RESET}                                      ${BOLD}│${RESET}\n"
 printf "${BOLD}  └──────────────────────────────────────┘${RESET}\n"
@@ -297,14 +297,14 @@ step "Runtime: ${CONTAINER_RUNTIME} ${RUNTIME_VERSION}"
 step "Compose: ${COMPOSE_VERSION}"
 
 # ---------------------------------------------------------------------------
-# 2b. Check if Auto Design is already running
+# 2b. Check if Open Design is already running
 # ---------------------------------------------------------------------------
 if $CONTAINER_CMD ps --filter "name=open-design" --format '{{.Names}}' 2>/dev/null | grep -q 'open-design'; then
   STATUS="$($CONTAINER_CMD inspect --format '{{.State.Status}}' open-design 2>/dev/null || echo 'unknown')"
   IMAGE="$($CONTAINER_CMD inspect --format '{{.Config.Image}}' open-design 2>/dev/null || echo 'unknown')"
   PORTS="$($CONTAINER_CMD port open-design 2>/dev/null || echo 'unknown')"
 
-  error "Auto Design is already running."
+  error "Open Design is already running."
   printf "\n"
   printf "  Container:  open-design\n"
   printf "  Status:     %s\n" "$STATUS"
@@ -400,7 +400,7 @@ ok "Written ${ENV_FILE}"
 step "Pulling image: ${IMAGE}"
 $COMPOSE_CMD "${COMPOSE_FILES[@]}" pull
 
-step "Starting Auto Design..."
+step "Starting Open Design..."
 $COMPOSE_CMD "${COMPOSE_FILES[@]}" up -d --no-build
 
 # ---------------------------------------------------------------------------
@@ -451,7 +451,7 @@ if [ "$OS" = "Linux" ] && [ "$OPT_NO_SYSTEMD" = "0" ]; then
 
     {
       echo "[Unit]"
-      echo "Description=Auto Design daemon (${CONTAINER_RUNTIME} Compose)"
+      echo "Description=Open Design daemon (${CONTAINER_RUNTIME} Compose)"
       if [ "$CONTAINER_RUNTIME" = "docker" ]; then
         echo "After=${CONTAINER_RUNTIME}.service"
         echo "Requires=${CONTAINER_RUNTIME}.service"

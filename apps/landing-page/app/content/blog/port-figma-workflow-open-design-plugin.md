@@ -10,7 +10,7 @@ A Figma workflow usually starts as muscle memory: export these frames, sync thos
 
 The 0.8.0-preview thread makes a sharper ask: port that muscle memory into a plugin. Not a panel bolted onto a canvas. Not a private script only one team can run. A reusable Auto Design workflow that an agent can pick up, execute, review, and hand off through the same local-first loop as any other design task.
 
-This is the practical version of the [0.8.0-preview call for plugins](https://github.com/nexu-io/open-design/discussions/1727). If your team has one repeatable design workflow today, this post shows what it looks like to turn it into a plugin-shaped contribution.
+This is the practical version of the [0.8.0-preview call for plugins](https://github.com/aresbit/autoagent-design/discussions/1727). If your team has one repeatable design workflow today, this post shows what it looks like to turn it into a plugin-shaped contribution.
 
 ## The workflow worth porting is smaller than you think
 
@@ -98,7 +98,7 @@ The team still needs taste. The plugin just stops making them re-explain the sam
 
 If your team has a Figma export, token sync, brand kit, or deck template that keeps coming back, port the smallest repeatable slice first. Start with a `SKILL.md`, add `open-design.json`, validate it, and open the PR before the workflow grows into a private tool nobody else can reuse. The screenshot-to-prototype example shows the plugin-shaped version: a portable skill plus an Auto Design sidecar.
 
-[Try this workflow](https://github.com/nexu-io/open-design/tree/main/plugins/spec/examples/import-screenshot-to-prototype).
+[Try this workflow](https://github.com/aresbit/autoagent-design/tree/main/plugins/spec/examples/import-screenshot-to-prototype).
 
 ## Related reading
 

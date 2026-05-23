@@ -4,8 +4,8 @@ description: |
   Browser automation CLI for AI agents. Use when the user needs to inspect,
   test, or automate browser behavior: navigating pages, filling forms,
   clicking buttons, taking screenshots, extracting page data, testing web
-  apps, dogfooding Auto Design previews, QA, bug hunts, or reviewing app
-  quality. Prefer local Auto Design preview URLs unless the user explicitly
+  apps, dogfooding Open Design previews, QA, bug hunts, or reviewing app
+  quality. Prefer local Open Design preview URLs unless the user explicitly
   asks for external browsing.
 triggers:
   - "browser"
@@ -34,7 +34,7 @@ od:
 
 # Agent Browser
 
-Use `agent-browser` for local Auto Design preview validation: inspect rendered
+Use `agent-browser` for local Open Design preview validation: inspect rendered
 state, click/type when requested, and capture one screenshot when visual evidence
 matters. Keep the browser local-first unless the user explicitly asks for
 external browsing.
@@ -116,7 +116,7 @@ If Chrome exits before CDP is ready or reports `DevToolsActivePort`, report:
 Lightpanda is optional. Do not try `--engine lightpanda` unless
 `command -v lightpanda` succeeds.
 
-## Auto Design Smoke Path
+## Open Design Smoke Path
 
 Use a temp home and stable session:
 
@@ -125,7 +125,7 @@ export HOME=/tmp/agent-browser-home
 export AGENT_BROWSER_SESSION=od-local-preview
 ```
 
-With the Auto Design preview at `http://127.0.0.1:17573/`, run:
+With the Open Design preview at `http://127.0.0.1:17573/`, run:
 
 ```bash
 if ! curl -fsS http://127.0.0.1:9223/json/version | rg -q webSocketDebuggerUrl; then
@@ -152,8 +152,8 @@ agent-browser snapshot
 agent-browser screenshot /tmp/od-agent-browser.png
 ```
 
-Expected success: title `Auto Design`, current URL under `127.0.0.1:17573`,
-visible Auto Design UI text in the snapshot, and a screenshot at
+Expected success: title `Open Design`, current URL under `127.0.0.1:17573`,
+visible Open Design UI text in the snapshot, and a screenshot at
 `/tmp/od-agent-browser.png`.
 
 ## Workflow

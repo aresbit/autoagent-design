@@ -7,7 +7,7 @@ const STORAGE_KEY = 'open-design:config';
 const GITHUB_STARS_STORAGE_KEY = 'open-design:gh-stars';
 const VISUAL_STYLE_ID = 'od-visual-stability-style';
 // Keep this exact-route mock narrow so unrelated GitHub UI still behaves normally.
-const VISUAL_GITHUB_REPO_API = 'https://api.github.com/repos/nexu-io/open-design';
+const VISUAL_GITHUB_REPO_API = 'https://api.github.com/repos/aresbit/autoagent-design';
 const VISUAL_GITHUB_STARS = 40_000;
 
 const VISUAL_CONFIG = {
@@ -96,7 +96,7 @@ const VISUAL_PLUGINS = [
   makeVisualPlugin({
     id: 'visual-figma-importer',
     title: 'Figma Importer',
-    description: 'Migrate a Figma frame into an editable Auto Design project.',
+    description: 'Migrate a Figma frame into an editable Open Design project.',
     mode: 'prototype',
     taskKind: 'figma-migration',
     tags: ['migration'],
@@ -269,7 +269,7 @@ export async function configureVisualPage(page: Page, options: VisualPageOptions
 }
 
 export async function waitForVisualReady(page: Page): Promise<void> {
-  await page.getByText('Loading Auto Design…').waitFor({ state: 'detached', timeout: 10_000 }).catch(() => {});
+  await page.getByText('Loading Open Design…').waitFor({ state: 'detached', timeout: 10_000 }).catch(() => {});
   await expect(page.getByTestId('home-hero')).toBeVisible();
   await expect(page.getByTestId('home-hero-input')).toBeVisible();
   await page.evaluate(async () => {

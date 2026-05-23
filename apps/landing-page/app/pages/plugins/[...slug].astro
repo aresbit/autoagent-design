@@ -363,7 +363,7 @@ const breadcrumbJsonLd = {
         });
       });
 
-      fetch('https://api.github.com/repos/nexu-io/open-design')
+      fetch('https://api.github.com/repos/aresbit/autoagent-design')
         .then((response) => response.ok ? response.json() : undefined)
         .then((repo) => {
           const count = Number(repo?.stargazers_count);

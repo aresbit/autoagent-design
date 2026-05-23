@@ -7,7 +7,7 @@
   "description": "Default reference pipeline for the code-migration taskKind, with patch-edit ↔ build-test devloop and diff-review handoff.",
   "license": "MIT",
   "author": {
-    "name": "Auto Design",
+    "name": "Open Design",
     "url": "https://github.com/nexu-io"
   },
   "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/scenarios/od-code-migration",

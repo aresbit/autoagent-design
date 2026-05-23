@@ -58,7 +58,7 @@ describe("desktop updater host boundary", () => {
   it("exposes process quit only as an explicit post-installer-open action", () => {
     const runtime = source("src/main/runtime.ts");
     const quitStart = runtime.indexOf('ipcMain.handle("od:update:quit"');
-    const quitEnd = runtime.indexOf('ipcMain.removeAllListeners("desktop-pet:set-visible"');
+    const quitEnd = runtime.indexOf("unsubscribeUpdater();", quitStart);
     expect(quitStart).toBeGreaterThanOrEqual(0);
     expect(quitEnd).toBeGreaterThan(quitStart);
     const quitHandler = runtime.slice(quitStart, quitEnd);

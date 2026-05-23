@@ -1,9 +1,10 @@
 import { createHmac, randomBytes } from "node:crypto";
 import { appendFile, mkdir, realpath, stat, writeFile } from "node:fs/promises";
 import { dirname, isAbsolute, join, resolve } from "node:path";
+import { performance } from "node:perf_hooks";
 import { fileURLToPath } from "node:url";
 
-import { BrowserWindow, dialog, ipcMain, screen, shell } from "electron";
+import { BrowserWindow, dialog, ipcMain, shell } from "electron";
 import {
   DESKTOP_UPDATE_CHANNELS,
   DESKTOP_UPDATE_MODES,
@@ -214,9 +215,6 @@ export function signDesktopImportToken(
 const PENDING_POLL_MS = 120;
 const RUNNING_POLL_MS = 2000;
 const MAX_CONSOLE_ENTRIES = 200;
-const DESKTOP_PET_WINDOW_WIDTH = 360;
-const DESKTOP_PET_WINDOW_HEIGHT = 300;
-const DESKTOP_PET_WINDOW_MARGIN = 24;
 const UPDATER_STATUS_EVENT = "od:update:status-changed";
 const UPDATER_IPC_CHANNELS = [
   "od:update:status",
@@ -747,49 +745,6 @@ function installWindowChromeCssHook(window: BrowserWindow): void {
   });
 }
 
-function desktopPetUrl(baseUrl: string): string {
-  const url = new URL(baseUrl);
-  url.pathname = "/desktop-pet";
-  url.search = "";
-  url.hash = "";
-  return url.toString();
-}
-
-function createDesktopPetWindow(preloadPath: string): BrowserWindow {
-  const { workArea } = screen.getPrimaryDisplay();
-  const petWindow = new BrowserWindow({
-    width: DESKTOP_PET_WINDOW_WIDTH,
-    height: DESKTOP_PET_WINDOW_HEIGHT,
-    x: workArea.x + workArea.width - DESKTOP_PET_WINDOW_WIDTH - DESKTOP_PET_WINDOW_MARGIN,
-    y: workArea.y + workArea.height - DESKTOP_PET_WINDOW_HEIGHT - DESKTOP_PET_WINDOW_MARGIN,
-    show: false,
-    frame: false,
-    transparent: true,
-    backgroundColor: "#00000000",
-    resizable: false,
-    skipTaskbar: true,
-    alwaysOnTop: true,
-    hasShadow: false,
-    focusable: false,
-    webPreferences: {
-      contextIsolation: true,
-      nodeIntegration: false,
-      preload: preloadPath,
-      sandbox: true,
-    },
-  });
-  petWindow.setAlwaysOnTop(true, "floating");
-  petWindow.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
-  petWindow.webContents.setWindowOpenHandler(({ url }) => {
-    if (isHttpUrl(url)) void shell.openExternal(url);
-    return { action: "deny" };
-  });
-  petWindow.webContents.on("will-navigate", (event, url) => {
-    if (!url.includes("/desktop-pet")) event.preventDefault();
-  });
-  return petWindow;
-}
-
 function showWindowButtons(window: BrowserWindow): void {
   if (process.platform !== "darwin" || window.isDestroyed()) return;
   window.setWindowButtonVisibility(true);
@@ -1096,16 +1051,16 @@ export async function createDesktopRuntime(options: DesktopRuntimeOptions): Prom
   });
 
   const consoleEntries: DesktopConsoleEntry[] = [];
-  const petWindow = createDesktopPetWindow(preloadPath);
+  performance.mark("desktop:browserwindow-start");
+  performance.mark("desktop:pet-window-created");
   const window = new BrowserWindow({
     height: 900,
-    // Below this size the project page's left/right split (chat
-    // composer + designs panel + preview pane) overlaps and the top
-    // navigation clips, so prevent Electron from honoring user drags
-    // that would shrink the window past the usable breakpoint.
     minHeight: 600,
     minWidth: 900,
-    show: true,
+    // show:false → we control the first paint: load pending HTML, then
+    // call ensureWindowVisible(). This avoids a white-flash on platforms
+    // where the renderer process isn't ready when the native window opens.
+    show: false,
     title: "Auto Design",
     ...MAC_WINDOW_CHROME,
     webPreferences: {
@@ -1116,9 +1071,11 @@ export async function createDesktopRuntime(options: DesktopRuntimeOptions): Prom
     },
     width: 1280,
   });
+  performance.mark("desktop:browserwindow-created");
   installWindowChromeCssHook(window);
   showWindowButtons(window);
   attachDownloadSaveAsDialog(window);
+  performance.mark("desktop:window-setup-done");
 
   const sendUpdaterStatus = (status = options.updater?.snapshot() ?? unavailableUpdaterStatus()) => {
     if (window.isDestroyed()) return;
@@ -1167,13 +1124,6 @@ export async function createDesktopRuntime(options: DesktopRuntimeOptions): Prom
     return { ok: true };
   });
 
-  ipcMain.removeAllListeners("desktop-pet:set-visible");
-  ipcMain.on("desktop-pet:set-visible", (event, visible: unknown) => {
-    if (petWindow.isDestroyed() || event.sender !== petWindow.webContents) return;
-    if (visible) petWindow.showInactive();
-    else petWindow.hide();
-  });
-
   ipcMain.removeHandler('od:print-pdf');
   ipcMain.handle('od:print-pdf', async (_event, html: unknown, nonce: unknown, options: unknown): Promise<void> => {
     if (typeof html !== 'string') {
@@ -1198,12 +1148,13 @@ export async function createDesktopRuntime(options: DesktopRuntimeOptions): Prom
       throw new Error(result.error ?? 'PDF export failed');
     }
   });
+  performance.mark("desktop:ipc-handlers-done");
 
   let currentUrl: string | null = null;
-  let currentPetUrl: string | null = null;
   let pendingUrl: string | null = null;
   let stopped = false;
   let timer: NodeJS.Timeout | null = null;
+  let firstRealUrlLoaded = false;
 
   window.on("focus", () => showWindowButtons(window));
   window.on("blur", () => showWindowButtons(window));
@@ -1299,9 +1250,28 @@ export async function createDesktopRuntime(options: DesktopRuntimeOptions): Prom
     void persistRendererEntry(entry);
   });
 
+  performance.mark("desktop:loadurl-start");
   await window.loadURL(createPendingHtml());
+  performance.mark("desktop:loadurl-done");
   showWindowButtons(window);
   ensureWindowVisible(window);
+
+  try {
+    performance.measure("desktop:ipc-handlers", "desktop:browserwindow-start", "desktop:ipc-handlers-done");
+    performance.measure("desktop:browserwindow", "desktop:browserwindow-start", "desktop:browserwindow-created");
+    performance.measure("desktop:pet-window", "desktop:browserwindow-start", "desktop:pet-window-created");
+    performance.measure("desktop:window-setup", "desktop:browserwindow-created", "desktop:window-setup-done");
+    performance.measure("desktop:loadurl", "desktop:loadurl-start", "desktop:loadurl-done");
+    for (const entry of performance.getEntriesByType("measure")) {
+      if (entry.name.startsWith("desktop:")) {
+        console.log(`[auto-design desktop] runtime timing — ${entry.name}: ${Math.round(entry.duration)}ms`);
+      }
+    }
+    performance.clearMarks();
+    performance.clearMeasures();
+  } catch {
+    // ignore timing errors
+  }
 
   const schedule = (delayMs: number) => {
     if (stopped) return;
@@ -1320,12 +1290,15 @@ export async function createDesktopRuntime(options: DesktopRuntimeOptions): Prom
         await window.loadURL(url);
         currentUrl = url;
         pendingUrl = null;
-        showWindowButtons(window);
-        const nextPetUrl = desktopPetUrl(url);
-        if (!petWindow.isDestroyed() && nextPetUrl !== currentPetUrl) {
-          await petWindow.loadURL(nextPetUrl);
-          currentPetUrl = nextPetUrl;
+        if (!firstRealUrlLoaded) {
+          firstRealUrlLoaded = true;
+          performance.mark("desktop:web-first-load");
+          try {
+            performance.measure("desktop:web-discovery-total", "desktop:loadurl-done", "desktop:web-first-load");
+            console.log(`[auto-design desktop] runtime timing — desktop:web-discovery-total: ${Math.round(performance.getEntriesByName("desktop:web-discovery-total")[0]?.duration ?? 0)}ms`);
+          } catch { /* ignore */ }
         }
+        showWindowButtons(window);
       } else if (url == null) {
         pendingUrl = null;
       }
@@ -1360,11 +1333,9 @@ export async function createDesktopRuntime(options: DesktopRuntimeOptions): Prom
         timer = null;
       }
       unsubscribeUpdater();
-      ipcMain.removeAllListeners("desktop-pet:set-visible");
       for (const channel of UPDATER_IPC_CHANNELS) {
         ipcMain.removeHandler(channel);
       }
-      if (!petWindow.isDestroyed()) petWindow.close();
       if (!window.isDestroyed()) window.close();
     },
     console() {

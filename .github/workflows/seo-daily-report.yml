@@ -28,7 +28,7 @@ concurrency:
 jobs:
   report:
     name: Post SEO daily report to Feishu
-    if: github.repository == 'nexu-io/open-design'
+    if: github.repository == 'aresbit/autoagent-design'
     runs-on: ubuntu-latest
     timeout-minutes: 10
 

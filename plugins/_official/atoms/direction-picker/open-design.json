@@ -7,7 +7,7 @@
   "description": "3-5 direction picker that lets the user choose before final generation.",
   "license": "MIT",
   "author": {
-    "name": "Auto Design",
+    "name": "Open Design",
     "url": "https://github.com/nexu-io"
   },
   "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/atoms/direction-picker",

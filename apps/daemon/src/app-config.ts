@@ -135,6 +135,7 @@ function validateTelemetry(raw: unknown): TelemetryPrefs | undefined {
 }
 
 const AGENT_CLI_ENV_KEYS: ReadonlyMap<string, ReadonlySet<string>> = new Map([
+  ['opencc', new Set(['ANTHROPIC_BASE_URL', 'ANTHROPIC_API_KEY'])],
   ['claude', new Set(['CLAUDE_CONFIG_DIR', 'CLAUDE_BIN', 'ANTHROPIC_BASE_URL', 'ANTHROPIC_API_KEY'])],
   ['codex', new Set(['CODEX_HOME', 'CODEX_BIN', 'OPENAI_BASE_URL', 'CODEX_API_KEY', 'OPENAI_API_KEY'])],
   ['copilot', new Set(['COPILOT_BIN'])],
@@ -143,7 +144,6 @@ const AGENT_CLI_ENV_KEYS: ReadonlyMap<string, ReadonlySet<string>> = new Map([
   ['devin', new Set(['DEVIN_BIN'])],
   ['gemini', new Set(['GEMINI_BIN'])],
   ['hermes', new Set(['HERMES_BIN'])],
-  ['kimi', new Set(['KIMI_BIN'])],
   ['kiro', new Set(['KIRO_BIN'])],
   ['kilo', new Set(['KILO_BIN'])],
   ['opencode', new Set(['OPENCODE_BIN'])],

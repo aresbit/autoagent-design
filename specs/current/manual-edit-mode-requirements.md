@@ -1,8 +1,8 @@
-# Auto Design Manual Edit Mode Requirements
+# Open Design Manual Edit Mode Requirements
 
 ## Purpose
 
-This document records the accepted manual edit-mode model from `apps/edit-mode-demo` so it can be migrated into the main Auto Design web app.
+This document records the accepted manual edit-mode model from `apps/edit-mode-demo` so it can be migrated into the main Open Design web app.
 
 The key product decision is:
 
@@ -95,7 +95,7 @@ Purpose: live artifact preview.
 Required behavior:
 
 - Render artifact in sandboxed iframe.
-- Preserve Auto Design's existing preview model.
+- Preserve Open Design's existing preview model.
 - In edit mode, selectable elements show subtle outlines.
 - Hovered/selectable elements should feel discoverable without overwhelming the artifact.
 - Center toolbar includes:
@@ -411,7 +411,7 @@ The accepted design direction:
   - left layers
   - center canvas
   - right properties modal
-- Auto Design-specific mode rail:
+- Open Design-specific mode rail:
   - Preview
   - Edit
   - Comment AI
@@ -443,7 +443,7 @@ Likely production destinations:
 - `apps/web/src/components/FileViewer.tsx`
 - `apps/web/src/index.css`
 
-Existing Auto Design integration points:
+Existing Open Design integration points:
 
 - `FileViewer` already owns preview iframe and mode toolbar.
 - Existing comment mode already injects a preview bridge.

@@ -44,7 +44,7 @@ const locale = localeFromPath(Astro.url.pathname);
 const localeDef = getLocaleDefinition(locale);
 const ui = getLandingUiCopy(locale);
 const href = (path: string) => localizedHref(path, locale);
-const sourceUrl = `https://github.com/nexu-io/open-design/blob/main/apps/landing-page/app/content/tutorials/${entry.id}.md`;
+const sourceUrl = `https://github.com/aresbit/autoagent-design/blob/main/apps/landing-page/app/content/tutorials/${entry.id}.md`;
 const youtubeUrl = `https://www.youtube.com/watch?v=${entry.data.youtubeId}`;
 const thumbnailUrl =
   entry.data.thumbnail ?? `https://i.ytimg.com/vi/${entry.data.youtubeId}/maxresdefault.jpg`;

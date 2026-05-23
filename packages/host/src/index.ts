@@ -202,9 +202,6 @@ export type OpenDesignHostBridge = {
   pdf: {
     print(html: string, nonce?: string, options?: OpenDesignHostPdfPrintOptions): Promise<OpenDesignHostActionResult>;
   };
-  pet: {
-    setVisible(visible: boolean): void;
-  };
   project: {
     pickAndImport(init?: OpenDesignHostProjectImportInit): Promise<OpenDesignHostProjectImportResult>;
     pickAndReplaceWorkingDir(projectId: string): Promise<OpenDesignHostProjectReplaceWorkingDirResult>;
@@ -265,9 +262,6 @@ export function isOpenDesignHostBridge(value: unknown): value is OpenDesignHostB
 
   const pdf = value.pdf;
   if (!isRecord(pdf) || !hasFunction(pdf, "print")) return false;
-
-  const pet = value.pet;
-  if (!isRecord(pet) || !hasFunction(pet, "setVisible")) return false;
 
   const updater = value.updater;
   if (
@@ -435,17 +429,6 @@ export async function printHostPdf(
   if (host == null) return unavailable("Auto Design host is not available");
   try {
     return await host.pdf.print(html, nonce, options);
-  } catch (error) {
-    return unavailable(error instanceof Error ? error.message : String(error));
-  }
-}
-
-export function setHostPetVisible(visible: boolean, scope: OpenDesignHostGlobalScope = globalThis): OpenDesignHostActionResult {
-  const host = getOpenDesignHost(scope);
-  if (host == null) return unavailable("Auto Design host is not available");
-  try {
-    host.pet.setVisible(visible);
-    return { ok: true };
   } catch (error) {
     return unavailable(error instanceof Error ? error.message : String(error));
   }

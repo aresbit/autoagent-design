@@ -91,7 +91,7 @@ The dimension that decides it for most teams isn't quality. It's whether you'd r
 
 If you want to see what owning the workflow feels like before you spend a Pro subscription, run the three-command quickstart and point it at the model you already pay for. The whole thing lives in one repo and the first deck takes about ten minutes.
 
-[Try the open-source workflow](https://github.com/nexu-io/open-design/releases).
+[Try the open-source workflow](https://github.com/aresbit/autoagent-design/releases).
 
 ## Related reading
 

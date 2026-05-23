@@ -84,8 +84,8 @@ function previewUrlFor(
   return filename ? `/previews/${bucket}/${filename}` : null;
 }
 
-const REPO_TREE = 'https://github.com/nexu-io/open-design/tree/main';
-const REPO_BLOB = 'https://github.com/nexu-io/open-design/blob/main';
+const REPO_TREE = 'https://github.com/aresbit/autoagent-design/tree/main';
+const REPO_BLOB = 'https://github.com/aresbit/autoagent-design/blob/main';
 const SHOULD_CACHE_CATALOG = import.meta.env.PROD;
 
 // ---------------------------------------------------------------------------

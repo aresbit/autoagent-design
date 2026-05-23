@@ -220,7 +220,7 @@ describe('PluginShareMenu', () => {
     openPopover();
     const repoLinks = Array.from(
       container.querySelectorAll<HTMLAnchorElement>(
-        'a.plugin-share-item[href="https://github.com/nexu-io/open-design"]',
+        'a.plugin-share-item[href="https://github.com/aresbit/autoagent-design"]',
       ),
     );
     expect(repoLinks.length).toBeGreaterThan(0);

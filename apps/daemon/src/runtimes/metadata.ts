@@ -24,12 +24,8 @@ const AGENT_INSTALL_LINKS: Record<
     docsUrl: 'https://github.com/sst/opencode',
   },
   hermes: {
-    installUrl: 'https://github.com/nexu-io/open-design/blob/main/docs/agent-adapters.md',
+    installUrl: 'https://github.com/aresbit/autoagent-design/blob/main/docs/agent-adapters.md',
     docsUrl: 'https://hermes-agent.nousresearch.com/docs/',
-  },
-  kimi: {
-    installUrl: 'https://github.com/MoonshotAI/kimi-cli',
-    docsUrl: 'https://www.kimi.com/code/docs/en/kimi-cli/guides/getting-started.html',
   },
   'cursor-agent': {
     installUrl: 'https://cursor.com/docs/cli/overview',
@@ -48,7 +44,7 @@ const AGENT_INSTALL_LINKS: Record<
     docsUrl: 'https://docs.github.com/en/copilot/how-tos/use-copilot-extensions/use-in-cli',
   },
   pi: {
-    installUrl: 'https://github.com/nexu-io/open-design/blob/main/docs/agent-adapters.md',
+    installUrl: 'https://github.com/aresbit/autoagent-design/blob/main/docs/agent-adapters.md',
     docsUrl: 'https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/README.md',
   },
   kiro: {

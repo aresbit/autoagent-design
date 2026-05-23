@@ -7,7 +7,7 @@
   "description": "Default scenario plugin for image, video, and audio projects. Routes through the media-* atoms based on the project kind and wraps the result in a live artifact.",
   "license": "MIT",
   "author": {
-    "name": "Auto Design",
+    "name": "Open Design",
     "url": "https://github.com/nexu-io"
   },
   "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/scenarios/od-media-generation",

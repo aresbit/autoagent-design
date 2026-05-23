@@ -14,7 +14,7 @@
 
 These binaries are vendored only for the Windows tools-pack installer build.
 The installer embeds `7z.exe` and `7z.dll` temporarily to extract the packaged
-Auto Design `.7z` payload during installation.
+Open Design `.7z` payload during installation.
 
 These files remain subject to the upstream 7-Zip license and are not relicensed
 under this repository's Apache-2.0 license. In particular, see `License.txt` for

@@ -17,10 +17,10 @@ permissions:
 jobs:
   metrics:
     name: Generate repository metrics SVG
-    if: github.repository == 'nexu-io/open-design'
+    if: github.repository == 'aresbit/autoagent-design'
     runs-on: ubuntu-latest
     steps:
-      - name: Generate Auto Design bot token
+      - name: Generate Open Design bot token
         id: open-design-bot-token
         uses: actions/create-github-app-token@v2
         with:
@@ -40,7 +40,7 @@ jobs:
           # Requires manual review to merge. If metrics unchanged, no PR is created.
           filename: docs/assets/github-metrics.svg
 
-          # Auth: use the Auto Design GitHub App so generated commits and pull
+          # Auth: use the Open Design GitHub App so generated commits and pull
           # requests come from open-design-bot[bot] and trigger normal PR CI.
           token: ${{ steps.open-design-bot-token.outputs.token }}
           committer_token: ${{ steps.open-design-bot-token.outputs.token }}

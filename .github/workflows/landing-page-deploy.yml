@@ -37,7 +37,7 @@ concurrency:
 jobs:
   deploy:
     name: Deploy landing page
-    if: github.repository == 'nexu-io/open-design'
+    if: github.repository == 'aresbit/autoagent-design'
     runs-on: ubuntu-latest
     timeout-minutes: 20
 

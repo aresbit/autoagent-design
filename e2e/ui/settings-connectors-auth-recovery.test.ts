@@ -63,13 +63,13 @@ function connectorCard(scope: Page | Locator, id: string) {
 }
 
 async function waitForLoadingToClear(page: Page) {
-  await expect(page.getByText('Loading Auto Design…')).toHaveCount(0, { timeout: 15_000 });
+  await expect(page.getByText('Loading Open Design…')).toHaveCount(0, { timeout: 15_000 });
 }
 
 async function gotoEntryHome(page: Page) {
   await page.goto('/', { waitUntil: 'domcontentloaded' });
   await waitForLoadingToClear(page);
-  const privacyDialog = page.getByRole('dialog').filter({ hasText: 'Help us improve Auto Design' });
+  const privacyDialog = page.getByRole('dialog').filter({ hasText: 'Help us improve Open Design' });
   if (await privacyDialog.isVisible()) {
     await privacyDialog.getByRole('button', { name: /not now|don't share/i }).click();
   }
@@ -268,7 +268,7 @@ test.describe('Settings connectors auth recovery', () => {
     await githubCard.getByRole('button', { name: 'Connect' }).click();
     await expect(githubCard.getByRole('button', { name: 'Cancel' })).toHaveCount(0);
     await expect(
-      dialog.getByText('Popup blocked. Allow popups for Auto Design and try again.'),
+      dialog.getByText('Popup blocked. Allow popups for Open Design and try again.'),
     ).toBeVisible();
     await expect
       .poll(async () =>

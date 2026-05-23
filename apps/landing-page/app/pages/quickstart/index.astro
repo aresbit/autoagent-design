@@ -27,7 +27,7 @@ const common = copy.common;
 // Derive SITE from Astro.site so preview/staging JSON-LD matches the
 // layout's canonical link. Falls back to the production origin.
 const SITE = Astro.site?.toString() ?? 'https://open-design.ai/';
-const REPO = 'https://github.com/nexu-io/open-design';
+const REPO = 'https://github.com/aresbit/autoagent-design';
 const REPO_RELEASES = `${REPO}/releases`;
 const QUICKSTART_DOC = `${REPO}/blob/main/QUICKSTART.md`;
 
@@ -157,7 +157,7 @@ const jsonLd = [
         <p>{page.ctaBody}</p>
       </div>
       <div class="info-cta-actions">
-        <a class="btn btn-primary" href="https://github.com/nexu-io/open-design" target="_blank" rel="noreferrer noopener">{common.starOnGithub}</a>
+        <a class="btn btn-primary" href="https://github.com/aresbit/autoagent-design" target="_blank" rel="noreferrer noopener">{common.starOnGithub}</a>
         <a class="btn btn-ghost" href={REPO_RELEASES} target="_blank" rel="noreferrer noopener">{common.downloadDesktop}</a>
         <a class="btn btn-ghost" href="https://discord.gg/9ptkbbqRu" target="_blank" rel="noreferrer noopener">{common.joinDiscord}</a>
       </div>

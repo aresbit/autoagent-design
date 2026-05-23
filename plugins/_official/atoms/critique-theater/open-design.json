@@ -7,7 +7,7 @@
   "description": "5-dimension critique panel; emits the critique.score signal that drives devloop convergence.",
   "license": "MIT",
   "author": {
-    "name": "Auto Design",
+    "name": "Open Design",
     "url": "https://github.com/nexu-io"
   },
   "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/atoms/critique-theater",

@@ -40,7 +40,7 @@ concurrency:
 jobs:
   report:
     name: Daily 3-day traffic digest
-    if: github.repository == 'nexu-io/open-design'
+    if: github.repository == 'aresbit/autoagent-design'
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -93,7 +93,7 @@ jobs:
           {
             echo "### Blog 3-day report configuration"
             echo "- GSC auth configured: \`$gsc\`"
-            echo "- Auto Design bot configured: \`$bot\`"
+            echo "- Open Design bot configured: \`$bot\`"
             echo "- Feishu digest webhook configured: \`$feishu\`"
             if [ "$gsc" != "true" ]; then
               echo ""
@@ -157,7 +157,7 @@ jobs:
             .blog-indexing/blog-traffic-digest-summary.json
           retention-days: 30
 
-      - name: Generate Auto Design bot token
+      - name: Generate Open Design bot token
         if: steps.config.outputs.gsc == 'true' && steps.config.outputs.bot == 'true'
         id: open-design-bot-token
         uses: actions/create-github-app-token@v2

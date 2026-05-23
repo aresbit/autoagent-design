@@ -1,4 +1,4 @@
-# NixOS module for Auto Design — secondary interface for shared/server
+# NixOS module for Open Design — secondary interface for shared/server
 # installs (e.g. running the daemon as a long-lived service on a team
 # build host). For individual developer machines, prefer the Home
 # Manager module (nix/home-manager.nix).
@@ -178,7 +178,7 @@ in {
         isSystemUser = true;
         group = cfg.group;
         home = cfg.dataDir;
-        description = "Auto Design daemon";
+        description = "Open Design daemon";
       };
       users.groups.${cfg.group} = {};
 
@@ -220,7 +220,7 @@ in {
 
     (lib.mkIf cfg.autoStart {
       systemd.services.open-design = {
-        description = "Auto Design daemon";
+        description = "Open Design daemon";
         wantedBy = ["multi-user.target"];
         after = ["network-online.target"];
         wants = ["network-online.target"];
@@ -246,7 +246,7 @@ in {
 
     (lib.mkIf cfg.webFrontend.enable {
       systemd.services.open-design-web = {
-        description = "Auto Design web frontend (static file server)";
+        description = "Open Design web frontend (static file server)";
         wantedBy = ["multi-user.target"];
         after = ["network-online.target"];
         wants = ["network-online.target"];

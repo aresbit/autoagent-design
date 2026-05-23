@@ -7,7 +7,7 @@
   "description": "Default reference pipeline for the figma-migration taskKind.",
   "license": "MIT",
   "author": {
-    "name": "Auto Design",
+    "name": "Open Design",
     "url": "https://github.com/nexu-io"
   },
   "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/scenarios/od-figma-migration",

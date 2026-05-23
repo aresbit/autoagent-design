@@ -20,7 +20,7 @@ concurrency:
 jobs:
   refresh:
     name: Refresh contributors wall cache bust
-    if: github.repository == 'nexu-io/open-design'
+    if: github.repository == 'aresbit/autoagent-design'
     runs-on: ubuntu-latest
 
     steps:
@@ -37,7 +37,7 @@ jobs:
           fi
           perl -0pi -e "s/cache_bust=\d{4}-\d{2}-\d{2}/cache_bust=$DATE/g" README*.md
 
-      - name: Generate Auto Design bot token
+      - name: Generate Open Design bot token
         id: open-design-bot-token
         uses: actions/create-github-app-token@v2
         with:

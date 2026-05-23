@@ -35,7 +35,7 @@ describe('GithubStarBadge', () => {
     globalThis.fetch = vi.fn().mockResolvedValue({
       ok: true,
       json: async () => ({
-        repo: 'nexu-io/open-design',
+        repo: 'aresbit/autoagent-design',
         stargazers_count: 42137,
         fetchedAt: Date.parse('2026-05-22T00:00:00.000Z'),
         stale: false,

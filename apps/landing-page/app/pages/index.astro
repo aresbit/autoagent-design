@@ -36,7 +36,7 @@ const alternateLinks = alternateLinksForPath('/').map((entry) => ({
 }));
 const xDefaultHref = new URL('/', Astro.site).toString();
 
-const REPO_URL = 'https://github.com/nexu-io/open-design';
+const REPO_URL = 'https://github.com/aresbit/autoagent-design';
 const RELEASES_URL = `${REPO_URL}/releases`;
 const ISSUES_URL = `${REPO_URL}/issues`;
 const DOCS_URL = `${REPO_URL}#readme`;
@@ -49,7 +49,7 @@ const OFFICIAL_URL = `${origin}official/`;
 // "lives at https://open-design.ai/" with a stray protocol/slash.
 const faq = getHomeFaq(locale, {
   origin: 'open-design.ai',
-  repo: 'github.com/nexu-io/open-design',
+  repo: 'github.com/aresbit/autoagent-design',
 });
 
 const websiteSchema = {
@@ -67,7 +67,7 @@ const organizationSchema = {
   '@type': 'Organization',
   '@id': `${origin}#organization`,
   name: 'Auto Design',
-  alternateName: ['OpenDesign', 'open-design', 'opendesign', 'Auto Design AI', 'OD', 'nexu-io/open-design'],
+  alternateName: ['OpenDesign', 'open-design', 'opendesign', 'Auto Design AI', 'OD', 'aresbit/autoagent-design'],
   url: origin,
   logo: {
     '@type': 'ImageObject',
@@ -261,7 +261,7 @@ const pageHtml = renderToStaticMarkup(
 
           const stars = document.querySelector('[data-github-stars]');
           if (stars) {
-            fetch('https://api.github.com/repos/nexu-io/open-design', {
+            fetch('https://api.github.com/repos/aresbit/autoagent-design', {
               headers: { Accept: 'application/vnd.github+json' },
             })
               .then((r) => (r.ok ? r.json() : Promise.reject(new Error('http error'))))
@@ -279,7 +279,7 @@ const pageHtml = renderToStaticMarkup(
           // each slot keeps the layout sane if the request fails or 403s.
           const versionSlots = document.querySelectorAll('[data-github-version]');
           if (versionSlots.length === 0) return;
-          fetch('https://api.github.com/repos/nexu-io/open-design/releases/latest', {
+          fetch('https://api.github.com/repos/aresbit/autoagent-design/releases/latest', {
             headers: { Accept: 'application/vnd.github+json' },
           })
             .then((r) => (r.ok ? r.json() : Promise.reject(new Error('http error'))))
@@ -335,7 +335,7 @@ const pageHtml = renderToStaticMarkup(
             return link;
           };
 
-          fetch('https://api.github.com/repos/nexu-io/open-design/contributors?per_page=12', {
+          fetch('https://api.github.com/repos/aresbit/autoagent-design/contributors?per_page=12', {
             headers: { Accept: 'application/vnd.github+json' },
           })
             .then((r) => (r.ok ? r.json() : Promise.reject(new Error('http error'))))
@@ -354,7 +354,7 @@ const pageHtml = renderToStaticMarkup(
               live.push({
                 handle: 'you',
                 role: 'be next',
-                href: 'https://github.com/nexu-io/open-design/graphs/contributors',
+                href: 'https://github.com/aresbit/autoagent-design/graphs/contributors',
               });
               if (count) count.textContent = String(Math.max(0, live.length - 1));
               track.replaceChildren(

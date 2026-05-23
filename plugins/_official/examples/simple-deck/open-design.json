@@ -7,7 +7,7 @@
   "description": "Single-file horizontal-swipe HTML deck. Built by copying the seed\n`assets/template.html` (which carries the proven 5-rule iframe nav script)\nand pasting slide layouts from `references/layouts.md`. Pitch decks,\nproduct overviews, study material — when you don't need the magazine\naesthetic of `magazine-web-ppt`.",
   "license": "MIT",
   "author": {
-    "name": "Auto Design",
+    "name": "Open Design",
     "url": "https://github.com/nexu-io"
   },
   "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/examples/simple-deck",

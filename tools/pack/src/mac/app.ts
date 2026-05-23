@@ -210,7 +210,7 @@ export async function writeAssembledApp(
     `${JSON.stringify(
       {
         dependencies,
-        description: "Auto Design packaged runtime",
+        description: "Open Design packaged runtime",
         main: "./main.cjs",
         name: "open-design-packaged-app",
         private: true,

@@ -8,7 +8,7 @@ summary: "We promised BYOK as first-class. Five open bug threads from this week 
 
 We've been telling people Auto Design is BYOK from the ground up. That's still true. The seed post on the [BYOK design workflow](/blog/byok-design-workflow-claude-codex-qwen/) walks through the working path — point the daemon at any OpenAI-compatible endpoint, paste your key, you're done.
 
-But "BYOK" isn't a single feature. It's a contract that reaches into the chat composer, the finalize endpoint, the model picker, the CLI launch path, and the analytics layer. Every one of those is a place where the contract can break — and right now, four of them are open issues in our [public tracker](https://github.com/nexu-io/open-design/issues), reported by users in the last 48 hours.
+But "BYOK" isn't a single feature. It's a contract that reaches into the chat composer, the finalize endpoint, the model picker, the CLI launch path, and the analytics layer. Every one of those is a place where the contract can break — and right now, four of them are open issues in our [public tracker](https://github.com/aresbit/autoagent-design/issues), reported by users in the last 48 hours.
 
 This post lists what's broken, why it's broken, what to do today, and which PR is fixing it. Treat it as the Windows-and-Gemini honesty pass that the seed BYOK post didn't give you.
 
@@ -20,7 +20,7 @@ Here are the five.
 
 ## Gemini gets lost on the way to "Finish Design"
 
-**[Issue #1619](https://github.com/nexu-io/open-design/issues/1619) — `bug`, open**
+**[Issue #1619](https://github.com/aresbit/autoagent-design/issues/1619) — `bug`, open**
 
 Reporter: BYOK is configured for Gemini. The Settings test connection succeeds. The model picker returns Gemini models. Regular chat works. But the moment they hit **Finish Design**, the daemon throws an Anthropic-shaped error.
 
@@ -32,7 +32,7 @@ The maintainer reply confirms it: regular API-mode chat honors the selected Gemi
 
 ## Gemini 3 Flash dies on Windows before the prompt lands
 
-**[Issue #1611](https://github.com/nexu-io/open-design/issues/1611) — `bug`, open**
+**[Issue #1611](https://github.com/aresbit/autoagent-design/issues/1611) — `bug`, open**
 
 Reporter: Gemini 3 Flash Preview fails inside Auto Design on Windows with `stdin: write EOF` after about 1.5 seconds. Gemini 3 Pro works fine in the same install. Direct Gemini CLI (`gemini --model gemini-3-flash-preview ...`) succeeds when `GEMINI_CLI_TRUST_WORKSPACE=true` is set.
 
@@ -44,7 +44,7 @@ The diagnosis took two passes. First read of the screenshot looked like upstream
 
 ## DeepSeek TUI has a 30 KB prompt ceiling on Windows
 
-**[Issue #1610](https://github.com/nexu-io/open-design/issues/1610) — `bug`, open**
+**[Issue #1610](https://github.com/aresbit/autoagent-design/issues/1610) — `bug`, open**
 
 Reporter (DeepSeek wrapper v0.8.33, Windows packaged build): a long composed prompt fails with our pre-flight guard at `81397 > 30000 bytes`.
 
@@ -56,7 +56,7 @@ That guard is intentional. Without it, Windows would fail later with a less usef
 
 ## The OpenCode local-CLI test times out before the model warms up
 
-**[Issue #1603](https://github.com/nexu-io/open-design/issues/1603) — `bug`, `priority:p0`, open**
+**[Issue #1603](https://github.com/aresbit/autoagent-design/issues/1603) — `bug`, `priority:p0`, open**
 
 Reporter: in Settings → BYOK → OpenCode, the connection test reliably times out at 45 seconds. But if they first open OpenCode Desktop's terminal and attach a local LLM there, the same Auto Design test then succeeds.
 
@@ -68,7 +68,7 @@ That's the useful clue. Auto Design doesn't attach to the running OpenCode Deskt
 
 ## The packaged web app refuses to load over plain HTTP
 
-**[Issue #1620](https://github.com/nexu-io/open-design/issues/1620) — `bug`, open**
+**[Issue #1620](https://github.com/aresbit/autoagent-design/issues/1620) — `bug`, open**
 
 Slightly different bug, same family. Reporter is running the packaged web app on a LAN IP over plain HTTP. After PR #1428, the analytics provider and the PDF export nonce started calling `crypto.randomUUID()` directly, bypassing the tiered helper from PR #900. Chromium does not expose `crypto.randomUUID` in non-secure contexts, so the page throws on load.
 
@@ -94,18 +94,18 @@ The trade is still right. A working setup on Claude Code, Codex, Cursor, Gemini 
 | Codex | ✓ | ✓ | ✓ | native |
 | Cursor (BYOK) | ✓ | ✓ | ✓ | native |
 | Gemini 3 Pro Preview | ✓ | ✓ | ✓ | OpenRouter shim |
-| Gemini 3 Flash Preview | ✓ | ✓ | ✗ ([#1611](https://github.com/nexu-io/open-design/issues/1611)) | OpenRouter shim |
+| Gemini 3 Flash Preview | ✓ | ✓ | ✗ ([#1611](https://github.com/aresbit/autoagent-design/issues/1611)) | OpenRouter shim |
 | DeepSeek (API) | ✓ | ✓ | ✓ | OpenRouter shim |
-| DeepSeek TUI (long prompts) | ✓ | ✓ | ✗ ([#1610](https://github.com/nexu-io/open-design/issues/1610)) | OpenRouter shim |
+| DeepSeek TUI (long prompts) | ✓ | ✓ | ✗ ([#1610](https://github.com/aresbit/autoagent-design/issues/1610)) | OpenRouter shim |
 | OpenCode (local model) | ✓ | ✓ | ✓ (warm first) | n/a |
 
-Subscribe to the [BYOK label on the tracker](https://github.com/nexu-io/open-design/issues?q=is%3Aissue+label%3Abug+BYOK) if you want notifications when each row above flips.
+Subscribe to the [BYOK label on the tracker](https://github.com/aresbit/autoagent-design/issues?q=is%3Aissue+label%3Abug+BYOK) if you want notifications when each row above flips.
 
 ## What to do next
 
-Auto Design's [skills library](https://github.com/nexu-io/open-design/tree/main/skills) is the working layer underneath all of this — the file-driven contracts that the BYOK adapter feeds into. If you want to see what a skill actually consumes from the model and what it doesn't care about, that directory is the right place to start.
+Auto Design's [skills library](https://github.com/aresbit/autoagent-design/tree/main/skills) is the working layer underneath all of this — the file-driven contracts that the BYOK adapter feeds into. If you want to see what a skill actually consumes from the model and what it doesn't care about, that directory is the right place to start.
 
-[Browse the skills library](https://github.com/nexu-io/open-design/tree/main/skills).
+[Browse the skills library](https://github.com/aresbit/autoagent-design/tree/main/skills).
 
 ## Related reading
 

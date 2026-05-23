@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 import type { OpenDesignGithubRepoResponse } from '@open-design/contracts';
 
 const API = '/api/github/open-design';
-const REPO = 'https://github.com/nexu-io/open-design';
+const REPO = 'https://github.com/aresbit/autoagent-design';
 const LS_KEY = 'open-design:gh-stars';
 export const GITHUB_STARS_FALLBACK_LABEL = '40K+';
 

@@ -11,7 +11,7 @@
  * filter to "every EINVAL" (which would silently swallow real bugs)
  * trips a test.
  *
- * @see https://github.com/nexu-io/open-design/issues/895
+ * @see https://github.com/aresbit/autoagent-design/issues/895
  */
 
 import { afterEach, describe, expect, it, vi } from 'vitest';

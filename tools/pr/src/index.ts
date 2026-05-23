@@ -1,5 +1,5 @@
 /**
- * tools-pr — maintainer PR-duty control plane for nexu-io/open-design.
+ * tools-pr — maintainer PR-duty control plane for aresbit/autoagent-design.
  *
  * Thin gh wrapper that encodes review knowledge specific to this repo: lane
  * derivation, forbidden-surface flags, per-lane checklists, and validation

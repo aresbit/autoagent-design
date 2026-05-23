@@ -1,6 +1,6 @@
 ---
 name: od-default
-description: Hidden fallback scenario for free-form Home prompts. Ask the task type first, then continue through the matching Auto Design flow.
+description: Hidden fallback scenario for free-form Home prompts. Ask the task type first, then continue through the matching Open Design flow.
 od:
   scenario: default-router
   mode: scenario
@@ -21,7 +21,7 @@ answers.
 ```html
 <question-form id="task-type" title="Choose the task type">
 {
-  "description": "I will route the free-form prompt through the right Auto Design workflow.",
+  "description": "I will route the free-form prompt through the right Open Design workflow.",
   "questions": [
     {
       "id": "taskType",
@@ -68,7 +68,7 @@ task type as authoritative and continue:
 - `Audio`: plan voice/music/SFX intent, then use the OD media generation
   CLI for audio output.
 - `Other`: ask only the minimum follow-up needed, then choose the closest
-  Auto Design workflow and continue.
+  Open Design workflow and continue.
 
 Keep the rest of the run plugin-driven: use the discovery, planning,
 generation, and critique stages declared by this plugin. Do not tell the

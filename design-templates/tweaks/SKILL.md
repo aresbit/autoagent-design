@@ -142,7 +142,7 @@ that set, regardless of stored preference.
 
 ## Host integration contract (REQUIRED)
 
-The Auto Design viewer toolbar has a **Tweaks** toggle that drives panel
+The Open Design viewer toolbar has a **Tweaks** toggle that drives panel
 visibility from outside the iframe. For the toggle to bind to your panel,
 your artifact **must** speak one of these two protocols (pick one; don't
 mix). The toolbar enables itself the moment it sees either signal.

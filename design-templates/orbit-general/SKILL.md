@@ -149,7 +149,7 @@ Connector icons must be monochrome line SVG (1.5 stroke).
 
 7. **Footer** — single line, ~52px.
    Left: `Open Orbit · auto-generated 06:42 · N connectors`.
-   Right: `由  出品`.
+   Right: `由 Nexu Labs 出品`.
    Border-top 1px, all text 12px muted.
 
 ## Connector → UI mapping (pick the matching family)

@@ -40,7 +40,7 @@ jobs:
   recognize:
     name: Render and post contributor card
     if: |
-      github.repository == 'nexu-io/open-design' &&
+      github.repository == 'aresbit/autoagent-design' &&
       (
         (github.event_name == 'pull_request_target' && github.event.pull_request.merged == true) ||
         (github.event_name == 'issues' && github.event.action == 'opened') ||
@@ -55,7 +55,7 @@ jobs:
       - name: Checkout contributor bot
         uses: actions/checkout@v6.0.2
         with:
-          repository: nexu-io/open-design-bot-sandbox
+          repository: aresbit/autoagent-design-bot-sandbox
           ref: main
 
       - name: Setup pnpm

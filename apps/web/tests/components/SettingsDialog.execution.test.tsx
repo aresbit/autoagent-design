@@ -2661,7 +2661,7 @@ describe('SettingsDialog about interactions', () => {
     const openSpy = vi.spyOn(window, 'open').mockImplementation(() => null);
     fetchLatestGithubReleaseInfoMock.mockResolvedValue({
       tagName: 'v0.4.1',
-      htmlUrl: 'https://github.com/nexu-io/open-design/releases/tag/v0.4.1',
+      htmlUrl: 'https://github.com/aresbit/autoagent-design/releases/tag/v0.4.1',
       stale: true,
     });
 
@@ -2683,7 +2683,7 @@ describe('SettingsDialog about interactions', () => {
 
     await waitFor(() => {
       expect(openSpy).toHaveBeenCalledWith(
-        'https://github.com/nexu-io/open-design/releases',
+        'https://github.com/aresbit/autoagent-design/releases',
         '_blank',
         'noopener,noreferrer',
       );

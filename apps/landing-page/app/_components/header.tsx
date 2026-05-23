@@ -19,7 +19,7 @@ import {
   type LandingLocaleCode,
 } from '../i18n';
 
-const REPO = 'https://github.com/nexu-io/open-design';
+const REPO = 'https://github.com/aresbit/autoagent-design';
 const REPO_RELEASES = `${REPO}/releases`;
 
 const ext = {

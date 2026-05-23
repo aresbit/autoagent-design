@@ -1,7 +1,5 @@
 packages:
   - packages/*
-  - '!packages/opencc'
-  - '!packages/opencc/**'
   - apps/*
   - tools/*
   - e2e

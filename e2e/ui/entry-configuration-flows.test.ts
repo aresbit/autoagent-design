@@ -51,7 +51,7 @@ const IMAGE_TEMPLATE = {
   source: {
     repo: 'open-design/test-prompts',
     license: 'MIT',
-    author: 'Auto Design QA',
+    author: 'Open Design QA',
   },
 };
 

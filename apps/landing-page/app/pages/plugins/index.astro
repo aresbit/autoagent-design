@@ -165,7 +165,7 @@ const trustLabel = (plugin: (typeof plugins)[number]) =>
                 <a class='btn btn-primary' href='#registry-results'>
                   {ui.plugins.browseRegistry}
                 </a>
-                <a class='btn btn-ghost' href='https://raw.githubusercontent.com/nexu-io/open-design/main/plugins/registry/community/open-design-marketplace.json' target='_blank' rel='noreferrer noopener'>
+                <a class='btn btn-ghost' href='https://raw.githubusercontent.com/aresbit/autoagent-design/main/plugins/registry/community/open-design-marketplace.json' target='_blank' rel='noreferrer noopener'>
                   {ui.plugins.communityMarketplace}
                 </a>
               </div>
@@ -342,7 +342,7 @@ const trustLabel = (plugin: (typeof plugins)[number]) =>
         });
       }
 
-      fetch('https://api.github.com/repos/nexu-io/open-design')
+      fetch('https://api.github.com/repos/aresbit/autoagent-design')
         .then((response) => response.ok ? response.json() : undefined)
         .then((repo) => {
           const count = Number(repo?.stargazers_count);

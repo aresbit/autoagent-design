@@ -7,7 +7,7 @@
   "description": "Open Orbit briefing skill — selected by the Orbit pipeline when\nGmail is the user's only connected connector, or when the user\nexplicitly scopes their daily digest to Gmail. Pulls the past 24\nhours of inbox activity (replies awaited, mentions, cc, auto-\ncategorized bulk) from the user's authenticated Gmail connection\nand renders the digest as the Orbit Daily Digest email opened\ninside Gmail's reading view. This skill should not be triggered\nmanually — it is invoked by Orbit's daily-digest scheduler against\nlive Gmail data.",
   "license": "MIT",
   "author": {
-    "name": "Auto Design",
+    "name": "Open Design",
     "url": "https://github.com/nexu-io"
   },
   "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/examples/orbit-gmail",

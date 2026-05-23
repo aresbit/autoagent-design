@@ -38,7 +38,7 @@ concurrency:
 jobs:
   monitor:
     name: Monitor recent blog URLs
-    if: github.repository == 'nexu-io/open-design'
+    if: github.repository == 'aresbit/autoagent-design'
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
@@ -86,12 +86,12 @@ jobs:
             echo "::warning title=Blog indexing monitor not fully configured::GSC auth is missing; URL Inspection, Search Analytics, status refresh, and escalation checks will be skipped."
           fi
           if [ "$bot" != "true" ]; then
-            echo "::warning title=Blog indexing monitor writes disabled::Auto Design bot secrets are missing; issue and status PR writes will be skipped."
+            echo "::warning title=Blog indexing monitor writes disabled::Open Design bot secrets are missing; issue and status PR writes will be skipped."
           fi
           {
             echo "### Blog indexing monitor configuration"
             echo "- GSC auth configured: \`$gsc\`"
-            echo "- Auto Design bot configured: \`$bot\`"
+            echo "- Open Design bot configured: \`$bot\`"
             if [ "$gsc" != "true" ]; then
               echo ""
               echo "URL Inspection, Search Analytics, and status refresh steps will be skipped."
@@ -197,7 +197,7 @@ jobs:
           should=$(node -e "console.log(require('./.blog-indexing/low-traffic.json').shouldEscalate)")
           echo "should=$should" >> "$GITHUB_OUTPUT"
 
-      - name: Generate Auto Design bot token
+      - name: Generate Open Design bot token
         if: steps.window.outputs.count != '0' && steps.config.outputs.gsc == 'true' && steps.config.outputs.bot == 'true'
         id: open-design-bot-token
         uses: actions/create-github-app-token@v2
@@ -218,14 +218,14 @@ jobs:
           title=$(node -e "console.log(require('./.blog-indexing/stalls.json').issueTitle)")
           body_file=.blog-indexing/issue-body.md
           node -e "require('fs').writeFileSync('${body_file}',require('./.blog-indexing/stalls.json').issueBody)"
-          existing=$(gh issue list --repo nexu-io/open-design --state open --search "in:title \"${title}\"" --json number --jq '.[0].number // empty')
+          existing=$(gh issue list --repo aresbit/autoagent-design --state open --search "in:title \"${title}\"" --json number --jq '.[0].number // empty')
           if [ -n "$existing" ]; then
             echo "Updating issue #$existing"
-            gh issue edit "$existing" --repo nexu-io/open-design --title "$title" --body-file "$body_file"
-            gh issue comment "$existing" --repo nexu-io/open-design --body-file "$body_file"
+            gh issue edit "$existing" --repo aresbit/autoagent-design --title "$title" --body-file "$body_file"
+            gh issue comment "$existing" --repo aresbit/autoagent-design --body-file "$body_file"
           else
             echo "Opening new issue"
-            gh issue create --repo nexu-io/open-design --title "$title" --body-file "$body_file"
+            gh issue create --repo aresbit/autoagent-design --title "$title" --body-file "$body_file"
           fi
 
       - name: Open / refresh low-traffic issue
@@ -236,12 +236,12 @@ jobs:
           title=$(node -e "console.log(require('./.blog-indexing/low-traffic.json').issueTitle)")
           body_file=.blog-indexing/low-traffic-issue-body.md
           node -e "require('fs').writeFileSync('${body_file}',require('./.blog-indexing/low-traffic.json').issueBody)"
-          existing=$(gh issue list --repo nexu-io/open-design --state open --search "in:title \"${title}\"" --json number --jq '.[0].number // empty')
+          existing=$(gh issue list --repo aresbit/autoagent-design --state open --search "in:title \"${title}\"" --json number --jq '.[0].number // empty')
           if [ -n "$existing" ]; then
-            gh issue edit "$existing" --repo nexu-io/open-design --title "$title" --body-file "$body_file"
-            gh issue comment "$existing" --repo nexu-io/open-design --body-file "$body_file"
+            gh issue edit "$existing" --repo aresbit/autoagent-design --title "$title" --body-file "$body_file"
+            gh issue comment "$existing" --repo aresbit/autoagent-design --body-file "$body_file"
           else
-            gh issue create --repo nexu-io/open-design --title "$title" --body-file "$body_file"
+            gh issue create --repo aresbit/autoagent-design --title "$title" --body-file "$body_file"
           fi
 
       - name: Close stall issue if all clear
@@ -249,10 +249,10 @@ jobs:
         env:
           GH_TOKEN: ${{ steps.open-design-bot-token.outputs.token }}
         run: |
-          existing=$(gh issue list --repo nexu-io/open-design --state open --search 'in:title "Blog indexing — URLs stalled in Search Console"' --json number --jq '.[0].number // empty')
+          existing=$(gh issue list --repo aresbit/autoagent-design --state open --search 'in:title "Blog indexing — URLs stalled in Search Console"' --json number --jq '.[0].number // empty')
           if [ -n "$existing" ]; then
-            gh issue comment "$existing" --repo nexu-io/open-design --body 'All previously stalled URLs have reached `indexed` status. Closing automatically. — `blog-indexing-monitor`'
-            gh issue close "$existing" --repo nexu-io/open-design
+            gh issue comment "$existing" --repo aresbit/autoagent-design --body 'All previously stalled URLs have reached `indexed` status. Closing automatically. — `blog-indexing-monitor`'
+            gh issue close "$existing" --repo aresbit/autoagent-design
           fi
 
       - name: Close low-traffic issue if all clear
@@ -260,10 +260,10 @@ jobs:
         env:
           GH_TOKEN: ${{ steps.open-design-bot-token.outputs.token }}
         run: |
-          existing=$(gh issue list --repo nexu-io/open-design --state open --search 'in:title "Blog traffic — indexed posts with zero impressions"' --json number --jq '.[0].number // empty')
+          existing=$(gh issue list --repo aresbit/autoagent-design --state open --search 'in:title "Blog traffic — indexed posts with zero impressions"' --json number --jq '.[0].number // empty')
           if [ -n "$existing" ]; then
-            gh issue comment "$existing" --repo nexu-io/open-design --body 'All previously low-traffic tracked URLs now have impressions or no longer match the escalation window. Closing automatically. — `blog-indexing-monitor`'
-            gh issue close "$existing" --repo nexu-io/open-design
+            gh issue comment "$existing" --repo aresbit/autoagent-design --body 'All previously low-traffic tracked URLs now have impressions or no longer match the escalation window. Closing automatically. — `blog-indexing-monitor`'
+            gh issue close "$existing" --repo aresbit/autoagent-design
           fi
 
       - name: Open status PR

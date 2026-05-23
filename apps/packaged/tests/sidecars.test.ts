@@ -13,7 +13,7 @@
  *
  * @see apps/packaged/src/sidecars.ts
  * @see apps/daemon/src/legacy-data-migrator.ts
- * @see https://github.com/nexu-io/open-design/issues/710
+ * @see https://github.com/aresbit/autoagent-design/issues/710
  */
 import { EventEmitter } from 'node:events';
 import { mkdtempSync, rmSync } from 'node:fs';

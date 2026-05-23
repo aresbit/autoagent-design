@@ -20,7 +20,6 @@ import {
   printHostPdf,
   openHostProjectPath,
   quitHostAfterUpdaterInstallerOpen,
-  setHostPetVisible,
   subscribeHostUpdater,
 } from "../src/index.js";
 import { createMockOpenDesignHost, installMockOpenDesignHost } from "../src/testing.js";
@@ -195,13 +194,11 @@ describe("open-design host contract", () => {
       entryFile: "app.html",
     }));
     const print = vi.fn(async () => ({ ok: true as const }));
-    const setVisible = vi.fn();
     const scope: Record<string, unknown> = {};
     scope[OPEN_DESIGN_HOST_GLOBAL] = createMockOpenDesignHost({
       shell: { openExternal, openPath },
       project: { pickAndImport },
       pdf: { print },
-      pet: { setVisible },
     });
 
     await expect(openHostExternalUrl("https://example.com", scope)).resolves.toEqual({ ok: true });
@@ -211,13 +208,11 @@ describe("open-design host contract", () => {
       projectId: "project-2",
     });
     await expect(printHostPdf("<html></html>", "nonce", { deck: true }, scope)).resolves.toEqual({ ok: true });
-    expect(setHostPetVisible(true, scope)).toEqual({ ok: true });
 
     expect(openExternal).toHaveBeenCalledWith("https://example.com");
     expect(openPath).toHaveBeenCalledWith("project-2");
     expect(pickAndImport).toHaveBeenCalledWith({ skillId: "skill-1" });
     expect(print).toHaveBeenCalledWith("<html></html>", "nonce", { deck: true });
-    expect(setVisible).toHaveBeenCalledWith(true);
   });
 
   it("routes updater status, actions, and subscriptions through package-owned helpers", async () => {

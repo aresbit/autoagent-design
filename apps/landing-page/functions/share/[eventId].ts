@@ -26,7 +26,7 @@ type ShareClickRecord = {
   region?: string;
 };
 
-const REPO_URL = "https://github.com/nexu-io/open-design";
+const REPO_URL = "https://github.com/aresbit/autoagent-design";
 
 function normalizeEventId(value: string): string {
   return value.replace(/[^a-zA-Z0-9._:-]/g, "").slice(0, 120);

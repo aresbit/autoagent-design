@@ -129,10 +129,10 @@ Keep this list short — only entries useful as guard-rails so we don't re-litig
 ## Source URL list (for the agent's "find topics" pass)
 
 P0 — every find-topics pass (mandatory):
-- `gh issue list --repo nexu-io/open-design --state open --limit 30` — current pain, BYOK, contributor work
-- `gh issue list --repo nexu-io/open-design --state closed --limit 30 --search "closed:>=$(date -v-7d +%Y-%m-%d)"` — recent shipped wins worth narrating
-- `gh issue list --repo nexu-io/open-design --label blog --state all` — direct content requests
-- https://github.com/nexu-io/open-design/issues — same data via web for skim/triage
+- `gh issue list --repo aresbit/autoagent-design --state open --limit 30` — current pain, BYOK, contributor work
+- `gh issue list --repo aresbit/autoagent-design --state closed --limit 30 --search "closed:>=$(date -v-7d +%Y-%m-%d)"` — recent shipped wins worth narrating
+- `gh issue list --repo aresbit/autoagent-design --label blog --state all` — direct content requests
+- https://github.com/aresbit/autoagent-design/issues — same data via web for skim/triage
 
 P0 — daily:
 - https://www.anthropic.com/news

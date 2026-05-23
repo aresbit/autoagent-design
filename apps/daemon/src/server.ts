@@ -1056,7 +1056,7 @@ const PLUGIN_REGISTRY_DIR = resolveDaemonResourceDir(
   path.join(PROJECT_ROOT, 'plugins', 'registry'),
 );
 const OFFICIAL_MARKETPLACE_ID = 'official';
-const OFFICIAL_PLUGIN_SOURCE_REPO = 'github:nexu-io/open-design@main';
+const OFFICIAL_PLUGIN_SOURCE_REPO = 'github:aresbit/autoagent-design@main';
 
 export function isStaticSpaFallbackRequest(req) {
   if (req.method !== 'GET' && req.method !== 'HEAD') return false;
@@ -1211,7 +1211,7 @@ const RUNTIME_DATA_DIR_CANONICAL = (() => {
 // new data root is fresh (no app.sqlite), copy the 0.3.x .od/ payload
 // across before SQLite opens. Synchronous on purpose: openDatabase below
 // would race an async copy. See apps/daemon/src/legacy-data-migrator.ts
-// and https://github.com/nexu-io/open-design/issues/710.
+// and https://github.com/aresbit/autoagent-design/issues/710.
 migrateLegacyDataDirSync({
   legacyDir: process.env.OD_LEGACY_DATA_DIR,
   dataDir: RUNTIME_DATA_DIR,
@@ -2522,8 +2522,8 @@ function setLiveArtifactCodeHeaders(res) {
   res.setHeader('Referrer-Policy', 'no-referrer');
 }
 
-const OPEN_DESIGN_GITHUB_REPO_API = 'https://api.github.com/repos/nexu-io/open-design';
-const OPEN_DESIGN_GITHUB_RELEASE_LATEST_API = 'https://api.github.com/repos/nexu-io/open-design/releases/latest';
+const OPEN_DESIGN_GITHUB_REPO_API = 'https://api.github.com/repos/aresbit/autoagent-design';
+const OPEN_DESIGN_GITHUB_RELEASE_LATEST_API = 'https://api.github.com/repos/aresbit/autoagent-design/releases/latest';
 const OPEN_DESIGN_GITHUB_CACHE_TTL_MS = 60 * 60 * 1000;
 const OPEN_DESIGN_GITHUB_TIMEOUT_MS = 4_000;
 
@@ -3676,7 +3676,7 @@ export async function startServer({
     try {
       const stats = await readOpenDesignGithubRepoStats();
       const payload = /** @type {OpenDesignGithubRepoResponse} */ ({
-        repo: 'nexu-io/open-design',
+        repo: 'aresbit/autoagent-design',
         stargazers_count: stats.stargazersCount,
         fetchedAt: stats.fetchedAt,
         stale: stats.stale,
@@ -3693,7 +3693,7 @@ export async function startServer({
     try {
       const release = await readOpenDesignLatestReleaseInfo();
       const payload = /** @type {OpenDesignGithubLatestReleaseResponse} */ ({
-        repo: 'nexu-io/open-design',
+        repo: 'aresbit/autoagent-design',
         tag_name: release.tagName,
         html_url: release.htmlUrl,
         fetchedAt: release.fetchedAt,
@@ -8252,8 +8252,8 @@ export async function startServer({
       ].join('\n');
       const log = [...(gh.log ?? [])];
       for (const [cmd, args, opts] of [
-        ['gh', ['repo', 'fork', 'nexu-io/open-design', '--remote=false'], { cwd: tmp }],
-        ['gh', ['repo', 'clone', 'nexu-io/open-design', work], { cwd: tmp }],
+        ['gh', ['repo', 'fork', 'aresbit/autoagent-design', '--remote=false'], { cwd: tmp }],
+        ['gh', ['repo', 'clone', 'aresbit/autoagent-design', work], { cwd: tmp }],
         ['git', ['checkout', '-b', branch], { cwd: work }],
         ['git', ['remote', 'add', 'fork', `https://github.com/${login}/open-design.git`], { cwd: work }],
       ]) {
@@ -8290,7 +8290,7 @@ export async function startServer({
         'pr',
         'create',
         '--repo',
-        'nexu-io/open-design',
+        'aresbit/autoagent-design',
         '--head',
         `${login}:${branch}`,
         '--base',
@@ -11073,7 +11073,8 @@ export async function startServer({
       : null;
     if (!agentId) {
       const agents = await detectAgents(appConfig.agentCliEnv ?? {}).catch(() => []);
-      agentId = agents.find((agent) => agent.available)?.id ?? null;
+      agentId = (agents.find((agent) => agent.available && agent.id === 'opencc')
+        ?? agents.find((agent) => agent.available))?.id ?? null;
     }
     if (!agentId) throw new Error('No available agent is configured for Orbit. Choose an agent in Settings first.');
 
@@ -11602,7 +11603,8 @@ export async function startServer({
       || (typeof appConfig.agentId === 'string' && appConfig.agentId ? appConfig.agentId : null);
     if (!agentId) {
       const agents = await detectAgents(appConfig.agentCliEnv ?? {}).catch(() => []);
-      agentId = agents.find((agent) => agent.available)?.id ?? null;
+      agentId = (agents.find((agent) => agent.available && agent.id === 'opencc')
+        ?? agents.find((agent) => agent.available))?.id ?? null;
     }
     if (!agentId) {
       throw new Error('No available agent is configured. Choose an agent in Settings first.');

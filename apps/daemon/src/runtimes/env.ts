@@ -37,6 +37,13 @@ export function spawnEnvForAgent(
     ...baseEnv,
     ...expandConfiguredEnv(configuredEnv),
   };
+  if (agentId === 'opencc') {
+    // OpenCC defaults to DeepSeek API — users only need to set ANTHROPIC_API_KEY.
+    if (!hasEnvKey(env, 'ANTHROPIC_BASE_URL')) {
+      env.ANTHROPIC_BASE_URL = 'https://api.deepseek.com/anthropic';
+    }
+    return env;
+  }
   if (agentId === 'claude') {
     stripUnlessCustomBaseUrl(env, 'ANTHROPIC_BASE_URL', ['ANTHROPIC_API_KEY']);
     return env;
@@ -56,6 +63,13 @@ export function spawnEnvForAgent(
 // a custom endpoint and the secret is the credential that authenticates
 // against it. Comparison is case-insensitive so Windows env names with
 // mixed casing (`Openai_Api_Key`) cannot slip past a literal `delete`.
+function hasEnvKey(env: NodeJS.ProcessEnv, key: string): boolean {
+  const upper = key.toUpperCase();
+  return Object.keys(env).some(
+    (k) => k.toUpperCase() === upper && typeof env[k] === 'string' && env[k].trim() !== '',
+  );
+}
+
 function stripUnlessCustomBaseUrl(
   env: NodeJS.ProcessEnv,
   baseUrlKey: string,

@@ -43,7 +43,7 @@ The release is wide. The pieces worth pulling forward:
 - **Italian (it) locale + CJK font fallback.** The UI now ships in 19 languages including Italian (#1323), and Chinese / Japanese / Korean text falls back to platform-native fonts instead of going through Latin substitution (#2227).
 - **Top-to-bottom visual refresh.** New app icons, brand glyphs, refreshed wordmark — one coordinated drop in time for the cut (#2436).
 
-The full list runs to 305 PRs. The [release notes on GitHub](https://github.com/nexu-io/open-design/releases/tag/open-design-v0.8.0) carry the rest.
+The full list runs to 305 PRs. The [release notes on GitHub](https://github.com/aresbit/autoagent-design/releases/tag/open-design-v0.8.0) carry the rest.
 
 ## What to do with it today
 
@@ -61,7 +61,7 @@ If you've been waiting for the agent-native loop to feel like the canonical loop
 
 The fastest way to feel the difference between 0.7 and 0.8 is to install the desktop app, let it pick up your existing agent, and run the same brief you ran last month. The shape of the answer changes.
 
-[Download desktop](https://github.com/nexu-io/open-design/releases/tag/open-design-v0.8.0).
+[Download desktop](https://github.com/aresbit/autoagent-design/releases/tag/open-design-v0.8.0).
 
 ## Related reading
 

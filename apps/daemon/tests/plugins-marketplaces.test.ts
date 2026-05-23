@@ -160,13 +160,13 @@ describe('marketplaces', () => {
 
   it('normalizes legacy branch raw urls to the canonical raw registry', () => {
     expect(resolveMarketplaceFetchUrl(
-      'https://raw.githubusercontent.com/nexu-io/open-design/garnet-hemisphere/plugins/registry/community/open-design-marketplace.json',
+      'https://raw.githubusercontent.com/aresbit/autoagent-design/garnet-hemisphere/plugins/registry/community/open-design-marketplace.json',
     )).toBe(marketplaceManifestUrlForRegistry('community'));
   });
 
   it('requires a raw open-design-marketplace.json document, not a GitHub tree page', async () => {
     const result = await addMarketplace(db, {
-      url: 'https://github.com/nexu-io/open-design/tree/garnet-hemisphere/plugins/registry/community',
+      url: 'https://github.com/aresbit/autoagent-design/tree/garnet-hemisphere/plugins/registry/community',
       fetcher: fixtureFetcher('<!doctype html><html><body>GitHub tree page</body></html>'),
     });
 
@@ -356,7 +356,7 @@ describe('marketplaces', () => {
     expect(JSON.parse(sourceManifest)).toMatchObject({
       name: 'community-registry-starter',
       plugin: {
-        repo: expect.stringContaining('github.com/nexu-io/open-design'),
+        repo: expect.stringContaining('github.com/aresbit/autoagent-design'),
       },
     });
   });

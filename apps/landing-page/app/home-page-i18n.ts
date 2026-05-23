@@ -232,7 +232,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     officialLabel: 'Source officielle',
     officialItems: [
       { label: 'Site officiel', value: 'open-design.ai' },
-      { label: 'Code source', value: 'nexu-io/open-design' },
+      { label: 'Code source', value: 'aresbit/autoagent-design' },
       { label: 'Versions', value: 'version' },
       { label: 'Téléchargement', value: 'Desktop · macOS · Win · Linux' },
       { label: 'Documentation', value: 'README + /quickstart/' },
@@ -387,7 +387,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     officialLabel: 'Официальный источник',
     officialItems: [
       { label: 'Официальный сайт', value: 'open-design.ai' },
-      { label: 'Исходный код', value: 'nexu-io/open-design' },
+      { label: 'Исходный код', value: 'aresbit/autoagent-design' },
       { label: 'Релизы', value: 'version' },
       { label: 'Загрузка', value: 'Desktop · macOS · Win · Linux' },
       { label: 'Документация', value: 'README + /quickstart/' },
@@ -542,7 +542,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     officialLabel: 'Fuente oficial',
     officialItems: [
       { label: 'Sitio oficial', value: 'open-design.ai' },
-      { label: 'Código fuente', value: 'nexu-io/open-design' },
+      { label: 'Código fuente', value: 'aresbit/autoagent-design' },
       { label: 'Versiones', value: 'version' },
       { label: 'Descarga', value: 'Desktop · macOS · Win · Linux' },
       { label: 'Documentación', value: 'README + /quickstart/' },
@@ -697,7 +697,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     officialLabel: 'Fonte oficial',
     officialItems: [
       { label: 'Site oficial', value: 'open-design.ai' },
-      { label: 'Código-fonte', value: 'nexu-io/open-design' },
+      { label: 'Código-fonte', value: 'aresbit/autoagent-design' },
       { label: 'Versões', value: 'version' },
       { label: 'Download', value: 'Desktop · macOS · Win · Linux' },
       { label: 'Documentação', value: 'README + /quickstart/' },
@@ -852,7 +852,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     officialLabel: 'Fonte ufficiale',
     officialItems: [
       { label: 'Sito ufficiale', value: 'open-design.ai' },
-      { label: 'Codice sorgente', value: 'nexu-io/open-design' },
+      { label: 'Codice sorgente', value: 'aresbit/autoagent-design' },
       { label: 'Release', value: 'version' },
       { label: 'Download', value: 'Desktop · macOS · Win · Linux' },
       { label: 'Documentazione', value: 'README + /quickstart/' },
@@ -1007,7 +1007,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     officialLabel: 'Nguồn chính thức',
     officialItems: [
       { label: 'Trang chính thức', value: 'open-design.ai' },
-      { label: 'Mã nguồn', value: 'nexu-io/open-design' },
+      { label: 'Mã nguồn', value: 'aresbit/autoagent-design' },
       { label: 'Bản phát hành', value: 'version' },
       { label: 'Tải xuống', value: 'Desktop · macOS · Win · Linux' },
       { label: 'Tài liệu', value: 'README + /quickstart/' },
@@ -1162,7 +1162,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     officialLabel: 'Oficjalne źródło',
     officialItems: [
       { label: 'Oficjalna strona', value: 'open-design.ai' },
-      { label: 'Kod źródłowy', value: 'nexu-io/open-design' },
+      { label: 'Kod źródłowy', value: 'aresbit/autoagent-design' },
       { label: 'Wydania', value: 'version' },
       { label: 'Pobieranie', value: 'Desktop · macOS · Win · Linux' },
       { label: 'Dokumentacja', value: 'README + /quickstart/' },
@@ -1317,7 +1317,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     officialLabel: 'Sumber resmi',
     officialItems: [
       { label: 'Situs resmi', value: 'open-design.ai' },
-      { label: 'Kode sumber', value: 'nexu-io/open-design' },
+      { label: 'Kode sumber', value: 'aresbit/autoagent-design' },
       { label: 'Rilis', value: 'version' },
       { label: 'Unduh', value: 'Desktop · macOS · Win · Linux' },
       { label: 'Dokumentasi', value: 'README + /quickstart/' },
@@ -1472,7 +1472,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     officialLabel: 'Officiële bron',
     officialItems: [
       { label: 'Officiële site', value: 'open-design.ai' },
-      { label: 'Broncode', value: 'nexu-io/open-design' },
+      { label: 'Broncode', value: 'aresbit/autoagent-design' },
       { label: 'Uitgaven', value: 'version' },
       { label: 'Download', value: 'Desktop · macOS · Win · Linux' },
       { label: 'Documentatie', value: 'README + /quickstart/' },
@@ -1627,7 +1627,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     officialLabel: 'المصدر الرسمي',
     officialItems: [
       { label: 'الموقع الرسمي', value: 'open-design.ai' },
-      { label: 'الكود المصدري', value: 'nexu-io/open-design' },
+      { label: 'الكود المصدري', value: 'aresbit/autoagent-design' },
       { label: 'الإصدارات', value: 'version' },
       { label: 'التنزيل', value: 'Desktop · macOS · Win · Linux' },
       { label: 'التوثيق', value: 'README + /quickstart/' },
@@ -1782,7 +1782,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     officialLabel: 'Resmi kaynak',
     officialItems: [
       { label: 'Resmi site', value: 'open-design.ai' },
-      { label: 'Kaynak kod', value: 'nexu-io/open-design' },
+      { label: 'Kaynak kod', value: 'aresbit/autoagent-design' },
       { label: 'Sürümler', value: 'version' },
       { label: 'İndir', value: 'Desktop · macOS · Win · Linux' },
       { label: 'Dokümantasyon', value: 'README + /quickstart/' },
@@ -1937,7 +1937,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     officialLabel: 'Офіційне джерело',
     officialItems: [
       { label: 'Офіційний сайт', value: 'open-design.ai' },
-      { label: 'Вихідний код', value: 'nexu-io/open-design' },
+      { label: 'Вихідний код', value: 'aresbit/autoagent-design' },
       { label: 'Релізи', value: 'version' },
       { label: 'Завантаження', value: 'Desktop · macOS · Win · Linux' },
       { label: 'Документація', value: 'README + /quickstart/' },

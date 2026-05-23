@@ -66,14 +66,14 @@ const localizedBodyHtml = explicitLocalizedString(
   locale,
 ) ?? fallbackPost.bodyHtml;
 const DISCORD = 'https://discord.gg/9ptkbbqRu';
-const sourceUrl = `https://github.com/nexu-io/open-design/blob/main/apps/landing-page/app/content/blog/${post.id}.md`;
+const sourceUrl = `https://github.com/aresbit/autoagent-design/blob/main/apps/landing-page/app/content/blog/${post.id}.md`;
 const category = post.data.category.toLowerCase();
 const bottomCta =
   category.includes('announcement') || category.includes('product')
     ? {
         title: ui.blog.cta.downloadTitle,
         body: ui.blog.cta.downloadBody,
-        href: 'https://github.com/nexu-io/open-design/releases',
+        href: 'https://github.com/aresbit/autoagent-design/releases',
         label: ui.blog.cta.downloadLabel,
         external: true,
       }
@@ -88,7 +88,7 @@ const bottomCta =
       : {
           title: ui.blog.cta.repoTitle,
           body: ui.blog.cta.repoBody,
-          href: 'https://github.com/nexu-io/open-design',
+          href: 'https://github.com/aresbit/autoagent-design',
           label: ui.blog.cta.repoLabel,
           external: true,
         };

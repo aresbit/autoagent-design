@@ -7,7 +7,7 @@
   "description": "Single-file horizontal-swipe slide deck for a weekly team update —\nshipped, in flight, blocked, metrics, asks. 6–8 slides. Use when the\nbrief mentions \"weekly update\", \"team update slides\", \"weekly status\",\n\"周报演示\".",
   "license": "MIT",
   "author": {
-    "name": "Auto Design",
+    "name": "Open Design",
     "url": "https://github.com/nexu-io"
   },
   "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/examples/weekly-update",

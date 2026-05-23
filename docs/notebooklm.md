@@ -1,6 +1,6 @@
-# NotebookLM: export issues/PRs from Auto Design
+# NotebookLM: export issues/PRs from Open Design
 
-Auto Design gets a lot of feedback via GitHub Issues + PRs. If you want NotebookLM to help with:
+Open Design gets a lot of feedback via GitHub Issues + PRs. If you want NotebookLM to help with:
 
 - support answers (with citations)
 - clustering + taxonomy of user scenarios

@@ -39,7 +39,7 @@ jobs:
   index:
     name: Index newly deployed blog posts
     if: >-
-      github.repository == 'nexu-io/open-design'
+      github.repository == 'aresbit/autoagent-design'
       && (
         github.event_name == 'workflow_dispatch'
         || github.event.workflow_run.conclusion == 'success'
@@ -99,12 +99,12 @@ jobs:
             echo "::warning title=Blog indexing not fully configured::GSC auth is missing; sitemap submission, URL Inspection, Search Analytics, and status rendering will be skipped."
           fi
           if [ "$bot" != "true" ]; then
-            echo "::warning title=Blog indexing status PR disabled::Auto Design bot secrets are missing; status PR creation will be skipped."
+            echo "::warning title=Blog indexing status PR disabled::Open Design bot secrets are missing; status PR creation will be skipped."
           fi
           {
             echo "### Blog indexing configuration"
             echo "- GSC auth configured: \`$gsc\`"
-            echo "- Auto Design bot configured: \`$bot\`"
+            echo "- Open Design bot configured: \`$bot\`"
             if [ "$gsc" != "true" ]; then
               echo ""
               echo "GSC-dependent sitemap submission and URL Inspection steps will be skipped."
@@ -230,7 +230,7 @@ jobs:
           if-no-files-found: ignore
           retention-days: 30
 
-      - name: Generate Auto Design bot token
+      - name: Generate Open Design bot token
         if: steps.detect.outputs.count != '0' && steps.config.outputs.gsc == 'true' && steps.config.outputs.bot == 'true'
         id: open-design-bot-token
         uses: actions/create-github-app-token@v2

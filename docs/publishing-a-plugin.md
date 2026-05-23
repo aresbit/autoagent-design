@@ -1,6 +1,6 @@
-# Publishing An Auto Design Plugin
+# Publishing An Open Design Plugin
 
-Auto Design registry publishing is GitHub-backed in v1. The CLI remains the
+Open Design registry publishing is GitHub-backed in v1. The CLI remains the
 canonical workflow; the product UI and agent flows wrap these commands.
 
 ## 1. Scaffold
@@ -12,7 +12,7 @@ od plugin scaffold --id figma-workflow --title "Figma workflow" --out ./plugins/
 The scaffold command creates `./plugins/community/figma-workflow/`. Plugin IDs
 must be lowercase, start with a letter, and use only `[a-z0-9._-]`; slash-
 separated registry paths are used by catalogs, not by `od plugin scaffold`.
-The generated `open-design.json` is the Auto Design sidecar next to `SKILL.md`.
+The generated `open-design.json` is the Open Design sidecar next to `SKILL.md`.
 
 ## 2. Validate And Pack
 
@@ -32,7 +32,7 @@ od plugin login
 od plugin whoami --json
 ```
 
-These commands wrap GitHub CLI. Tokens stay in `gh`; Auto Design does not store
+These commands wrap GitHub CLI. Tokens stay in `gh`; Open Design does not store
 GitHub credentials.
 
 ## 4. Publish

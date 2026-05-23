@@ -1,5 +1,6 @@
 import { randomBytes } from "node:crypto";
 import { realpathSync } from "node:fs";
+import { performance } from "node:perf_hooks";
 import { fileURLToPath } from "node:url";
 
 import { BrowserWindow, Menu, app, shell, type MenuItemConstructorOptions } from "electron";
@@ -211,7 +212,7 @@ function installDesktopMenu(
           {
             label: "Auto Design",
             click() {
-              void shell.openExternal("https://github.com/nexu-io/open-design");
+              void shell.openExternal("https://github.com/aresbit/autoagent-design");
             },
           },
           { type: "separator" },
@@ -280,6 +281,8 @@ export async function runDesktopMain(
   runtime: SidecarRuntimeContext<SidecarStamp>,
   options: DesktopMainOptions = {},
 ): Promise<void> {
+  performance.mark("desktop:main:start");
+
   // Install the defensive uncaughtException filter BEFORE awaiting
   // app.whenReady, so a setTypeOfService EINVAL thrown by undici during
   // the renderer's first fetch is intercepted rather than surfacing as
@@ -290,6 +293,7 @@ export async function runDesktopMain(
   attachDesktopProcessErrorFilter();
 
   await app.whenReady();
+  performance.mark("desktop:app-ready");
 
   // PR #974: mint a per-process auth secret and hand it to the daemon
   // BEFORE the BrowserWindow loads. The daemon uses it to verify the
@@ -310,9 +314,10 @@ export async function runDesktopMain(
   // renderer toast rather than silently dropping forever.
   const desktopAuthSecret = randomBytes(32);
   const registered = await registerDesktopAuthWithDaemon(runtime, desktopAuthSecret);
+  performance.mark("desktop:auth-registered");
   if (!registered) {
     console.warn(
-      "[open-design desktop] initial import-token handshake with daemon did not complete; " +
+      "[auto-design desktop] initial import-token handshake with daemon did not complete; " +
         "first folder-import attempt will lazily retry registration before failing",
     );
   }
@@ -326,6 +331,7 @@ export async function runDesktopMain(
     },
     { openPath: (path) => shell.openPath(path) },
   );
+  performance.mark("desktop:updater-created");
   const namespaceRoot = resolveNamespaceRoot({
     base: runtime.base,
     contract: OPEN_DESIGN_SIDECAR_CONTRACT,
@@ -378,8 +384,11 @@ export async function runDesktopMain(
     requestQuit: shutdownAndExit,
     updater,
   });
+  performance.mark("desktop:runtime-created");
   disposeMenu = installDesktopMenu(runtime);
+  performance.mark("desktop:menu-installed");
   removeDiagnosticsIpc = registerDesktopDiagnosticsIpc(runtime);
+  performance.mark("desktop:diagnostics-ipc");
   updateScheduler = createDesktopUpdaterScheduler(updater, {
     backoffInitialMs: updater.config.checkBackoffInitialMs,
     backoffMaxMs: updater.config.checkBackoffMaxMs,
@@ -388,6 +397,7 @@ export async function runDesktopMain(
   });
   if (updater.shouldAutoCheck()) updateScheduler.start();
 
+  performance.mark("desktop:scheduler-created");
   attachParentMonitor(shutdown);
 
   app.on("before-quit", (event) => {
@@ -427,6 +437,28 @@ export async function runDesktopMain(
       }
     },
   });
+  performance.mark("desktop:ipc-ready");
+
+  // Log startup timing breakdown
+  try {
+    performance.measure("desktop:app-ready", "desktop:main:start", "desktop:app-ready");
+    performance.measure("desktop:auth", "desktop:app-ready", "desktop:auth-registered");
+    performance.measure("desktop:updater-create", "desktop:auth-registered", "desktop:updater-created");
+    performance.measure("desktop:runtime", "desktop:updater-created", "desktop:runtime-created");
+    performance.measure("desktop:menu", "desktop:runtime-created", "desktop:menu-installed");
+    performance.measure("desktop:diagnostics", "desktop:menu-installed", "desktop:diagnostics-ipc");
+    performance.measure("desktop:scheduler", "desktop:diagnostics-ipc", "desktop:scheduler-created");
+    performance.measure("desktop:ipc", "desktop:scheduler-created", "desktop:ipc-ready");
+    performance.measure("desktop:total", "desktop:main:start", "desktop:ipc-ready");
+    const entries = performance.getEntriesByType("measure");
+    for (const entry of entries) {
+      console.log(`[auto-design desktop] startup timing — ${entry.name}: ${Math.round(entry.duration)}ms`);
+    }
+    performance.clearMarks();
+    performance.clearMeasures();
+  } catch {
+    // ignore timing errors
+  }
 
   app.on("before-quit", (event) => {
     if (shuttingDown) return;

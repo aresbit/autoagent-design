@@ -83,7 +83,7 @@ describe('renderMarkdownToSafeHtml', () => {
       ['[Link](https://github.com/user/repo")}', 'https://github.com/user/repo'],
       ['[Link](https://github.com/user/repo.git")}', 'https://github.com/user/repo.git'],
       // Realistic sentence
-      ['Check out [the repo](https://github.com/nexu-io/open-design).', 'https://github.com/nexu-io/open-design'],
+      ['Check out [the repo](https://github.com/aresbit/autoagent-design).', 'https://github.com/aresbit/autoagent-design'],
     ];
     for (const [md, expectedHref] of cases) {
       const out = renderMarkdownToSafeHtml(md);

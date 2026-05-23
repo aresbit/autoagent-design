@@ -24,7 +24,7 @@ export function buildPluginFolderAgentActionPrompt(
   ].join('\n');
 }
 
-// `contribute` opens a draft PR against the `nexu-io/open-design` community
+// `contribute` opens a draft PR against the `aresbit/autoagent-design` community
 // catalog. The agent drives the whole git/gh sequence — fork, branch, copy
 // the plugin into `plugins/community/<name>/`, commit, push, then hand the
 // `gh pr create --web` URL back so the author reviews and clicks Create in
@@ -37,7 +37,7 @@ export function buildPluginFolderAgentActionPrompt(
 //     user expected the plugin-folder buttons to satisfy.
 function buildContributePrompt(folderPath: string): string {
   return [
-    'Open a draft Pull Request that adds this generated plugin to the Auto Design community catalog at `nexu-io/open-design`.',
+    'Open a draft Pull Request that adds this generated plugin to the Auto Design community catalog at `aresbit/autoagent-design`.',
     'The goal is to end this turn with a single PR URL the user can click in their browser to review the pre-filled form and press Create.',
     '',
     `Plugin folder: \`${folderPath}\``,
@@ -51,7 +51,7 @@ function buildContributePrompt(folderPath: string): string {
     '',
     '3. **Resolve author identity.** Run `gh api user --jq .login` to get the author\'s GitHub login.',
     '',
-    '4. **Fork the registry repo.** Run `gh repo fork nexu-io/open-design --remote=false`. Tolerate "already exists" / "existing fork" — it is idempotent.',
+    '4. **Fork the registry repo.** Run `gh repo fork aresbit/autoagent-design --remote=false`. Tolerate "already exists" / "existing fork" — it is idempotent.',
     '',
     '5. **Prepare contribution branch.** In a fresh temp directory:',
     '   - `gh repo clone <login>/open-design <tmp>` (clone the author\'s fork)',
@@ -65,7 +65,7 @@ function buildContributePrompt(folderPath: string): string {
     '6. **Open the PR in the browser.** Run:',
     '   ```',
     '   gh pr create \\',
-    '     --repo nexu-io/open-design \\',
+    '     --repo aresbit/autoagent-design \\',
     '     --head <login>:plugin/<name>-<unix-timestamp> \\',
     '     --base main \\',
     '     --title "Add <title> plugin" \\',

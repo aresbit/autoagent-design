@@ -181,7 +181,7 @@ export interface InfoPageCopy {
 }
 
 const QUICKSTART_CODE = {
-  install: 'git clone https://github.com/nexu-io/open-design\ncd open-design\npnpm install',
+  install: 'git clone https://github.com/aresbit/autoagent-design\ncd open-design\npnpm install',
   start: 'pnpm tools-dev',
   first: 'od skill run open-design-landing --output ./artifact.html',
 };
@@ -210,13 +210,13 @@ const INFO_PAGE_COPY: Partial<Record<LandingLocaleCode, InfoPageCopy>> = {
       label: 'Source · Nº 00',
       heading: 'Official Auto Design source page.',
       lead:
-        'Auto Design (also searched as OpenDesign, open-design, opendesign, or Auto Design AI) is the official open-source AI design workspace from the nexu-io/open-design project. This page lists every canonical surface so you can verify the source for yourself.',
+        'Auto Design (also searched as OpenDesign, open-design, opendesign, or Auto Design AI) is the official open-source AI design workspace from the aresbit/autoagent-design project. This page lists every canonical surface so you can verify the source for yourself.',
       canonicalTitle: 'Canonical surfaces',
       canonicalBody:
         'Bookmark open-design.ai and the GitHub repo. Everything else points back to one of these two.',
       sources: [
         { label: 'Official website', name: 'open-design.ai' },
-        { label: 'GitHub repository', name: 'nexu-io/open-design' },
+        { label: 'GitHub repository', name: 'aresbit/autoagent-design' },
         { label: 'Latest release', name: 'version' },
         { label: 'Issues / discussion', name: 'GitHub issues' },
         { label: 'Community', name: 'Discord' },
@@ -240,7 +240,7 @@ const INFO_PAGE_COPY: Partial<Record<LandingLocaleCode, InfoPageCopy>> = {
       aliasesClosing: 'All six names refer to this same project. The canonical URL is always open-design.ai.',
       maintainerTitle: 'Maintainer & license',
       maintainerBody:
-        'Auto Design is developed in the open at github.com/nexu-io/open-design and released under the Apache-2.0 license. Issues, RFCs, and roadmap conversations happen on GitHub Issues and Discord.',
+        'Auto Design is developed in the open at github.com/aresbit/autoagent-design and released under the Apache-2.0 license. Issues, RFCs, and roadmap conversations happen on GitHub Issues and Discord.',
       runtimeTitle: 'What runs on your machine',
       runtimeBody: 'Auto Design ships three runnable surfaces — all open source, all local-first:',
       runtimeItems: [
@@ -495,7 +495,7 @@ const INFO_PAGE_COPY: Partial<Record<LandingLocaleCode, InfoPageCopy>> = {
         { name: 'What happens to my Claude Design designs?', text: 'You can keep using Claude Design alongside Auto Design; migration is manual today.' },
         { name: 'Does Auto Design generate the same artifact types?', text: 'Yes for common types: landing pages, decks, dashboards, social posts, brand systems, and prototypes.' },
         { name: 'Why "open-source Claude Design" vs "open-source AI design tool"?', text: 'That is how many users describe the product shape they are searching for.' },
-        { name: 'Who builds and maintains Auto Design?', text: 'The project lives at github.com/nexu-io/open-design and is Apache-2.0.' },
+        { name: 'Who builds and maintains Auto Design?', text: 'The project lives at github.com/aresbit/autoagent-design and is Apache-2.0.' },
       ],
       ctaTitle: 'Switch in three commands.',
       ctaBody:
@@ -527,12 +527,12 @@ INFO_PAGE_COPY.zh = {
     label: '来源 · Nº 00',
     heading: '官方 Auto Design 来源页。',
     lead:
-      'Auto Design（也会被搜索为 OpenDesign、open-design、opendesign 或 Auto Design AI）是 nexu-io/open-design 项目的官方开源 AI 设计工作台。这个页面列出所有 canonical 入口，方便你自行核验来源。',
+      'Auto Design（也会被搜索为 OpenDesign、open-design、opendesign 或 Auto Design AI）是 aresbit/autoagent-design 项目的官方开源 AI 设计工作台。这个页面列出所有 canonical 入口，方便你自行核验来源。',
     canonicalTitle: 'Canonical 入口',
     canonicalBody: '请收藏 open-design.ai 和 GitHub 仓库。其它入口都应回到这两个来源之一。',
     sources: [
       { label: '官方网站', name: 'open-design.ai' },
-      { label: 'GitHub 仓库', name: 'nexu-io/open-design' },
+      { label: 'GitHub 仓库', name: 'aresbit/autoagent-design' },
       { label: '最新版本', name: 'version' },
       { label: 'Issue / 讨论', name: 'GitHub issues' },
       { label: '社区', name: 'Discord' },
@@ -555,7 +555,7 @@ INFO_PAGE_COPY.zh = {
     aliasesClosing: '这六个名称都指向同一个项目。canonical URL 始终是 open-design.ai。',
     maintainerTitle: '维护者与许可证',
     maintainerBody:
-      'Auto Design 在 github.com/nexu-io/open-design 公开开发，并以 Apache-2.0 发布。Issue、RFC 和路线图讨论都在 GitHub Issues 与 Discord 进行。',
+      'Auto Design 在 github.com/aresbit/autoagent-design 公开开发，并以 Apache-2.0 发布。Issue、RFC 和路线图讨论都在 GitHub Issues 与 Discord 进行。',
     runtimeTitle: '你的机器上运行什么',
     runtimeBody: 'Auto Design 提供三个可运行表面，全部开源、全部本地优先：',
     runtimeItems: [
@@ -750,7 +750,7 @@ INFO_PAGE_COPY.zh = {
       { name: '我的 Claude Design 设计怎么办？', text: '你可以继续并行使用 Claude Design；目前迁移是手动的。' },
       { name: 'Auto Design 能生成相同类型的 artifact 吗？', text: '常见类型可以：落地页、演示文稿、仪表盘、社交内容、品牌系统和原型。' },
       { name: '为什么说 open-source Claude Design，而不是 open-source AI design tool？', text: '因为很多用户就是用这个形状来描述他们在找的产品。' },
-      { name: '谁在构建和维护 Auto Design？', text: '项目位于 github.com/nexu-io/open-design，许可证为 Apache-2.0。' },
+      { name: '谁在构建和维护 Auto Design？', text: '项目位于 github.com/aresbit/autoagent-design，许可证为 Apache-2.0。' },
     ],
     ctaTitle: '三条命令切换。',
     ctaBody: '给仓库点 Star、下载桌面版，或直接在终端安装。你的 DESIGN.md 系统从第一次渲染开始就留在自己的 repo。',
@@ -777,7 +777,7 @@ INFO_PAGE_COPY['zh-tw'] = {
     breadcrumb: '官方',
     heading: '官方 Auto Design 來源頁。',
     lead:
-      'Auto Design（也會被搜尋為 OpenDesign、open-design、opendesign 或 Auto Design AI）是 nexu-io/open-design 專案的官方開源 AI 設計工作台。這個頁面列出所有 canonical 入口，方便你自行核驗來源。',
+      'Auto Design（也會被搜尋為 OpenDesign、open-design、opendesign 或 Auto Design AI）是 aresbit/autoagent-design 專案的官方開源 AI 設計工作台。這個頁面列出所有 canonical 入口，方便你自行核驗來源。',
     canonicalBody: '請收藏 open-design.ai 與 GitHub repo。其他入口都應回到這兩個來源之一。',
     aliasesTitle: '命名與別名',
     aliasesLead: '不同工具、受眾與語言環境裡，這個專案會以幾種方式被搜尋和書寫：',
@@ -791,7 +791,7 @@ INFO_PAGE_COPY['zh-tw'] = {
     ],
     aliasesClosing: '這六個名稱都指向同一個專案。canonical URL 永遠是 open-design.ai。',
     maintainerBody:
-      'Auto Design 在 github.com/nexu-io/open-design 公開開發，並以 Apache-2.0 發布。Issue、RFC 與路線圖討論都在 GitHub Issues 與 Discord 進行。',
+      'Auto Design 在 github.com/aresbit/autoagent-design 公開開發，並以 Apache-2.0 發布。Issue、RFC 與路線圖討論都在 GitHub Issues 與 Discord 進行。',
     runtimeTitle: '你的機器上執行什麼',
     runtimeBody: 'Auto Design 提供三個可執行表面，全部開源、全部本地優先：',
     runtimeItems: [
@@ -917,7 +917,7 @@ INFO_PAGE_COPY['zh-tw'] = {
       { name: '我的 Claude Design 設計怎麼辦？', text: '你可以繼續並行使用 Claude Design；目前遷移是手動的。' },
       { name: 'Auto Design 能生成相同類型的 artifact 嗎？', text: '常見類型可以：落地頁、簡報、儀表板、社群內容、品牌系統和原型。' },
       { name: '為什麼說 open-source Claude Design，而不是 open-source AI design tool？', text: '因為很多使用者就是用這個形狀來描述他們在找的產品。' },
-      { name: '誰在構建和維護 Auto Design？', text: '專案位於 github.com/nexu-io/open-design，授權為 Apache-2.0。' },
+      { name: '誰在構建和維護 Auto Design？', text: '專案位於 github.com/aresbit/autoagent-design，授權為 Apache-2.0。' },
     ],
     ctaTitle: '三條命令切換。',
     ctaBody: '給 repo 按 Star、下載桌面版，或直接在終端安裝。你的 DESIGN.md 系統從第一次渲染開始就留在自己的 repo。',
@@ -1021,7 +1021,7 @@ type CompactInfoPageText = {
 
 const sourceNames = [
   'open-design.ai',
-  'nexu-io/open-design',
+  'aresbit/autoagent-design',
   'version',
   'GitHub issues',
   'Discord',
@@ -1334,7 +1334,7 @@ const COMPACT_INFO_PAGE_TEXT: Partial<
       breadcrumb: '公式',
       label: '出典 · Nº 00',
       heading: '公式 Auto Design 出典ページ。',
-      lead: 'Auto Design は nexu-io/open-design プロジェクトのオープンソース AI デザインワークスペースです。',
+      lead: 'Auto Design は aresbit/autoagent-design プロジェクトのオープンソース AI デザインワークスペースです。',
     },
     quickstart: {
       title: 'Auto Design クイックスタート — Node 24 と pnpm で開始',

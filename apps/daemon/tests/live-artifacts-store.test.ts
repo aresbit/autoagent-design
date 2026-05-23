@@ -830,8 +830,8 @@ describe('live artifact store layout', () => {
       dataPath: 'data.json',
       dataJson: {
         repository: {
-          fullName: 'nexu-io/open-design',
-          url: 'https://github.com/nexu-io/open-design',
+          fullName: 'aresbit/autoagent-design',
+          url: 'https://github.com/aresbit/autoagent-design',
           starCount: 100,
           starCountFormatted: '100',
           fetchedAt: '2026-05-01T00:00:00.000Z',
@@ -841,7 +841,7 @@ describe('live artifact store layout', () => {
       sourceJson: {
         type: 'daemon_tool',
         toolName: 'public_github_repository_metric',
-        input: { url: 'https://api.github.com/repos/nexu-io/open-design' },
+        input: { url: 'https://api.github.com/repos/aresbit/autoagent-design' },
         outputMapping: {
           dataPaths: [
             { from: 'stargazers_count', to: 'repository.starCount' },
@@ -873,8 +873,8 @@ describe('live artifact store layout', () => {
       documentOutput: {
         output: {
           stargazers_count: 12987,
-          full_name: 'nexu-io/open-design',
-          html_url: 'https://github.com/nexu-io/open-design',
+          full_name: 'aresbit/autoagent-design',
+          html_url: 'https://github.com/aresbit/autoagent-design',
           updated_at: '2026-05-02T00:00:00Z',
         },
       },

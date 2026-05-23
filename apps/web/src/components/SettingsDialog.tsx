@@ -403,7 +403,6 @@ const AGENT_SHORT_DESCRIPTIONS: Record<string, string> = {
   qwen: 'Qwen coding CLI',
   copilot: 'GitHub coding CLI',
   devin: 'Cognition terminal CLI',
-  kimi: 'Moonshot Kimi CLI',
   qoder: 'Alibaba coding CLI',
   pi: 'Inflection chat CLI',
   kiro: 'Kiro agent CLI',
@@ -915,7 +914,7 @@ export function SettingsDialog({
     } finally {
       setVersionChecking(false);
     }
-    window.open('https://github.com/nexu-io/open-design/releases', '_blank', 'noopener,noreferrer');
+    window.open('https://github.com/aresbit/autoagent-design/releases', '_blank', 'noopener,noreferrer');
   }, [versionChecking, appVersionInfo, t]);
 
   // Imperative handle for the External MCP section. The dialog footer Save

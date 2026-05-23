@@ -6,7 +6,7 @@
  * `app/pages/index.astro` enhances it with a tiny inline GitHub fetch so
  * the browser never downloads React.
  *
- *   GET https://api.github.com/repos/nexu-io/open-design/contributors
+ *   GET https://api.github.com/repos/aresbit/autoagent-design/contributors
  *
  * Each entry becomes a `<a class='wire-item is-link'>` linking straight
  * to the contributor's GitHub profile. We:
@@ -22,7 +22,7 @@
  * fallback list stays visible — the section never goes empty.
  */
 
-const REPO = 'https://github.com/nexu-io/open-design';
+const REPO = 'https://github.com/aresbit/autoagent-design';
 const REPO_CONTRIBUTORS_PAGE = `${REPO}/graphs/contributors`;
 
 const ext = {

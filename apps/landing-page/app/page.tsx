@@ -83,7 +83,7 @@ const NBSP = '\u00A0';
 // string (e.g. `v0.3.0`), never any surrounding label or punctuation. The
 // inline enhancement script in `app/pages/index.astro` assigns `textContent`
 // on each slot, so any extra text inside the wrapper would be clobbered.
-const REPO = 'https://github.com/nexu-io/open-design';
+const REPO = 'https://github.com/aresbit/autoagent-design';
 const REPO_RELEASES = `${REPO}/releases`;
 const REPO_ISSUES = `${REPO}/issues`;
 const REPO_CONTRIBUTORS = `${REPO}/graphs/contributors`;
@@ -924,7 +924,7 @@ export default function Page({
               </div>
               <div className='right'>
                 <a className='method-repo-link' href={REPO} {...ext}>
-                  <b>github.com/nexu-io/open-design</b>
+                  <b>github.com/aresbit/autoagent-design</b>
                 </a>
                 {NBSP}·{NBSP}Apache-2.0
               </div>

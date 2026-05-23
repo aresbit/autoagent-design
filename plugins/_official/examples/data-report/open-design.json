@@ -7,7 +7,7 @@
   "description": "把 CSV/Excel/JSON 数据转成漂亮的可视化报告页",
   "license": "MIT",
   "author": {
-    "name": "Auto Design",
+    "name": "Open Design",
     "url": "https://github.com/nexu-io"
   },
   "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/examples/data-report",

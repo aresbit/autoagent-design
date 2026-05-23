@@ -8,7 +8,7 @@ summary: "A community reply on the 0.8.0 preview named the real question behind 
 
 A useful community reply does not ask for a bigger button. It names the missing layer.
 
-That is what happened under the [Auto Design 0.8.0-preview discussion](https://github.com/nexu-io/open-design/discussions/1727). The launch thread argued for two shifts: stop treating the canvas as the primary work unit, and make the agent the first-class design worker. One reply agreed with the direction, then pointed at the hard part: when the canvas disappears, users still need a way to understand what the agent made before they can edit it with confidence.
+That is what happened under the [Auto Design 0.8.0-preview discussion](https://github.com/aresbit/autoagent-design/discussions/1727). The launch thread argued for two shifts: stop treating the canvas as the primary work unit, and make the agent the first-class design worker. One reply agreed with the direction, then pointed at the hard part: when the canvas disappears, users still need a way to understand what the agent made before they can edit it with confidence.
 
 The phrase in the reply was "Layout Understanding Layer." It is a good name because it refuses the lazy answer. Agent-native design cannot mean "trust the screenshot." It needs a readable model of the artifact: sections, intent, editable parts, stable references, and suggested edit moves.
 
@@ -55,7 +55,7 @@ It also gives the community a clean contribution path. A contributor does not ne
 
 If this is the kind of problem you want to work on, contribute a small skill or plugin that makes one artifact easier to inspect. Start with a concrete output: a landing page, a deck, or a mobile screen. Add stable section IDs, describe the editable aspects, and open the PR with a before/after artifact.
 
-[Contribute a skill](https://github.com/nexu-io/open-design/tree/main/skills).
+[Contribute a skill](https://github.com/aresbit/autoagent-design/tree/main/skills).
 
 ## Related reading
 

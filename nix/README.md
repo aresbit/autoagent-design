@@ -1,6 +1,6 @@
-# Auto Design — Nix flake
+# Open Design — Nix flake
 
-This flake exposes Auto Design as a reproducible package, a `nix run` entry
+This flake exposes Open Design as a reproducible package, a `nix run` entry
 point, a dev shell, and Home Manager / NixOS modules. The architecture
 mirrors the runtime: the **daemon** (`od` CLI, Express API on `/api/*`)
 and the **web frontend** (Next.js static SPA at `apps/web/out/`) are
@@ -84,7 +84,7 @@ configuration prefer the Home Manager module.
 
 ## (3) `webFrontend` — when to use it, when to bring your own server
 
-Auto Design's frontend is a static SPA that issues relative `/api/*`,
+Open Design's frontend is a static SPA that issues relative `/api/*`,
 `/artifacts/*`, and `/frames/*` requests. Three serving options:
 
 | Option                                 | When                                                                                                                                                                                                              |
@@ -175,7 +175,7 @@ If you serve the static bundle yourself, replicate that shape:
   response compression.
 - SPA fallback for unmatched paths → `index.html`.
 
-The static-server's environment does not need any Auto Design env
+The static-server's environment does not need any Open Design env
 vars — but **the daemon's environment usually does**, because its
 same-origin gate is built from `OD_BIND_HOST:port` (loopback hosts
 included). The browser's `Origin` and `Host` are whatever your proxy

@@ -1765,7 +1765,7 @@ describe('FileViewer tweaks toolbar', () => {
   // to a second `.twk-panel` file left the guard comparing against the
   // stale captured name and never re-mirrored the new artifact's open state
   // back to ON. Surfaced by Siri-Ray in
-  // https://github.com/nexu-io/open-design/pull/1643#discussion_r3266838151.
+  // https://github.com/aresbit/autoagent-design/pull/1643#discussion_r3266838151.
   it('mirrors __edit_mode_available default-open state for each switched-to .twk-panel file', async () => {
     function twkFile(name: string): ProjectFile {
       return baseFile({
@@ -1847,7 +1847,7 @@ describe('FileViewer tweaks toolbar', () => {
   // read `visible` and only flip to ON when the panel reports itself open
   // (or omits `visible` — back-compat shim for the common open-by-default
   // case). Surfaced by Siri-Ray in
-  // https://github.com/nexu-io/open-design/pull/1643#discussion_r3269955351.
+  // https://github.com/aresbit/autoagent-design/pull/1643#discussion_r3269955351.
   it('respects __edit_mode_available { visible: false } for default-closed dynamic artifacts', async () => {
     const file = baseFile({
       name: 'closed.html',
@@ -1926,7 +1926,7 @@ describe('applyInspectOverridesToSource', () => {
     expect(next.indexOf('<style data-od-inspect-overrides>')).toBeLessThan(next.indexOf('<main'));
   });
 
-  // Regression for nexu-io/open-design#362: if a source file has more than
+  // Regression for aresbit/autoagent-design#362: if a source file has more than
   // one inspect override block (manual edit, or an earlier buggy save), the
   // splicer must drop them all before inserting the new block. A non-global
   // regex would only strip the first, so save-then-reload could resurrect an
@@ -1947,7 +1947,7 @@ describe('applyInspectOverridesToSource', () => {
     expect(cleared).not.toContain('data-od-inspect-overrides');
   });
 
-  // Regression for nexu-io/open-design#362: the splicer must be HTML-aware
+  // Regression for aresbit/autoagent-design#362: the splicer must be HTML-aware
   // when locating its own override block and the head insertion point.
   // Generated artifacts commonly carry inline scripts/styles that mention
   // `</head>` or `<style data-od-inspect-overrides>` as text, e.g. a
@@ -2013,7 +2013,7 @@ describe('applyInspectOverridesToSource', () => {
     expect(allMatches).toHaveLength(1);
   });
 
-  // Regression for nexu-io/open-design#362: the splicer must look at real
+  // Regression for aresbit/autoagent-design#362: the splicer must look at real
   // attribute names, not just substring-match the marker text against the
   // whole opening tag. A `\bdata-od-inspect-overrides\b` regex over the
   // full tag matches both a longer attribute name (`-note` suffix) and the
@@ -2123,7 +2123,7 @@ describe('serializeInspectOverrides', () => {
     expect(out).not.toContain('[data-od-id="hero"]');
   });
 
-  // Regression for nexu-io/open-design#362: standard deck slides ship as
+  // Regression for aresbit/autoagent-design#362: standard deck slides ship as
   // `<section data-screen-label="01 Cover">`. The bridge keys overrides by
   // the raw label and posts a CSS.escape'd selector, so the host must
   // accept whitespace/leading-digit ids and detect the selector kind by
@@ -2220,7 +2220,7 @@ describe('serializeInspectOverrides', () => {
   });
 });
 
-// Regression for nexu-io/open-design#362: the host owns the inspect override
+// Regression for aresbit/autoagent-design#362: the host owns the inspect override
 // map authoritatively. Hydration parses the artifact source on load so an
 // initial Save-to-source preserves prior rules even when the user edits a
 // different element, and forging the iframe's od:inspect-overrides reply
@@ -2293,7 +2293,7 @@ describe('parseInspectOverridesFromSource', () => {
     expect(parseInspectOverridesFromSource(source)).toEqual({});
   });
 
-  // Regression for nexu-io/open-design#362: hydration must require an
+  // Regression for aresbit/autoagent-design#362: hydration must require an
   // actual `data-od-inspect-overrides` attribute name, not a boundary-only
   // substring match against the whole opening tag. Otherwise a sibling
   // attribute name with `-note` suffix or a tooltip whose value contains

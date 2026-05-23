@@ -12,8 +12,8 @@ asset_suffix="${ASSET_VERSION_SUFFIX:-}"
 release_dir="$RUNNER_TEMP/release-assets"
 mkdir -p "$release_dir"
 
-source_dmg="$RUNNER_TEMP/tools-pack/out/mac/namespaces/$TOOLS_PACK_NAMESPACE/dmg/Auto Design-$TOOLS_PACK_NAMESPACE.dmg"
-source_zip="$RUNNER_TEMP/tools-pack/out/mac/namespaces/$TOOLS_PACK_NAMESPACE/zip/Auto Design-$TOOLS_PACK_NAMESPACE.zip"
+source_dmg="$RUNNER_TEMP/tools-pack/out/mac/namespaces/$TOOLS_PACK_NAMESPACE/dmg/Open Design-$TOOLS_PACK_NAMESPACE.dmg"
+source_zip="$RUNNER_TEMP/tools-pack/out/mac/namespaces/$TOOLS_PACK_NAMESPACE/zip/Open Design-$TOOLS_PACK_NAMESPACE.zip"
 if [ ! -f "$source_dmg" ]; then
   echo "expected dmg not found at $source_dmg" >&2
   exit 1

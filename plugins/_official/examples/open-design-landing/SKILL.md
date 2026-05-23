@@ -3,7 +3,7 @@ name: open-design-landing
 description: >
   Produce a world-class single-page editorial landing site in the
   Atelier Zero visual language (Monocle / Apartamento / Études editorial
-  collage) — the same aesthetic Auto Design uses for its own marketing
+  collage) — the same aesthetic Open Design uses for its own marketing
   surface. The agent fills a typed `inputs.json` from a brand brief,
   optionally generates 16 collage assets via gpt-image-2, then runs a
   pure-function composer that emits a self-contained HTML file; a
@@ -122,7 +122,7 @@ Tight + Playfair Display, italic serif emphasis spans, dotted hairline
 rules, coral terminating dots, scroll-reveal motion, and 16 surreal
 collage plates.
 
-This is the canonical Auto Design marketing-page recipe — the example
+This is the canonical Open Design marketing-page recipe — the example
 output is the very page you see at [open-design](https://github.com/nexu-io/open-design).
 
 The skill is fully **parameterized**. The agent fills one typed

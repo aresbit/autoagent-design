@@ -4,7 +4,7 @@
 
 > Want to read the protocol spec instead? See [`skills-protocol.md`](skills-protocol.md). This file is the **how-to** for shipping a skill upstream — what to write, how to run it locally, what we'll send back at review.
 
-A skill is the most leverage you can ship into Auto Design without writing framework code. One folder, one Markdown file with frontmatter, a hand-built example, and the picker shows it. This guide walks you through the path from `git clone` to merged PR, plus the bar we hold skill PRs to and the patterns that get bounced.
+A skill is the most leverage you can ship into Open Design without writing framework code. One folder, one Markdown file with frontmatter, a hand-built example, and the picker shows it. This guide walks you through the path from `git clone` to merged PR, plus the bar we hold skill PRs to and the patterns that get bounced.
 
 If you only have ten seconds, the picture is:
 

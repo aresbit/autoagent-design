@@ -1,3 +1,4 @@
+import { performance } from "node:perf_hooks";
 import {
   APP_KEYS,
   OPEN_DESIGN_SIDECAR_CONTRACT,
@@ -59,18 +60,23 @@ function applyLaunchEnv(base: string, stamp: SidecarStamp): void {
 }
 
 async function main(): Promise<void> {
+  performance.mark("packaged:start");
   const config = await readPackagedConfig();
+  performance.mark("packaged:config-read");
   const argvStamp = readProcessStamp(process.argv.slice(1), OPEN_DESIGN_SIDECAR_CONTRACT);
   const namespace = argvStamp?.namespace ?? config.namespace;
   const paths = resolvePackagedNamespacePaths(config, namespace);
   const stamp = argvStamp ?? createPackagedDesktopStamp(namespace);
 
   await ensurePackagedNamespacePaths(paths);
+  performance.mark("packaged:paths-ready");
   packagedLogger = createPackagedDesktopLogger(paths);
   attachPackagedDesktopProcessLogging({ logger: packagedLogger, paths, stamp });
   applyPackagedElectronPathOverrides(paths);
+  performance.mark("packaged:electron-ready");
   const identity = await writePackagedDesktopIdentity({ paths, stamp });
   await app.whenReady();
+  performance.mark("packaged:app-ready");
 
   applyLaunchEnv(paths.runtimeRoot, stamp);
 
@@ -79,6 +85,7 @@ async function main(): Promise<void> {
     base: paths.runtimeRoot,
     contract: OPEN_DESIGN_SIDECAR_CONTRACT,
   });
+  performance.mark("packaged:runtime-bootstrapped");
 
   const sidecars = await startPackagedSidecars(runtime, paths, {
     appVersion: config.appVersion,
@@ -97,9 +104,33 @@ async function main(): Promise<void> {
     webStandaloneRoot: config.webStandaloneRoot,
     webOutputMode: config.webOutputMode,
   });
+  performance.mark("packaged:sidecars-ready");
   registerOdProtocol(sidecars.web.url ?? "http://127.0.0.1:0");
+  performance.mark("packaged:protocol-registered");
 
   const { runDesktopMain } = await import("@open-design/desktop/main");
+  performance.mark("packaged:desktop-main-imported");
+
+  // Log packaged startup timing breakdown
+  try {
+    performance.measure("packaged:config", "packaged:start", "packaged:config-read");
+    performance.measure("packaged:paths", "packaged:config-read", "packaged:paths-ready");
+    performance.measure("packaged:electron-setup", "packaged:paths-ready", "packaged:electron-ready");
+    performance.measure("packaged:app-wait", "packaged:electron-ready", "packaged:app-ready");
+    performance.measure("packaged:bootstrap", "packaged:app-ready", "packaged:runtime-bootstrapped");
+    performance.measure("packaged:sidecars", "packaged:runtime-bootstrapped", "packaged:sidecars-ready");
+    performance.measure("packaged:protocol", "packaged:sidecars-ready", "packaged:protocol-registered");
+    performance.measure("packaged:desktop-import", "packaged:protocol-registered", "packaged:desktop-main-imported");
+    performance.measure("packaged:pre-desktop-total", "packaged:start", "packaged:desktop-main-imported");
+    for (const entry of performance.getEntriesByType("measure")) {
+      console.log(`[auto-design packaged] startup timing — ${entry.name}: ${Math.round(entry.duration)}ms`);
+    }
+    performance.clearMarks();
+    performance.clearMeasures();
+  } catch {
+    // ignore timing errors
+  }
+
   await runDesktopMain(runtime, {
     async beforeShutdown() {
       try {

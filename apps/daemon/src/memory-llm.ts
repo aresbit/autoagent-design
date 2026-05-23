@@ -210,7 +210,6 @@ function chatProtocolFromAgentId(agentId) {
     || id === 'opencode'
     || id === 'qwen'
     || id === 'deepseek'
-    || id === 'kimi'
     || id === 'copilot'
     || id === 'pi'
     || id === 'kiro'

@@ -46,8 +46,8 @@ describe("resolveMacInstallIdentity", () => {
   it("keeps stable builds on the canonical mac identity", () => {
     expect(resolveMacInstallIdentity(makeConfig("/work", "release-stable"))).toMatchObject({
       appId: "io.open-design.desktop",
-      productName: "Auto Design",
-      publicAppBundleName: "Auto Design.app",
+      productName: "Open Design",
+      publicAppBundleName: "Open Design.app",
     });
   });
 
@@ -56,12 +56,12 @@ describe("resolveMacInstallIdentity", () => {
 
     expect(resolveMacInstallIdentity(config)).toEqual({
       appId: "io.open-design.desktop.beta",
-      executableName: "Auto Design Beta",
-      productName: "Auto Design Beta",
-      publicAppBundleName: "Auto Design Beta.app",
-      systemAppBundleName: "Auto Design Beta.app",
+      executableName: "Open Design Beta",
+      productName: "Open Design Beta",
+      publicAppBundleName: "Open Design Beta.app",
+      systemAppBundleName: "Open Design Beta.app",
     });
-    expect(resolveMacPaths(config).appPath).toMatch(/Auto Design Beta\.app$/);
+    expect(resolveMacPaths(config).appPath).toMatch(/Open Design Beta\.app$/);
   });
 
   it("uses first-class preview app identity for preview release namespaces", () => {
@@ -69,11 +69,11 @@ describe("resolveMacInstallIdentity", () => {
 
     expect(resolveMacInstallIdentity(config)).toEqual({
       appId: "io.open-design.desktop.preview",
-      executableName: "Auto Design Preview",
-      productName: "Auto Design Preview",
-      publicAppBundleName: "Auto Design Preview.app",
-      systemAppBundleName: "Auto Design Preview.app",
+      executableName: "Open Design Preview",
+      productName: "Open Design Preview",
+      publicAppBundleName: "Open Design Preview.app",
+      systemAppBundleName: "Open Design Preview.app",
     });
-    expect(resolveMacPaths(config).appPath).toMatch(/Auto Design Preview\.app$/);
+    expect(resolveMacPaths(config).appPath).toMatch(/Open Design Preview\.app$/);
   });
 });

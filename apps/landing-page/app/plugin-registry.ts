@@ -103,8 +103,8 @@ export type PublicPluginEntry = {
   searchText: string;
 };
 
-const REPO = 'https://github.com/nexu-io/open-design';
-const RAW_REPO = 'https://raw.githubusercontent.com/nexu-io/open-design/main';
+const REPO = 'https://github.com/aresbit/autoagent-design';
+const RAW_REPO = 'https://raw.githubusercontent.com/aresbit/autoagent-design/main';
 const findRepoRoot = () => {
   const candidates = [
     process.cwd(),
@@ -534,7 +534,7 @@ const officialEntryFromManifest = (
   const id = `open-design/${pluginName}`;
   const pluginDir = path.dirname(manifestPath);
   const repoPath = toPosix(path.relative(REPO_ROOT, pluginDir));
-  const source = `github:nexu-io/open-design@main/${repoPath}`;
+  const source = `github:aresbit/autoagent-design@main/${repoPath}`;
   const od = asRecord(manifest?.od) as RawOdMetadata | undefined;
   const capabilities = asStringArray(od?.capabilities);
   const tags = asStringArray(manifest?.tags);

@@ -18,7 +18,7 @@ import { localeFromPath, localizedHref } from '../../../i18n';
 // Derive SITE from Astro.site so preview/staging JSON-LD matches the
 // layout's canonical link. Falls back to the production origin.
 const SITE = Astro.site?.toString() ?? 'https://open-design.ai/';
-const REPO = 'https://github.com/nexu-io/open-design';
+const REPO = 'https://github.com/aresbit/autoagent-design';
 const REPO_RELEASES = `${REPO}/releases`;
 const locale = localeFromPath(Astro.url.pathname);
 const href = (path: string) => localizedHref(path, locale);

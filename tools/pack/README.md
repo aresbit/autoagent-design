@@ -64,7 +64,7 @@ from the user's Electron `userData` root instead of the build machine's `.tmp` p
 ### macOS compatibility notes
 
 - `tools-pack mac build --portable --to zip` is the safest manual-install artifact for Intel Macs. This path was smoke-tested on macOS 12.7.6 Monterey on a 2015 Intel iMac and the app launched successfully from `/Applications`.
-- Finder/manual launches on macOS may not inherit your shell-managed `PATH`. If packaged Auto Design cannot detect agent CLIs that work in Terminal, expose those binaries to the GUI login environment or launch the packaged app from a shell session that already sees them.
+- Finder/manual launches on macOS may not inherit your shell-managed `PATH`. If packaged Open Design cannot detect agent CLIs that work in Terminal, expose those binaries to the GUI login environment or launch the packaged app from a shell session that already sees them.
 
 ## Windows
 

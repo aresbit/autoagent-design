@@ -15,9 +15,9 @@ describe('fetchLatestGithubReleaseInfo', () => {
     globalThis.fetch = vi.fn().mockResolvedValue({
       ok: true,
       json: async () => ({
-        repo: 'nexu-io/open-design',
+        repo: 'aresbit/autoagent-design',
         tag_name: 'v0.8.0-nightly.3',
-        html_url: 'https://github.com/nexu-io/open-design/releases/tag/v0.8.0-nightly.3',
+        html_url: 'https://github.com/aresbit/autoagent-design/releases/tag/v0.8.0-nightly.3',
         fetchedAt: Date.parse('2026-05-22T00:00:00.000Z'),
         stale: false,
       } satisfies OpenDesignGithubLatestReleaseResponse),
@@ -28,7 +28,7 @@ describe('fetchLatestGithubReleaseInfo', () => {
     expect(globalThis.fetch).toHaveBeenCalledWith('/api/github/open-design/releases/latest');
     expect(result).toEqual({
       tagName: 'v0.8.0-nightly.3',
-      htmlUrl: 'https://github.com/nexu-io/open-design/releases/tag/v0.8.0-nightly.3',
+      htmlUrl: 'https://github.com/aresbit/autoagent-design/releases/tag/v0.8.0-nightly.3',
       stale: false,
     });
   });

@@ -37,7 +37,7 @@ const limitsFaq = page.limitsFaq.map(({ name, text }) => ({ q: name, a: text }))
 
 const comparisons = page.comparisons.map((comparison, idx) => ({
   ...comparison,
-  href: idx === 0 ? href('/alternatives/claude-design/') : 'https://github.com/nexu-io/open-design',
+  href: idx === 0 ? href('/alternatives/claude-design/') : 'https://github.com/aresbit/autoagent-design',
 }));
 
 const jsonLd = [

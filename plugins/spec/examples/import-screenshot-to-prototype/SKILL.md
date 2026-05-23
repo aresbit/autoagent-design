@@ -1,6 +1,6 @@
 ---
 name: import-screenshot-to-prototype
-description: Use this plugin when the user provides a screenshot or image reference and wants it reconstructed as an editable Auto Design prototype with sensible components, layout, and responsive behavior.
+description: Use this plugin when the user provides a screenshot or image reference and wants it reconstructed as an editable Open Design prototype with sensible components, layout, and responsive behavior.
 license: MIT
 metadata:
   author: open-design-spec
@@ -21,3 +21,4 @@ metadata:
 ## Output Contract
 
 Produce `index.html` and a short `import-notes.md` that lists inferred decisions.
+

@@ -1345,10 +1345,10 @@ describe('DesignSystemCreationFlow', () => {
     expect(screen.getByText('Coming soon')).toBeTruthy();
     expect(screen.getByText('Not configured')).toBeTruthy();
 
-    fireEvent.change(input, { target: { value: 'https://github.com/nexu-io/open-design/' } });
+    fireEvent.change(input, { target: { value: 'https://github.com/aresbit/autoagent-design/' } });
     fireEvent.click(screen.getByRole('button', { name: 'Add' }));
 
-    expect(screen.getByText('nexu-io/open-design')).toBeTruthy();
+    expect(screen.getByText('aresbit/autoagent-design')).toBeTruthy();
 
     fireEvent.click(screen.getByRole('button', { name: 'Configure Composio' }));
 
@@ -1460,10 +1460,10 @@ describe('DesignSystemCreationFlow', () => {
     const input = screen.getByPlaceholderText('https://github.com/owner/repo') as HTMLInputElement;
     expect(input.disabled).toBe(false);
 
-    fireEvent.change(input, { target: { value: 'https://github.com/nexu-io/open-design/' } });
+    fireEvent.change(input, { target: { value: 'https://github.com/aresbit/autoagent-design/' } });
     fireEvent.click(screen.getByRole('button', { name: 'Add' }));
 
-    expect(screen.getByText('nexu-io/open-design')).toBeTruthy();
+    expect(screen.getByText('aresbit/autoagent-design')).toBeTruthy();
     expect(input.value).toBe('');
   });
 
@@ -1599,7 +1599,7 @@ describe('DesignSystemCreationFlow', () => {
       target: { value: 'GitHub: product workspace' },
     });
     const input = screen.getByPlaceholderText('https://github.com/owner/repo') as HTMLInputElement;
-    fireEvent.change(input, { target: { value: 'https://github.com/nexu-io/open-design' } });
+    fireEvent.change(input, { target: { value: 'https://github.com/aresbit/autoagent-design' } });
     fireEvent.click(screen.getByRole('button', { name: 'Add' }));
     continueToGeneration();
     continueToGeneration();
@@ -1613,7 +1613,7 @@ describe('DesignSystemCreationFlow', () => {
     expect(mocks.writeProjectTextFile).toHaveBeenCalledWith(
       project.id,
       'context/source-context.md',
-      expect.stringContaining('https://github.com/nexu-io/open-design'),
+      expect.stringContaining('https://github.com/aresbit/autoagent-design'),
     );
     expect(mocks.writeProjectTextFile).toHaveBeenCalledWith(
       project.id,
@@ -1623,7 +1623,7 @@ describe('DesignSystemCreationFlow', () => {
     expect(mocks.writeProjectTextFile).toHaveBeenCalledWith(
       project.id,
       'context/source-context.md',
-      expect.stringContaining('"$OD_NODE_BIN" "$OD_BIN" tools connectors github-design-context --repo \'https://github.com/nexu-io/open-design\' --output context/github/nexu-io-open-design.md'),
+      expect.stringContaining('"$OD_NODE_BIN" "$OD_BIN" tools connectors github-design-context --repo \'https://github.com/aresbit/autoagent-design\' --output context/github/nexu-io-open-design.md'),
     );
     expect(mocks.writeProjectTextFile).not.toHaveBeenCalledWith(
       project.id,
@@ -1755,7 +1755,7 @@ describe('DesignSystemCreationFlow', () => {
       target: { value: 'GitHub: product workspace' },
     });
     const input = screen.getByPlaceholderText('https://github.com/owner/repo') as HTMLInputElement;
-    fireEvent.change(input, { target: { value: 'https://github.com/nexu-io/open-design' } });
+    fireEvent.change(input, { target: { value: 'https://github.com/aresbit/autoagent-design' } });
     fireEvent.click(screen.getByRole('button', { name: 'Add' }));
     continueToGeneration();
     continueToGeneration();

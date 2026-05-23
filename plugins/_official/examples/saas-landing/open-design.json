@@ -7,7 +7,7 @@
   "description": "Single-page SaaS landing with hero, features, social proof, pricing, and CTA.\nRespects the active DESIGN.md color/typography/layout tokens.\nTrigger keywords: \"saas landing\", \"marketing page\", \"product landing\".",
   "license": "MIT",
   "author": {
-    "name": "Auto Design",
+    "name": "Open Design",
     "url": "https://github.com/nexu-io"
   },
   "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/examples/saas-landing",

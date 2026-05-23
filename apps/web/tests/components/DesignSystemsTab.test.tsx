@@ -182,7 +182,7 @@ function selectCategory(value: string) {
 
 describe('DesignSystemsTab surface filtering', () => {
   it('scopes surface pill counts to the selected style category', () => {
-    // Regression: nexu-io/open-design#2062 — surface chips kept showing the
+    // Regression: aresbit/autoagent-design#2062 — surface chips kept showing the
     // unfiltered totals after a style category was applied. The counts must
     // describe the filtered result set, otherwise "All 149 / Web 149" is a
     // lie about what the user is looking at.
@@ -200,7 +200,7 @@ describe('DesignSystemsTab surface filtering', () => {
   });
 
   it('keeps the style category when a surface chip refines within it', () => {
-    // Regression: nexu-io/open-design#2062 — clicking a surface chip reset
+    // Regression: aresbit/autoagent-design#2062 — clicking a surface chip reset
     // the style category to "All", discarding the user's filter instead of
     // refining inside it. The category survives when it still has matches
     // for the chosen surface.

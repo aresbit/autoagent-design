@@ -7,7 +7,7 @@
   "description": "A documentation page — inline-start nav, scrollable article body,\ninline-end table of contents. Use when the brief mentions \"docs\",\n\"documentation\", \"guide\", \"API reference\", or \"tutorial\".",
   "license": "MIT",
   "author": {
-    "name": "Auto Design",
+    "name": "Open Design",
     "url": "https://github.com/nexu-io"
   },
   "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/examples/docs-page",

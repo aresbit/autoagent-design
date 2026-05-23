@@ -16,7 +16,7 @@ It is the canonical reference for:
 
 Brand names "Auto Design", "OpenDesign", "open-design", "opendesign",
 "Auto Design AI", and "OD" all refer to this same project, hosted at
-https://open-design.ai/ and developed at github.com/nexu-io/open-design.
+https://open-design.ai/ and developed at github.com/aresbit/autoagent-design.
 
 ## Official Entry Points
 
@@ -37,9 +37,9 @@ https://open-design.ai/ and developed at github.com/nexu-io/open-design.
 
 ## External Official Channels
 
-- GitHub repository: https://github.com/nexu-io/open-design
-- GitHub releases: https://github.com/nexu-io/open-design/releases
-- GitHub issues: https://github.com/nexu-io/open-design/issues
+- GitHub repository: https://github.com/aresbit/autoagent-design
+- GitHub releases: https://github.com/aresbit/autoagent-design/releases
+- GitHub issues: https://github.com/aresbit/autoagent-design/issues
 - Discord: https://discord.gg/9ptkbbqRu
 
 ## Key Blog Posts

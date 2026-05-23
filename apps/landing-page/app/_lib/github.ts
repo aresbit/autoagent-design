@@ -3,7 +3,7 @@ export interface GithubRepoMeta {
   versionLabel: string;
 }
 
-const REPO_API = 'https://api.github.com/repos/nexu-io/open-design';
+const REPO_API = 'https://api.github.com/repos/aresbit/autoagent-design';
 const FALLBACK_META: GithubRepoMeta = {
   starsLabel: '40K+',
   versionLabel: 'v0.3.0',

@@ -18,10 +18,6 @@ import { deepseekAgentDef } from './defs/deepseek.js';
 import { readLocalAgentProfileDefs as readLocalAgentProfileDefsFromFile } from './local-profiles.js';
 import type { RuntimeAgentDef } from './types.js';
 
-// NOTE: kimiAgentDef is intentionally removed from BASE_AGENT_DEFS because
-// Kimi Desktop (Electron GUI app) uses the same binary name `kimi` as the
-// CLI, causing the daemon to accidentally launch the GUI when scanning PATH.
-// See task_plan.md: "kimi-desktop auto-launch fix".
 const BASE_AGENT_DEFS: RuntimeAgentDef[] = [
   openccAgentDef,
   claudeAgentDef,

@@ -1,4 +1,4 @@
-# Auto Design daemon — Helm chart values. Spec §15.5.
+# Open Design daemon — Helm chart values. Spec §15.5.
 #
 # Override the image / persistence / secret pattern per cloud:
 #   AWS:    persistence.backend=efs    secrets.backend=secrets-manager

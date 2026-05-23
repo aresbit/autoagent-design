@@ -4,7 +4,7 @@ import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { PreviewModal } from '../../src/components/PreviewModal';
 
-// Regression coverage for nexu-io/open-design#897: skills declared with a
+// Regression coverage for aresbit/autoagent-design#897: skills declared with a
 // non-html `od.preview.type` (image, markdown, …) ship no fetchable
 // example artifact. The modal must render a calm "no shipped preview"
 // placeholder distinct from both the loading state (which would never

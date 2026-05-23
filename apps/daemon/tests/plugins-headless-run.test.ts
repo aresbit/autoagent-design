@@ -323,14 +323,14 @@ if (args[0] === 'auth' && args[1] === 'status') ok('Logged in to github.com as t
 if (args[0] === 'api' && args[1] === 'user') ok('test-user');
 if (args[0] === 'repo' && args[1] === 'create') ok('https://github.com/test-user/' + args[2]);
 if (args[0] === 'repo' && args[1] === 'view') ok('https://github.com/test-user/' + path.basename(process.cwd()));
-if (args[0] === 'repo' && args[1] === 'fork') ok('forked nexu-io/open-design');
+if (args[0] === 'repo' && args[1] === 'fork') ok('forked aresbit/autoagent-design');
 if (args[0] === 'repo' && args[1] === 'clone') {
   const dest = args[3] || path.basename(args[2]);
   fs.mkdirSync(dest, { recursive: true });
   const init = spawnSync(process.env.OD_REAL_GIT, ['init'], { cwd: dest, stdio: 'inherit' });
   process.exit(init.status ?? 0);
 }
-if (args[0] === 'pr' && args[1] === 'create') ok('https://github.com/nexu-io/open-design/pull/123');
+if (args[0] === 'pr' && args[1] === 'create') ok('https://github.com/aresbit/autoagent-design/pull/123');
 console.error('unexpected gh command: ' + args.join(' '));
 process.exit(1);
 `,
@@ -384,7 +384,7 @@ process.exit(result.status ?? 0);
                 url?: string;
               };
               expect(contributeEndpointBody.ok).toBe(true);
-              expect(contributeEndpointBody.url).toBe('https://github.com/nexu-io/open-design/pull/123');
+              expect(contributeEndpointBody.url).toBe('https://github.com/aresbit/autoagent-design/pull/123');
             },
           );
         },

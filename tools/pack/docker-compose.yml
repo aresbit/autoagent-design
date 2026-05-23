@@ -1,6 +1,6 @@
 # Phase 5 / spec §15.4 — reference Docker Compose manifest.
 #
-# Brings up the Auto Design daemon container alongside the persistent
+# Brings up the Open Design daemon container alongside the persistent
 # volumes and the env vars hosted deployments need. Drop this file into
 # any directory and run `docker compose up -d` — the only required
 # customisation is the OD_API_TOKEN secret and the provider keys.
