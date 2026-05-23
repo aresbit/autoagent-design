@@ -2,7 +2,7 @@
 @import './styles/design-system-flow.css';
 
 /* ============================================================
-   Open Design — neutral product workspace
+   Auto Design — neutral product workspace
    ============================================================ */
 :root {
   /* Surface palette — neutral app chrome that does not bias generated artifacts.
@@ -24,7 +24,7 @@
   --text-soft: #989590;
   --text-faint: #b3b0a8;
 
-  /* Accent — Open Design action color for app chrome only. */
+  /* Accent — Auto Design action color for app chrome only. */
   --accent: #c96442;
   --accent-strong: #b45a3b;
   --accent-soft: #f5d8cb;

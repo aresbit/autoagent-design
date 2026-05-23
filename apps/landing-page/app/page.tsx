@@ -1,5 +1,5 @@
 /*
- * Open Design — Atelier Zero landing page.
+ * Auto Design — Atelier Zero landing page.
  *
  * Mirrors `design-templates/open-design-landing/example.html` 1:1. When the canonical
  * example.html changes, mirror the diff here and into `app/globals.css`.
@@ -383,7 +383,7 @@ export default function Page({
               <span className='annot annot-br'>
                 {home.hero.composedIn}
                 {NBSP}
-                <span style={{ color: 'var(--coral)' }}>Open Design</span>
+                <span style={{ color: 'var(--coral)' }}>Auto Design</span>
               </span>
               <img
                 src={heroImage}
@@ -1192,7 +1192,7 @@ export default function Page({
                 {home.faqSection.label} <span className='ix'>· Nº 06.5</span>
               </span>
               <h2 className='display'>
-                {home.faqSection.titlePrefix} <em>Open Design</em>,{' '}
+                {home.faqSection.titlePrefix} <em>Auto Design</em>,{' '}
                 <em>OpenDesign</em>, {home.faqSection.titleMiddle}{' '}
                 <em>{home.faqSection.titleSuffix}</em>
                 <span className='dot'>.</span>
@@ -1283,7 +1283,7 @@ export default function Page({
                   <span className='brand-mark'>
                     <img src='/logo.webp' alt='' width={44} height={44} />
                   </span>
-                  <span className='brand-name'>Open Design</span>
+                  <span className='brand-name'>Auto Design</span>
                 </a>
                 <p style={{ marginTop: 18 }}>
                   {home.footer.summary}
@@ -1345,7 +1345,7 @@ export default function Page({
                   {/*
                    * Sister product: HTML Anything is the agent-driven HTML
                    * editor from the same team. Listed here as a peer to the
-                   * Open Design library facets so the home delivers a real
+                   * Auto Design library facets so the home delivers a real
                    * inline anchor link to /html-anything/ — nav-only entries
                    * (the Product dropdown) carry less SEO weight than a body
                    * anchor in a discoverable section like the footer. The

@@ -283,7 +283,7 @@ jobs:
           CLOUDFLARE_R2_RELEASES_PUBLIC_ORIGIN: ${{ vars.CLOUDFLARE_R2_RELEASES_PUBLIC_ORIGIN }}
           MAC_ARTIFACT_MODE: dmg-only
           RELEASE_CHANNEL: beta
-          RELEASE_NOTES: Open Design beta ${{ needs.metadata.outputs.beta_version }}${{ needs.metadata.outputs.asset_version_suffix }}
+          RELEASE_NOTES: Auto Design beta ${{ needs.metadata.outputs.beta_version }}${{ needs.metadata.outputs.asset_version_suffix }}
           RELEASE_VERSION: ${{ needs.metadata.outputs.beta_version }}
           TOOLS_PACK_NAMESPACE: release-beta
         run: bash .github/scripts/release/assets/mac.sh
@@ -521,7 +521,7 @@ jobs:
           ASSET_VERSION_SUFFIX: ${{ needs.metadata.outputs.asset_version_suffix }}
           CLOUDFLARE_R2_RELEASES_PUBLIC_ORIGIN: ${{ vars.CLOUDFLARE_R2_RELEASES_PUBLIC_ORIGIN }}
           RELEASE_CHANNEL: beta
-          RELEASE_NOTES: Open Design beta ${{ needs.metadata.outputs.beta_version }}.unsigned
+          RELEASE_NOTES: Auto Design beta ${{ needs.metadata.outputs.beta_version }}.unsigned
           RELEASE_VERSION: ${{ needs.metadata.outputs.beta_version }}
           TOOLS_PACK_NAMESPACE: release-beta-win
           WINDOWS_ASSET_SUFFIX: .unsigned

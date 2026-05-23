@@ -65,9 +65,9 @@ export const zhTW: Dict = {
   'common.daysShort': '{n}天',
   'common.untitled': '未命名',
 
-  'app.brand': 'Open Design',
+  'app.brand': 'Auto Design',
   'app.brandPill': '研究預覽版',
-  'app.brandSubtitle': '由 Nexu Labs 出品',
+  'app.brandSubtitle': '',
   'app.welcomeLoading': '正在載入工作區…',
 
   'settings.welcomeKicker': "",
@@ -75,7 +75,7 @@ export const zhTW: Dict = {
   'settings.welcomeSubtitle': "",
   'settings.onboardingCreateTitle': '從一句需求開始',
   'settings.onboardingCreateBody':
-    '描述你想做的網站、應用、Deck、圖片或影片，Open Design 會建立專案，並保留可繼續編輯的產出。',
+    '描述你想做的網站、應用、Deck、圖片或影片，Auto Design 會建立專案，並保留可繼續編輯的產出。',
   'settings.onboardingMemoryTitle': '保存工作上下文',
   'settings.onboardingMemoryBody':
     '把偏好、專案事實和長期規則寫入 Memory，後續對話會自動帶上正確背景。',
@@ -198,10 +198,10 @@ export const zhTW: Dict = {
   'settings.agentInstall.install': '安裝',
   'settings.agentInstall.docs': '文件',
   'settings.agentInstall.pathHint':
-    '如果你透過 npm 或 Homebrew 安裝了 CLI，但仍顯示為未安裝，請確認該工具的 bin 目錄已加入 Open Design daemon 繼承的 PATH（在 macOS 上，Terminal 與 GUI 應用的 PATH 可能不同）。請參閱 QUICKSTART.md（「Local agent CLI and PATH」章節）。',
+    '如果你透過 npm 或 Homebrew 安裝了 CLI，但仍顯示為未安裝，請確認該工具的 bin 目錄已加入 Auto Design daemon 繼承的 PATH（在 macOS 上，Terminal 與 GUI 應用的 PATH 可能不同）。請參閱 QUICKSTART.md（「Local agent CLI and PATH」章節）。',
   'settings.agentInstall.stepOpenLinks': '在目標代理卡片上開啟「安裝」或「文件」連結。',
   'settings.agentInstall.stepAuth':
-    '返回 Open Design 前，請先在對應 CLI 完成驗證（登入或新增 API 憑證）。',
+    '返回 Auto Design 前，請先在對應 CLI 完成驗證（登入或新增 API 憑證）。',
   'settings.agentInstall.stepRescan': '在此區域點擊「重新掃描」。',
   'settings.agentInstall.stepSelect': '當代理顯示為已安裝後，選擇該代理卡片。',
   'settings.noAgentsDetected':
@@ -276,7 +276,7 @@ export const zhTW: Dict = {
   'settings.mediaProviders': '媒體生成提供商',
   'settings.mediaProvidersHint': '圖片、影片、音訊生成的 API key。存於本機並同步到本地守護程序。',
   'settings.mcpServerTitle': 'MCP 伺服器',
-  'settings.mcpServerHint': '將 Open Design 作為 MCP 伺服器暴露給你的編碼代理。',
+  'settings.mcpServerHint': '將 Auto Design 作為 MCP 伺服器暴露給你的編碼代理。',
   'settings.externalMcpTitle': '外部 MCP',
   'settings.externalMcpHint': '接入外部服務的 MCP 工具（Higgsfield、GitHub 等）。',
   'settings.mediaProviderApiKey': 'API key',
@@ -293,9 +293,9 @@ export const zhTW: Dict = {
   'settings.mediaProviderLoadError': '無法從本機守護程序載入媒體供應商設定。目前將使用瀏覽器中儲存的設定。',
   'settings.mediaProviderComingSoonHint': '我們在路線圖中追蹤這些提供者；守護程式尚未提供客戶端，因此暫無可配置項。',
   'settings.privacy': '隱私',
-  'settings.privacyHint': '與 Open Design 團隊共享哪些資料',
-  'settings.privacyConsentKicker': '協助我們改進 Open Design',
-  'settings.privacyConsentLead': 'Open Design 可以將使用資料分享給我們的團隊以協助改進。包含:',
+  'settings.privacyHint': '與 Auto Design 團隊共享哪些資料',
+  'settings.privacyConsentKicker': '協助我們改進 Auto Design',
+  'settings.privacyConsentLead': 'Auto Design 可以將使用資料分享給我們的團隊以協助改進。包含:',
   'settings.privacyConsentFooter': '你可以隨時在 設定 → 隱私 中變更任一項。我們絕不上傳你產生的產出檔案內容。',
   'settings.privacyConsentShare': '分享使用資料',
   'settings.privacyConsentDecline': '不分享',
@@ -329,9 +329,9 @@ export const zhTW: Dict = {
   // MCP server settings
   'settings.mcpTitle': 'MCP server',
   'settings.mcpHint':
-    '讓其他專案中的程式碼代理（Claude Code、Cursor、VS Code、Antigravity、Zed、Windsurf）讀取您的 Open Design 專案。您可以直接將設計匯入應用程式，無需先匯出 zip。',
+    '讓其他專案中的程式碼代理（Claude Code、Cursor、VS Code、Antigravity、Zed、Windsurf）讀取您的 Auto Design 專案。您可以直接將設計匯入應用程式，無需先匯出 zip。',
   'settings.mcpDaemonError':
-    '無法連線到本地守護程序以解析安裝路徑（{error}）。請確認 Open Design 正在執行，然後重新開啟此面板。',
+    '無法連線到本地守護程序以解析安裝路徑（{error}）。請確認 Auto Design 正在執行，然後重新開啟此面板。',
   'settings.mcpBuildDaemon': '請先建置守護行程。',
   'settings.mcpNodeMissing': '缺少 Node 執行檔。',
   'settings.mcpBuildHint':
@@ -369,9 +369,9 @@ export const zhTW: Dict = {
   'settings.mcpCapabilityPull':
     '透過單一呼叫拉取設計套件：包含進入點檔案以及所有引用的 CSS 變數、元件與字型。',
   'settings.mcpCapabilityDefault':
-    '預設使用您在 Open Design 中開啟的專案與檔案，因此您可以說「在我的應用程式中建置這個」，無需重新說明是哪個設計。',
+    '預設使用您在 Auto Design 中開啟的專案與檔案，因此您可以說「在我的應用程式中建置這個」，無需重新說明是哪個設計。',
   'settings.mcpRunningNote':
-    'Open Design 必須正在執行，MCP 工具呼叫才能成功。如果您在開啟 Open Design 之前就已啟動 coding agent，請重新啟動 agent，使其能夠連線到正在執行的守護行程。',
+    'Auto Design 必須正在執行，MCP 工具呼叫才能成功。如果您在開啟 Auto Design 之前就已啟動 coding agent，請重新啟動 agent，使其能夠連線到正在執行的守護行程。',
 
   'entry.tabDesigns': '我的設計',
   'entry.tabTemplates': '範本',
@@ -412,7 +412,7 @@ export const zhTW: Dict = {
   'entry.helpDownloadDesktop': '下載桌面端',
   'entry.githubStarLabel': 'Star',
   'entry.githubStarTitle': '在 GitHub 為我們點亮 Star',
-  'entry.githubStarAria': '在 GitHub 為 Open Design 點亮 Star',
+  'entry.githubStarAria': '在 GitHub 為 Auto Design 點亮 Star',
   'entry.tabImageTemplates': '圖片範本',
   'entry.tabVideoTemplates': '影片範本',
   'promptTemplates.searchPlaceholder': '搜尋範本…',
@@ -537,7 +537,7 @@ export const zhTW: Dict = {
   'connectors.emptyNoMatchBody': '試試其他關鍵字，或清除搜尋以瀏覽完整目錄。',
   'connectors.emptyNoMatchAction': '清除搜尋',
   'integrations.kicker': '整合',
-  'integrations.lede': '連接外部系統，把 MCP 工具帶入智能體迴圈，並在其他 IDE、腳本與自動化流程中使用 Open Design。',
+  'integrations.lede': '連接外部系統，把 MCP 工具帶入智能體迴圈，並在其他 IDE、腳本與自動化流程中使用 Auto Design。',
   'integrations.agentReady': '智能體就緒',
   'integrations.areasAria': '整合區域',
   'integrations.tabLabel.mcp': 'MCP 伺服器',
@@ -554,7 +554,7 @@ export const zhTW: Dict = {
   'mcpClient.emptyBody': '點擊「新增伺服器」即可開始 — 選擇範本（Higgsfield OpenClaw、Pollinations、Allyson、Imagician、EdgeOne Pages、GitHub、Filesystem…），或設定自訂 stdio / HTTP 伺服器。',
   'mcpClient.saveChanges': '儲存變更',
   'mcpClient.storedAt': '儲存於',
-  'mcpClient.daemonError': '無法連線到本機 daemon。請確認 Open Design 正在執行，然後重新開啟此面板。',
+  'mcpClient.daemonError': '無法連線到本機 daemon。請確認 Auto Design 正在執行，然後重新開啟此面板。',
   'mcpClient.saveFailed': '儲存失敗。請確認 daemon 正在執行後再試一次。',
   'tasks.comingSoon': '即將推出',
 
@@ -1010,7 +1010,7 @@ export const zhTW: Dict = {
   'preview.closeTitle': '關閉（Esc）',
   'preview.loading': '正在載入{label}…',
   'preview.errorTitle': '無法載入此範例。',
-  'preview.errorBody': '範例 HTML 載入失敗。請確認 Open Design 正在執行後重試。',
+  'preview.errorBody': '範例 HTML 載入失敗。請確認 Auto Design 正在執行後重試。',
   'preview.retry': '重試',
   'preview.unavailableTitle': '此技能尚未附帶預覽範例。',
   'preview.unavailableBody': '此技能用於產生 {kind} 產物 — 請在對話中執行此 Prompt 來產生。',
@@ -1496,7 +1496,7 @@ export const zhTW: Dict = {
 
   'pet.title': '寵物',
   'pet.tabBuiltIn': '內建',
-  'pet.tabBuiltInHint': 'Open Design 內建的精選寵物 — 一鍵領養。',
+  'pet.tabBuiltInHint': 'Auto Design 內建的精選寵物 — 一鍵領養。',
   'pet.builtInEmpty': '目前無法載入內建寵物。等本地服務恢復後,重新整理「社群」頁籤再試。',
   'pet.tabCustom': '自訂',
   'pet.tabCustomHint': '自己命名、選符號或上傳精靈圖。',
@@ -1616,7 +1616,7 @@ export const zhTW: Dict = {
   'pet.communitySyncDone': '已同步 {wrote} 個新寵物（共 {total} 個）。',
   'pet.communitySyncFailed': '同步失敗：{error}',
   'pet.codexBundled': '內建',
-  'pet.codexBundledTitle': 'Open Design 內建寵物，無需下載。',
+  'pet.codexBundledTitle': 'Auto Design 內建寵物，無需下載。',
 
   'settings.notifications': '通知',
   'settings.notificationsHint': '任務完成時的音效和桌面通知',
@@ -1750,7 +1750,7 @@ export const zhTW: Dict = {
   'settings.memoryStarterFeedbackDesc': '深色主題、字號偏大、資訊密度低',
   'settings.memoryStarterFeedbackBody': '- 主題：預設深色\n- 正文字號：≥ 18px\n- 資訊密度：留白多一些，一屏不要塞太多東西\n\n為什麼：長時間使用眼睛不容易累。\n何時適用：讓你畫 UI、網頁、PPT 時都按這個走。',
   'settings.memoryStarterProjectName': '當前專案',
-  'settings.memoryStarterProjectDesc': 'Open Design v0.5 — 聊天驅動的設計編輯器',
+  'settings.memoryStarterProjectDesc': 'Auto Design v0.5 — 聊天驅動的設計編輯器',
   'settings.memoryStarterProjectBody': '- 目標：本季交付聊天驅動的編輯體驗\n- 優先級：串流渲染、本地多模態、離線優先\n- 技術棧：Next.js 16、Express daemon、SQLite\n\n何時適用：與本專案相關的所有對話。',
   'settings.memorySaveHint': '不會自動儲存 — 點擊「建立」/「儲存」才會生效。',
   'settings.memoryIndexSaveHint': '索引不會自動儲存 — 改完後點擊「儲存索引」才會生效。',
@@ -1818,19 +1818,19 @@ export const zhTW: Dict = {
   'updater.downloadingPercent': '正在下載更新 {percent}%',
   'updater.done': '完成',
   'updater.failed': '更新失敗',
-  'updater.installerOpenBody': '安裝器已開啟。替換應用程式前請先結束 Open Design。',
+  'updater.installerOpenBody': '安裝器已開啟。替換應用程式前請先結束 Auto Design。',
   'updater.installerOpened': '安裝器已開啟',
   'updater.later': '稍後',
   'updater.openFailedFallback': '無法開啟安裝器。',
   'updater.openInstaller': '開啟安裝器',
   'updater.opening': '正在開啟…',
-  'updater.quitButton': '結束 Open Design',
-  'updater.quitFailedBody': 'Open Design 無法結束。',
+  'updater.quitButton': '結束 Auto Design',
+  'updater.quitFailedBody': 'Auto Design 無法結束。',
   'updater.quitFailedTitle': '無法結束',
   'updater.quitting': '正在結束…',
   'updater.ready': '更新已就緒',
   'updater.readyGeneric': '新版本已就緒。',
-  'updater.readyVersion': 'Open Design {version} 已就緒。',
+  'updater.readyVersion': 'Auto Design {version} 已就緒。',
   'settings.memoryModelInlineLabel': 'Memory 模型',
   'settings.memoryModelInlineSameAsChat': '與聊天一致',
   'settings.memoryModelInlineSameAsChatWithModel': '與聊天一致（{model}）',
@@ -1938,6 +1938,6 @@ export const zhTW: Dict = {
   'pluginCard.shareAria': '分享 {title}',
   'pluginCard.publishAria': '將 {title} 發布為 GitHub 儲存庫',
   'pluginCard.publishTitle': '將外掛發布為 GitHub 儲存庫',
-  'pluginCard.contributeAria': '將 {title} 貢獻至 Open Design',
-  'pluginCard.contributeTitle': '透過 pull request 將外掛貢獻至 Open Design',
+  'pluginCard.contributeAria': '將 {title} 貢獻至 Auto Design',
+  'pluginCard.contributeTitle': '透過 pull request 將外掛貢獻至 Auto Design',
 };

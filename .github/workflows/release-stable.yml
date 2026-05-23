@@ -330,7 +330,7 @@ jobs:
         env:
           CLOUDFLARE_R2_RELEASES_PUBLIC_ORIGIN: ${{ vars.CLOUDFLARE_R2_RELEASES_PUBLIC_ORIGIN }}
           RELEASE_CHANNEL: ${{ needs.metadata.outputs.channel }}
-          RELEASE_NOTES: Open Design ${{ needs.metadata.outputs.release_version }}
+          RELEASE_NOTES: Auto Design ${{ needs.metadata.outputs.release_version }}
           RELEASE_VERSION: ${{ needs.metadata.outputs.release_version }}
           TOOLS_PACK_NAMESPACE: release-stable
         run: bash .github/scripts/release/assets/mac.sh
@@ -586,7 +586,7 @@ jobs:
         env:
           CLOUDFLARE_R2_RELEASES_PUBLIC_ORIGIN: ${{ vars.CLOUDFLARE_R2_RELEASES_PUBLIC_ORIGIN }}
           RELEASE_CHANNEL: ${{ needs.metadata.outputs.channel }}
-          RELEASE_NOTES: Open Design ${{ needs.metadata.outputs.release_version }}
+          RELEASE_NOTES: Auto Design ${{ needs.metadata.outputs.release_version }}
           RELEASE_VERSION: ${{ needs.metadata.outputs.release_version }}
           TOOLS_PACK_NAMESPACE: release-stable-win
         run: ./.github/scripts/release/assets/win.ps1

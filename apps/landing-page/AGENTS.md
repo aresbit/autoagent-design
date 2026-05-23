@@ -6,7 +6,7 @@ records module-level boundaries for `apps/landing-page/`.
 ## Purpose
 
 `apps/landing-page` is a stand-alone static Astro site that renders
-the Open Design marketing surface in the **Atelier Zero** style and
+the Auto Design marketing surface in the **Atelier Zero** style and
 ships per-facet catalog pages for every skill, design system, craft
 principle, and live-artifact template in the repo root.
 

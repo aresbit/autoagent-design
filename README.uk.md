@@ -1,18 +1,18 @@
-# Open Design — офіційна open-source альтернатива [Claude Design][cd]
+# Auto Design — офіційна open-source альтернатива [Claude Design][cd]
 
-> **Open Design — це альтернатива з відкритим кодом і локально-перший варіант [Claude Design][cd].** Розгортується в web, BYOK на кожному рівні — **16 CLI агентів для кодування** автоматично виявляються у вашому `PATH` (Claude Code, Codex, Devin for Terminal, Cursor Agent, Gemini CLI, OpenCode, Qwen, Qoder CLI, GitHub Copilot CLI, Hermes, Kimi, Pi, Kiro, Kilo, Mistral Vibe, DeepSeek TUI) стають механізмом дизайну, керуються **31 компонуваною навичкою** та **72 системами дизайну комерційного класу**. Немає CLI? OpenAI-сумісний BYOK проксі — це той же цикл без spawn.
+> **Auto Design — це альтернатива з відкритим кодом і локально-перший варіант [Claude Design][cd].** Розгортується в web, BYOK на кожному рівні — **16 CLI агентів для кодування** автоматично виявляються у вашому `PATH` (Claude Code, Codex, Devin for Terminal, Cursor Agent, Gemini CLI, OpenCode, Qwen, Qoder CLI, GitHub Copilot CLI, Hermes, Kimi, Pi, Kiro, Kilo, Mistral Vibe, DeepSeek TUI) стають механізмом дизайну, керуються **31 компонуваною навичкою** та **72 системами дизайну комерційного класу**. Немає CLI? OpenAI-сумісний BYOK проксі — це той же цикл без spawn.
 
 > [!IMPORTANT]
 > ### 🔥 `0.8.0-preview` уже тут. Старий світ дизайну закінчується тут.
 >
 > Open-source альтернатива Claude Design / Figma — 40k зірок за два тижні привели нас сюди. **Далі — тільки з тобою.**
 >
-> **Швидка ітерація на `main`** — 0.8.0 — наступна фаза Open Design. Кидай PR, кидай шалену ідею, заводь баг — те, що приносиш ти, тим стає цей рух.
+> **Швидка ітерація на `main`** — 0.8.0 — наступна фаза Auto Design. Кидай PR, кидай шалену ідею, заводь баг — те, що приносиш ти, тим стає цей рух.
 >
 > → [**Прочитати анонс · завантажити інсталятор · приєднатися до руху**](https://github.com/nexu-io/open-design/discussions/1727) · встановлюється паралельно з твоєю поточною 0.7.
 
 <p align="center">
-  <img src="docs/assets/banner.png" alt="Open Design — editorial cover: design with the agent on your laptop" width="100%" />
+  <img src="docs/assets/banner.png" alt="Auto Design — editorial cover: design with the agent on your laptop" width="100%" />
 </p>
 
 <p align="center">
@@ -44,7 +44,7 @@
 
 [Claude Design][cd] від Anthropic (випущено 17.04.2026, Opus 4.7) показав, що відбувається, коли LLM припиняє писати прозу й починає поставляти артефакти дизайну. Це стало вірусним — і залишилось закритим кодом, тільки платним, тільки хмарним, прив'язаним до моделі Anthropic та навичок Anthropic. Немає касси, немає self-hosting, немає Vercel deploy, немає зміни на свого власного агента.
 
-**Open Design (OD) — це альтернатива з відкритим кодом.** Той же цикл, той же artifact-first менталітет, але без lock-in. Ми не поставляємо агента — найсильніші агенти для кодування вже живуть на вашому ноутбуці. Ми підключаємо їх до workflow дизайну, керованого навичками, що працює локально за допомогою `pnpm tools-dev`, може розгорнути веб-шар на Vercel, і залишається BYOK на кожному рівні.
+**Auto Design (AD) — це альтернатива з відкритим кодом.** Той же цикл, той же artifact-first менталітет, але без lock-in. Ми не поставляємо агента — найсильніші агенти для кодування вже живуть на вашому ноутбуці. Ми підключаємо їх до workflow дизайну, керованого навичками, що працює локально за допомогою `pnpm tools-dev`, може розгорнути веб-шар на Vercel, і залишається BYOK на кожному рівні.
 
 Введіть `make me a magazine-style pitch deck for our seed round`. Інтерактивна форма запитань з'являється до того, як модель навіть імпровізує один піксель. Агент вибирає один із п'яти курованих візуальних напрямків. Живий план `TodoWrite` потокує в UI. Демон будує реальну папку проекту на диску з seed шаблоном, бібліотекою макетів і контрольним списком self-check. Агент читає їх — перевірка перед польотом обов'язкова — запускає п'яти-розмірну критику проти свого власного виходу й видає один `<artifact>`, який рендериться в пісочниці iframe через кілька секунд.
 
@@ -312,7 +312,7 @@ DISCOVERY directives  (форма 1-го ходу, бранч бренду 2-г�
 
 ### Завантажити desktop-додаток (збірка не потрібна)
 
-Найшвидший спосіб спробувати Open Design — готовий desktop-додаток, без Node, pnpm і клонування:
+Найшвидший спосіб спробувати Auto Design — готовий desktop-додаток, без Node, pnpm і клонування:
 
 - **[open-design.ai](https://open-design.ai/)** — офіційна сторінка завантаження
 - **[GitHub релізи](https://github.com/nexu-io/open-design/releases)**
@@ -405,7 +405,7 @@ open-design/
 │
 ├── packages/
 │   ├── contracts/                 ← спільні контракти веб/daemon додатку
-│   ├── sidecar-proto/             ← контракт протоколу sidecar Open Design
+│   ├── sidecar-proto/             ← контракт протоколу sidecar Auto Design
 │   ├── sidecar/                   ← загальні примітиви sidecar рантайму
 │   └── platform/                  ← загальні примітиви процесів/платформи
 │
@@ -553,7 +553,7 @@ OD не зупиняється на коді. Та сама поверхня ч�
 
 ### HyperFrames — HTML→MP4 моушн-графіка (11 готових до репліки шаблонів)
 
-[**`heygen-com/hyperframes`**](https://github.com/heygen-com/hyperframes) — це фреймворк відео з відкритим кодом від HeyGen, нативний для агентів: ви (або агент) пишете HTML + CSS + GSAP, HyperFrames рендерить це у детермінований MP4 через headless Chrome + FFmpeg. Open Design поставляє HyperFrames як відеомодель першого класу (`hyperframes-html`), підключену до диспетчеризації демона, плюс навичку `skills/hyperframes/`, яка навчає агента контракту таймлайну, правил переходу між сценами, аудіо-реактивних патернів, субтитрів/TTS та каталог-блоків (`npx hyperframes add <slug>`).
+[**`heygen-com/hyperframes`**](https://github.com/heygen-com/hyperframes) — це фреймворк відео з відкритим кодом від HeyGen, нативний для агентів: ви (або агент) пишете HTML + CSS + GSAP, HyperFrames рендерить це у детермінований MP4 через headless Chrome + FFmpeg. Auto Design поставляє HyperFrames як відеомодель першого класу (`hyperframes-html`), підключену до диспетчеризації демона, плюс навичку `skills/hyperframes/`, яка навчає агента контракту таймлайну, правил переходу між сценами, аудіо-реактивних патернів, субтитрів/TTS та каталог-блоків (`npx hyperframes add <slug>`).
 
 Одинадцять промптів hyperframes поставляються у [`prompt-templates/video/hyperframes-*.json`](prompt-templates/video/), кожен — конкретний бриф, що створює певний архетип:
 
@@ -608,7 +608,7 @@ OD не зупиняється на коді. Та сама поверхня ч�
 
 ## Порівняння
 
-| Вісь | [Claude Design][cd] (Anthropic) | [Open CoDesign][ocod] | **Open Design** |
+| Вісь | [Claude Design][cd] (Anthropic) | [Open CoDesign][ocod] | **Auto Design** |
 |---|---|---|---|
 | Ліцензія | Закрита | MIT | **Apache-2.0** |
 | Форм-фактор | Веб (claude.ai) | Desktop (Electron) | **Веб-додаток + локальний демон** |
@@ -709,7 +709,7 @@ OD не зупиняється на коді. Та сама поверхня ч�
 ## Поставте нам зірку
 
 <p align="center">
-  <a href="https://github.com/nexu-io/open-design"><img src="docs/assets/star-us.png" alt="Поставте зірку Open Design на GitHub — github.com/nexu-io/open-design" width="100%" /></a>
+  <a href="https://github.com/nexu-io/open-design"><img src="docs/assets/star-us.png" alt="Поставте зірку Auto Design на GitHub — github.com/nexu-io/open-design" width="100%" /></a>
 </p>
 
 Якщо це зекономило вам тридцять хвилин — поставте ★. Зірки не сплачують оренду, але вони кажуть наступному дизайнеру, агенту та контриб'ютору, що цей експеримент вартий їхньої уваги. Один клік, три секунди, реальний сигнал: [github.com/nexu-io/open-design](https://github.com/nexu-io/open-design).
@@ -726,10 +726,10 @@ OD не зупиняється на коді. Та сама поверхня ч�
 
 ## Контриб'ютори
 
-Дякуємо всім, хто допоміг просувати Open Design — через код, документацію, зворотний зв'язок, нові навички, нові системи дизайну або навіть гостре питання. Кожен реальний внесок рахується, а стіна нижче — найпростіший спосіб сказати це вголос.
+Дякуємо всім, хто допоміг просувати Auto Design — через код, документацію, зворотний зв'язок, нові навички, нові системи дизайну або навіть гостре питання. Кожен реальний внесок рахується, а стіна нижче — найпростіший спосіб сказати це вголос.
 
 <a href="https://github.com/nexu-io/open-design/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=nexu-io/open-design&cache_bust=2026-05-22" alt="Контриб'ютори Open Design" />
+  <img src="https://contrib.rocks/image?repo=nexu-io/open-design&cache_bust=2026-05-22" alt="Контриб'ютори Auto Design" />
 </a>
 
 Якщо ви злили свій перший PR — ласкаво просимо. Мітка [`good-first-issue`/`help-wanted`](https://github.com/nexu-io/open-design/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22%2C%22help+wanted%22) — це точка входу.
@@ -737,7 +737,7 @@ OD не зупиняється на коді. Та сама поверхня ч�
 ## Активність репозиторію
 
 <picture>
-  <img alt="Open Design — метрики репозиторію" src="docs/assets/github-metrics.svg" />
+  <img alt="Auto Design — метрики репозиторію" src="docs/assets/github-metrics.svg" />
 </picture>
 
 SVG вище перегенерується щодня [`.github/workflows/metrics.yml`](.github/workflows/metrics.yml) за допомогою [`lowlighter/metrics`](https://github.com/lowlighter/metrics). Зробіть ручне оновлення з вкладки **Actions**, якщо хочете швидше; для багатших плагінів (трафік, час відповіді) додайте секрет репозиторію `METRICS_TOKEN` з fine-grained PAT.
@@ -748,7 +748,7 @@ SVG вище перегенерується щодня [`.github/workflows/metri
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&theme=dark&cache_bust=2026-05-22" />
     <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-22" />
-    <img alt="Історія зірок Open Design" src="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-22" />
+    <img alt="Історія зірок Auto Design" src="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-22" />
   </picture>
 </a>
 

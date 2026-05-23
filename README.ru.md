@@ -1,18 +1,18 @@
-# Open Design — официальная open-source альтернатива [Claude Design][cd]
+# Auto Design — официальная open-source альтернатива [Claude Design][cd]
 
-> **Open Design — открытая, локально-ориентированная альтернатива [Claude Design][cd].** Пригодна для web-деплоя, с BYOK на каждом уровне: **16 CLI coding-агентов** автоматически обнаруживаются в вашем `PATH` (Claude Code, Codex, Devin for Terminal, Cursor Agent, Gemini CLI, OpenCode, Qwen, Qoder CLI, GitHub Copilot CLI, Hermes, Kimi, Pi, Kiro, Kilo, Mistral Vibe, DeepSeek TUI) и превращаются в движок генерации дизайна, управляемый **31 комбинируемым навыком** и **72 дизайн-системами уровня бренда**. Нет CLI? OpenAI-совместимый BYOK-прокси даёт тот же цикл без локального запуска агента.
+> **Auto Design — открытая, локально-ориентированная альтернатива [Claude Design][cd].** Пригодна для web-деплоя, с BYOK на каждом уровне: **16 CLI coding-агентов** автоматически обнаруживаются в вашем `PATH` (Claude Code, Codex, Devin for Terminal, Cursor Agent, Gemini CLI, OpenCode, Qwen, Qoder CLI, GitHub Copilot CLI, Hermes, Kimi, Pi, Kiro, Kilo, Mistral Vibe, DeepSeek TUI) и превращаются в движок генерации дизайна, управляемый **31 комбинируемым навыком** и **72 дизайн-системами уровня бренда**. Нет CLI? OpenAI-совместимый BYOK-прокси даёт тот же цикл без локального запуска агента.
 
 > [!IMPORTANT]
 > ### 🔥 `0.8.0-preview` уже здесь. Старый мир дизайна заканчивается здесь.
 >
 > Open-source альтернатива Claude Design / Figma — 40k звёзд за две недели довели нас до этой точки. **Дальше — только с тобой.**
 >
-> **Быстрая итерация на `main`** — 0.8.0 — следующая фаза Open Design. Кидай PR, бросай безумную идею, заводи баг — что приносишь ты, таким и становится это движение.
+> **Быстрая итерация на `main`** — 0.8.0 — следующая фаза Auto Design. Кидай PR, бросай безумную идею, заводи баг — что приносишь ты, таким и становится это движение.
 >
 > → [**Прочитать анонс · скачать установщик · присоединиться к движению**](https://github.com/nexu-io/open-design/discussions/1727) · устанавливается параллельно с твоей текущей 0.7.
 
 <p align="center">
-  <img src="docs/assets/banner.png" alt="Open Design — редакционная обложка: дизайн вместе с агентом на вашем ноутбуке" width="100%" />
+  <img src="docs/assets/banner.png" alt="Auto Design — редакционная обложка: дизайн вместе с агентом на вашем ноутбуке" width="100%" />
 </p>
 
 <p align="center">
@@ -44,7 +44,7 @@
 
 Anthropic [Claude Design][cd] (выпущен 2026-04-17, на Opus 4.7) показал, что происходит, когда LLM перестаёт писать прозу и начинает выдавать готовые дизайн-артефакты. Продукт моментально стал вирусным — и остался закрытым, платным, облачным и жёстко привязанным к модели Anthropic и внутренним навыкам Anthropic. Никакого checkout, никакого self-host, никакого деплоя на Vercel, никакой замены агента на своего.
 
-**Open Design (OD) — открытая альтернатива.** Тот же цикл, та же логика artifact-first, но без lock-in. Мы не поставляем собственного агента: самые сильные coding-агенты уже стоят у вас на ноутбуке. Мы связываем их с skill-driven workflow для дизайна, который запускается локально через `pnpm tools-dev`, умеет выкладывать web-слой на Vercel и остаётся BYOK на каждом уровне.
+**Auto Design (AD) — открытая альтернатива.** Тот же цикл, та же логика artifact-first, но без lock-in. Мы не поставляем собственного агента: самые сильные coding-агенты уже стоят у вас на ноутбуке. Мы связываем их с skill-driven workflow для дизайна, который запускается локально через `pnpm tools-dev`, умеет выкладывать web-слой на Vercel и остаётся BYOK на каждом уровне.
 
 Введите `make me a magazine-style pitch deck for our seed round`. Ещё до того, как модель импровизирует хоть один пиксель, появляется интерактивная форма вопросов. Агент выбирает одно из пяти отобранных визуальных направлений. Живой план `TodoWrite` стримится в UI. Демон создаёт на диске реальную проектную папку с seed-шаблоном, библиотекой раскладок и checklist’ом самопроверки. Агент читает их — pre-flight обязателен — прогоняет пятимерную критику собственного результата и выдаёт единый `<artifact>`, который через несколько секунд рендерится в sandboxed iframe.
 
@@ -312,7 +312,7 @@ DISCOVERY directives  (turn-1 form, turn-2 brand branch, TodoWrite, 5-dim critiq
 
 ### Скачать desktop-приложение (без сборки)
 
-Самый быстрый способ попробовать Open Design — готовое desktop-приложение, без Node, pnpm и клонирования:
+Самый быстрый способ попробовать Auto Design — готовое desktop-приложение, без Node, pnpm и клонирования:
 
 - **[open-design.ai](https://open-design.ai/)** — официальная страница загрузки
 - **[GitHub-релизы](https://github.com/nexu-io/open-design/releases)**
@@ -405,7 +405,7 @@ open-design/
 │
 ├── packages/
 │   ├── contracts/                 ← общие контракты web/daemon
-│   ├── sidecar-proto/             ← протокол sidecar Open Design
+│   ├── sidecar-proto/             ← протокол sidecar Auto Design
 │   ├── sidecar/                   ← базовые runtime-примитивы sidecar
 │   └── platform/                  ← общие process/platform primitives
 │
@@ -553,7 +553,7 @@ OD не заканчивается на коде. Тот же чатовый sur
 
 ### HyperFrames — HTML→MP4 motion graphics (11 готовых шаблонов)
 
-[**`heygen-com/hyperframes`**](https://github.com/heygen-com/hyperframes) — это open-source, agent-native video framework от HeyGen: вы (или агент) пишете HTML + CSS + GSAP, а HyperFrames рендерит всё в детерминированный MP4 через headless Chrome + FFmpeg. Open Design поставляет HyperFrames как first-class video model (`hyperframes-html`) в dispatch-пайплайне демона, плюс skill `skills/hyperframes/`, объясняющий агенту контракт таймлайна, правила переходов между сценами, audio-reactive patterns, captions/TTS и catalog blocks (`npx hyperframes add <slug>`).
+[**`heygen-com/hyperframes`**](https://github.com/heygen-com/hyperframes) — это open-source, agent-native video framework от HeyGen: вы (или агент) пишете HTML + CSS + GSAP, а HyperFrames рендерит всё в детерминированный MP4 через headless Chrome + FFmpeg. Auto Design поставляет HyperFrames как first-class video model (`hyperframes-html`) в dispatch-пайплайне демона, плюс skill `skills/hyperframes/`, объясняющий агенту контракт таймлайна, правила переходов между сценами, audio-reactive patterns, captions/TTS и catalog blocks (`npx hyperframes add <slug>`).
 
 Одиннадцать hyperframes-промптов лежат в [`prompt-templates/video/hyperframes-*.json`](prompt-templates/video/), и каждый из них описывает конкретный archetype:
 
@@ -608,7 +608,7 @@ OD не заканчивается на коде. Тот же чатовый sur
 
 ## Сравнение
 
-| Axis | [Claude Design][cd] (Anthropic) | [Open CoDesign][ocod] | **Open Design** |
+| Axis | [Claude Design][cd] (Anthropic) | [Open CoDesign][ocod] | **Auto Design** |
 |---|---|---|---|
 | License | Closed | MIT | **Apache-2.0** |
 | Form factor | Web (claude.ai) | Desktop (Electron) | **Web app + local daemon** |
@@ -709,7 +709,7 @@ OD не заканчивается на коде. Тот же чатовый sur
 ## Поставьте звезду
 
 <p align="center">
-  <a href="https://github.com/nexu-io/open-design"><img src="docs/assets/star-us.png" alt="Поставьте звезду Open Design на GitHub — github.com/nexu-io/open-design" width="100%" /></a>
+  <a href="https://github.com/nexu-io/open-design"><img src="docs/assets/star-us.png" alt="Поставьте звезду Auto Design на GitHub — github.com/nexu-io/open-design" width="100%" /></a>
 </p>
 
 Если OD сэкономил вам хотя бы тридцать минут — подарите ему ★. Звёзды не платят аренду, но показывают следующему дизайнеру, агенту и контрибьютору, что этот эксперимент заслуживает внимания. Один клик, три секунды, реальный сигнал: [github.com/nexu-io/open-design](https://github.com/nexu-io/open-design).
@@ -726,10 +726,10 @@ Issues, PR, новые skills и новые design systems приветству�
 
 ## Участники
 
-Спасибо всем, кто помогает двигать Open Design вперёд — кодом, документацией, обратной связью, новыми skills, новыми design systems или просто точным issue. Вклад любого реального масштаба здесь важен, а стена ниже — самый простой способ сказать это вслух.
+Спасибо всем, кто помогает двигать Auto Design вперёд — кодом, документацией, обратной связью, новыми skills, новыми design systems или просто точным issue. Вклад любого реального масштаба здесь важен, а стена ниже — самый простой способ сказать это вслух.
 
 <a href="https://github.com/nexu-io/open-design/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=nexu-io/open-design&cache_bust=2026-05-22" alt="Contributors Open Design" />
+  <img src="https://contrib.rocks/image?repo=nexu-io/open-design&cache_bust=2026-05-22" alt="Contributors Auto Design" />
 </a>
 
 Если вы только что отправили свой первый PR — добро пожаловать. Метка [`good-first-issue`/`help-wanted`](https://github.com/nexu-io/open-design/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22%2C%22help+wanted%22) — хорошая точка входа.
@@ -737,7 +737,7 @@ Issues, PR, новые skills и новые design systems приветству�
 ## Активность репозитория
 
 <picture>
-  <img alt="Open Design — repository metrics" src="docs/assets/github-metrics.svg" />
+  <img alt="Auto Design — repository metrics" src="docs/assets/github-metrics.svg" />
 </picture>
 
 SVG выше ежедневно пересобирается workflow [`.github/workflows/metrics.yml`](.github/workflows/metrics.yml) с помощью [`lowlighter/metrics`](https://github.com/lowlighter/metrics). Если нужен refresh раньше, запустите workflow вручную во вкладке **Actions**; для более богатых плагинов (traffic, follow-up time) добавьте секрет репозитория `METRICS_TOKEN` с fine-grained PAT.
@@ -748,7 +748,7 @@ SVG выше ежедневно пересобирается workflow [`.github/
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&theme=dark&cache_bust=2026-05-22" />
     <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-22" />
-    <img alt="История звёзд Open Design" src="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-22" />
+    <img alt="История звёзд Auto Design" src="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-22" />
   </picture>
 </a>
 

@@ -1,18 +1,18 @@
-# Open Design —— [Claude Design][cd] 的官方开源替代品
+# Auto Design —— [Claude Design][cd] 的官方开源替代品
 
-> **Open Design 是 [Claude Design][cd] 的开源、本地优先替代品。** 可部署到 Vercel、每一层都 BYOK —— **16 套 coding-agent CLI** 在 `PATH` 上自动检测（Claude Code, Codex, Devin for Terminal, Cursor Agent, Gemini CLI, OpenCode, Qwen, Qoder CLI, GitHub Copilot CLI, Hermes, Kimi, Pi, Kiro, Kilo, Mistral Vibe, DeepSeek TUI）就是设计引擎，由 **31 个可组合 Skills** 和 **72 套品牌级 Design System** 驱动。
+> **Auto Design 是 [Claude Design][cd] 的开源、本地优先替代品。** 可部署到 Vercel、每一层都 BYOK —— **16 套 coding-agent CLI** 在 `PATH` 上自动检测（Claude Code, Codex, Devin for Terminal, Cursor Agent, Gemini CLI, OpenCode, Qwen, Qoder CLI, GitHub Copilot CLI, Hermes, Kimi, Pi, Kiro, Kilo, Mistral Vibe, DeepSeek TUI）就是设计引擎，由 **31 个可组合 Skills** 和 **72 套品牌级 Design System** 驱动。
 
 > [!IMPORTANT]
 > ### 🔥 `0.8.0-preview` 已发布。设计的旧世界，到此为止。
 >
 > Claude Design / Figma 的开源替代品 —— 上线两周，40k stars 在身，且仍在加速。**剩下的路，需要你和我们一起推完。**
 >
-> **正在 `main` 分支飞速迭代中** —— 0.8.0 是 Open Design 的下一阶段。提一个 PR、扔一个想法、报一个 bug —— 你带来的，就是这场运动接下来的样子。
+> **正在 `main` 分支飞速迭代中** —— 0.8.0 是 Auto Design 的下一阶段。提一个 PR、扔一个想法、报一个 bug —— 你带来的，就是这场运动接下来的样子。
 >
 > → [**读公告 · 下载安装包 · 加入这场运动**](https://github.com/nexu-io/open-design/discussions/1727) · 可与你现有的 0.7 并行安装。
 
 <p align="center">
-  <img src="docs/assets/banner.png" alt="Open Design 封面：与本地 AI 智能体共同设计" width="100%" />
+  <img src="docs/assets/banner.png" alt="Auto Design 封面：与本地 AI 智能体共同设计" width="100%" />
 </p>
 
 <p align="center">
@@ -44,7 +44,7 @@
 
 Anthropic 的 [Claude Design][cd]（2026-04-17 发布，基于 Opus 4.7）让大家第一次看到：当一个 LLM 不再写废话、开始直接交付设计成品，会是什么样子。它瞬间出圈 —— 然后保持**闭源**、付费、只跑在云上、绑定 Anthropic 的模型和 Anthropic 的内部 skill。没有 checkout，没有自托管，没有 Vercel 部署，也换不了自己的 agent。
 
-**Open Design（OD）就是它的开源替代品。** 同一套 loop、同一种「artifact-first」心智模型，但没有锁定。我们不做 agent —— 你笔记本上最强的 coding agent 已经装好了。我们要做的，是把它接进一个 skill 驱动的设计工作流：本地用 `pnpm tools-dev` 跑完整本地闭环，云端可单独部署 Web 层，每一层都 BYOK（自带 Key）。
+**Auto Design（OD）就是它的开源替代品。** 同一套 loop、同一种「artifact-first」心智模型，但没有锁定。我们不做 agent —— 你笔记本上最强的 coding agent 已经装好了。我们要做的，是把它接进一个 skill 驱动的设计工作流：本地用 `pnpm tools-dev` 跑完整本地闭环，云端可单独部署 Web 层，每一层都 BYOK（自带 Key）。
 
 输入「帮我做一份杂志风的种子轮 pitch deck」。在模型挥洒第一个像素之前，**初始化问题表单**已经先跳出来。Agent 从 5 套精挑的视觉方向里选一个。一张活的 `TodoWrite` 计划卡片实时流入 UI。Daemon 在磁盘上构建出一个真实的项目目录，里面有 seed 模板、布局库、自检 checklist。Agent **强制 pre-flight** 读取它们，对自己的输出跑一轮**五维评审**，几秒后吐出一个 `<artifact>`，渲染在沙盒 iframe 里。
 
@@ -311,7 +311,7 @@ DISCOVERY 指令         （turn-1 表单、turn-2 品牌分支、TodoWrite、�
 
 ### 下载桌面端（无需构建）
 
-试用 Open Design 最快的方式是直接下载预编译的桌面端 —— 不用装 Node、不用 pnpm、不用 clone：
+试用 Auto Design 最快的方式是直接下载预编译的桌面端 —— 不用装 Node、不用 pnpm、不用 clone：
 
 - **[open-design.ai](https://open-design.ai/)** —— 官方下载页
 - **[GitHub releases](https://github.com/nexu-io/open-design/releases)**
@@ -400,7 +400,7 @@ open-design/
 │
 ├── packages/
 │   ├── contracts/                 ← web/daemon 共享 app contracts
-│   ├── sidecar-proto/             ← Open Design sidecar protocol contract
+│   ├── sidecar-proto/             ← Auto Design sidecar protocol contract
 │   ├── sidecar/                   ← 通用 sidecar runtime primitives
 │   └── platform/                  ← 通用 process/platform primitives
 │
@@ -547,7 +547,7 @@ OD 不止于代码。同一套生成 `<artifact>` HTML 的 chat 入口，也驱�
 
 ### HyperFrames —— HTML→MP4 动态图形（11 条可一键复刻模板）
 
-[**`heygen-com/hyperframes`**](https://github.com/heygen-com/hyperframes) 是 HeyGen 开源的 agent-native 视频框架 —— 你（或者 agent）写 HTML + CSS + GSAP，HyperFrames 通过 headless Chrome + FFmpeg 确定性地渲成 MP4。Open Design 把 HyperFrames 作为一等视频模型（`hyperframes-html`）接到 daemon dispatch；同时打包了 `skills/hyperframes/` 这个 skill，把 timeline 合约、scene transition 规则、audio-reactive 模式、字幕/TTS、目录块（`npx hyperframes add <slug>`）一并教给 agent。
+[**`heygen-com/hyperframes`**](https://github.com/heygen-com/hyperframes) 是 HeyGen 开源的 agent-native 视频框架 —— 你（或者 agent）写 HTML + CSS + GSAP，HyperFrames 通过 headless Chrome + FFmpeg 确定性地渲成 MP4。Auto Design 把 HyperFrames 作为一等视频模型（`hyperframes-html`）接到 daemon dispatch；同时打包了 `skills/hyperframes/` 这个 skill，把 timeline 合约、scene transition 规则、audio-reactive 模式、字幕/TTS、目录块（`npx hyperframes add <slug>`）一并教给 agent。
 
 11 条 HyperFrames prompt 放在 [`prompt-templates/video/hyperframes-*.json`](prompt-templates/video/)，每一条都是产生具体某个原型的明确 brief：
 
@@ -602,7 +602,7 @@ Chat / artifact 循环最显眼，但这套仓库里还有几个能力被埋得�
 
 ## 横向对比
 
-| 维度 | [Claude Design][cd]（Anthropic） | [Open CoDesign][ocod] | **Open Design** |
+| 维度 | [Claude Design][cd]（Anthropic） | [Open CoDesign][ocod] | **Auto Design** |
 |---|---|---|---|
 | License | 闭源 | MIT | **Apache-2.0** |
 | 形态 | Web (claude.ai) | 桌面 (Electron) | **Web 应用 + 本地 daemon** |
@@ -702,7 +702,7 @@ Daemon 启动时从 `PATH` 自动检测，无需配置。流式分发逻辑在 [
 ## 给我们点个 Star
 
 <p align="center">
-  <a href="https://github.com/nexu-io/open-design"><img src="docs/assets/star-us.png" alt="给 Open Design 点个 Star —— github.com/nexu-io/open-design" width="100%" /></a>
+  <a href="https://github.com/nexu-io/open-design"><img src="docs/assets/star-us.png" alt="给 Auto Design 点个 Star —— github.com/nexu-io/open-design" width="100%" /></a>
 </p>
 
 如果这套东西帮你省了半小时，给它一个 ★。Star 不付房租，但它告诉下一个设计师、Agent 和贡献者：这个实验值得他们的注意力。一次点击、三秒钟、真实信号：[github.com/nexu-io/open-design](https://github.com/nexu-io/open-design)。
@@ -719,10 +719,10 @@ Daemon 启动时从 `PATH` 自动检测，无需配置。流式分发逻辑在 [
 
 ## 贡献者墙
 
-感谢每一位让 Open Design 变得更好的朋友 —— 无论是写代码、修文档、提 issue、加 skill 还是加 design system，每一次真实贡献都会被记住。下面这面墙是最直观的「Thank you」。
+感谢每一位让 Auto Design 变得更好的朋友 —— 无论是写代码、修文档、提 issue、加 skill 还是加 design system，每一次真实贡献都会被记住。下面这面墙是最直观的「Thank you」。
 
 <a href="https://github.com/nexu-io/open-design/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=nexu-io/open-design&cache_bust=2026-05-22" alt="Open Design 贡献者" />
+  <img src="https://contrib.rocks/image?repo=nexu-io/open-design&cache_bust=2026-05-22" alt="Auto Design 贡献者" />
 </a>
 
 第一次提 PR？欢迎从 [`good-first-issue`/`help-wanted`](https://github.com/nexu-io/open-design/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22%2C%22help+wanted%22) 标签起步。
@@ -730,7 +730,7 @@ Daemon 启动时从 `PATH` 自动检测，无需配置。流式分发逻辑在 [
 ## 仓库活跃度
 
 <picture>
-  <img alt="Open Design 仓库指标" src="docs/assets/github-metrics.svg" />
+  <img alt="Auto Design 仓库指标" src="docs/assets/github-metrics.svg" />
 </picture>
 
 上面的 SVG 由 [`.github/workflows/metrics.yml`](.github/workflows/metrics.yml) 借助 [`lowlighter/metrics`](https://github.com/lowlighter/metrics) 每天自动重新生成。想要立刻刷新可以去 **Actions** 选项卡手动触发；想开启更丰富的插件（traffic、follow-up time 等）可在仓库 secrets 里加一个细粒度 PAT 命名为 `METRICS_TOKEN`。
@@ -741,7 +741,7 @@ Daemon 启动时从 `PATH` 自动检测，无需配置。流式分发逻辑在 [
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&theme=dark&cache_bust=2026-05-22" />
     <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-22" />
-    <img alt="Open Design star history" src="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-22" />
+    <img alt="Auto Design star history" src="https://api.star-history.com/svg?repos=nexu-io/open-design&type=Date&cache_bust=2026-05-22" />
   </picture>
 </a>
 
