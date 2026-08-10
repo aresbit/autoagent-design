@@ -7,7 +7,7 @@
   "description": "A mobile-app screen rendered inside a pixel-accurate iPhone 15 Pro frame\non the page. Built by copying the seed `assets/template.html` and pasting\none screen archetype from `references/layouts.md`. Use when the brief asks\nfor \"mobile app\", \"iOS app\", \"Android app\", \"phone screen\", or \"app UI\".",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/aresbit"
   },
   "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/_official/examples/mobile-app",

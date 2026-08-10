@@ -7,7 +7,7 @@
   "description": "Hyperframes / Remotion 兼容的连续帧动画, 可自动播放",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/aresbit"
   },
   "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/_official/examples/video-hyperframes",

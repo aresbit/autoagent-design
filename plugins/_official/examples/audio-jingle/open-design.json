@@ -7,7 +7,7 @@
   "description": "Audio generation skill — jingles, beds, voiceover, and sound effects.\nRoutes music requests to Suno V5 / Udio / Lyria, speech to MiniMax\nTTS / FishAudio / ElevenLabs V3, and SFX to ElevenLabs SFX or\nAudioCraft. Output is one MP3/WAV file saved to the project folder.",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/aresbit"
   },
   "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/_official/examples/audio-jingle",

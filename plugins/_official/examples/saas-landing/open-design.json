@@ -7,7 +7,7 @@
   "description": "Single-page SaaS landing with hero, features, social proof, pricing, and CTA.\nRespects the active DESIGN.md color/typography/layout tokens.\nTrigger keywords: \"saas landing\", \"marketing page\", \"product landing\".",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/aresbit"
   },
   "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/_official/examples/saas-landing",

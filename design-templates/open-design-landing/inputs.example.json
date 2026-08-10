@@ -118,7 +118,7 @@
       { "text": ".", "dot": true }
     ],
     "lead": "We blend human taste with whichever agent you already trust to ship interfaces, decks, and editorial pages that feel intentional, expressive, and alive.",
-    "ribbon": "<b>OPEN DESIGN</b> &nbsp;·&nbsp; CAPABILITIES MATRIX &nbsp;·&nbsp; OD/26",
+    "ribbon": "<b>AUTO DESIGN</b> &nbsp;·&nbsp; CAPABILITIES MATRIX &nbsp;·&nbsp; OD/26",
     "cards": [
       {
         "num": "01",
@@ -276,7 +276,7 @@
     ],
     "lead": "Star us on GitHub, drop into the issues, or run <code class='code-inline'>pnpm tools-dev</code> tonight. Three commands and the loop is yours.",
     "primary": { "label": "Star on GitHub", "href": "https://github.com/nexu-io/open-design" },
-    "ribbon": "OPEN DESIGN &nbsp;·&nbsp; FIN."
+    "ribbon": "AUTO DESIGN &nbsp;·&nbsp; FIN."
   },
 
   "wire": {

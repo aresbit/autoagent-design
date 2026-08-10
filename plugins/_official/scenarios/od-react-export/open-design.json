@@ -4,10 +4,10 @@
   "name": "od-react-export",
   "title": "Export to React",
   "version": "0.1.0",
-  "description": "Starter downstream export plugin for turning an accepted Open Design artifact into a React component handoff.",
+  "description": "Starter downstream export plugin for turning an accepted Auto Design artifact into a React component handoff.",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/aresbit"
   },
   "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/_official/scenarios/od-react-export",
@@ -49,8 +49,8 @@
     ],
     "useCase": {
       "query": {
-        "en": "Export the accepted Open Design artifact to a React 18 + TypeScript component. Preserve the visual system, extract reusable props only where they clarify intent, and finish with integration notes.",
-        "zh-CN": "将已确认的 Open Design 产物导出为 React 18 + TypeScript 组件。保持视觉系统一致，只在有助于表达意图时抽出可复用 props，并在最后给出集成说明。"
+        "en": "Export the accepted Auto Design artifact to a React 18 + TypeScript component. Preserve the visual system, extract reusable props only where they clarify intent, and finish with integration notes.",
+        "zh-CN": "将已确认的 Auto Design 产物导出为 React 18 + TypeScript 组件。保持视觉系统一致，只在有助于表达意图时抽出可复用 props，并在最后给出集成说明。"
       },
       "exampleOutputs": []
     },

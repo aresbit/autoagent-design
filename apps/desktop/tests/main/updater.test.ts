@@ -59,7 +59,7 @@ async function createUpdaterFixture(options: {
     ? `open-design-${version}-win-x64-setup.exe`
     : `open-design-${version}-mac-arm64.dmg`;
   const artifactPath = `/artifact.${artifactExt}`;
-  const artifactBody = options.artifactBody ?? "open design updater fixture";
+  const artifactBody = options.artifactBody ?? "auto design updater fixture";
   const digest = createHash("sha256").update(artifactBody).digest("hex");
   let artifactRequests = 0;
   let metadataRequests = 0;
@@ -212,7 +212,7 @@ describe("desktop updater", () => {
       expect(checked.paths?.manifestPath).toBe(join(root, "metadata.json"));
       expect(checked.active?.path).toBe(checked.downloadPath);
       expect(relative(await realpath(root), checked.downloadPath ?? "")).not.toMatch(/^\.\./);
-      expect(await readFile(checked.downloadPath ?? "", "utf8")).toBe("open design updater fixture");
+      expect(await readFile(checked.downloadPath ?? "", "utf8")).toBe("auto design updater fixture");
 
       const restored = await updater.status();
       expect(restored.state).toBe(DESKTOP_UPDATE_STATES.DOWNLOADED);
@@ -247,7 +247,7 @@ describe("desktop updater", () => {
       expect(checked.artifact?.platformKey).toBe("win");
       expect(checked.artifact?.type).toBe("installer");
       expect(checked.downloadPath).toEqual(expect.stringMatching(/\.exe$/));
-      expect(await readFile(checked.downloadPath ?? "", "utf8")).toBe("open design updater fixture");
+      expect(await readFile(checked.downloadPath ?? "", "utf8")).toBe("auto design updater fixture");
 
       const installed = await updater.installUpdate();
       expect(installed.state).toBe(DESKTOP_UPDATE_STATES.DOWNLOADED);

@@ -3,7 +3,7 @@ name: open-design-landing-deck
 description: >
   Produce a single-file slide deck in the Atelier Zero visual language
   (warm-paper background, italic-serif emphasis spans, coral terminating
-  dots, surreal collage plates) — Open Design's brand deck recipe.
+  dots, surreal collage plates) — Auto Design's brand deck recipe.
   The deck uses **horizontal magazine-style swipe pagination** (←/→,
   wheel, swipe), a per-slide chrome strip with brand mark and slide
   counter, an ESC overview grid, a coral progress bar, and inherits
@@ -16,8 +16,8 @@ triggers:
   - keynote
   - editorial slides
   - atelier zero deck
-  - open design deck
-  - open design landing deck
+  - auto design deck
+  - auto design landing deck
 od:
   category: brand-deck
   surface: web
@@ -39,7 +39,7 @@ inputs:
     schema_path: ./schema.ts#BrandBlock
   - id: deck_title
     label: Kicker shown in the per-slide top chrome
-    description: e.g. `'Open Design · Vol. 01 / Issue Nº 26'`.
+    description: e.g. `'Auto Design · Vol. 01 / Issue Nº 26'`.
   - id: slides
     label: Ordered list of typed slides
     description: >

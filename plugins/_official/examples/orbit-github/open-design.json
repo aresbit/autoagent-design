@@ -7,7 +7,7 @@
   "description": "Open Orbit briefing skill — selected by the Orbit pipeline when\nGitHub is the user's only connected connector, or when the user\nexplicitly scopes their daily digest to GitHub. Pulls the past 24\nhours of PRs, review requests, issues, CI runs, and merges from the\nuser's authenticated GitHub connection and renders them in a layout\nthat mirrors GitHub's native Notifications + PR-diff visual language.\nThis skill should not be triggered manually — it is invoked by\nOrbit's daily-digest scheduler against live GitHub data.",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/aresbit"
   },
   "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/_official/examples/orbit-github",

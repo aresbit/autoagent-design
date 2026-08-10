@@ -321,12 +321,12 @@ A memory-plus-UI release: **auto-memory store** carries agent context across run
 - **`ib-pitch-book` skill** — investment-banking strategic-alternatives pitch book (Anthropic financial-services Pitch Agent workflow); ships `example.html` and IB layout references.
 ## [0.6.0] - 2026-05-09
 
-A connectivity-and-iteration release: Open Design becomes a fully bidirectional MCP citizen (external MCP client with 39 templates), ships **Cloudflare Pages deployment** for generated artifacts (with custom domains), advances Critique Theater to **Phase 6** (interrupt + project-keyed run registry), and lands a redesigned top bar, draggable file tabs, batch delete, **vector PDF export**, **agent-callable research/search**, and **Orbit activity summaries**. Hyperframes learns the HTML-in-Canvas API. New BYOK provider (Ollama Cloud), new agent capabilities (Gemini 3 preview + GPT-5.1 codex picker + DeepSeek v4), new design systems (BMW M, Slack, Cisco, Webex, Mission Control, Urdu Modern), eight new skill bundles, and Turkish + Thai locales. 136 merged PRs since 0.5.0.
+A connectivity-and-iteration release: Auto Design becomes a fully bidirectional MCP citizen (external MCP client with 39 templates), ships **Cloudflare Pages deployment** for generated artifacts (with custom domains), advances Critique Theater to **Phase 6** (interrupt + project-keyed run registry), and lands a redesigned top bar, draggable file tabs, batch delete, **vector PDF export**, **agent-callable research/search**, and **Orbit activity summaries**. Hyperframes learns the HTML-in-Canvas API. New BYOK provider (Ollama Cloud), new agent capabilities (Gemini 3 preview + GPT-5.1 codex picker + DeepSeek v4), new design systems (BMW M, Slack, Cisco, Webex, Mission Control, Urdu Modern), eight new skill bundles, and Turkish + Thai locales. 136 merged PRs since 0.5.0.
 
 ### Added
 
 #### MCP, deployment & connectors
-- **External MCP client with daemon-managed OAuth and 39 design-focused templates.** Open Design can now consume MCP servers, not just expose itself as one. ([#898])
+- **External MCP client with daemon-managed OAuth and 39 design-focused templates.** Auto Design can now consume MCP servers, not just expose itself as one. ([#898])
 - **Cloudflare Pages artifact deployment.** One-shot publish of generated artifacts to Pages from the desktop app. ([#729])
 - **Cloudflare Pages custom domains.** Bind your own domain to deployed artifacts. ([#851])
 - Preserve OAuth state and advertised tool counts when reconnecting MCP/connector providers. ([#1036])
@@ -468,7 +468,7 @@ A connectivity-and-iteration release: Open Design becomes a fully bidirectional 
 - Fix desktop preview interactions and connector auth feedback. ([#864])
 - Fix desktop preview and packaged app interactions. ([#879])
 - Fix desktop prompt template close hitbox. ([#1056])
-- Pack/win: close detection gaps that let `Open Design.exe` stay locked at install time. ([#823])
+- Pack/win: close detection gaps that let `Auto Design.exe` stay locked at install time. ([#823])
 - Tools-pack: mark `blake3-wasm` as external in the macOS prebundle. ([#844])
 - Packaged: swallow harmless `setTypeOfService EINVAL` from undici. ([#906])
 
@@ -502,7 +502,7 @@ A connectivity-and-iteration release: Open Design becomes a fully bidirectional 
 - Test: cover model option rendering. ([#948])
 - Test: de-flake chat-scroll-preservation across tab switches. ([#886])
 - Auto-generated metrics + contributors wall refreshes. ([#853], [#998], [#856], [#1004])
-- Release: Open Design 0.5.0 changelog landing. ([#820])
+- Release: Auto Design 0.5.0 changelog landing. ([#820])
 
 ## [0.5.0] - 2026-05-07
 
@@ -650,12 +650,12 @@ A minor release focused on iteration: live-data dashboards graduate to a first-c
 
 ## [0.4.0] - 2026-05-05
 
-A multi-protocol leap: Open Design now ships as an MCP server, ships Critique Theater (Design Jury) Phase 4, gains live-reload + Tweaks mode + live artifacts in the preview pane, and adds five new agent / runtime adapters. 71 merged PRs from 40+ contributors over two days. Linux AppImage packaging landed in tooling, but the stable Linux artifact is deferred from 0.4.0 while containerized release packaging is hardened.
+A multi-protocol leap: Auto Design now ships as an MCP server, ships Critique Theater (Design Jury) Phase 4, gains live-reload + Tweaks mode + live artifacts in the preview pane, and adds five new agent / runtime adapters. 71 merged PRs from 40+ contributors over two days. Linux AppImage packaging landed in tooling, but the stable Linux artifact is deferred from 0.4.0 while containerized release packaging is hardened.
 
 ### Added
 
 #### MCP & agent integration
-- **`od mcp` — expose Open Design as a stdio MCP server.** Coding agents in other repos (Claude Code, Codex, Cursor, VS Code, Antigravity, Zed, Windsurf) can read files from local Open Design projects directly, including the project the user has open in the Open Design app right now. ([#399])
+- **`od mcp` — expose Auto Design as a stdio MCP server.** Coding agents in other repos (Claude Code, Codex, Cursor, VS Code, Antigravity, Zed, Windsurf) can read files from local Auto Design projects directly, including the project the user has open in the Auto Design app right now. ([#399])
 - **Link code folder support for agent context** — point agents at any local code folder alongside the design project. ([#455])
 - Kilo CLI (ACP) agent adapter. ([#480])
 - DeepSeek TUI agent adapter. ([#439])

@@ -7,7 +7,7 @@
   "description": "A multi-screen mobile onboarding flow rendered as three phone frames\nside by side — splash, value-prop, sign-in. Status bar, swipe dots,\nprimary CTA. Use when the brief mentions \"mobile onboarding\", \"iOS\nonboarding\", \"phone signup\", or \"移动端引导\".",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/aresbit"
   },
   "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/_official/examples/mobile-onboarding",

@@ -7,7 +7,7 @@
   "description": "Spec example plugin for a refreshable live operations artifact with seeded data fallback.",
   "license": "MIT",
   "author": {
-    "name": "Open Design Spec Examples",
+    "name": "Auto Design Spec Examples",
     "url": "https://github.com/aresbit/autoagent-design"
   },
   "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/spec/examples/create-live-artifact-ops",

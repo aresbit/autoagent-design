@@ -7,7 +7,7 @@
   "description": "Single-image generation skill for posters, key art, and editorial\nillustrations. Defaults to gpt-image-2 but is provider-agnostic — the\nsame workflow drives Flux, Imagen, or Midjourney via the active\nupstream tooling. Output is one or more PNG/JPEG files saved to the\nproject folder.",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/aresbit"
   },
   "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/_official/examples/image-poster",

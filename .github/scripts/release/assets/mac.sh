@@ -21,8 +21,8 @@ case "$mac_artifact_mode" in
     ;;
 esac
 
-source_dmg="$RUNNER_TEMP/tools-pack/out/mac/namespaces/$TOOLS_PACK_NAMESPACE/dmg/Open Design-$TOOLS_PACK_NAMESPACE.dmg"
-source_zip="$RUNNER_TEMP/tools-pack/out/mac/namespaces/$TOOLS_PACK_NAMESPACE/zip/Open Design-$TOOLS_PACK_NAMESPACE.zip"
+source_dmg="$RUNNER_TEMP/tools-pack/out/mac/namespaces/$TOOLS_PACK_NAMESPACE/dmg/Auto Design-$TOOLS_PACK_NAMESPACE.dmg"
+source_zip="$RUNNER_TEMP/tools-pack/out/mac/namespaces/$TOOLS_PACK_NAMESPACE/zip/Auto Design-$TOOLS_PACK_NAMESPACE.zip"
 if [ ! -f "$source_dmg" ]; then
   echo "expected dmg not found at $source_dmg" >&2
   exit 1
@@ -59,7 +59,7 @@ public_origin="${CLOUDFLARE_R2_RELEASES_PUBLIC_ORIGIN%/}"
 version_prefix="${RELEASE_VERSION_PREFIX:-$RELEASE_CHANNEL/versions/$RELEASE_VERSION$asset_suffix}"
 zip_url="$public_origin/$version_prefix/$versioned_zip"
 release_date="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-release_notes="${RELEASE_NOTES:-Open Design $RELEASE_VERSION$asset_suffix}"
+release_notes="${RELEASE_NOTES:-Auto Design $RELEASE_VERSION$asset_suffix}"
 cat > "$release_dir/latest-mac.yml" <<EOF
 version: "$RELEASE_VERSION"
 files:

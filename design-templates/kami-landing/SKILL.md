@@ -205,7 +205,7 @@ host app's comment mode can target it.
 skills/kami-landing/
 ├── SKILL.md                 # this contract
 ├── README.md                # human quick-start
-└── example.html             # canonical Open Design rendering
+└── example.html             # canonical Auto Design rendering
 ```
 
 ## Boundaries

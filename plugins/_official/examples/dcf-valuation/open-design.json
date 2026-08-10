@@ -7,7 +7,7 @@
   "description": "Discounted cash flow valuation and intrinsic value analysis for public\ncompanies. Use when the brief asks for DCF, fair value, intrinsic value,\nprice target, undervalued or overvalued analysis, or \"what is this company\nworth?\"",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/aresbit"
   },
   "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/_official/examples/dcf-valuation",

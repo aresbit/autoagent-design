@@ -1,6 +1,6 @@
-# Open Design
+# Auto Design
 
-Open Design is a local-first design workspace where projects contain generated design files and agent conversations. This glossary records domain language only, not implementation details.
+Auto Design is a local-first design workspace where projects contain generated design files and agent conversations. This glossary records domain language only, not implementation details.
 
 ## Language
 
@@ -25,7 +25,7 @@ The sidecar metadata that identifies a project file as a normal artifact and rec
 _Avoid_: live-artifact document, project metadata
 
 **Active Project**:
-The project the user most recently interacted with in the Open Design UI and that MCP tools may use when no project is specified.
+The project the user most recently interacted with in the Auto Design UI and that MCP tools may use when no project is specified.
 _Avoid_: latest project, default project
 
 **Home Composer Media Surface**:

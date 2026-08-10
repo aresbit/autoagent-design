@@ -1,7 +1,7 @@
 apiVersion: v2
 name: open-design
 description: |
-  Open Design daemon Helm chart. Spec §15.5 reference deployment for
+  Auto Design daemon Helm chart. Spec §15.5 reference deployment for
   AWS / GCP / Azure / Aliyun / Tencent / Huawei / self-hosted Kubernetes.
   Pairs with `tools/pack/docker-compose.yml` as the docker-only entry
   point.
@@ -19,5 +19,5 @@ home: https://open-design.ai
 sources:
   - https://github.com/aresbit/autoagent-design
 maintainers:
-  - name: Open Design
+  - name: Auto Design
     url: https://open-design.ai

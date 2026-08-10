@@ -7,7 +7,7 @@
   "description": "Minimal pre-launch landing with email capture, brand logo, and optional decorative layer.\nReads DESIGN.md for colors, typography, and layout rules.\nBest for: product launches, beta signups, early access programs, indie projects.",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/aresbit"
   },
   "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/_official/examples/waitlist-page",

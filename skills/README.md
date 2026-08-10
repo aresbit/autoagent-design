@@ -1,6 +1,6 @@
 # Skills
 
-A skill is the atomic unit of design capability in Open Design — one folder, one `SKILL.md`, optional `assets/` and `references/`. The daemon scans this directory at startup; drop a folder in, restart, and the picker shows it.
+A skill is the atomic unit of design capability in Auto Design — one folder, one `SKILL.md`, optional `assets/` and `references/`. The daemon scans this directory at startup; drop a folder in, restart, and the picker shows it.
 
 ## Adding a new skill
 

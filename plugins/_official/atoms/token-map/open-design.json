@@ -7,7 +7,7 @@
   "description": "Map an extracted source-token bag onto the active OD design system, producing a deterministic crosswalk.",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/aresbit"
   },
   "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/_official/atoms/token-map",

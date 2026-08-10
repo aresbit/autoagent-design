@@ -2171,7 +2171,7 @@ const HOME_PAGE_COPY_EN: HomePageCopy = {
   capabilities: {
     rule: 'Capabilities · Skills · Systems',
     surfaces: '4 surfaces / 1 loop',
-    ribbon: 'OPEN DESIGN · CAPABILITIES MATRIX · OD/26',
+    ribbon: 'AUTO DESIGN · CAPABILITIES MATRIX · OD/26',
     label: 'Capabilities',
     titlePrefix: 'Skills, systems, and surfaces',
     titleEmphasis: 'for creative',
@@ -2351,7 +2351,7 @@ const HOME_PAGE_COPY_EN: HomePageCopy = {
     star: 'Star on GitHub',
     issue: 'Open an issue',
     live: 'Live',
-    ribbon: 'OPEN DESIGN · FIN.',
+    ribbon: 'AUTO DESIGN · FIN.',
   },
   footer: {
     summary:
@@ -2449,7 +2449,7 @@ const HOME_PAGE_COPY: Partial<Record<LandingLocaleCode, HomePageCopy>> = {
     capabilities: {
       rule: '能力 · Skill · 系统',
       surfaces: '4 个表面 / 1 个循环',
-      ribbon: 'OPEN DESIGN · 能力矩阵 · OD/26',
+      ribbon: 'AUTO DESIGN · 能力矩阵 · OD/26',
       label: '能力',
       titlePrefix: 'Skill、系统与界面',
       titleEmphasis: '服务于创意',
@@ -2626,7 +2626,7 @@ const HOME_PAGE_COPY: Partial<Record<LandingLocaleCode, HomePageCopy>> = {
       star: '在 GitHub 点 Star',
       issue: '提交 issue',
       live: '在线',
-      ribbon: 'OPEN DESIGN · 完。',
+      ribbon: 'AUTO DESIGN · 完。',
     },
     footer: {
       summary:
@@ -2722,7 +2722,7 @@ HOME_PAGE_COPY['zh-tw'] = {
   capabilities: {
     ...HOME_PAGE_COPY.zh!.capabilities,
     rule: '能力 · Skill · 系統',
-    ribbon: 'OPEN DESIGN · 能力矩陣 · OD/26',
+    ribbon: 'AUTO DESIGN · 能力矩陣 · OD/26',
     titlePrefix: 'Skill、系統與介面',
     titleEmphasis: '服務於創意',
     titleSuffix: '智能',
@@ -2900,7 +2900,7 @@ HOME_PAGE_COPY['zh-tw'] = {
     star: '在 GitHub 點 Star',
     issue: '提交 issue',
     live: '在線',
-    ribbon: 'OPEN DESIGN · 完。',
+    ribbon: 'AUTO DESIGN · 完。',
   },
   footer: {
     ...HOME_PAGE_COPY.zh!.footer,
@@ -4818,7 +4818,7 @@ const LOCALIZED_HOME_BODY_COPY: Partial<Record<LandingLocaleCode, DeepPartial<Ho
     capabilities: {
       rule: '機能 · Skill · System',
       surfaces: '4 つの表面 / 1 つのループ',
-      ribbon: 'OPEN DESIGN · 機能マトリクス · OD/26',
+      ribbon: 'AUTO DESIGN · 機能マトリクス · OD/26',
       label: '機能',
       titlePrefix: 'Skill、System、Surface が',
       titleEmphasis: '創造的な',
@@ -4915,7 +4915,7 @@ const LOCALIZED_HOME_BODY_COPY: Partial<Record<LandingLocaleCode, DeepPartial<Ho
       star: 'GitHub で Star',
       issue: 'issue を開く',
       live: '稼働中',
-      ribbon: 'OPEN DESIGN · 完。',
+      ribbon: 'AUTO DESIGN · 完。',
     },
   }),
 };
@@ -4974,7 +4974,7 @@ LOCALIZED_HOME_BODY_COPY.ko = homeFallbackCopy({
   capabilities: {
     rule: '기능 · Skill · System',
     surfaces: '4개 표면 / 1개 루프',
-    ribbon: 'OPEN DESIGN · 기능 매트릭스 · OD/26',
+    ribbon: 'AUTO DESIGN · 기능 매트릭스 · OD/26',
     label: '기능',
     titlePrefix: 'Skill, System, Surface가',
     titleEmphasis: '창의적',
@@ -5071,7 +5071,7 @@ LOCALIZED_HOME_BODY_COPY.ko = homeFallbackCopy({
     star: 'GitHub에서 Star',
     issue: 'issue 열기',
     live: '실행 중',
-    ribbon: 'OPEN DESIGN · 끝.',
+    ribbon: 'AUTO DESIGN · 끝.',
   },
 });
 
@@ -5129,7 +5129,7 @@ LOCALIZED_HOME_BODY_COPY.de = homeFallbackCopy({
   capabilities: {
     rule: 'Fähigkeiten · Skills · Systeme',
     surfaces: '4 Oberflächen / 1 Schleife',
-    ribbon: 'OPEN DESIGN · FÄHIGKEITENMATRIX · OD/26',
+    ribbon: 'AUTO DESIGN · FÄHIGKEITENMATRIX · OD/26',
     label: 'Fähigkeiten',
     titlePrefix: 'Skills, Systeme und Oberflächen',
     titleEmphasis: 'für kreative',
@@ -5226,7 +5226,7 @@ LOCALIZED_HOME_BODY_COPY.de = homeFallbackCopy({
     star: 'Auf GitHub sternen',
     issue: 'Issue öffnen',
     live: 'Live',
-    ribbon: 'OPEN DESIGN · SCHLUSS.',
+    ribbon: 'AUTO DESIGN · SCHLUSS.',
   },
 });
 

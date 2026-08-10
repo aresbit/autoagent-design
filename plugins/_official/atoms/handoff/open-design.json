@@ -7,7 +7,7 @@
   "description": "Push the run's accepted artifact to a downstream collaboration surface (cli, other code agents, cloud, desktop, github, figma) and stamp the artifact manifest with the export target.",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/aresbit"
   },
   "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/_official/atoms/handoff",

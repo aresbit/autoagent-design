@@ -7,7 +7,7 @@
   "description": "Run a 5-dimension expert design review on any HTML artifact in the\nproject — Philosophy / Visual hierarchy / Detail / Functionality /\nInnovation, each scored 0–10. Outputs a single self-contained HTML\nreport with a radar chart, evidence-backed scores, and three lists:\nKeep / Fix / Quick-wins. Use when the brief asks for a \"design\nreview\", \"design critique\", \"5 维度评审\", \"design audit\", or \"what's\nwrong with my design\".",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/aresbit"
   },
   "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/_official/examples/critique",

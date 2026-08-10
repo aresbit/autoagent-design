@@ -106,7 +106,7 @@ test.describe('Settings Memory and Automations flows', () => {
           entries: [
             {
               id: 'feedback_ui_density',
-              name: 'Open Design plugin authoring flow',
+              name: 'Auto Design plugin authoring flow',
               description: 'Keep plugin setup terse and reproducible.',
               type: 'feedback',
               updatedAt: Date.now(),
@@ -147,7 +147,7 @@ test.describe('Settings Memory and Automations flows', () => {
               id: 'feedback_ui_density',
               parentId: 'folder-feedback',
               path: '/FEEDBACK/open-design-plugin-authoring-flow',
-              name: 'Open Design plugin authoring flow',
+              name: 'Auto Design plugin authoring flow',
               description: 'Keep plugin setup terse and reproducible.',
               kind: 'entry',
               type: 'feedback',
@@ -249,7 +249,7 @@ test.describe('Settings Memory and Automations flows', () => {
     await expect(memoryTree.getByText('/FEEDBACK', { exact: true })).toBeVisible();
     await expect(memoryTree.getByText('Project', { exact: true })).toBeVisible();
     await expect(memoryTree.getByText('/PROJECT', { exact: true })).toBeVisible();
-    await expect(memoryTree.getByText('Open Design plugin authoring flow')).toBeVisible();
+    await expect(memoryTree.getByText('Auto Design plugin authoring flow')).toBeVisible();
     await expect(memoryTree.getByText('Weekly launch brief')).toBeVisible();
   });
 

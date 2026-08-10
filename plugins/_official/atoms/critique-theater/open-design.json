@@ -7,7 +7,7 @@
   "description": "5-dimension critique panel; emits the critique.score signal that drives devloop convergence.",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/aresbit"
   },
   "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/_official/atoms/critique-theater",

@@ -7,7 +7,7 @@
   "description": "Spec example plugin for creating a dense operations dashboard prototype with KPIs, charts, and an action table.",
   "license": "MIT",
   "author": {
-    "name": "Open Design Spec Examples",
+    "name": "Auto Design Spec Examples",
     "url": "https://github.com/aresbit/autoagent-design"
   },
   "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/spec/examples/create-prototype-dashboard",

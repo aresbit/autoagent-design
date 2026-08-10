@@ -96,7 +96,7 @@ const VISUAL_PLUGINS = [
   makeVisualPlugin({
     id: 'visual-figma-importer',
     title: 'Figma Importer',
-    description: 'Migrate a Figma frame into an editable Open Design project.',
+    description: 'Migrate a Figma frame into an editable Auto Design project.',
     mode: 'prototype',
     taskKind: 'figma-migration',
     tags: ['migration'],

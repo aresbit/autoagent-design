@@ -12,7 +12,7 @@ asset_suffix="${LINUX_ASSET_SUFFIX:-}"
 release_dir="$RUNNER_TEMP/release-assets"
 mkdir -p "$release_dir"
 
-source_appimage="$RUNNER_TEMP/tools-pack/out/linux/namespaces/$TOOLS_PACK_NAMESPACE/builder/Open Design-$TOOLS_PACK_NAMESPACE.AppImage"
+source_appimage="$RUNNER_TEMP/tools-pack/out/linux/namespaces/$TOOLS_PACK_NAMESPACE/builder/Auto Design-$TOOLS_PACK_NAMESPACE.AppImage"
 if [ ! -f "$source_appimage" ]; then
   echo "expected AppImage not found at $source_appimage" >&2
   exit 1

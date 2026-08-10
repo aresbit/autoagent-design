@@ -7,7 +7,7 @@
   "description": "Apply one rewrite-plan step at a time as small reviewable file edits.",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/aresbit"
   },
   "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/_official/atoms/patch-edit",

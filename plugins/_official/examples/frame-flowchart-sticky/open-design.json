@@ -7,7 +7,7 @@
   "description": "SVG 曲线连接 + 便利贴节点 + 光标交互, 像白板 brainstorm",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/aresbit"
   },
   "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/_official/examples/frame-flowchart-sticky",

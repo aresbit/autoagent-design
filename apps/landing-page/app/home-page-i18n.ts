@@ -259,7 +259,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     capabilities: {
       rule: 'Capacités · skills · systèmes',
       surfaces: '4 surfaces / 1 boucle',
-      ribbon: 'OPEN DESIGN · MATRICE DES CAPACITÉS · OD/26',
+      ribbon: 'AUTO DESIGN · MATRICE DES CAPACITÉS · OD/26',
       label: 'Capacités',
       titlePrefix: 'Skills, systèmes et surfaces',
       titleEmphasis: 'pour une intelligence',
@@ -356,7 +356,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
       star: 'Mettre une Star sur GitHub',
       issue: 'Ouvrir une issue',
       live: 'En ligne',
-      ribbon: 'OPEN DESIGN · TERMINÉ.',
+      ribbon: 'AUTO DESIGN · TERMINÉ.',
     },
   }),
   ru: homeFallbackCopy({
@@ -414,7 +414,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     capabilities: {
       rule: 'Возможности · skills · системы',
       surfaces: '4 поверхности / 1 цикл',
-      ribbon: 'OPEN DESIGN · МАТРИЦА ВОЗМОЖНОСТЕЙ · OD/26',
+      ribbon: 'AUTO DESIGN · МАТРИЦА ВОЗМОЖНОСТЕЙ · OD/26',
       label: 'Возможности',
       titlePrefix: 'Skills, системы и поверхности',
       titleEmphasis: 'для творческого',
@@ -511,7 +511,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
       star: 'Поставить Star на GitHub',
       issue: 'Открыть issue',
       live: 'В сети',
-      ribbon: 'OPEN DESIGN · ФИНАЛ.',
+      ribbon: 'AUTO DESIGN · ФИНАЛ.',
     },
   }),
   es: homeFallbackCopy({
@@ -569,7 +569,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     capabilities: {
       rule: 'Capacidades · skills · sistemas',
       surfaces: '4 superficies / 1 bucle',
-      ribbon: 'OPEN DESIGN · MATRIZ DE CAPACIDADES · OD/26',
+      ribbon: 'AUTO DESIGN · MATRIZ DE CAPACIDADES · OD/26',
       label: 'Capacidades',
       titlePrefix: 'Skills, sistemas y superficies',
       titleEmphasis: 'para inteligencia',
@@ -666,7 +666,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
       star: 'Dar Star en GitHub',
       issue: 'Abrir issue',
       live: 'En línea',
-      ribbon: 'OPEN DESIGN · CIERRE.',
+      ribbon: 'AUTO DESIGN · CIERRE.',
     },
   }),
   'pt-br': homeFallbackCopy({
@@ -724,7 +724,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     capabilities: {
       rule: 'Capacidades · skills · sistemas',
       surfaces: '4 superfícies / 1 loop',
-      ribbon: 'OPEN DESIGN · MATRIZ DE CAPACIDADES · OD/26',
+      ribbon: 'AUTO DESIGN · MATRIZ DE CAPACIDADES · OD/26',
       label: 'Capacidades',
       titlePrefix: 'Skills, sistemas e superfícies',
       titleEmphasis: 'para inteligência',
@@ -821,7 +821,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
       star: 'Dar Star no GitHub',
       issue: 'Abrir issue',
       live: 'No ar',
-      ribbon: 'OPEN DESIGN · FIM.',
+      ribbon: 'AUTO DESIGN · FIM.',
     },
   }),
   it: homeFallbackCopy({
@@ -879,7 +879,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     capabilities: {
       rule: 'Capacità · skill · sistemi',
       surfaces: '4 superfici / 1 loop',
-      ribbon: 'OPEN DESIGN · MATRICE CAPACITÀ · OD/26',
+      ribbon: 'AUTO DESIGN · MATRICE CAPACITÀ · OD/26',
       label: 'Capacità',
       titlePrefix: 'Skill, sistemi e superfici',
       titleEmphasis: 'per intelligenza',
@@ -976,7 +976,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
       star: 'Metti Star su GitHub',
       issue: 'Apri issue',
       live: 'Online',
-      ribbon: 'OPEN DESIGN · FINE.',
+      ribbon: 'AUTO DESIGN · FINE.',
     },
   }),
   vi: homeFallbackCopy({
@@ -1034,7 +1034,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     capabilities: {
       rule: 'Năng lực · skill · hệ thống',
       surfaces: '4 bề mặt / 1 vòng lặp',
-      ribbon: 'OPEN DESIGN · MA TRẬN NĂNG LỰC · OD/26',
+      ribbon: 'AUTO DESIGN · MA TRẬN NĂNG LỰC · OD/26',
       label: 'Năng lực',
       titlePrefix: 'Skill, hệ thống và bề mặt',
       titleEmphasis: 'cho trí tuệ',
@@ -1131,7 +1131,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
       star: 'Star trên GitHub',
       issue: 'Mở issue',
       live: 'Đang chạy',
-      ribbon: 'OPEN DESIGN · KẾT.',
+      ribbon: 'AUTO DESIGN · KẾT.',
     },
   }),
   pl: homeFallbackCopy({
@@ -1189,7 +1189,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     capabilities: {
       rule: 'Możliwości · skills · systemy',
       surfaces: '4 powierzchnie / 1 pętla',
-      ribbon: 'OPEN DESIGN · MACIERZ MOŻLIWOŚCI · OD/26',
+      ribbon: 'AUTO DESIGN · MACIERZ MOŻLIWOŚCI · OD/26',
       label: 'Możliwości',
       titlePrefix: 'Skills, systemy i powierzchnie',
       titleEmphasis: 'dla kreatywnej',
@@ -1286,7 +1286,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
       star: 'Daj Star na GitHubie',
       issue: 'Otwórz issue',
       live: 'Online',
-      ribbon: 'OPEN DESIGN · KONIEC.',
+      ribbon: 'AUTO DESIGN · KONIEC.',
     },
   }),
   id: homeFallbackCopy({
@@ -1344,7 +1344,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     capabilities: {
       rule: 'Kapabilitas · skill · sistem',
       surfaces: '4 permukaan / 1 loop',
-      ribbon: 'OPEN DESIGN · MATRIKS KAPABILITAS · OD/26',
+      ribbon: 'AUTO DESIGN · MATRIKS KAPABILITAS · OD/26',
       label: 'Kapabilitas',
       titlePrefix: 'Skill, sistem, dan permukaan',
       titleEmphasis: 'untuk kecerdasan',
@@ -1441,7 +1441,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
       star: 'Beri Star di GitHub',
       issue: 'Buka issue',
       live: 'Aktif',
-      ribbon: 'OPEN DESIGN · SELESAI.',
+      ribbon: 'AUTO DESIGN · SELESAI.',
     },
   }),
   nl: homeFallbackCopy({
@@ -1499,7 +1499,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     capabilities: {
       rule: 'Mogelijkheden · skills · systemen',
       surfaces: '4 oppervlakken / 1 loop',
-      ribbon: 'OPEN DESIGN · MOGELIJKHEDENMATRIX · OD/26',
+      ribbon: 'AUTO DESIGN · MOGELIJKHEDENMATRIX · OD/26',
       label: 'Mogelijkheden',
       titlePrefix: 'Skills, systemen en oppervlakken',
       titleEmphasis: 'voor creatieve',
@@ -1596,7 +1596,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
       star: 'Geef een Star op GitHub',
       issue: 'Open issue',
       live: 'Live',
-      ribbon: 'OPEN DESIGN · EINDE.',
+      ribbon: 'AUTO DESIGN · EINDE.',
     },
   }),
   ar: homeFallbackCopy({
@@ -1654,7 +1654,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     capabilities: {
       rule: 'القدرات · skills · الأنظمة',
       surfaces: '4 أسطح / حلقة واحدة',
-      ribbon: 'OPEN DESIGN · مصفوفة القدرات · OD/26',
+      ribbon: 'AUTO DESIGN · مصفوفة القدرات · OD/26',
       label: 'القدرات',
       titlePrefix: 'Skills والأنظمة والأسطح',
       titleEmphasis: 'للذكاء',
@@ -1751,7 +1751,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
       star: 'ضع Star على GitHub',
       issue: 'افتح issue',
       live: 'مباشر',
-      ribbon: 'OPEN DESIGN · النهاية.',
+      ribbon: 'AUTO DESIGN · النهاية.',
     },
   }),
   tr: homeFallbackCopy({
@@ -1809,7 +1809,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     capabilities: {
       rule: 'Yetenekler · skill · sistem',
       surfaces: '4 yüzey / 1 döngü',
-      ribbon: 'OPEN DESIGN · YETENEK MATRİSİ · OD/26',
+      ribbon: 'AUTO DESIGN · YETENEK MATRİSİ · OD/26',
       label: 'Yetenekler',
       titlePrefix: 'Skill, sistem ve yüzeyler',
       titleEmphasis: 'yaratıcı',
@@ -1906,7 +1906,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
       star: 'GitHub’da Star ver',
       issue: 'Issue aç',
       live: 'Canlı',
-      ribbon: 'OPEN DESIGN · SON.',
+      ribbon: 'AUTO DESIGN · SON.',
     },
   }),
   uk: homeFallbackCopy({
@@ -1964,7 +1964,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
     capabilities: {
       rule: 'Можливості · skills · системи',
       surfaces: '4 поверхні / 1 цикл',
-      ribbon: 'OPEN DESIGN · МАТРИЦЯ МОЖЛИВОСТЕЙ · OD/26',
+      ribbon: 'AUTO DESIGN · МАТРИЦЯ МОЖЛИВОСТЕЙ · OD/26',
       label: 'Можливості',
       titlePrefix: 'Skills, системи та поверхні',
       titleEmphasis: 'для творчого',
@@ -2061,7 +2061,7 @@ export const EXTRA_LOCALIZED_HOME_BODY_COPY: Partial<
       star: 'Поставити Star на GitHub',
       issue: 'Відкрити issue',
       live: 'Онлайн',
-      ribbon: 'OPEN DESIGN · ФІН.',
+      ribbon: 'AUTO DESIGN · ФІН.',
     },
   }),
 };

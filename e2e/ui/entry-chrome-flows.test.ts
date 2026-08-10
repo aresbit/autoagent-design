@@ -644,7 +644,7 @@ test('home starters html details modal shows metadata links, supports copy query
     inputs: [{ name: 'topic', type: 'string', default: 'editorial systems' }],
     previewEntry: './example.html',
     tags: ['deck', 'marketing'],
-    authorName: 'Open Design',
+    authorName: 'Auto Design',
     authorUrl: 'https://github.com/aresbit/autoagent-design',
     homepage: 'https://example.com/html-metadata-plugin',
     context: {
@@ -693,7 +693,7 @@ test('home starters html details modal shows metadata links, supports copy query
 
   const dialog = page.getByRole('dialog', { name: /HTML Metadata Plugin preview/i });
   await expect(dialog).toBeVisible();
-  await expect(page.getByTestId('plugin-details-author')).toContainText('Open Design');
+  await expect(page.getByTestId('plugin-details-author')).toContainText('Auto Design');
   await expect(page.getByTestId('plugin-details-author-profile')).toHaveAttribute(
     'href',
     'https://github.com/aresbit/autoagent-design',

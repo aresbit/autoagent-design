@@ -7,7 +7,7 @@
   "description": "Wrap any HTML artifact with a side panel of live, parameterized\ncontrols — accent color, type scale, density, motion, theme — that\nrewrite CSS custom properties in real time and persist to\nlocalStorage. Lets the user explore variants of a design without\nre-prompting the agent. Use when the brief asks for \"variants\",\n\"side-by-side options\", \"tweak this\", \"let me adjust\", \"live\nknobs\", or \"实时调参\".",
   "license": "MIT",
   "author": {
-    "name": "Open Design",
+    "name": "Auto Design",
     "url": "https://github.com/aresbit"
   },
   "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/_official/examples/tweaks",
