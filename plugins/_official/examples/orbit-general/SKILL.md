@@ -188,7 +188,7 @@ If still ambiguous, fall back to a status-dot list (the safest default).
 | Render every module as the same card shape | Vary by family — Alert = big red number + heatmap; Status = status-dot list; Files = thumbnail grid; Comms = avatar + quote |
 | Render Sentry / PagerDuty as a plain list | Big red Cormorant number + 7-day heatmap + latest error line (`TypeError: …`) |
 | Render Calendar as a plain text agenda | Visualize on the horizontal timeline at the top; module form is an agenda list with start-time gutter |
-| Use placeholder names like "Service A / Project X" | Infer plausible real names from the connector type — GitHub → `nexu-io/open-design`, Sentry → `frontend-prod`, Linear → `ENG / DES` cycle 24, Stripe → `Pro plan / Acme Co.` |
+| Use placeholder names like "Service A / Project X" | Infer plausible real names from the connector type — GitHub → `aresbit/autoagent-design`, Sentry → `frontend-prod`, Linear → `ENG / DES` cycle 24, Stripe → `Pro plan / Acme Co.` |
 | Use lorem ipsum filler | Write specific mock copy that reads as a real workday — names, numbers, errors, paths, percentages |
 | Mix emoji and SVG icons in the same module set | Use monochrome line SVGs (1.5 stroke) consistently for all connector icons; emoji are reserved for hero greeting and section anchors only |
 | Square or rounded-square avatars | Always circles; sizes 28 / 32 / 40 / 44 px depending on context |

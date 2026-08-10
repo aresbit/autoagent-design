@@ -8,9 +8,9 @@
   "license": "MIT",
   "author": {
     "name": "Open Design",
-    "url": "https://github.com/nexu-io"
+    "url": "https://github.com/aresbit"
   },
-  "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/examples/social-reddit-card",
+  "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/_official/examples/social-reddit-card",
   "tags": [
     "example",
     "first-party",

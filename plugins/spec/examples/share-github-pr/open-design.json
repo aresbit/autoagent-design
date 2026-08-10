@@ -46,7 +46,7 @@
       ]
     },
     "inputs": [
-      { "name": "targetRepo", "type": "string", "required": true, "label": "Target repository", "placeholder": "nexu-io/open-design" }
+      { "name": "targetRepo", "type": "string", "required": true, "label": "Target repository", "placeholder": "aresbit/autoagent-design" }
     ],
     "capabilities": ["prompt:inject", "fs:read", "connector", "connector:github", "network"]
   }

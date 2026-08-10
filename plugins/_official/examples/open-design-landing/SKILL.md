@@ -123,7 +123,7 @@ rules, coral terminating dots, scroll-reveal motion, and 16 surreal
 collage plates.
 
 This is the canonical Open Design marketing-page recipe — the example
-output is the very page you see at [open-design](https://github.com/nexu-io/open-design).
+output is the very page you see at [open-design](https://github.com/aresbit/autoagent-design).
 
 The skill is fully **parameterized**. The agent fills one typed
 `inputs.json` from the user's brief; the composer turns that JSON +

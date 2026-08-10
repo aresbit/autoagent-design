@@ -297,7 +297,7 @@ describe('marketplaces', () => {
     expect(resolved?.marketplaceId).toBe('community');
     expect(resolved?.marketplaceTrust).toBe('restricted');
     expect(resolved?.source).toMatch(
-      /^github:nexu-io\/open-design(?:@[^/]+)?\/plugins\/community\/registry-starter$/,
+      /^github:aresbit\/autoagent-design(?:@[^/]+)?\/plugins\/community\/registry-starter$/,
     );
   });
 
@@ -319,7 +319,7 @@ describe('marketplaces', () => {
     );
     expect(officialManifest.plugins?.some((plugin) => plugin.name === 'open-design/build-test')).toBe(true);
     expect(officialManifest.plugins?.every((plugin) =>
-      /^github:nexu-io\/open-design(?:@[^/]+)?\/plugins\/_official\//.test(plugin.source ?? ''),
+      /^github:aresbit\/autoagent-design(?:@[^/]+)?\/plugins\/_official\//.test(plugin.source ?? ''),
     )).toBe(true);
 
     const seeded = ensureMarketplaceManifest(db, {
@@ -346,7 +346,7 @@ describe('marketplaces', () => {
     const entry = communityManifest.plugins?.find((plugin) => plugin.name === 'community/registry-starter');
     expect(entry?.source).toBeTruthy();
 
-    const sourceSubpath = entry!.source!.replace(/^github:nexu-io\/open-design(?:@[^/]+)?\//, '');
+    const sourceSubpath = entry!.source!.replace(/^github:aresbit\/autoagent-design(?:@[^/]+)?\//, '');
     expect(sourceSubpath).toBe('plugins/community/registry-starter');
 
     const sourceManifest = await readFile(

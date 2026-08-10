@@ -4,10 +4,10 @@
       "type": "github_api",
       "description": "GitHub REST API v3",
       "endpoints": [
-        "GET /repos/nexu-io/open-design",
-        "GET /repos/nexu-io/open-design/contributors?per_page=100&page=1",
-        "GET /search/issues?q=repo:nexu-io/open-design+is:issue",
-        "GET /search/issues?q=repo:nexu-io/open-design+is:pr"
+        "GET /repos/aresbit/autoagent-design",
+        "GET /repos/aresbit/autoagent-design/contributors?per_page=100&page=1",
+        "GET /search/issues?q=repo:aresbit/autoagent-design+is:issue",
+        "GET /search/issues?q=repo:aresbit/autoagent-design+is:pr"
       ],
       "fetchedAt": "2026-05-06T09:30:00Z"
     }
@@ -15,33 +15,33 @@
   "fields": [
     {
       "path": "repository.fullName",
-      "source": "GET /repos/nexu-io/open-design",
+      "source": "GET /repos/aresbit/autoagent-design",
       "field": "full_name"
     },
     {
       "path": "metrics.stars.total",
-      "source": "GET /repos/nexu-io/open-design",
+      "source": "GET /repos/aresbit/autoagent-design",
       "field": "stargazers_count"
     },
     {
       "path": "metrics.forks.total",
-      "source": "GET /repos/nexu-io/open-design",
+      "source": "GET /repos/aresbit/autoagent-design",
       "field": "forks_count"
     },
     {
       "path": "metrics.contributors.total",
-      "source": "GET /repos/nexu-io/open-design/contributors?per_page=100&page=N",
+      "source": "GET /repos/aresbit/autoagent-design/contributors?per_page=100&page=N",
       "field": "paginated unique contributor count",
       "note": "Display value may be capped or labelled as an estimate when only page 1 is available."
     },
     {
       "path": "metrics.issues.total",
-      "source": "GET /search/issues?q=repo:nexu-io/open-design+is:issue",
+      "source": "GET /search/issues?q=repo:aresbit/autoagent-design+is:issue",
       "field": "total_count"
     },
     {
       "path": "metrics.pullRequests.total",
-      "source": "GET /search/issues?q=repo:nexu-io/open-design+is:pr",
+      "source": "GET /search/issues?q=repo:aresbit/autoagent-design+is:pr",
       "field": "total_count"
     },
     {

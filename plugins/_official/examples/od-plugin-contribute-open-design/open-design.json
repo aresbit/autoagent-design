@@ -8,9 +8,9 @@
   "license": "MIT",
   "author": {
     "name": "Open Design",
-    "url": "https://github.com/nexu-io"
+    "url": "https://github.com/aresbit"
   },
-  "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/examples/od-plugin-contribute-open-design",
+  "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/_official/examples/od-plugin-contribute-open-design",
   "tags": [
     "share",
     "github",
@@ -37,8 +37,8 @@
     "surface": "github",
     "useCase": {
       "query": {
-        "en": "Open a pull request to add the staged Open Design plugin to nexu-io/open-design using gh CLI.",
-        "zh-CN": "使用 gh CLI 给 nexu-io/open-design 提交一个 PR，加入已暂存的 Open Design 插件。"
+        "en": "Open a pull request to add the staged Open Design plugin to aresbit/autoagent-design using gh CLI.",
+        "zh-CN": "使用 gh CLI 给 aresbit/autoagent-design 提交一个 PR，加入已暂存的 Open Design 插件。"
       }
     },
     "inputs": [

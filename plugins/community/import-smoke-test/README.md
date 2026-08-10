@@ -9,7 +9,7 @@ plugin manifest.
 
 - Upload folder: choose `plugins/community/import-smoke-test`.
 - Upload zip: package this folder and upload the archive.
-- From GitHub: use `github:nexu-io/open-design@main/plugins/community/import-smoke-test` after the entry is available on `main`.
+- From GitHub: use `github:aresbit/autoagent-design@main/plugins/community/import-smoke-test` after the entry is available on `main`.
 - Marketplace name: use `community/import-smoke-test` after the community marketplace has been registered or refreshed.
 
 ## Expected Result

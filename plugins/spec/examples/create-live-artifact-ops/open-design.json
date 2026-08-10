@@ -8,9 +8,9 @@
   "license": "MIT",
   "author": {
     "name": "Open Design Spec Examples",
-    "url": "https://github.com/nexu-io/open-design"
+    "url": "https://github.com/aresbit/autoagent-design"
   },
-  "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/spec/examples/create-live-artifact-ops",
+  "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/spec/examples/create-live-artifact-ops",
   "tags": ["create", "live-artifact", "operations", "dashboard"],
   "compat": {
     "agentSkills": [{ "path": "./SKILL.md" }]

@@ -156,5 +156,5 @@ Type stack:
 | Use lorem ipsum | Write real-shaped GitHub copy: PR titles like `feat: orbit briefing card`, branches like `chore/upgrade-deps`, commit subjects under 72 chars |
 | Render a CI failure as a normal row | Wrap in a red-bordered card (`#cf222e` border, `#ffebe9` bg) with a red `✗` glyph and run name |
 | Render a review request as a normal row | Sit it in the yellow attention block (`#fff8c5` bg, `#d4a72c` border) with reviewer status dots row |
-| Use placeholder repo names like `org/repo` | Use `nexu-io/open-design` (this org's actual primary repo) |
+| Use placeholder repo names like `org/repo` | Use `aresbit/autoagent-design` (this org's actual primary repo) |
 | Pluck arbitrary label colors | Use realistic dev-team hues — `bug` red, `enhancement` blue, `documentation` light blue, `frontend` purple |

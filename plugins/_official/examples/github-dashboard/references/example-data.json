@@ -1,8 +1,8 @@
 {
   "repository": {
     "name": "open-design",
-    "fullName": "nexu-io/open-design",
-    "url": "https://github.com/nexu-io/open-design",
+    "fullName": "aresbit/autoagent-design",
+    "url": "https://github.com/aresbit/autoagent-design",
     "description": "Local-first, open-source alternative to Anthropic's Claude Design. 19 Skills · 71 brand-grade Design Systems · Generate web/desktop/mobile prototypes · slides · images · videos",
     "language": "TypeScript",
     "license": "Apache-2.0",

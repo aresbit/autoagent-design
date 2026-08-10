@@ -8,9 +8,9 @@
   "license": "Apache-2.0",
   "author": {
     "name": "open-design contributors",
-    "url": "https://github.com/nexu-io/open-design"
+    "url": "https://github.com/aresbit/autoagent-design"
   },
-  "homepage": "https://github.com/nexu-io/open-design",
+  "homepage": "https://github.com/aresbit/autoagent-design",
   "tags": [
     "video-template",
     "first-party",
@@ -35,8 +35,8 @@
     "surface": "video",
     "preview": {
       "type": "video",
-      "poster": "https://raw.githubusercontent.com/nexu-io/open-design/main/assets/prompt-templates/video/video-seedance-three-kingdoms-lyubu-yuanmen-archery-poster.jpg",
-      "video": "https://raw.githubusercontent.com/nexu-io/open-design/main/assets/prompt-templates/video/video-seedance-three-kingdoms-lyubu-yuanmen-archery.mp4"
+      "poster": "https://raw.githubusercontent.com/aresbit/autoagent-design/main/assets/prompt-templates/video/video-seedance-three-kingdoms-lyubu-yuanmen-archery-poster.jpg",
+      "video": "https://raw.githubusercontent.com/aresbit/autoagent-design/main/assets/prompt-templates/video/video-seedance-three-kingdoms-lyubu-yuanmen-archery.mp4"
     },
     "useCase": {
       "query": {

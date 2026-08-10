@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "owner": {
     "name": "Open Design Spec Examples",
-    "url": "https://github.com/nexu-io/open-design"
+    "url": "https://github.com/aresbit/autoagent-design"
   },
   "metadata": {
     "description": "Example plugin spec catalog for authoring and PR workflows.",

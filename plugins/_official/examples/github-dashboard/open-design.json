@@ -8,9 +8,9 @@
   "license": "MIT",
   "author": {
     "name": "Open Design",
-    "url": "https://github.com/nexu-io"
+    "url": "https://github.com/aresbit"
   },
-  "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/examples/github-dashboard",
+  "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/_official/examples/github-dashboard",
   "tags": [
     "example",
     "first-party",
@@ -47,8 +47,8 @@
     },
     "useCase": {
       "query": {
-        "en": "Build a GitHub dashboard for nexu-io/open-design — stars, forks, contributors, issues, PRs, recent activity, and top contributors.",
-        "zh-CN": "使用这个插件完成以下任务：Build a GitHub dashboard for nexu-io/open-design — stars, forks, contributors, issues, PRs, recent activity, and top contributors."
+        "en": "Build a GitHub dashboard for aresbit/autoagent-design — stars, forks, contributors, issues, PRs, recent activity, and top contributors.",
+        "zh-CN": "使用这个插件完成以下任务：Build a GitHub dashboard for aresbit/autoagent-design — stars, forks, contributors, issues, PRs, recent activity, and top contributors."
       },
       "exampleOutputs": [
         {

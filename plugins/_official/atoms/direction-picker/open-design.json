@@ -8,9 +8,9 @@
   "license": "MIT",
   "author": {
     "name": "Open Design",
-    "url": "https://github.com/nexu-io"
+    "url": "https://github.com/aresbit"
   },
-  "homepage": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/atoms/direction-picker",
+  "homepage": "https://github.com/aresbit/autoagent-design/tree/main/plugins/_official/atoms/direction-picker",
   "tags": [
     "atom",
     "first-party",

@@ -8,9 +8,9 @@
   "license": "Apache-2.0",
   "author": {
     "name": "open-design contributors",
-    "url": "https://github.com/nexu-io/open-design"
+    "url": "https://github.com/aresbit/autoagent-design"
   },
-  "homepage": "https://github.com/nexu-io/open-design",
+  "homepage": "https://github.com/aresbit/autoagent-design",
   "tags": [
     "image-template",
     "first-party",
@@ -32,7 +32,7 @@
     "surface": "image",
     "preview": {
       "type": "image",
-      "poster": "https://raw.githubusercontent.com/nexu-io/open-design/main/assets/prompt-templates/image/game-screenshot-three-kingdoms-lyubu-yuanmen-archery.jpg"
+      "poster": "https://raw.githubusercontent.com/aresbit/autoagent-design/main/assets/prompt-templates/image/game-screenshot-three-kingdoms-lyubu-yuanmen-archery.jpg"
     },
     "useCase": {
       "query": {
