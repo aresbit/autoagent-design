@@ -269,7 +269,7 @@ export async function configureVisualPage(page: Page, options: VisualPageOptions
 }
 
 export async function waitForVisualReady(page: Page): Promise<void> {
-  await page.getByText('Loading Open Design…').waitFor({ state: 'detached', timeout: 10_000 }).catch(() => {});
+  await page.getByText('Loading Auto Design…').waitFor({ state: 'detached', timeout: 10_000 }).catch(() => {});
   await expect(page.getByTestId('home-hero')).toBeVisible();
   await expect(page.getByTestId('home-hero-input')).toBeVisible();
   await page.evaluate(async () => {
