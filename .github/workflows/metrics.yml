@@ -1,15 +1,9 @@
 name: github-metrics
 
 on:
-  schedule:
-    # Runs daily at 00:15 UTC; output is committed to docs/assets/github-metrics.svg.
-    - cron: '15 0 * * *'
+  # Automatic triggers are disabled in this fork; run manually from
+  # the Actions tab, or restore the triggers this commit removed.
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - .github/workflows/metrics.yml
 
 permissions:
   contents: read

@@ -16,8 +16,8 @@ name: Stale issues
 # disables PR processing by setting the PR thresholds to -1.
 
 on:
-  schedule:
-    - cron: '30 1 * * *'
+  # Automatic triggers are disabled in this fork; run manually from
+  # the Actions tab, or restore the triggers this commit removed.
   workflow_dispatch: {}
 
 permissions:

@@ -17,8 +17,8 @@ name: blog-3day-report
 # indexing, only Search Analytics + URL Inspection coverage state.
 
 on:
-  schedule:
-    - cron: '0 2 * * *'
+  # Automatic triggers are disabled in this fork; run manually from
+  # the Actions tab, or restore the triggers this commit removed.
   workflow_dispatch:
     inputs:
       today:

@@ -24,13 +24,10 @@
 name: Discord · resolved
 
 on:
-  issues:
-    types: [closed]
+  # Automatic triggers are disabled in this fork; run manually from
+  # the Actions tab, or restore the triggers this commit removed.
+  workflow_dispatch:
 
-# Read-only. Discord post goes via webhook URL (a secret), not GitHub auth.
-# - contents:read       : required by repos.listPullRequestsAssociatedWithCommit
-# - issues:read         : timeline + issue body
-# - pull-requests:read  : PR metadata (merger, title)
 permissions:
   contents: read
   issues: read

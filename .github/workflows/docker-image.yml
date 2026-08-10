@@ -6,8 +6,9 @@ name: Docker image
 #   - tag (v*.*.*)    → ghcr.io/<owner>/od:<tag> + :latest
 
 on:
-  push:
-    tags: ['v*.*.*']
+  # Automatic triggers are disabled in this fork; run manually from
+  # the Actions tab, or restore the triggers this commit removed.
+  workflow_dispatch:
 
 jobs:
   build-and-push:

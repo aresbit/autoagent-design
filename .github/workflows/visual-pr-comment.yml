@@ -1,9 +1,8 @@
 name: visual-pr-comment
 
 on:
-  workflow_run:
-    workflows: [visual-pr-capture]
-    types: [completed]
+  # Automatic triggers are disabled in this fork; run manually from
+  # the Actions tab, or restore the triggers this commit removed.
   workflow_dispatch:
     inputs:
       capture_run_id:

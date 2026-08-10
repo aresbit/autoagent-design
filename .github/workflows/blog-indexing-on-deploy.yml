@@ -15,10 +15,8 @@ name: blog-indexing-on-deploy
 # + healthy internal linking is what makes URLs discoverable.
 
 on:
-  workflow_run:
-    workflows: ['landing-page-deploy']
-    types: [completed]
-    branches: [main]
+  # Automatic triggers are disabled in this fork; run manually from
+  # the Actions tab, or restore the triggers this commit removed.
   workflow_dispatch:
     inputs:
       head_sha:

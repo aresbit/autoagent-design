@@ -11,14 +11,8 @@ name: Contributor Card Bot
 # so wiring those events here would fail-closed exactly for the contributors we
 # want to recognize. They can be re-added later via a workflow_run handoff.
 on:
-  pull_request_target:
-    types: [closed]
-  issues:
-    types: [opened]
-  discussion:
-    types: [created]
-  discussion_comment:
-    types: [created]
+  # Automatic triggers are disabled in this fork; run manually from
+  # the Actions tab, or restore the triggers this commit removed.
   workflow_dispatch:
 
 permissions:

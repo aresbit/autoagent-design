@@ -1,8 +1,9 @@
 name: visual-pr-verify
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened, ready_for_review]
+  # Automatic triggers are disabled in this fork; run manually from
+  # the Actions tab, or restore the triggers this commit removed.
+  workflow_dispatch:
 
 permissions:
   contents: read

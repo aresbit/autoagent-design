@@ -1,9 +1,8 @@
 name: visual-baseline
 
 on:
-  push:
-    branches:
-      - main
+  # Automatic triggers are disabled in this fork; run manually from
+  # the Actions tab, or restore the triggers this commit removed.
   workflow_dispatch:
 
 permissions:

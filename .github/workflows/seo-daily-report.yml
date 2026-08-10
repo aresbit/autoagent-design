@@ -6,8 +6,8 @@ name: seo-daily-report
 # backfills recent data.
 
 on:
-  schedule:
-    - cron: '0 1 * * *'
+  # Automatic triggers are disabled in this fork; run manually from
+  # the Actions tab, or restore the triggers this commit removed.
   workflow_dispatch:
     inputs:
       today:

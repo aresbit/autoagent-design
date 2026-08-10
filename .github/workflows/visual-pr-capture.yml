@@ -1,19 +1,9 @@
 name: visual-pr-capture
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened, ready_for_review]
-    paths:
-      - 'apps/web/**'
-      - '.github/actions/visual-screenshot/**'
-      - '.github/workflows/visual-*.yml'
-      - 'e2e/package.json'
-      - 'e2e/playwright.visual.config.ts'
-      - 'e2e/lib/playwright/**'
-      - 'e2e/scripts/playwright.ts'
-      - 'e2e/scripts/visual-report.ts'
-      - 'e2e/ui/visual-*.test.ts'
-      - 'pnpm-lock.yaml'
+  # Automatic triggers are disabled in this fork; run manually from
+  # the Actions tab, or restore the triggers this commit removed.
+  workflow_dispatch:
 
 permissions:
   actions: read

@@ -25,8 +25,8 @@ name: PR author inactivity
 # inline — is what starts the inactivity clock.
 
 on:
-  schedule:
-    - cron: '0 */6 * * *'
+  # Automatic triggers are disabled in this fork; run manually from
+  # the Actions tab, or restore the triggers this commit removed.
   workflow_dispatch:
     inputs:
       dry_run:
