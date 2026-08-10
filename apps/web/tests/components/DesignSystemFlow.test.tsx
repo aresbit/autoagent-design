@@ -1623,7 +1623,7 @@ describe('DesignSystemCreationFlow', () => {
     expect(mocks.writeProjectTextFile).toHaveBeenCalledWith(
       project.id,
       'context/source-context.md',
-      expect.stringContaining('"$OD_NODE_BIN" "$OD_BIN" tools connectors github-design-context --repo \'https://github.com/aresbit/autoagent-design\' --output context/github/nexu-io-open-design.md'),
+      expect.stringContaining('"$OD_NODE_BIN" "$OD_BIN" tools connectors github-design-context --repo \'https://github.com/aresbit/autoagent-design\' --output context/github/aresbit-autoagent-design.md'),
     );
     expect(mocks.writeProjectTextFile).not.toHaveBeenCalledWith(
       project.id,
