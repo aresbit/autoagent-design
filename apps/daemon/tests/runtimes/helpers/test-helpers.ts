@@ -72,7 +72,6 @@ export function minimalAgentDef(
 
 export const codex = requireAgent('codex');
 export const hermes = requireAgent('hermes');
-export const kimi = requireAgent('kimi');
 export const copilot = requireAgent('copilot');
 export const cursorAgent = requireAgent('cursor-agent');
 export const kiro = requireAgent('kiro');

@@ -40,6 +40,40 @@ test('spawnEnvForAgent applies configured Claude Code env before auth stripping'
   assert.equal(env.PATH, '/usr/bin');
 });
 
+// OpenCC is the bundled default agent and speaks the Anthropic wire protocol
+// against DeepSeek. Users should only have to supply ANTHROPIC_API_KEY, so the
+// adapter fills in the DeepSeek base URL when the environment does not set one.
+test('spawnEnvForAgent defaults the OpenCC base URL to DeepSeek', () => {
+  const env = spawnEnvForAgent('opencc', {
+    ANTHROPIC_API_KEY: 'sk-deepseek',
+    PATH: '/usr/bin',
+  });
+
+  assert.equal(env.ANTHROPIC_BASE_URL, 'https://api.deepseek.com/anthropic');
+  assert.equal(env.ANTHROPIC_API_KEY, 'sk-deepseek');
+});
+
+test('spawnEnvForAgent keeps a user-supplied OpenCC base URL', () => {
+  const env = spawnEnvForAgent('opencc', {
+    ANTHROPIC_API_KEY: 'sk-custom',
+    ANTHROPIC_BASE_URL: 'https://gateway.internal/anthropic',
+    PATH: '/usr/bin',
+  });
+
+  assert.equal(env.ANTHROPIC_BASE_URL, 'https://gateway.internal/anthropic');
+  assert.equal(env.ANTHROPIC_API_KEY, 'sk-custom');
+});
+
+test('spawnEnvForAgent lets configured OpenCC env override the DeepSeek default', () => {
+  const base = { ANTHROPIC_API_KEY: 'sk-deepseek', PATH: '/usr/bin' };
+  const env = spawnEnvForAgent('opencc', base, {
+    ANTHROPIC_BASE_URL: 'https://gateway.internal/anthropic',
+  });
+
+  assert.equal(env.ANTHROPIC_BASE_URL, 'https://gateway.internal/anthropic');
+  assert.equal('ANTHROPIC_BASE_URL' in base, false);
+});
+
 test('spawnEnvForAgent applies configured Codex env without mutating the base env', () => {
   const base = { PATH: '/usr/bin' };
   const env = spawnEnvForAgent('codex', base, {

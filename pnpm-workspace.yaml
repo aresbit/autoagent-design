@@ -1,5 +1,8 @@
 packages:
   - packages/*
+  # packages/opencc is a self-contained Bun project with its own workspaces and
+  # bun.lock; it is built via scripts/build-opencc.sh, not by root pnpm install.
+  - "!packages/opencc"
   - apps/*
   - tools/*
   - e2e

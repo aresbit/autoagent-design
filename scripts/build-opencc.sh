@@ -111,7 +111,7 @@ build_opencc() {
   log_info "Build complete → ${DIST_FILE} (${size}) in ${elapsed}"
 
   # Quick smoke test: does the binary start?
-  if "${CI_MODE:-false}" = true || "${VERIFY:-true}" = true; then
+  if [ "${CI_MODE:-false}" = true ] || [ "${VERIFY:-true}" = true ]; then
     log_info "Smoke test: version check ..."
     local version_out; version_out="$(bun run "${DIST_FILE}" --version 2>&1 || true)"
     if [ -n "${version_out}" ]; then

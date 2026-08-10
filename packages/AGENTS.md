@@ -10,6 +10,12 @@ Follow the root `AGENTS.md` first. This file only records module-level boundarie
 - `packages/sidecar`: generic sidecar runtime primitives. Includes bootstrap, IPC transport, path/runtime resolution, launch env, and JSON runtime file helpers; it must not hard-code Auto Design app keys or IPC business messages.
 - `packages/platform`: generic OS process primitives. Includes stamp serialization, command parsing, process matching/search, and well-known user-toolchain bin discovery; it must consume the `sidecar-proto` descriptor and must not hard-code `--od-stamp-*` details. The toolchain helper is the single source of truth shared by the daemon agent resolver (`apps/daemon/src/agents.ts`) and the packaged sidecar PATH builder (`apps/packaged/src/sidecars.ts`) so neither layer can drift the search list.
 
+## Vendored packages
+
+- `packages/opencc` is vendored upstream: the reverse-engineered Claude Code CLI (`claude-js`) that ships as the default agent brain. It is a self-contained Bun project with its own nested workspaces (`packages/@ant/*`), `bun.lock`, `Makefile`, and TypeScript version.
+- It is excluded from the pnpm workspace in `pnpm-workspace.yaml` (`!packages/opencc`); root `pnpm install` must never try to resolve its `workspace:*` dependencies. Build and install it with `./scripts/build-opencc.sh` instead.
+- Repository-wide source conventions do not apply inside it. `scripts/guard.ts` skips it through `vendoredProjectPathPrefixes` (residual JavaScript, test layout) and `vendoredPackageManifestPaths` (dependency-spec policy). Do not "fix" its layout, dependency ranges, or file extensions to match this repo — keep the vendored tree close to upstream so it stays re-syncable.
+
 ## Removed directories
 
 - `packages/shared` has been removed; do not restore it.

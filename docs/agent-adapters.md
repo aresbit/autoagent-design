@@ -85,6 +85,7 @@ If both signals agree, detection is confident. If only one signal fires, we mark
 
 | Adapter | CLI command | Config dir | Skills dir | Native skill loading | Surgical edit | Streaming | Priority |
 |---|---|---|---|---|---|---|---|
+| **opencc** | `opencc` (fallback `claude-js`) | `~/.claude/` | `~/.claude/skills/` | ✅ | ✅ | ✅ (`stream-json`) | P0 (bundled default) |
 | **claude-code** | `claude` | `~/.claude/` | `~/.claude/skills/` | ✅ | ✅ | ✅ | P0 (MVP) |
 | **api-fallback** | *(direct Anthropic API)* | — | — | ❌ (prompt-injected) | 〜 | ✅ | P0 (MVP) |
 | **codex** | `codex` | `~/.codex/` | `~/.codex/skills/` | 〜 (varies by version) | 〜 (regenerate w/ scoping) | ✅ | P1 |
@@ -126,6 +127,13 @@ For agents that support `AGENTS.md` / `.cursorrules` / similar project-level ins
 The adapter declares which strategy to use via `capabilities().nativeSkillLoading` and a private `skillInjectionStrategy` field.
 
 ## 5. Per-adapter notes
+
+### 5.0 OpenCC (bundled default)
+
+- OpenCC (`claude-js`) is the reverse-engineered Claude Code CLI vendored at [`packages/opencc`](../packages/opencc). It runs on Bun and speaks the same `--output-format stream-json` protocol, so it reuses the `claude-stream-json` reader.
+- Build and install it with [`scripts/build-opencc.sh`](../scripts/build-opencc.sh); the daemon resolves `opencc` first and falls back to the published `claude-js` bin.
+- Auth: it targets DeepSeek's Anthropic-compatible endpoint. `spawnEnvForAgent` fills in `ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic` when the environment does not already set one, so users only supply `ANTHROPIC_API_KEY`. Setting `ANTHROPIC_BASE_URL` yourself routes it anywhere else.
+- The web UI prefers `opencc` when it is available and detected (see `apps/web/src/App.tsx`).
 
 ### 5.1 Claude Code (reference implementation)
 

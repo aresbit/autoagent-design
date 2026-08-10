@@ -32,6 +32,15 @@ function toRepositoryPath(filePath: string): string {
   return path.relative(repoRoot, filePath).split(path.sep).join("/");
 }
 
+// Vendored projects that live inside a workspace scope directory but are not
+// project-owned. They ship their own toolchain, lockfile, layout, and version
+// policy, so repository-wide source conventions do not apply inside them.
+const vendoredProjectPathPrefixes = ["packages/opencc/"];
+
+function isVendoredProjectPath(repositoryPath: string): boolean {
+  return vendoredProjectPathPrefixes.some((prefix) => `${repositoryPath}/`.startsWith(prefix));
+}
+
 const residualExtensions = new Set([".js", ".mjs", ".cjs"]);
 
 const residualSkippedDirectories = new Set([
@@ -104,6 +113,8 @@ const residualAllowedPathPrefixes = [
   "e2e/ui/reports/playwright-html-report/",
   "e2e/ui/reports/test-results/",
   "e2e/ui/test-results/",
+  // Vendored self-contained projects (see vendoredProjectPathPrefixes).
+  ...vendoredProjectPathPrefixes,
   // Vendored upstream HyperFrames helper scripts (design template).
   "design-templates/hyperframes/scripts/",
   // Vendored upstream Last30Days runtime helper used by the engine (design template).
@@ -190,6 +201,10 @@ async function checkResidualJavaScript(): Promise<boolean> {
 
 const sourcePackageManifestRootPaths = ["package.json", "e2e/package.json"];
 const sourcePackageManifestScopedDirectories = ["apps", "packages", "tools"];
+// Vendored projects that live inside a scoped directory but are not
+// project-owned: they carry their own package manager, lockfile, and version
+// policy, so the repository dependency-spec rules do not apply to them.
+const vendoredPackageManifestPaths = new Set(["packages/opencc/package.json"]);
 const packageDependencySections = [
   "dependencies",
   "devDependencies",
@@ -243,10 +258,13 @@ async function collectScopedPackageManifestPaths(scopeDirectory: string): Promis
   for (const entry of entries) {
     if (!entry.isDirectory()) continue;
 
+    const manifestPath = `${scopeDirectory}/${entry.name}/package.json`;
+    if (vendoredPackageManifestPaths.has(manifestPath)) continue;
+
     const packageDirectory = path.join(scopeRoot, entry.name);
     const packageEntries = await readdir(packageDirectory, { withFileTypes: true });
     if (packageEntries.some((packageEntry) => packageEntry.isFile() && packageEntry.name === "package.json")) {
-      manifestPaths.push(`${scopeDirectory}/${entry.name}/package.json`);
+      manifestPaths.push(manifestPath);
     }
   }
 
@@ -410,6 +428,10 @@ async function collectTestLayoutViolations(directory: string): Promise<string[]>
 
     if (entry.isDirectory()) {
       if (testLayoutSkippedDirectories.has(entry.name)) {
+        continue;
+      }
+
+      if (isVendoredProjectPath(toRepositoryPath(fullPath))) {
         continue;
       }
 
