@@ -2267,11 +2267,15 @@ function AppInner() {
     if (!daemonConfigLoaded || agentsLoading) return;
     if (config.onboardingCompleted !== true) return;
     if (config.agentId) return;
-    const firstAvailable = agents.find((a) => a.available);
-    if (!firstAvailable) return;
+    // Prefer the bundled OpenCC brain when it is installed; otherwise fall back
+    // to whichever agent was detected first, matching the daemon's own
+    // pickDefaultAvailableAgent so both surfaces backfill the same choice.
+    const preferred = agents.find((a) => a.available && a.id === 'opencc')
+      ?? agents.find((a) => a.available);
+    if (!preferred) return;
     setConfig((prev) => {
       if (prev.agentId) return prev;
-      const next: AppConfig = { ...prev, agentId: firstAvailable.id };
+      const next: AppConfig = { ...prev, agentId: preferred.id };
       saveConfig(next);
       void syncConfigToDaemon(next);
       return next;
@@ -5312,6 +5316,7 @@ function AppInner() {
           dockLine
         />
       )}
+
       <TooltipLayer />
       <UpdateDialog />
       <AmrArtifactUpgradeGate

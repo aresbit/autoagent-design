@@ -1333,6 +1333,16 @@ const workspaceEventSinks =
 // store.
 const activeChatRunHandles = new Map();
 
+// This fork bundles OpenCC (packages/opencc) as its agent brain, so when the
+// user has not picked an agent yet, prefer OpenCC over whatever else happens to
+// be on PATH. Any other detected agent is still a valid fallback, so a user who
+// never builds OpenCC keeps the upstream "first available wins" behavior.
+function pickDefaultAvailableAgent(agents) {
+  return agents.find((agent) => agent.available && agent.id === 'opencc')
+    ?? agents.find((agent) => agent.available)
+    ?? null;
+}
+
 function emitChatAgentEvent(runId, payload) {
   const sink = activeChatAgentEventSinks.get(runId);
   if (!sink) return false;
@@ -8100,7 +8110,7 @@ export async function startServer({
       let detectedAgentName: string | null = null;
       if (!agentId) {
         const agents = await detectAgents(config.agentCliEnv ?? {}).catch(() => []);
-        const available = agents.find((agent) => agent.available);
+        const available = pickDefaultAvailableAgent(agents);
         agentId = available?.id ?? null;
         detectedAgentName = available?.name ?? null;
       }
@@ -14185,7 +14195,7 @@ export async function startServer({
       : null;
     if (!agentId) {
       const agents = await detectAgents(appConfig.agentCliEnv ?? {}).catch(() => []);
-      agentId = agents.find((agent) => agent.available)?.id ?? null;
+      agentId = pickDefaultAvailableAgent(agents)?.id ?? null;
     }
     if (!agentId) throw new Error('No available agent is configured for Orbit. Choose an agent in Settings first.');
 
@@ -14420,7 +14430,7 @@ export async function startServer({
       || (typeof appConfig.agentId === 'string' && appConfig.agentId ? appConfig.agentId : null);
     if (!agentId) {
       const agents = await detectAgents(appConfig.agentCliEnv ?? {}).catch(() => []);
-      agentId = agents.find((agent) => agent.available)?.id ?? null;
+      agentId = pickDefaultAvailableAgent(agents)?.id ?? null;
     }
     if (!agentId) {
       throw new Error('No available agent is configured. Choose an agent in Settings first.');
