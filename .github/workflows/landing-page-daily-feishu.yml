@@ -7,12 +7,13 @@ name: landing-page-daily-feishu
 # landing-page-staging runs. If a staging deploy is still running, the card
 # links the in-flight CI run.
 
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  schedule:
-    # 01:00 UTC = 09:00 Asia/Shanghai
-    - cron: "0 1 * * *"
   workflow_dispatch:
-
 permissions:
   actions: read
   contents: read

@@ -1,5 +1,10 @@
 name: release-beta-s
 
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
   workflow_dispatch:
     inputs:
@@ -166,136 +171,6 @@ on:
         required: false
         type: string
         default: ""
-  workflow_call:
-    inputs:
-      enable_mac_arm64:
-        required: false
-        type: boolean
-        default: true
-      enable_win_x64:
-        required: false
-        type: boolean
-        default: true
-      enable_mac_x64:
-        required: false
-        type: boolean
-        default: false
-      enable_linux_x64:
-        required: false
-        type: boolean
-        default: false
-      publish:
-        required: false
-        type: boolean
-        default: true
-      release_version:
-        required: false
-        type: string
-        default: ""
-      release_origin:
-        required: false
-        type: string
-        default: nexu-s3
-      release_public_origin:
-        required: false
-        type: string
-        default: "https://s3.nexu.space/od-releases"
-      ref:
-        required: false
-        type: string
-        default: ""
-      mac_arm64_delivery_mode:
-        required: false
-        type: string
-        default: internal-updater
-      mac_arm64_sign_mode:
-        required: false
-        type: string
-        default: sign-only
-      mac_arm64_smoke_mode:
-        required: false
-        type: string
-        default: core
-      mac_arm64_target:
-        required: false
-        type: string
-        default: dmg
-      mac_arm64_update_metadata_url:
-        required: false
-        type: string
-        default: ""
-      mac_arm64_update_target_version:
-        required: false
-        type: string
-        default: ""
-      mac_x64_sign_mode:
-        required: false
-        type: string
-        default: "no"
-      mac_x64_smoke_mode:
-        required: false
-        type: string
-        default: skip
-      mac_x64_target:
-        required: false
-        type: string
-        default: all
-      win_x64_sign_mode:
-        required: false
-        type: string
-        default: "off"
-      win_x64_smoke_mode:
-        required: false
-        type: string
-        default: core
-      win_x64_target:
-        required: false
-        type: string
-        default: all
-      linux_x64_smoke_mode:
-        required: false
-        type: string
-        default: core
-      win_x64_update_metadata_url:
-        required: false
-        type: string
-        default: ""
-      win_x64_update_target_version:
-        required: false
-        type: string
-        default: ""
-    outputs:
-      release_version:
-        description: "The betas version that was built."
-        value: ${{ jobs.metadata.outputs.release_version }}
-      branch:
-        description: "The branch that was built."
-        value: ${{ jobs.metadata.outputs.branch }}
-      commit:
-        description: "The commit SHA that was built."
-        value: ${{ jobs.metadata.outputs.commit }}
-      previous_commit:
-        description: "Commit SHA of the previously published betas."
-        value: ${{ jobs.metadata.outputs.previous_commit }}
-      release_state:
-        description: "complete | partial | failed."
-        value: ${{ jobs.publish.outputs.release_state }}
-      version_metadata_url:
-        description: "Public URL of this build's version metadata.json."
-        value: ${{ jobs.publish.outputs.version_metadata_url }}
-      mac_arm64_url:
-        description: "macOS arm64 dmg download URL."
-        value: ${{ jobs.publish.outputs.mac_arm64_url }}
-      win_x64_url:
-        description: "Windows x64 installer download URL."
-        value: ${{ jobs.publish.outputs.win_x64_url }}
-      mac_x64_url:
-        description: "macOS x64 dmg download URL."
-        value: ${{ jobs.publish.outputs.mac_x64_url }}
-      linux_x64_url:
-        description: "Linux x64 AppImage download URL."
-        value: ${{ jobs.publish.outputs.linux_x64_url }}
-
 permissions:
   contents: read
   actions: read

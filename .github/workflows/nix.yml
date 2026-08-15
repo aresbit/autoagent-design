@@ -3,30 +3,13 @@ name: nix
 # Standalone Nix packaging check. Not part of core merge validation (ci.yml).
 # Triggered when flake/lock/nix inputs change; red here does not block merge.
 
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  pull_request:
-    paths:
-      - "nix/**"
-      - "flake.nix"
-      - "flake.lock"
-      - "pnpm-lock.yaml"
-      - "pnpm-workspace.yaml"
-      - "package.json"
-      - "scripts/update-nix-pnpm-deps-hash.ts"
-      - ".github/workflows/nix.yml"
-  push:
-    branches: [main]
-    paths:
-      - "nix/**"
-      - "flake.nix"
-      - "flake.lock"
-      - "pnpm-lock.yaml"
-      - "pnpm-workspace.yaml"
-      - "package.json"
-      - "scripts/update-nix-pnpm-deps-hash.ts"
-      - ".github/workflows/nix.yml"
   workflow_dispatch:
-
 permissions:
   contents: read
 

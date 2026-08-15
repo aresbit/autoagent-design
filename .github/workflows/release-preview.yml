@@ -1,5 +1,10 @@
 name: release-preview
 
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
   workflow_dispatch:
     inputs:
@@ -32,65 +37,6 @@ on:
         required: false
         type: string
         default: ""
-  workflow_call:
-    inputs:
-      ref:
-        description: "Optional git ref to build. Empty builds the caller's ref."
-        required: false
-        type: string
-        default: ""
-      release_version:
-        description: "Optional base version (x.y.z). Empty uses preview/vX.Y.Z when present, otherwise apps/packaged/package.json."
-        required: false
-        type: string
-        default: ""
-      win_x64_smoke_mode:
-        description: "Windows x64 smoke coverage: skip, core, or full."
-        required: false
-        type: string
-        default: "core"
-      win_x64_update_metadata_url:
-        description: "Optional external updater metadata URL for full Windows x64 payload smoke."
-        required: false
-        type: string
-        default: ""
-      win_x64_update_target_version:
-        description: "Optional external updater target version expected by full Windows x64 payload smoke."
-        required: false
-        type: string
-        default: ""
-    outputs:
-      release_version:
-        description: "The preview version that was built."
-        value: ${{ jobs.metadata.outputs.release_version }}
-      channel:
-        description: "The preview channel."
-        value: ${{ jobs.metadata.outputs.channel }}
-      branch:
-        description: "The branch that was built."
-        value: ${{ jobs.metadata.outputs.branch }}
-      commit:
-        description: "The commit SHA that was built."
-        value: ${{ jobs.metadata.outputs.commit }}
-      previous_commit:
-        description: "Commit SHA of the previously published preview; empty on cold start."
-        value: ${{ jobs.metadata.outputs.previous_commit }}
-      version_metadata_url:
-        description: "Public R2 URL of this build's version metadata.json."
-        value: ${{ jobs.publish.outputs.version_metadata_url }}
-      mac_arm64_url:
-        description: "macOS arm64 dmg download URL."
-        value: ${{ jobs.publish.outputs.mac_arm64_url }}
-      mac_intel_url:
-        description: "macOS x64 dmg download URL."
-        value: ${{ jobs.publish.outputs.mac_intel_url }}
-      win_url:
-        description: "Windows x64 installer download URL."
-        value: ${{ jobs.publish.outputs.win_url }}
-      linux_url:
-        description: "Linux x64 AppImage download URL."
-        value: ${{ jobs.publish.outputs.linux_url }}
-
 permissions:
   actions: write
   contents: read

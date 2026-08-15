@@ -23,14 +23,13 @@
 
 name: Discord · resolved
 
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  issues:
-    types: [closed]
-
-# Read-only. Discord post goes via webhook URL (a secret), not GitHub auth.
-# - contents:read       : required by repos.listPullRequestsAssociatedWithCommit
-# - issues:read         : timeline + issue body
-# - pull-requests:read  : PR metadata (merger, title)
+  workflow_dispatch:
 permissions:
   contents: read
   issues: read

@@ -11,9 +11,12 @@ name: bake-plugin-previews-gc
 # needs BOTH the `delete` input AND the GC_ENABLE_DELETE env below — flip them
 # only after eyeballing a few dry-run deletion lists.
 
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  schedule:
-    - cron: '0 6 * * 1' # Mondays 06:00 UTC
   workflow_dispatch:
     inputs:
       delete:
@@ -24,7 +27,6 @@ on:
         description: Minimum age in days before an orphan may be deleted.
         type: string
         default: '90'
-
 permissions:
   contents: read
 

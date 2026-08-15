@@ -9,13 +9,13 @@ name: bake-plugin-previews-release
 # input changes (fonts / web CSS / design systems / renderer) that per-file
 # triggers cannot detect — a full sweep alone would reuse, not re-render, them.
 
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  push:
-    branches: ['release/**']
-    paths-ignore:
-      - 'data/plugin-previews/**' # our own manifest commit must not re-trigger
-  workflow_dispatch: {}
-
+  workflow_dispatch:
 permissions:
   contents: write # commit the authoritative manifest onto the release branch
 

@@ -1,9 +1,11 @@
 name: E2E coverage reminder
 
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  schedule:
-    # 10:00 UTC = 18:00 Asia/Shanghai
-    - cron: "0 10 * * *"
   workflow_dispatch:
     inputs:
       lookback_hours:
@@ -18,7 +20,6 @@ on:
         options:
           - "false"
           - "true"
-
 permissions:
   contents: read
   pull-requests: read

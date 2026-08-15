@@ -7,38 +7,13 @@ name: landing-page-staging
 # `landing-page-production` workflow. This is the safety gate: project
 # separation means a merge to main can only ever change staging.
 
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  push:
-    branches:
-      - main
-    paths:
-      # Workflow files
-      - .github/workflows/landing-page-staging.yml
-      - .github/workflows/landing-page-production.yml
-      - .github/workflows/landing-page-ci.yml
-      # Landing page sources
-      - apps/landing-page/**
-      # Design template source of truth for the homepage.
-      - design-templates/open-design-landing/**
-      # Content sources — Astro content collections glob these at build
-      # time. Adding/removing a SKILL.md, DESIGN.md, craft principle, or
-      # live-artifact template MUST trigger a redeploy or the published
-      # site falls behind silently.
-      - skills/**
-      - design-systems/**
-      - craft/**
-      - templates/**
-      # Plugin marketplace — the registry JSON and bundled official plugin
-      # manifests are read at build time by plugin-registry.ts to render the
-      # /plugins catalogue. Merging a plugin PR MUST trigger a redeploy or the
-      # published catalogue silently falls behind.
-      - plugins/**
-      # Workspace plumbing
-      - package.json
-      - pnpm-lock.yaml
-      - pnpm-workspace.yaml
   workflow_dispatch:
-
 permissions:
   contents: read
   deployments: write

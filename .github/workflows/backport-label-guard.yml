@@ -6,10 +6,13 @@ name: backport-label-guard
 # GitHub App bots never appear in the collaborators API (permission reads as "none"), so
 # trusted automation apps are allowlisted by login instead.
 
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  pull_request_target:
-    types: [labeled]
-
+  workflow_dispatch:
 permissions:
   contents: read
 

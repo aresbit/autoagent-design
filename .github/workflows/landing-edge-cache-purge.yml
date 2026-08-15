@@ -7,6 +7,11 @@ name: landing-edge-cache-purge
 # Requires secrets.CLOUDFLARE_API_TOKEN with Zone → Cache Purge on the target
 # zone. Optional: vars.CLOUDFLARE_ZONE_ID.
 
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
   workflow_dispatch:
     inputs:
@@ -14,7 +19,6 @@ on:
         description: 'Comma-separated hostnames to purge (no scheme)'
         required: true
         default: 'open-design.ai'
-
 permissions:
   contents: read
 

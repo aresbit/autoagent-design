@@ -4,11 +4,13 @@ name: rerun.atom
 # cancel, request one automatic `gh run rerun --failed`. Decision logic lives in
 # `.github/scripts/rerun_infra_cancel.py` so the gate stays unit-testable and
 # checkout stays on the trusted default branch only.
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  workflow_run:
-    workflows: [ci]
-    types: [completed]
-
+  workflow_dispatch:
 permissions:
   actions: write
   contents: read

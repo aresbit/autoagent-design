@@ -5,14 +5,13 @@ name: backport
 # is silently lost and a human resolves it. That draft is also labelled `backport-failed`, which
 # is the signal the release owner's pre-flight check looks for (see open-design-release skill).
 
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  pull_request_target:
-    # closed: backport labels present at merge time.
-    # labeled: also catch a backport label added AFTER the PR was already merged (a common
-    #          slip — people forget to label before merging). The `if` below skips still-open
-    #          PRs, so labelling an open PR does nothing until it actually merges.
-    types: [closed, labeled]
-
+  workflow_dispatch:
 permissions:
   contents: read
 

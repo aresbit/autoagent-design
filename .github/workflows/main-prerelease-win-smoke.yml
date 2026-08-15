@@ -3,16 +3,13 @@ name: main-prerelease-win-smoke
 # Keep the Windows packaged prerelease path continuously exercised from main.
 # This intentionally does not prepare, reserve, or publish release metadata: a
 # stale workspace version must not prevent the product smoke from starting.
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  schedule:
-    - cron: "0 23 * * *" # 07:00 Asia/Shanghai, before the 09:00 release cuts
   workflow_dispatch:
-  workflow_call:
-    outputs:
-      commit:
-        description: "The exact commit that was exercised by the Windows packaged smoke."
-        value: ${{ jobs.smoke.outputs.commit }}
-
 permissions:
   actions: write
   contents: read

@@ -20,10 +20,12 @@ name: notify-release-feishu
 # X.Y.Z-prerelease.N on that same version line. Either way the build's actual commit
 # (not the dispatch ref) anchors the changelog and the card.
 
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  push:
-    branches:
-      - "release/**"
   workflow_dispatch:
     inputs:
       ref:
@@ -46,7 +48,6 @@ on:
         required: false
         type: string
         default: ""
-
 permissions:
   contents: write
   actions: write

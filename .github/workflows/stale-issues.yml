@@ -15,11 +15,13 @@ name: Stale issues
 # PRs are handled separately by pr-author-inactivity.yml; this workflow
 # disables PR processing by setting the PR thresholds to -1.
 
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  schedule:
-    - cron: '30 1 * * *'
-  workflow_dispatch: {}
-
+  workflow_dispatch:
 permissions:
   issues: write
   pull-requests: read

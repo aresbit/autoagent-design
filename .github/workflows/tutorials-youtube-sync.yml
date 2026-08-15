@@ -1,24 +1,17 @@
 name: tutorials-youtube-sync
 
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  # Daily sweep for new community YouTube tutorials about Open Design. New
-  # candidates are posted to Feishu for a maintainer to review — this workflow
-  # does NOT generate entries or open PRs. A maintainer replies with which
-  # candidates to publish, and the selected videos are turned into entries via
-  # scripts/youtube-tutorials/generate-selected.ts (run by a maintainer, who
-  # opens the PR).
-  schedule:
-    - cron: '30 2 * * *'
-  # Manual trigger: force a sweep outside the daily schedule. Leave days empty to
-  # use the same gap-free watermark (since the last successful run) the schedule
-  # uses; set it to force a fixed N-day catch-up window.
   workflow_dispatch:
     inputs:
       days:
         description: 'Override lookback window in days (blank = since last successful run)'
         required: false
         default: ''
-
 permissions:
   contents: read
   # Read this workflow's own run history to derive a gap-free window start.

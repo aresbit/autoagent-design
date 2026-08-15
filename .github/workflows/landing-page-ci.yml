@@ -1,60 +1,12 @@
 name: landing-page-ci
 
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  pull_request:
-    paths:
-      # Workflow files
-      - .github/workflows/landing-page-ci.yml
-      - .github/workflows/landing-page-staging.yml
-      - .github/workflows/landing-page-production.yml
-      - .github/workflows/blog-indexing-on-deploy.yml
-      # Landing page sources
-      - apps/landing-page/**
-      # Design template source of truth for the homepage.
-      - design-templates/open-design-landing/**
-      # Content sources globbed by Astro content collections — without
-      # these the deploy can be silently skipped when only Markdown
-      # content is touched.
-      - skills/**
-      - design-systems/**
-      - craft/**
-      - templates/**
-      # Plugin manifests power the bundled-plugin catalog and the new
-      # `_lib/bundled-plugins.ts` reader; CI must rerun when their
-      # `title_i18n` / `description_i18n` maps or other fields change.
-      - plugins/**
-      # Workspace plumbing
-      - package.json
-      - pnpm-lock.yaml
-      - pnpm-workspace.yaml
-  # Merge queue trigger so PRs that touch the same paths can clear
-  # `Validate landing page` / `Strict PR visual tests` while queued.
-  # Without this branch ruleset blocks merges (the queue waits forever
-  # for a check name that never gets dispatched against the merge_group
-  # ref), which is the exact deadlock observed during the 5/26 release
-  # window.
-  merge_group:
-    types: [checks_requested]
-  push:
-    branches:
-      - main
-    paths:
-      - .github/workflows/landing-page-ci.yml
-      - .github/workflows/landing-page-staging.yml
-      - .github/workflows/landing-page-production.yml
-      - .github/workflows/blog-indexing-on-deploy.yml
-      - apps/landing-page/**
-      - design-templates/open-design-landing/**
-      - skills/**
-      - design-systems/**
-      - craft/**
-      - templates/**
-      - plugins/**
-      - package.json
-      - pnpm-lock.yaml
-      - pnpm-workspace.yaml
   workflow_dispatch:
-
 permissions:
   contents: read
   # Needed to post/update the preview-URL comment on the PR. Fork PRs run

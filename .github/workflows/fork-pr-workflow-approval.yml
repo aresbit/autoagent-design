@@ -6,9 +6,12 @@ name: fork-pr-workflow-approval
 # paths are inside the low-risk source allowlist. It only approves the unified
 # low-privilege pull_request `ci` workflow; privileged workflow_run / release /
 # deploy workflows stay on manual gates.
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  pull_request_target:
-    types: [opened, synchronize, reopened, ready_for_review, edited]
   workflow_dispatch:
     inputs:
       pr_number:
@@ -20,7 +23,6 @@ on:
         required: false
         default: false
         type: boolean
-
 permissions:
   actions: write
   contents: read

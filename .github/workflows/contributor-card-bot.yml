@@ -8,17 +8,13 @@ name: Contributor Card Bot
 # issue_comment. GitHub withholds repository secrets from these events when
 # they originate on forked PRs, so the relay secret would fail-closed there too.
 # They can be re-added later via a workflow_run handoff.
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  pull_request_target:
-    types: [closed]
-  issues:
-    types: [opened]
-  discussion:
-    types: [created]
-  discussion_comment:
-    types: [created]
   workflow_dispatch:
-
 permissions:
   contents: read
 

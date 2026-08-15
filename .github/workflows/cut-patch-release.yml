@@ -25,9 +25,12 @@ name: cut-patch-release
 # NOTE: schedule triggers only fire from the default branch (main), so this file
 # must live on main to run on its cron.
 
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  schedule:
-    - cron: '0 1 * * 4'        # 01:00 UTC = 09:00 Asia/Shanghai, Thursday
   workflow_dispatch:
     inputs:
       version:
@@ -39,7 +42,6 @@ on:
         required: false
         type: boolean
         default: false
-
 permissions:
   contents: read               # branch/label writes still go through the App token below
 

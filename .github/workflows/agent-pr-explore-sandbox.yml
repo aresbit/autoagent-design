@@ -5,6 +5,11 @@ name: agent-pr-explore-sandbox
 # "/explore" on a PR (write-access gated). It deliberately does not auto-run on
 # every PR, so ordinary PRs do not accumulate waiting checks; PR code only ever
 # runs inside the Docker sandbox without secrets.
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
   workflow_dispatch:
     inputs:
@@ -17,13 +22,6 @@ on:
         required: false
         default: false
         type: boolean
-  # A maintainer commenting "/explore" on a PR explores that PR. issue_comment
-  # runs in the base (trusted) context with secrets, so the job `if` gate below
-  # restricts it to users with write access; untrusted PR code still runs only
-  # inside the Docker sandbox without secrets.
-  issue_comment:
-    types: [created]
-
 permissions:
   contents: read
   issues: write

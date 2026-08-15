@@ -8,16 +8,18 @@ name: cut-release
 # The push uses the App token (not GITHUB_TOKEN), so it triggers notify-release-feishu
 # -> builds a nightly package and posts the Feishu card.
 
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  schedule:
-    - cron: '0 1 * * 2'        # 01:00 UTC = 09:00 Asia/Shanghai, Tuesday
   workflow_dispatch:
     inputs:
       version:
         description: 'Full version x.y.z (empty = bump minor of the highest release branch)'
         required: false
         default: ''
-
 permissions:
   contents: read               # branch/label writes still go through the App token below
 

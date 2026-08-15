@@ -17,10 +17,12 @@ name: notify-daily-feishu
 # NOTE: schedule triggers only fire from the default branch (main), so this file
 # must live on main to run on its cron.
 
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  schedule:
-    # 01:00 UTC = 09:00 Asia/Shanghai
-    - cron: "0 1 * * *"
   workflow_dispatch:
     inputs:
       ref:
@@ -28,7 +30,6 @@ on:
         required: false
         type: string
         default: ""
-
 permissions:
   contents: read
   actions: write

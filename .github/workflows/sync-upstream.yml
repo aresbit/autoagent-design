@@ -1,0 +1,43 @@
+name: sync-upstream
+
+# Keeps this fork's `main` current with the project it was forked from.
+#
+# The remote below MUST stay pointed at nexu-io/open-design. An earlier
+# rebrand pass rewrote every `nexu-io/open-design` string in the repo,
+# including this one, which left the workflow merging the fork into itself —
+# a no-op that looked healthy while `main` silently fell ~1900 commits behind.
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    name: Sync from nexu-io/open-design
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.2
+        with:
+          fetch-depth: 0
+
+      - name: Merge upstream/main into main
+        run: |
+          set -euo pipefail
+          git remote add upstream https://github.com/nexu-io/open-design.git
+          git fetch upstream main
+          git checkout main
+          # A conflicting upstream change must fail loudly rather than land a
+          # half-merged tree: abort and let a human resolve it on a branch.
+          if ! git merge upstream/main --no-edit; then
+            git merge --abort
+            echo "::error::upstream/main conflicts with this fork; resolve it manually"
+            exit 1
+          fi
+          git push origin main

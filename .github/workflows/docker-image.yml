@@ -5,36 +5,13 @@ name: Docker image
 # - pull_request / workflow_dispatch: smoke build only (push: false, amd64)
 # - tag v*.*.* / workflow_call from release: multi-arch build + push to ghcr.io
 
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  workflow_call:
-    inputs:
-      ref:
-        description: "Git ref to build when invoked as a reusable workflow."
-        required: false
-        type: string
-        default: ""
-      release_version:
-        description: "Stable Docker tag to publish when invoked from release automation."
-        required: false
-        type: string
-        default: ""
-      publish_latest:
-        description: "Whether to also publish :latest when invoked from release automation."
-        required: false
-        type: boolean
-        default: false
-  push:
-    tags: ['v*.*.*']
-  pull_request:
-    paths:
-      - "deploy/**"
-      - ".dockerignore"
-      - "package.json"
-      - "pnpm-lock.yaml"
-      - "pnpm-workspace.yaml"
-      - ".github/workflows/docker-image.yml"
   workflow_dispatch:
-
 jobs:
   build-and-push:
     runs-on: ubuntu-latest

@@ -8,21 +8,13 @@ name: bake-plugin-previews-pr
 # upload/review PR path stays in bake-plugin-previews.yml after merge, and the
 # release writeback stays in bake-plugin-previews-release.yml.
 
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
-    # Everything that changes what a baked preview looks like: both plugin
-    # roots the preview manifest may reference (the guard and the bake cover
-    # plugins/community too), the renderer, and the shared bake action + this
-    # workflow itself — so a change to the bake recipe or its strictness can't
-    # merge without running the strict pre-merge validation.
-    paths:
-      - 'plugins/_official/**'
-      - 'plugins/community/**'
-      - 'scripts/bake-plugin-previews.mjs'
-      - '.github/actions/bake-previews/**'
-      - '.github/workflows/bake-plugin-previews-pr.yml'
-
+  workflow_dispatch:
 permissions:
   contents: read
 

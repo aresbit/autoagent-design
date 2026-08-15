@@ -7,23 +7,13 @@
 # when that PR merges.
 name: "PR Explore Agent - placeholder"
 
+# Automatic triggers are disabled in this fork: the upstream schedules and
+# push/pull_request hooks depend on secrets and infrastructure this fork does
+# not have (release buckets, Feishu/Discord webhooks, Search Console, deploy
+# targets), so they only ever fail. Every workflow stays runnable on demand
+# from the Actions tab, and restoring a trigger is a small revert.
 on:
-  pull_request:
-    types: [opened, synchronize, reopened, ready_for_review]
-    paths:
-      - "apps/web/**"
-      - "apps/landing-page/**"
-      - "design-templates/open-design-landing/**"
-      - "skills/**"
-      - "design-systems/**"
-      - "craft/**"
-      - "templates/**"
-      - "package.json"
-      - "pnpm-lock.yaml"
-      - "pnpm-workspace.yaml"
-      - ".github/workflows/agent-pr-explore.lock.yml"
   workflow_dispatch:
-
 permissions:
   contents: read
 
