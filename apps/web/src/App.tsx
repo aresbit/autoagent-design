@@ -5308,14 +5308,15 @@ function AppInner() {
           {appMain}
         </div>
       </div>
-      {clientType === 'desktop' ? null : (
-        <PetOverlay
-          pet={config.pet?.enabled ? config.pet : undefined}
-          taskCenter={petTaskCenter}
-          onOpenProject={handleOpenProject}
-          dockLine
-        />
-      )}
+      {/* The desktop shell used to render the pet in its own always-on-top
+          BrowserWindow; this fork embeds it in the main window instead, so the
+          overlay is rendered for every client type. */}
+      <PetOverlay
+        pet={config.pet?.enabled ? config.pet : undefined}
+        taskCenter={petTaskCenter}
+        onOpenProject={handleOpenProject}
+        dockLine
+      />
 
       <TooltipLayer />
       <UpdateDialog />

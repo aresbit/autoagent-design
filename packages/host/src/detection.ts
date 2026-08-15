@@ -58,9 +58,6 @@ export function isOpenDesignHostBridge(value: unknown): value is OpenDesignHostB
   const pdf = value.pdf;
   if (!isRecord(pdf) || !hasFunction(pdf, "print")) return false;
 
-  const pet = value.pet;
-  if (!isRecord(pet) || !hasFunction(pet, "setVisible")) return false;
-
   const updater = value.updater;
   if (
     !isRecord(updater) ||

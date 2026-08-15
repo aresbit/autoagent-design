@@ -376,9 +376,6 @@ export type OpenDesignHostBridge = {
   pdf: {
     print(html: string, nonce?: string, options?: OpenDesignHostPdfPrintOptions): Promise<OpenDesignHostActionResult>;
   };
-  pet: {
-    setVisible(visible: boolean): void;
-  };
   project: {
     pickAndImport(init?: OpenDesignHostProjectImportInit): Promise<OpenDesignHostProjectImportResult>;
     pickAndReplaceWorkingDir(projectId: string): Promise<OpenDesignHostProjectReplaceWorkingDirResult>;

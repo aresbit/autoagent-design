@@ -6,7 +6,7 @@ import { dirname, isAbsolute, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { promisify } from "node:util";
 
-import { BrowserWindow, app, dialog, ipcMain, nativeImage, nativeTheme, screen, session, shell } from "electron";
+import { BrowserWindow, app, dialog, ipcMain, nativeImage, nativeTheme, session, shell } from "electron";
 import {
   DESKTOP_UPDATE_CHANNELS,
   DESKTOP_UPDATE_MODES,
@@ -276,9 +276,6 @@ const summarizeExpression = (expression: string): Record<string, unknown> => ({
   expressionPreview: expression.length > 120 ? `${expression.slice(0, 120)}...` : expression,
 });
 const MAX_CONSOLE_ENTRIES = 200;
-const DESKTOP_PET_WINDOW_WIDTH = 360;
-const DESKTOP_PET_WINDOW_HEIGHT = 300;
-const DESKTOP_PET_WINDOW_MARGIN = 24;
 const UPDATER_STATUS_EVENT = "od:update:status-changed";
 const UPDATER_OPEN_DIALOG_EVENT = "od:update:open-dialog";
 const DESIGN_BROWSER_PARTITION = "persist:open-design-design-browser";
@@ -1653,71 +1650,11 @@ async function syncWindowFullscreenClass(window: BrowserWindow): Promise<void> {
   }
 }
 
-function desktopPetUrl(baseUrl: string): string {
-  const url = new URL(baseUrl);
-  url.pathname = "/desktop-pet";
-  url.search = "";
-  url.hash = "";
-  return url.toString();
-}
-
 // Encode the OS locale before stuffing it into a Chromium argv value
 // — BCP-47 region tags shouldn't contain `;` or `=`, but the renderer's
 // `process.argv` parser is happier if we never have to worry about it.
 function osLocaleAdditionalArguments(osLocale: string | undefined): string[] | undefined {
   return osLocale ? [`--od-os-locale=${encodeURIComponent(osLocale)}`] : undefined;
-}
-
-function createDesktopPetWindow(preloadPath: string, osLocale: string | undefined): BrowserWindow {
-  const { workArea } = screen.getPrimaryDisplay();
-  const petWindow = new BrowserWindow({
-    width: DESKTOP_PET_WINDOW_WIDTH,
-    height: DESKTOP_PET_WINDOW_HEIGHT,
-    x: workArea.x + workArea.width - DESKTOP_PET_WINDOW_WIDTH - DESKTOP_PET_WINDOW_MARGIN,
-    y: workArea.y + workArea.height - DESKTOP_PET_WINDOW_HEIGHT - DESKTOP_PET_WINDOW_MARGIN,
-    show: false,
-    frame: false,
-    transparent: true,
-    backgroundColor: "#00000000",
-    resizable: false,
-    skipTaskbar: true,
-    alwaysOnTop: true,
-    hasShadow: false,
-    focusable: false,
-    webPreferences: {
-      additionalArguments: osLocaleAdditionalArguments(osLocale),
-      contextIsolation: true,
-      nodeIntegration: false,
-      preload: preloadPath,
-      sandbox: true,
-    },
-  });
-  petWindow.setAlwaysOnTop(true, "floating");
-  // `skipTransformProcessType: true` is load-bearing, not an
-  // optimization. By default Electron's macOS `setVisibleOnAllWorkspaces`
-  // transforms the whole *process* type between `UIElementApplication`
-  // and `ForegroundApplication` to apply the all-Spaces behavior — the
-  // Electron docs note this "will hide the window and dock for a short
-  // time". That round-trip races during the launch burst (the pet
-  // window is created alongside the main window) and on Electron 41 /
-  // macOS 26 the process can stay stuck as an accessory app: no Dock
-  // icon, no menu bar, even though the windows render fine (issue
-  // #2394). The desktop pet is a cosmetic companion window; it must
-  // never decide the app's Dock identity — the main window does.
-  // Skipping the transform keeps the app a regular Dock app; the pet
-  // still floats on every Space via its `alwaysOnTop` floating level.
-  petWindow.setVisibleOnAllWorkspaces(true, {
-    visibleOnFullScreen: true,
-    skipTransformProcessType: true,
-  });
-  petWindow.webContents.setWindowOpenHandler(({ url }) => {
-    if (isHttpUrl(url)) void shell.openExternal(url);
-    return { action: "deny" };
-  });
-  petWindow.webContents.on("will-navigate", (event, url) => {
-    if (!url.includes("/desktop-pet")) event.preventDefault();
-  });
-  return petWindow;
 }
 
 function showWindowButtons(window: BrowserWindow): void {
@@ -2201,7 +2138,6 @@ export async function createDesktopRuntime(options: DesktopRuntimeOptions): Prom
   });
 
   let currentUrl: string | null = null;
-  let currentPetUrl: string | null = null;
   let pendingUrl: string | null = null;
   let stopped = false;
   let timer: NodeJS.Timeout | null = null;
@@ -2224,7 +2160,6 @@ export async function createDesktopRuntime(options: DesktopRuntimeOptions): Prom
   let rendererRecoveryAttempts = 0;
 
   const consoleEntries: DesktopConsoleEntry[] = [];
-  const petWindow = createDesktopPetWindow(preloadPath, options.osLocale);
   const windowTitle = options.windowTitle ?? "Open Design";
   const window = new BrowserWindow({
     height: 900,
@@ -2529,13 +2464,6 @@ export async function createDesktopRuntime(options: DesktopRuntimeOptions): Prom
     if (labels == null) return { ok: false, reason: "invalid updater menu labels" };
     options.onUpdateMenuLabels?.(labels);
     return { ok: true };
-  });
-
-  ipcMain.removeAllListeners("desktop-pet:set-visible");
-  ipcMain.on("desktop-pet:set-visible", (event, visible: unknown) => {
-    if (petWindow.isDestroyed() || event.sender !== petWindow.webContents) return;
-    if (visible) petWindow.showInactive();
-    else petWindow.hide();
   });
 
   ipcMain.removeAllListeners("od:appearance:set-theme");
@@ -2888,11 +2816,6 @@ export async function createDesktopRuntime(options: DesktopRuntimeOptions): Prom
         console.info("[open-design desktop] main window loadURL success", { url });
         currentUrl = url;
         pendingUrl = null;
-        const nextPetUrl = desktopPetUrl(url);
-        if (!petWindow.isDestroyed() && nextPetUrl !== currentPetUrl) {
-          await petWindow.loadURL(nextPetUrl);
-          currentPetUrl = nextPetUrl;
-        }
         if (!revealed) {
           void revealWhenReady();
         } else {
@@ -2937,14 +2860,12 @@ export async function createDesktopRuntime(options: DesktopRuntimeOptions): Prom
         timer = null;
       }
       unsubscribeUpdater();
-      ipcMain.removeAllListeners("desktop-pet:set-visible");
       ipcMain.removeAllListeners("od:appearance:set-theme");
       for (const channel of UPDATER_IPC_CHANNELS) {
         ipcMain.removeHandler(channel);
       }
       ipcMain.removeHandler("browser:clear-data");
       if (splash != null && !splash.isDestroyed()) splash.close();
-      if (!petWindow.isDestroyed()) petWindow.close();
       if (!window.isDestroyed()) window.close();
     },
     console() {

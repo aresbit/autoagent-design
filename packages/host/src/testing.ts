@@ -6,12 +6,11 @@ import {
   type OpenDesignHostUpdaterStatusSnapshot,
 } from "./index.js";
 
-export type MockOpenDesignHost = Partial<Omit<OpenDesignHostBridge, "capture" | "client" | "pdf" | "pet" | "project" | "shell" | "updater">> & {
+export type MockOpenDesignHost = Partial<Omit<OpenDesignHostBridge, "capture" | "client" | "pdf" | "project" | "shell" | "updater">> & {
   browser?: Partial<OpenDesignHostBridge["browser"]>;
   capture?: Partial<OpenDesignHostBridge["capture"]>;
   client?: Partial<OpenDesignHostBridge["client"]>;
   pdf?: Partial<OpenDesignHostBridge["pdf"]>;
-  pet?: Partial<OpenDesignHostBridge["pet"]>;
   project?: Partial<OpenDesignHostBridge["project"]>;
   shell?: Partial<OpenDesignHostBridge["shell"]>;
   updater?: Partial<OpenDesignHostBridge["updater"]>;
@@ -71,9 +70,6 @@ function defaultHost(): OpenDesignHostBridge {
     pdf: {
       print: async () => ({ ok: true }),
     },
-    pet: {
-      setVisible: () => undefined,
-    },
     updater: {
       check: async () => updaterStatus,
       "clear-cache": async () => updaterStatus,
@@ -99,7 +95,6 @@ export function createMockOpenDesignHost(overrides: MockOpenDesignHost = {}): Op
     shell: { ...base.shell, ...overrides.shell },
     project: { ...base.project, ...overrides.project },
     pdf: { ...base.pdf, ...overrides.pdf },
-    pet: { ...base.pet, ...overrides.pet },
     updater: { ...base.updater, ...overrides.updater },
   };
 }

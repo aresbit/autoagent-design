@@ -26,7 +26,7 @@ import { getOpenDesignHost } from "./detection.js";
  * Renderer-facing wrappers over the host bridge. Each resolves the bridge from
  * scope, invokes the capability, and returns a host-owned result (or a uniform
  * "host is not available" failure). Covers shell, browser, capture, project,
- * pdf, pet, and the full updater action surface.
+ * pdf, and the full updater action surface.
  */
 
 /** @internal Build a normalized host failure result. */
@@ -151,18 +151,6 @@ export async function printHostPdf(
   if (host == null) return unavailable("Open Design host is not available");
   try {
     return await host.pdf.print(html, nonce, options);
-  } catch (error) {
-    return unavailable(error instanceof Error ? error.message : String(error));
-  }
-}
-
-/** Toggle host pet visibility. */
-export function setHostPetVisible(visible: boolean, scope: OpenDesignHostGlobalScope = globalThis): OpenDesignHostActionResult {
-  const host = getOpenDesignHost(scope);
-  if (host == null) return unavailable("Open Design host is not available");
-  try {
-    host.pet.setVisible(visible);
-    return { ok: true };
   } catch (error) {
     return unavailable(error instanceof Error ? error.message : String(error));
   }
