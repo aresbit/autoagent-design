@@ -59,6 +59,7 @@ import { createObsoleteInstalledOuterRetirement } from "./obsolete-installed-out
 import { findPackagedDeeplinkArg, launchPackagedPayloadDesktop } from "./payload-desktop-launch.js";
 import { packagedEntryUrl, registerOdProtocol } from "./protocol.js";
 import { startPackagedSidecars } from "./sidecars.js";
+import { createStartupTimer } from "./startup-timing.js";
 import { reportStartupFailure, resolveStartupDistinctId } from "./startup-telemetry.js";
 import { resolvePackagedWindowTitle } from "./window-title.js";
 import { syncWindowsUninstallDisplayVersion } from "./windows-lifecycle.js";
@@ -116,7 +117,10 @@ function applyPackagedUpdaterEnv(updateMetadataUrl: string | null): void {
 }
 
 async function main(): Promise<void> {
+  const startup = createStartupTimer("packaged");
+  startup.mark("start");
   const config = await readPackagedConfig();
+  startup.mark("config-read");
   const headlessRequest = parsePackagedHeadlessRequest(process.argv.slice(1));
   if (headlessRequest.headless) {
     const { runPackagedHeadless } = await import("./headless-runtime.js");
@@ -201,6 +205,7 @@ async function main(): Promise<void> {
   };
 
   await ensurePackagedNamespacePaths(paths);
+  startup.mark("paths-ready");
   stabilizePackagedWorkingDirectory(paths);
   const downloadAttribution = await discoverPackagedDownloadAttribution(paths, console).catch((error: unknown) => {
     console.warn("[attribution] failed to discover packaged download attribution", error);
@@ -218,6 +223,7 @@ async function main(): Promise<void> {
     platform: process.platform,
   });
   applyPackagedElectronPathOverrides(paths);
+  startup.mark("electron-overrides");
   applyPackagedUpdaterEnv(activeConfig.updateMetadataUrl);
   if (!claimPackagedSingleInstanceLock(app, (argv) => {
     secondInstanceHandoff.handle(findPackagedDeeplinkArg(argv));
@@ -226,6 +232,7 @@ async function main(): Promise<void> {
   }
   const identity = await writePackagedDesktopIdentity({ paths, stamp });
   await app.whenReady();
+  startup.mark("app-ready");
 
   // Show the brand splash IMMEDIATELY, before we await the daemon/web sidecars
   // below. Cold boot otherwise leaves the user staring at no window at all for
@@ -243,6 +250,7 @@ async function main(): Promise<void> {
     base: paths.runtimeRoot,
     contract: OPEN_DESIGN_SIDECAR_CONTRACT,
   });
+  startup.mark("runtime-bootstrapped");
 
   const sidecars = await startPackagedSidecars(runtime, paths, {
     appVersion: activeConfig.appVersion,
@@ -279,8 +287,12 @@ async function main(): Promise<void> {
               ? "interface"
               : "interfaceReady";
       setSplashStage(splash.window, stage);
+      // The same four edges are the only sidecar boundaries worth timing, so
+      // reuse them instead of threading a second callback into sidecars.ts.
+      startup.mark(phase);
     },
   });
+  startup.mark("sidecars-ready");
   if (sidecars.daemon.url) {
     void claimPackagedDownloadAttribution({
       attribution: downloadAttribution,
@@ -297,8 +309,11 @@ async function main(): Promise<void> {
   // The restart supervisor may bind a fresh ephemeral port, while a temporary
   // lack of a target should surface as the protocol layer's structured 503.
   registerOdProtocol(() => sidecars.currentWebUrl());
+  startup.mark("protocol-registered");
 
   const { runDesktopMain } = await import("@open-design/desktop/main");
+  startup.mark("desktop-main-imported");
+  startup.report();
   await runDesktopMain(runtime, {
     splashWindow: splash.window,
     splashStartedAt: splash.startedAt,

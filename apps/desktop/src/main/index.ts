@@ -39,6 +39,7 @@ import {
 import { readProcessStamp } from "@open-design/platform";
 
 import { createDesktopRuntime, type DesktopRuntime } from "./runtime.js";
+import { createStartupTimer } from "./startup-timing.js";
 import { dispatchInviteDeeplink, registerInviteDeeplink } from "./invite-deeplink.js";
 import { focusDesktopForDeeplink } from "./deeplink-focus.js";
 import { setUpDesktopCrashReporter, writeDesktopGpuInfo } from "./crash-diagnostics.js";
@@ -695,6 +696,8 @@ export async function runDesktopMain(
   runtime: SidecarRuntimeContext<SidecarStamp>,
   options: DesktopMainOptions = {},
 ): Promise<void> {
+  const startup = createStartupTimer("desktop");
+  startup.mark("main:start");
   // Install the defensive uncaughtException filter BEFORE awaiting
   // app.whenReady, so a setTypeOfService EINVAL thrown by undici during
   // the renderer's first fetch is intercepted rather than surfacing as
@@ -715,6 +718,7 @@ export async function runDesktopMain(
   applyLoopbackConnectionLimitSwitch(app);
 
   await app.whenReady();
+  startup.mark("app-ready");
   configureAboutPanel(options);
 
   // PR #974: mint a per-process auth secret and hand it to the daemon
@@ -736,6 +740,7 @@ export async function runDesktopMain(
   // renderer toast rather than silently dropping forever.
   const desktopAuthSecret = randomBytes(32);
   const registered = await registerDesktopAuthWithDaemon(runtime, desktopAuthSecret);
+  startup.mark("auth-registered");
   if (!registered) {
     console.warn(
       "[open-design desktop] initial import-token handshake with daemon did not complete; " +
@@ -932,6 +937,7 @@ export async function runDesktopMain(
   });
   console.info("[open-design desktop] desktop IPC server listening", { ipc: runtime.ipc });
 
+  startup.mark("ipc-server-listening");
   const menuController = installDesktopMenu(runtime, {
     ...options,
     onOpenUpdateDialog: () => {
@@ -944,6 +950,7 @@ export async function runDesktopMain(
     updater,
   });
   disposeMenu = menuController.dispose;
+  startup.mark("menu-installed");
 
   console.info("[open-design desktop] creating desktop runtime");
   desktop = await createDesktopRuntime({
@@ -1007,6 +1014,7 @@ export async function runDesktopMain(
     app,
     (event, properties) => reportDesktopObservabilityEvent(discoverDaemonBaseUrl, event, properties),
   );
+  startup.mark("runtime-created");
   removeDiagnosticsIpc = registerDesktopDiagnosticsIpc({
     discoverDaemonBaseUrl: resolveDaemonBaseUrl(runtime, options),
   });
@@ -1035,6 +1043,9 @@ export async function runDesktopMain(
     },
   });
   if (updater.shouldAutoCheck()) updateScheduler.start();
+
+  startup.mark("scheduler-started");
+  startup.report();
 
   attachParentMonitor(shutdown);
 
