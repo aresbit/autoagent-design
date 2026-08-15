@@ -1,6 +1,5 @@
 import { openccAgentDef } from './defs/opencc.js';
 import { amrAgentDef } from './defs/amr.js';
-import { kimiAgentDef } from './defs/kimi.js';
 import { claudeAgentDef } from './defs/claude.js';
 import { codexAgentDef } from './defs/codex.js';
 import { devinAgentDef } from './defs/devin.js';
@@ -40,7 +39,6 @@ const BASE_AGENT_DEFS: RuntimeAgentDef[] = [
   hermesAgentDef,
   traeCliAgentDef,
   grokBuildAgentDef,
-  kimiAgentDef,
   cursorAgentDef,
   qwenAgentDef,
   qoderAgentDef,

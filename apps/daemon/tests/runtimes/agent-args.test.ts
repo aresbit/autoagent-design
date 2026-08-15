@@ -1,7 +1,7 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { test } from 'vitest';
 import {
-  AGENT_DEFS, aider, antigravity, assert, claude, codex, copilot, cursorAgent, deepseek, devin, detectAgents, grokBuild, join, kilo, kimi, kiro, mkdtempSync, opencode, pi, qoder, qwen, rmSync, spawnEnvForAgent, tmpdir, vibe, writeFileSync, chmodSync,
+  AGENT_DEFS, aider, antigravity, assert, claude, codex, copilot, cursorAgent, deepseek, devin, detectAgents, grokBuild, join, kilo, kiro, mkdtempSync, opencode, pi, qoder, qwen, rmSync, spawnEnvForAgent, tmpdir, vibe, writeFileSync, chmodSync,
 } from './helpers/test-helpers.js';
 import { writeAntigravityModelSelection } from '../../src/runtimes/defs/antigravity.js';
 import { agentCapabilities } from '../../src/runtimes/capabilities.js';
@@ -758,24 +758,6 @@ test('kilo args use acp subcommand for json-rpc streaming', () => {
 
   assert.deepEqual(args, ['acp']);
   assert.equal(kilo.streamFormat, 'acp-json-rpc');
-});
-
-test('kimi args use ACP so composed prompts do not travel through argv', () => {
-  const args = kimi.buildArgs('design a page', [], [], {});
-
-  assert.deepEqual(args, ['acp']);
-  assert.equal(args.includes('--yolo'), false);
-  assert.equal(kimi.streamFormat, 'acp-json-rpc');
-  assert.equal(kimi.eventParser, undefined);
-  assert.equal(kimi.mcpDiscovery, 'mature-acp');
-  assert.equal(kimi.externalMcpInjection, 'acp-merge');
-  assert.equal(kimi.maxPromptArgBytes, undefined);
-});
-
-test('kimi args leave model selection to the ACP session', () => {
-  const args = kimi.buildArgs('hello', [], [], { model: 'moonshot-v1-32k' });
-
-  assert.deepEqual(args, ['acp']);
 });
 
 test('kilo fetchModels falls back to fallbackModels when detection fails', async () => {

@@ -1,6 +1,6 @@
 import { test } from 'vitest';
 import { createLiveArtifactsMcpTools, handleLiveArtifactsMcpRequest } from '../../src/mcp-live-artifacts-server.js';
-import { AGENT_DEFS, assert, buildLiveArtifactsMcpServersForAgent, hermes, kimi } from './helpers/test-helpers.js';
+import { AGENT_DEFS, assert, buildLiveArtifactsMcpServersForAgent, hermes } from './helpers/test-helpers.js';
 
 test('live artifact MCP discovery is limited to mature ACP agents', () => {
   for (const agent of AGENT_DEFS) {
@@ -32,10 +32,10 @@ test('live artifact MCP discovery is disabled when run-scoped tool auth is unava
   assert.deepEqual(buildLiveArtifactsMcpServersForAgent(hermes, { enabled: false }), []);
 });
 
-test('Kimi retains ACP live-artifacts and external MCP wiring', () => {
-  assert.equal(kimi.mcpDiscovery, 'mature-acp');
-  assert.equal(kimi.externalMcpInjection, 'acp-merge');
-  assert.deepEqual(buildLiveArtifactsMcpServersForAgent(kimi), [
+test('mature-ACP agents retain ACP live-artifacts and external MCP wiring', () => {
+  assert.equal(hermes.mcpDiscovery, 'mature-acp');
+  assert.equal(hermes.externalMcpInjection, 'acp-merge');
+  assert.deepEqual(buildLiveArtifactsMcpServersForAgent(hermes), [
     {
       name: 'open-design-live-artifacts',
       command: 'od',

@@ -1,6 +1,6 @@
 import { test } from 'vitest';
 import {
-  assert, checkPromptArgvBudget, checkWindowsCmdShimCommandLineBudget, checkWindowsDirectExeCommandLineBudget, claude, deepseek, deepseekMaxPromptArgBytes, grokBuild, kimi, vibe,
+  assert, checkPromptArgvBudget, checkWindowsCmdShimCommandLineBudget, checkWindowsDirectExeCommandLineBudget, claude, deepseek, deepseekMaxPromptArgBytes, grokBuild, vibe,
 } from './helpers/test-helpers.js';
 import type { TestAgentDef } from './helpers/test-helpers.js';
 
@@ -163,11 +163,6 @@ test('checkPromptArgvBudget gives DeepSeek-specific guidance for large contexts'
   assert.match(flagged.message, /currently accepts prompts only as a command-line argument/);
   assert.match(flagged.message, /API\/provider model connection/);
   assert.match(flagged.message, /stdin-capable adapter/);
-});
-
-test('Kimi ACP mode does not declare an argv-byte prompt budget', () => {
-  assert.equal(kimi.maxPromptArgBytes, undefined);
-  assert.equal(checkPromptArgvBudget(kimi, 'x'.repeat(100_000), 'win32'), null);
 });
 
 test('checkPromptArgvBudget is a no-op for Grok Build because it uses prompt files', () => {

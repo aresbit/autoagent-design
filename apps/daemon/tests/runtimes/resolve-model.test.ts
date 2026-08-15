@@ -151,7 +151,7 @@ describe('resolveModelForAgent', () => {
     expect(resolveModelForAgent(def, 'default')).toBe('default');
   });
 
-  it('leaves the resolved model alone when the def lists "default" itself (the common case for hermes/devin/kimi)', () => {
+  it('leaves the resolved model alone when the def lists "default" itself (the common case for hermes/devin)', () => {
     const def = defWith(['default', 'sonnet']);
     expect(resolveModelForAgent(def, 'default')).toBe('default');
     expect(resolveModelForAgent(def, null)).toBe(null);

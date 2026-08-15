@@ -171,8 +171,8 @@ async function withFakeDeepSeek<T>(script: string, run: () => Promise<T>): Promi
   return withFakeAgent('deepseek', script, run);
 }
 
-async function withFakeKimi<T>(script: string, run: () => Promise<T>): Promise<T> {
-  return withFakeAgent('kimi', script, run);
+async function withFakeHermes<T>(script: string, run: () => Promise<T>): Promise<T> {
+  return withFakeAgent('hermes', script, run);
 }
 
 async function withFakeAntigravity<T>(script: string, run: () => Promise<T>): Promise<T> {
@@ -3952,16 +3952,16 @@ setInterval(() => {}, 1000);
     },
   );
 
-  it('launches Kimi connection tests through the ACP transport', async () => {
-    const markerDir = await fsp.mkdtemp(path.join(os.tmpdir(), 'od-kimi-argv-'));
+  it('launches ACP agent connection tests through the ACP transport', async () => {
+    const markerDir = await fsp.mkdtemp(path.join(os.tmpdir(), 'od-acp-argv-'));
     const argvFile = path.join(markerDir, 'argv.json');
     try {
-      await withFakeKimi(
+      await withFakeHermes(
         `
 const fs = require('node:fs');
 const args = process.argv.slice(2);
 fs.writeFileSync(${JSON.stringify(argvFile)}, JSON.stringify(args));
-if (args.length !== 1 || args[0] !== 'acp') {
+if (args[0] !== 'acp') {
   console.error('missing acp transport arg');
   process.exit(1);
 }
@@ -3973,21 +3973,21 @@ console.log(JSON.stringify({ jsonrpc: '2.0', method: 'session/update', params: {
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({
               mode: 'agent',
-              agentId: 'kimi',
-              model: 'moonshot-v1-32k',
+              agentId: 'hermes',
+              model: 'grok-4.3',
             }),
           });
           expect(res.status).toBe(200);
           await expect(res.json()).resolves.toMatchObject({
             ok: true,
             kind: 'success',
-            agentName: 'Kimi CLI',
-            model: 'moonshot-v1-32k',
+            agentName: 'Hermes',
+            model: 'grok-4.3',
             sample: 'ok',
           });
 
           await expect(fsp.readFile(argvFile, 'utf8')).resolves.toBe(
-            JSON.stringify(['acp']),
+            JSON.stringify(['acp', '--accept-hooks']),
           );
         },
       );

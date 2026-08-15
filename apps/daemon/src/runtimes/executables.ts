@@ -26,7 +26,6 @@ const AGENT_BIN_ENV_KEYS = new Map<string, string>([
   ['devin', 'DEVIN_BIN'],
   ['opencc', 'OPENCC_BIN'],
   ['hermes', 'HERMES_BIN'],
-  ['kimi', 'KIMI_BIN'],
   ['kiro', 'KIRO_BIN'],
   ['kilo', 'KILO_BIN'],
   ['mimo', 'MIMO_BIN'],
