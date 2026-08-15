@@ -1,4 +1,6 @@
+import { openccAgentDef } from './defs/opencc.js';
 import { amrAgentDef } from './defs/amr.js';
+import { kimiAgentDef } from './defs/kimi.js';
 import { claudeAgentDef } from './defs/claude.js';
 import { codexAgentDef } from './defs/codex.js';
 import { devinAgentDef } from './defs/devin.js';
@@ -7,7 +9,6 @@ import { byokOpenCodeAgentDef } from './defs/byok-opencode.js';
 import { hermesAgentDef } from './defs/hermes.js';
 import { traeCliAgentDef } from './defs/trae-cli.js';
 import { grokBuildAgentDef } from './defs/grok-build.js';
-import { kimiAgentDef } from './defs/kimi.js';
 import { cursorAgentDef } from './defs/cursor-agent.js';
 import { qwenAgentDef } from './defs/qwen.js';
 import { qoderAgentDef } from './defs/qoder.js';
@@ -29,6 +30,7 @@ import { readLocalAgentProfileDefs as readLocalAgentProfileDefsFromFile } from '
 import type { RuntimeAgentDef } from './types.js';
 
 const BASE_AGENT_DEFS: RuntimeAgentDef[] = [
+  openccAgentDef,
   amrAgentDef,
   claudeAgentDef,
   codexAgentDef,

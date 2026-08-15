@@ -131,6 +131,14 @@ export function spawnEnvForAgent(
     }
     return finalizeRuntimeEnv(env, sandboxRuntime);
   }
+  if (agentId === 'opencc') {
+    // OpenCC speaks the Claude Code wire protocol but ships pointed at
+    // DeepSeek's Anthropic-compatible endpoint, so a user who has only set
+    // ANTHROPIC_API_KEY still gets a working agent. An explicit base URL
+    // (inherited or from Settings -> Local CLI) always wins.
+    setEnvIfMissing(env, 'ANTHROPIC_BASE_URL', 'https://api.deepseek.com/anthropic');
+    return finalizeRuntimeEnv(env, sandboxRuntime);
+  }
   if (agentId === 'claude') {
     return finalizeRuntimeEnv(env, sandboxRuntime);
   }
